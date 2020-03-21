@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <dimen name="design_bottom_navigation_height" tools:override="true">64dp</dimen>
+    <dimen name="default_padding_small">6dp</dimen>
+    <dimen name="default_padding_medium">10dp</dimen>
+    <dimen name="default_margin_small">16dp</dimen>
+    <dimen name="default_margin_medium">24dp</dimen>
+    <dimen name="default_margin_large">32dp</dimen>
+    <dimen name="default_margin_xlarge">48dp</dimen>
+
+
+    <!--    icon action-->
+    <dimen name="default_ic_size_very_small">18dp</dimen>
+    <dimen name="default_ic_size_small">24dp</dimen>
+    <dimen name="default_ic_size_medium">32dp</dimen>
+    <dimen name="default_ic_size_large">64dp</dimen>
+    <dimen name="default_ic_size_xlarge">120dp</dimen>
+    <dimen name="default_ic_size_xxlarge">240dp</dimen>
+
+    <dimen name="font_size_10">10sp</dimen>
+    <dimen name="font_size_14">14sp</dimen>
+    <dimen name="font_size_16">16sp</dimen>
+    <dimen name="font_size_18">18sp</dimen>
+
+</resources>

@@ -1,0 +1,75 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/poppins_light</item>
+    </style>
+
+
+    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+
+    <style name="bottom_navigation_view" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_gravity">bottom</item>
+        <item name="itemRippleColor">@null</item>
+        <item name="android:background">@color/grey_10</item>
+        <item name="itemIconTint">@color/color_state_bottom_nav</item>
+        <item name="itemIconSize">24dp</item>
+        <item name="itemTextAppearanceActive">@style/TextAppearance.AppCompat.Caption</item>
+        <item name="itemTextColor">@color/color_state_bottom_nav</item>
+        <item name="labelVisibilityMode">labeled</item>
+    </style>
+
+    <style name="text_input" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="errorTextColor">@android:color/white</item>
+        <item name="errorIconDrawable">@null</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="boxBackgroundColor">@android:color/white</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="hintEnabled">false</item>
+    </style>
+
+    <style name="edit_text_input">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="default_button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/default_margin_medium</item>
+        <item name="android:backgroundTint">@color/deep_purple_200</item>
+        <item name="android:textSize">@dimen/font_size_16</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">@dimen/default_margin_small</item>
+        <item name="rippleColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="button_back" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:textSize">@dimen/font_size_16</item>
+        <item name="android:drawableLeft">@drawable/ic_arrow_left</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:text">Kembali</item>
+        <item name="android:padding">@dimen/default_margin_small</item>
+        <item name="rippleColor">@null</item>
+    </style>
+</resources>
