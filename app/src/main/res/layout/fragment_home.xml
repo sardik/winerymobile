@@ -3,12 +3,194 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/default_margin_small"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_menu_kartu_kredit"
+                style="@style/ll_container_item_menu_header">
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/rl_parent_image_item_menu"
+                    app:cardCornerRadius="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            style="@style/iv_item_menu_home"
+                            android:src="@drawable/ic_kartu_kredit"/>
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    style="@style/tv_title_menu_home"
+                    android:text="Kartu Kredit" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_menu_kartu_tambahan"
+                style="@style/ll_container_item_menu_header">
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/rl_parent_image_item_menu"
+                    app:cardCornerRadius="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            style="@style/iv_item_menu_home"
+                            android:src="@drawable/ic_kartu_tambahan"/>
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    style="@style/tv_title_menu_home"
+                    android:text="Kartu Tambahan"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_menu_kta"
+                style="@style/ll_container_item_menu_header">
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/rl_parent_image_item_menu"
+                    android:backgroundTint="@android:color/darker_gray"
+                    app:cardCornerRadius="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            style="@style/iv_item_menu_home"
+                            android:src="@drawable/ic_menu_kta"/>
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    style="@style/tv_title_menu_home"
+                    android:textColor="@android:color/darker_gray"
+                    android:text="KTA"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/default_margin_medium"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_report_kartu_kredit"
+                style="@style/ll_container_item_menu_header">
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/rl_parent_image_item_menu"
+                    android:backgroundTint="@android:color/darker_gray"
+                    app:cardCornerRadius="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            style="@style/iv_item_menu_home"
+                            android:src="@drawable/ic_report_credit_card"/>
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    style="@style/tv_title_menu_home"
+                    android:text="Report Kartu Kredit"
+                    android:textColor="@android:color/darker_gray"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/ll_container_item_menu_header"
+                android:id="@+id/ll_report_kartu_tambahan">
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/rl_parent_image_item_menu"
+                    android:backgroundTint="@android:color/darker_gray"
+                    app:cardCornerRadius="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            style="@style/iv_item_menu_home"
+                            android:src="@drawable/ic_report_kartu_tambahan"/>
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    style="@style/tv_title_menu_home"
+                    android:text="Report Kartu Tambahan"
+                    android:textColor="@android:color/darker_gray"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_report_kta"
+                style="@style/ll_container_item_menu_header">
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/rl_parent_image_item_menu"
+                    android:backgroundTint="@android:color/darker_gray"
+                    app:cardCornerRadius="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            style="@style/iv_item_menu_home"
+                            android:src="@drawable/ic_report_kta"/>
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    style="@style/tv_title_menu_home"
+                    android:textColor="@android:color/darker_gray"
+                    android:text="Report KTA"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
 
 </FrameLayout>

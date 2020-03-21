@@ -88,6 +88,7 @@
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_login"
                     style="@style/default_button"
+                    app:backgroundTint="@color/deep_purple_200"
                     android:text="Login"/>
 
                 <com.google.android.material.button.MaterialButton

@@ -2,6 +2,7 @@ package com.winery.winerymobile.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.winery.winerymobile.R;
@@ -34,8 +35,13 @@ public class LoginActivity extends AppCompatActivity {
         }else if(etPassword.getText().toString().equals("") || etPassword.getText().toString().equals(null)){
             tiPassword.setError("password harus di isi");
         }else{
-
+            Intent intent = new Intent(this, ParentHomeActivity.class);
+            startActivity(intent);
         }
+    }
+
+    @OnClick(R.id.btn_back) void back(){
+        onBackPressed();
     }
     
     @Override

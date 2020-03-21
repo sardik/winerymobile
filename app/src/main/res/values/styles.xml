@@ -51,7 +51,6 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">@dimen/default_margin_medium</item>
-        <item name="android:backgroundTint">@color/deep_purple_200</item>
         <item name="android:textSize">@dimen/font_size_16</item>
         <item name="android:textColor">@android:color/white</item>
         <item name="android:textStyle">bold</item>
@@ -71,5 +70,70 @@
         <item name="android:text">Kembali</item>
         <item name="android:padding">@dimen/default_margin_small</item>
         <item name="rippleColor">@null</item>
+    </style>
+
+    <style name="ll_container_item_menu_header">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="tv_title_menu_home">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_marginTop">@dimen/default_padding_small</item>
+        <item name="android:fontFamily">@font/expressway_rg</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Caption</item>
+    </style>
+
+    <style name="rl_parent_image_item_menu">
+        <item name="android:layout_height">56dp</item>
+        <item name="android:layout_width">56dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:backgroundTint">@color/light_blue_500</item>
+        <item name="elevation">4dp</item>
+        <item name="rippleColor">@color/deep_purple_200</item>
+        <item name="cardCornerRadius">10dp</item>
+
+    </style>
+
+    <style name="iv_item_menu_home">
+        <item name="android:layout_width">@dimen/default_ic_size_large</item>
+        <item name="android:layout_height">@dimen/default_ic_size_large</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="card_bank_selection">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginStart">@dimen/default_margin_small</item>
+        <item name="android:layout_marginEnd">@dimen/default_margin_small</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="backgroundTint">@android:color/white</item>
+        <item name="cardElevation">4dp</item>
+        <item name="rippleColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="tv_name_bank">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginLeft">@dimen/default_ic_size_medium</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/default_margin_small</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="iv_checked_bank">
+        <item name="android:layout_width">@dimen/default_ic_size_medium</item>
+        <item name="android:layout_height">@dimen/default_ic_size_medium</item>
+        <item name="android:src">@drawable/ic_check_white</item>
+        <item name="android:layout_marginEnd">@dimen/default_margin_small</item>
+        <item name="android:layout_gravity">center</item>
     </style>
 </resources>

@@ -2,16 +2,19 @@ package com.winery.winerymobile.ui;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.snackbar.Snackbar;
 import com.winery.winerymobile.R;
 
 import butterknife.BindView;
@@ -29,6 +32,8 @@ public class ParentHomeActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
     private Fragment homeFragment = null;
     private Fragment historyFragment = null;
+    private Fragment chatFragment = null;
+    private Fragment messageFragment = null;
     private Fragment profileFragment = null;
 
     @Override
@@ -67,10 +72,16 @@ public class ParentHomeActivity extends AppCompatActivity {
                             fragment = historyFragment;
                         break;
                     case R.id.navigation_3:
-                        Toast.makeText(getApplicationContext(),"Dalam pengembangan", Toast.LENGTH_LONG);
+                        if (messageFragment == null)
+                            snackBar();
+                        else
+                            snackBar();
                         break;
                     case R.id.navigation_4:
-                        Toast.makeText(getApplicationContext(),"Dalam pengembangan", Toast.LENGTH_LONG);
+                        if (chatFragment == null)
+                            snackBar();
+                        else
+                            snackBar();
                         break;
                     case R.id.navigation_5:
                         if (profileFragment == null)
@@ -86,5 +97,13 @@ public class ParentHomeActivity extends AppCompatActivity {
                 return true;
             }
         });
+    }
+
+    public void snackBar(){
+        Snackbar snackbar = Snackbar.make(findViewById(R.id.fragment), "Dalam tahap pengembangan", Snackbar.LENGTH_SHORT)
+                .setAction("Action", null);
+        View sbView = snackbar.getView();
+        sbView.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimary));
+        snackbar.show();
     }
 }

@@ -28,7 +28,7 @@ public class SplashScreen extends AppCompatActivity {
             @Override
             public void run() {
 
-            Intent mainIntent = new Intent(SplashScreen.this,LoginActivity.class);
+            Intent mainIntent = new Intent(SplashScreen.this,MainActivity.class);
             startActivity(mainIntent);
             finish();
             }
