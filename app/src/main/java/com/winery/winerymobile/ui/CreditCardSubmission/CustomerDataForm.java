@@ -2,6 +2,7 @@ package com.winery.winerymobile.ui.CreditCardSubmission;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 
@@ -137,7 +138,8 @@ public class CustomerDataForm extends AppCompatActivity {
 
         }
         else{
-
+            Intent intent = new Intent(this, FormUploadDocument.class);
+            startActivity(intent);
         }
     }
     
