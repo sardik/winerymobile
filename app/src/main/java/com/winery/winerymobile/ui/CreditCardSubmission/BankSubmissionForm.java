@@ -3,6 +3,7 @@ package com.winery.winerymobile.ui.CreditCardSubmission;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -177,6 +178,9 @@ public class BankSubmissionForm extends AppCompatActivity {
             !ivUob.isSelected()){
 
             selectionValidate();
+        }else{
+            Intent intent = new Intent(this, CustomerDataForm.class);
+            startActivity(intent);
         }
     }
 

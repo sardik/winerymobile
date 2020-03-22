@@ -9,6 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ui.CreditCardSubmission.FormUploadDocument"></activity>
+        <activity
+            android:name=".ui.CreditCardSubmission.CustomerDataForm"
+            android:windowSoftInputMode="adjustResize" />
         <activity android:name=".ui.CreditCardSubmission.BankSubmissionForm">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,9 +26,7 @@
         <activity android:name=".ui.ParentHomeActivity" />
         <activity
             android:name=".ui.SplashScreen"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
-
-        </activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
         <activity android:name=".ui.MainActivity" />
     </application>
 
