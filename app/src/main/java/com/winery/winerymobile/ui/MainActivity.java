@@ -1,6 +1,7 @@
 package com.winery.winerymobile.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @OnClick(R.id.btn_user) void loginUser(){
-        Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
+        DialogOptionUserLogin bottomSheetFragment = new DialogOptionUserLogin();
+        bottomSheetFragment.show(this.getSupportFragmentManager(), bottomSheetFragment.getTag());
     }
 
     @Override

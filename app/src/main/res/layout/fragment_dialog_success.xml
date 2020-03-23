@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="bottom"
+    app:cardCornerRadius="@dimen/default_margin_small"
+    tools:context=".ui.CreditCardSubmission.DialogSuccess">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/default_ic_size_xlarge"
+            android:layout_height="@dimen/default_ic_size_xlarge"
+            android:layout_gravity="center"
+            android:src="@drawable/logo_user"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_size_14"
+            android:gravity="center"
+            android:textColor="@android:color/darker_gray"
+            android:text="Terima kasih"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_size_14"
+            android:gravity="center"
+            android:textColor="@android:color/darker_gray"
+            android:text="Untuk detail silahkan cek proses pengaduan"/>
+
+
+        <LinearLayout
+            android:paddingTop="@dimen/default_margin_small"
+            android:paddingBottom="@dimen/default_margin_small"
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/default_margin_medium"
+            android:layout_marginEnd="@dimen/default_margin_medium"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_home"
+                style="@style/default_button"
+                android:layout_marginTop="0dp"
+                app:backgroundTint="@color/colorPrimary"
+                app:rippleColor="@color/deep_purple_200"
+                android:text="Home"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

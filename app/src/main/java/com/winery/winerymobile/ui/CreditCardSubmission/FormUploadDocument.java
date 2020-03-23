@@ -62,6 +62,11 @@ public class FormUploadDocument extends AppCompatActivity {
     com.google.android.material.button.MaterialButton btnBack;
     /** ButterKnife Code **/
 
+    @OnClick(R.id.btn_next) void fotoselfie(){
+        Intent intent = new Intent(this, FormUploadDocumentSelfie.class);
+        startActivity(intent);
+    }
+
     @OnClick(R.id.container_iv_ktp) void getPhotoKTP(){
         Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
         photoPickerIntent.setType("image/*");
@@ -104,7 +109,8 @@ public class FormUploadDocument extends AppCompatActivity {
     private static final int CHANGE_IMAGE_CC = 3;
     private static final int CHANGE_IMAGE_SUPPORT1 = 4;
     private static final int CHANGE_IMAGE_SUPPORT2 = 5;
-    
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -152,6 +158,51 @@ public class FormUploadDocument extends AppCompatActivity {
                     final InputStream imageStream = getContentResolver().openInputStream(imageUri);
                     final Bitmap selectedImage = BitmapFactory.decodeStream(imageStream);
                     ivIdcard.setImageBitmap(selectedImage);
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+
+            } else {
+
+            }
+        }
+        else if (reqCode == CHANGE_IMAGE_CC){
+            if (resultCode == RESULT_OK) {
+                try {
+                    final Uri imageUri = data.getData();
+                    final InputStream imageStream = getContentResolver().openInputStream(imageUri);
+                    final Bitmap selectedImage = BitmapFactory.decodeStream(imageStream);
+                    ivCc.setImageBitmap(selectedImage);
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+
+            } else {
+
+            }
+        }
+        else if (reqCode == CHANGE_IMAGE_SUPPORT1){
+            if (resultCode == RESULT_OK) {
+                try {
+                    final Uri imageUri = data.getData();
+                    final InputStream imageStream = getContentResolver().openInputStream(imageUri);
+                    final Bitmap selectedImage = BitmapFactory.decodeStream(imageStream);
+                    ivSupportdoc1.setImageBitmap(selectedImage);
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+
+            } else {
+
+            }
+        }
+        else if (reqCode == CHANGE_IMAGE_SUPPORT2) {
+            if (resultCode == RESULT_OK) {
+                try {
+                    final Uri imageUri = data.getData();
+                    final InputStream imageStream = getContentResolver().openInputStream(imageUri);
+                    final Bitmap selectedImage = BitmapFactory.decodeStream(imageStream);
+                    ivSupportdoc2.setImageBitmap(selectedImage);
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
