@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.AccountFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin_large"
+        android:scrollbars="none"
+        android:scrollingCache="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_section1"
+                    android:layout_marginStart="@dimen/default_margin_small"
+                    android:layout_marginEnd="@dimen/default_margin_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/tv_title_section_general"
+                        android:text="Settings"/>
+
+                    <!-- change password-->
+                    <RelativeLayout
+                        android:id="@+id/rl_parent_change_password"
+                        style="@style/rl_parent_section_list_settings">
+
+                        <TextView
+                            style="@style/tv_title_item_section_list"
+                            android:text="Ganti Password" />
+
+                        <ImageView
+                            style="@style/iv_item_section_list"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_section2"
+                    android:layout_marginTop="@dimen/default_margin_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_margin_small"
+                    android:layout_marginEnd="@dimen/default_margin_small"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/tv_title_section_general"
+                        android:text="HR Result"/>
+
+                    <!-- Absensi-->
+                    <RelativeLayout
+                        android:layout_marginTop="@dimen/default_margin_small"
+                        android:id="@+id/rl_parent_history_order"
+                        style="@style/rl_parent_section_list_settings">
+
+                        <TextView
+                            style="@style/tv_title_item_section_list"
+                            android:text="Absensi"
+                            android:textColor="@android:color/darker_gray"/>
+
+                        <ImageView
+                            style="@style/iv_item_section_list"
+                            android:tint="@android:color/darker_gray"/>
+                    </RelativeLayout>
+
+                    <!-- pay slip-->
+                    <RelativeLayout
+                        android:id="@+id/rl_parent_pay_slip"
+                        style="@style/rl_parent_section_list_settings">
+
+                        <TextView
+                            style="@style/tv_title_item_section_list"
+                            android:text="Slip Gaji"
+                            android:textColor="@android:color/darker_gray"/>
+
+                        <ImageView
+                            style="@style/iv_item_section_list"
+                            android:tint="@android:color/darker_gray"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_section3"
+                    android:layout_marginTop="@dimen/default_margin_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_height="5dp"
+                        android:layout_width="match_parent"
+                        android:background="@color/colorPrimary"/>
+
+                    <!-- logout-->
+                    <RelativeLayout
+                        android:id="@+id/rl_logout"
+                        android:layout_marginStart="@dimen/default_margin_small"
+                        android:layout_marginEnd="@dimen/default_margin_small"
+                        style="@style/rl_parent_section_list_settings">
+
+                        <TextView
+                            style="@style/tv_title_item_section_list"
+                            android:text="Logout" />
+
+                        <ImageView
+                            style="@style/iv_item_section_list"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/default_margin_small"
+                    android:background="@android:color/white">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="winery mobile 1.0"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

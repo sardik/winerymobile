@@ -1,25 +1,32 @@
 package com.winery.winerymobile.ui.CreditCardSubmission;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.winery.winerymobile.R;
 
+import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+
+import static java.sql.Types.NULL;
 
 public class FormUploadDocument extends AppCompatActivity {
 
@@ -62,9 +69,78 @@ public class FormUploadDocument extends AppCompatActivity {
     com.google.android.material.button.MaterialButton btnBack;
     /** ButterKnife Code **/
 
+    @OnClick(R.id.btn_back) void back(){
+        onBackPressed();
+    }
+
     @OnClick(R.id.btn_next) void fotoselfie(){
-        Intent intent = new Intent(this, FormUploadDocumentSelfie.class);
-        startActivity(intent);
+        if(selectedImageKtp == null){
+            bankValidation("Foto KTP tidak Boleh Kosong");
+        }else if(selectedImageNpwp == null) {
+            bankValidation("Foto NPWP tidak Boleh Kosong");
+        }else if(selectedImageIdCard == null) {
+            bankValidation("Foto ID Card tidak Boleh Kosong");
+        }else{
+            Intent intent = new Intent(this, FormUploadDocumentSelfie.class);
+            //Convert to byte array
+            ByteArrayOutputStream stream = new ByteArrayOutputStream();
+            // ktp
+            selectedImageKtp.compress(Bitmap.CompressFormat.PNG, 100, stream);
+            byte[] byteArrayKtp = stream.toByteArray();
+
+            // npwp
+            selectedImageNpwp.compress(Bitmap.CompressFormat.PNG, 100, stream);
+            byte[] byteArrayNpwp = stream.toByteArray();
+
+            // ID Card
+            selectedImageIdCard.compress(Bitmap.CompressFormat.PNG, 100, stream);
+            byte[] byteArrayIdCard = stream.toByteArray();
+
+
+            intent.putExtra("imageKtp",byteArrayKtp);
+            intent.putExtra("imageNpwp",byteArrayNpwp);
+            intent.putExtra("imageIDCard",byteArrayIdCard);
+
+//            // CC
+//            if(selectedImageCC == null){
+//                intent.putExtra("imageCC","");
+//            }else{
+//                selectedImageIdCard.compress(Bitmap.CompressFormat.PNG, 100, stream);
+//                byte[] byteArrayCC = stream.toByteArray();
+//                intent.putExtra("imageCC",byteArrayCC);
+//            }
+//
+//            // Doc 1
+//            if(selectedImageDoc1 == null){
+//                intent.putExtra("imageDoc1","");
+//            }else{
+//                selectedImageDoc1.compress(Bitmap.CompressFormat.PNG, 100, stream);
+//                byte[] byteArrayDoc1 = stream.toByteArray();
+//                intent.putExtra("imageDoc1",byteArrayDoc1);
+//            }
+//
+//            // Doc 1
+//            if(selectedImageDoc2 == null){
+//                intent.putExtra("imageDoc2","");
+//            }else{
+//                selectedImageDoc2.compress(Bitmap.CompressFormat.PNG, 100, stream);
+//                byte[] byteArrayDoc2 = stream.toByteArray();
+//                intent.putExtra("imageDoc2",byteArrayDoc2);
+//            }
+
+//            intent.putExtra("imageKtp", selectedImageKtp);
+//            Log.d("imageKtp", "fotoselfie: "+selectedImageKtp);
+//            intent.putExtra("imageNpwp", selectedImageNpwp);
+//            intent.putExtra("imageIDCard", selectedImageIdCard);
+//            intent.putExtra("imageCC", selectedImageCC);
+//            intent.putExtra("imageDoc1", selectedImageDoc1);
+//            intent.putExtra("imageDoc2", selectedImageDoc2);
+
+
+
+
+            startActivity(intent);
+        }
     }
 
     @OnClick(R.id.container_iv_ktp) void getPhotoKTP(){
@@ -110,6 +186,9 @@ public class FormUploadDocument extends AppCompatActivity {
     private static final int CHANGE_IMAGE_SUPPORT1 = 4;
     private static final int CHANGE_IMAGE_SUPPORT2 = 5;
 
+    Bitmap selectedImageIdCard = null , selectedImageKtp = null, selectedImageNpwp = null,
+            selectedImageCC = null, selectedImageDoc1 = null, selectedImageDoc2 = null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -128,8 +207,8 @@ public class FormUploadDocument extends AppCompatActivity {
                 try {
                     final Uri imageUri = data.getData();
                     final InputStream imageStream = getContentResolver().openInputStream(imageUri);
-                    final Bitmap selectedImage = BitmapFactory.decodeStream(imageStream);
-                    ivKtp.setImageBitmap(selectedImage);
+                    selectedImageKtp = BitmapFactory.decodeStream(imageStream);
+                    ivKtp.setImageBitmap(selectedImageKtp);
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
@@ -142,8 +221,8 @@ public class FormUploadDocument extends AppCompatActivity {
                 try {
                     final Uri imageUri = data.getData();
                     final InputStream imageStream = getContentResolver().openInputStream(imageUri);
-                    final Bitmap selectedImage = BitmapFactory.decodeStream(imageStream);
-                    ivNpwp.setImageBitmap(selectedImage);
+                    selectedImageNpwp = BitmapFactory.decodeStream(imageStream);
+                    ivNpwp.setImageBitmap(selectedImageNpwp);
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
@@ -156,8 +235,8 @@ public class FormUploadDocument extends AppCompatActivity {
                 try {
                     final Uri imageUri = data.getData();
                     final InputStream imageStream = getContentResolver().openInputStream(imageUri);
-                    final Bitmap selectedImage = BitmapFactory.decodeStream(imageStream);
-                    ivIdcard.setImageBitmap(selectedImage);
+                    selectedImageIdCard = BitmapFactory.decodeStream(imageStream);
+                    ivIdcard.setImageBitmap(selectedImageIdCard);
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
@@ -171,8 +250,8 @@ public class FormUploadDocument extends AppCompatActivity {
                 try {
                     final Uri imageUri = data.getData();
                     final InputStream imageStream = getContentResolver().openInputStream(imageUri);
-                    final Bitmap selectedImage = BitmapFactory.decodeStream(imageStream);
-                    ivCc.setImageBitmap(selectedImage);
+                    selectedImageCC = BitmapFactory.decodeStream(imageStream);
+                    ivCc.setImageBitmap(selectedImageCC);
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
@@ -186,8 +265,8 @@ public class FormUploadDocument extends AppCompatActivity {
                 try {
                     final Uri imageUri = data.getData();
                     final InputStream imageStream = getContentResolver().openInputStream(imageUri);
-                    final Bitmap selectedImage = BitmapFactory.decodeStream(imageStream);
-                    ivSupportdoc1.setImageBitmap(selectedImage);
+                    selectedImageDoc1 = BitmapFactory.decodeStream(imageStream);
+                    ivSupportdoc1.setImageBitmap(selectedImageDoc1);
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
@@ -201,8 +280,8 @@ public class FormUploadDocument extends AppCompatActivity {
                 try {
                     final Uri imageUri = data.getData();
                     final InputStream imageStream = getContentResolver().openInputStream(imageUri);
-                    final Bitmap selectedImage = BitmapFactory.decodeStream(imageStream);
-                    ivSupportdoc2.setImageBitmap(selectedImage);
+                    selectedImageDoc2 = BitmapFactory.decodeStream(imageStream);
+                    ivSupportdoc2.setImageBitmap(selectedImageDoc2);
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
@@ -211,6 +290,14 @@ public class FormUploadDocument extends AppCompatActivity {
 
             }
         }
+    }
+
+    public void bankValidation(String message){
+        Snackbar snackbar = Snackbar.make(findViewById(R.id.nested), message, Snackbar.LENGTH_SHORT)
+                .setAction("Action", null);
+        View sbView = snackbar.getView();
+        sbView.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimary));
+        snackbar.show();
     }
 
 }

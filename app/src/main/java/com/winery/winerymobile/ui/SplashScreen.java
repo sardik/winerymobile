@@ -9,10 +9,13 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import com.winery.winerymobile.R;
+import com.winery.winerymobile.ui.dbhelper.SessionManagement;
 
 public class SplashScreen extends AppCompatActivity {
 
     private final int SPLASH_DISPLAY_LENGTH = 1000;
+
+    SessionManagement session;
 
 
     @Override
@@ -23,14 +26,22 @@ public class SplashScreen extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash_screen);
 
+        session = new SessionManagement(getApplicationContext());
+
 
         new Handler().postDelayed(new Runnable(){
             @Override
             public void run() {
 
-            Intent mainIntent = new Intent(SplashScreen.this,MainActivity.class);
-            startActivity(mainIntent);
-            finish();
+                if(session.isLoggedIn()){
+                    Intent intent = new Intent(SplashScreen.this, ParentHomeActivity.class);
+                    startActivity(intent);
+                    finish();
+                }else{
+                    Intent intent = new Intent(SplashScreen.this, MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
             }
         }, SPLASH_DISPLAY_LENGTH);
     }

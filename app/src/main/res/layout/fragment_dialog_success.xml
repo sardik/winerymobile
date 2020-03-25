@@ -33,7 +33,7 @@
             android:textSize="@dimen/font_size_14"
             android:gravity="center"
             android:textColor="@android:color/darker_gray"
-            android:text="Untuk detail silahkan cek proses pengaduan"/>
+            android:text="Untuk detail silahkan cek proses pengajuan"/>
 
 
         <LinearLayout

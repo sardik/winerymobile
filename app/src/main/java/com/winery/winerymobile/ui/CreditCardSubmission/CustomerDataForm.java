@@ -7,6 +7,10 @@ import android.os.Bundle;
 import android.widget.ImageView;
 
 import com.winery.winerymobile.R;
+import com.winery.winerymobile.ui.dbhelper.SessionManagement;
+import com.winery.winerymobile.ui.dbhelper.StateTransactionSales;
+
+import java.util.HashMap;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -85,6 +89,10 @@ public class CustomerDataForm extends AppCompatActivity {
     com.google.android.material.button.MaterialButton btnBack;
     /** ButterKnife Code **/
 
+    @OnClick(R.id.btn_back) void back(){
+        onBackPressed();
+    }
+
     @OnClick(R.id.btn_next) void next(){
         if(etName.getText().toString().equals("")){
             tiName.setError("Nama harus di isi");
@@ -138,15 +146,47 @@ public class CustomerDataForm extends AppCompatActivity {
 
         }
         else{
-            Intent intent = new Intent(this, FormUploadDocument.class);
+
+            HashMap<String, String> user = sessionManagement.getUserDetails();
+            sales_name = user.get(SessionManagement.KEY_NAME);
+            sales_code = user.get(SessionManagement.KEY_SALES_CODE);
+
+            nama = etName.getText().toString();
+            nik = etNik.getText().toString();
+            tanggal_lahir = etYearBirth.getText().toString()+"-"+etMonthBirth.getText().toString()+"-"+etDateBrith.getText().toString();
+            bln_lahir = etMonthBirth.getText().toString();
+            thn_lahir = etYearBirth.getText().toString();
+            handphone_1 = etHp1.getText().toString();
+            handphone_2 = etHp2.getText().toString();
+            nama_ibu_kandung = etMotherName.getText().toString();
+            nama_perusahaan = etCompanyName.getText().toString();
+            alamat_perusahaan = etCompanyAddress.getText().toString();
+            telephone_kantor = etCompanyPhone.getText().toString();
+            nama_emergency_contact = etEmergencyName.getText().toString();
+            hubungan = etEmergencyRelationship.getText().toString();
+
+            stateTransactionSales.createStateInpuForm(nama, nik, tanggal_lahir, handphone_1, handphone_2,nama_ibu_kandung,
+                    nama_perusahaan,alamat_perusahaan,telephone_kantor,nama_emergency_contact,hubungan,sales_code,sales_name);
+            Intent intent = new Intent(this, FormUploadDocumentSelfie.class);
             startActivity(intent);
         }
     }
+
+    String nama, nik, tanggal_lahir,bln_lahir,thn_lahir, handphone_1,
+    handphone_2, nama_ibu_kandung, nama_perusahaan,
+    alamat_perusahaan, telephone_kantor, nama_emergency_contact,
+    hubungan, sales_code, sales_name;
+
+    SessionManagement sessionManagement;
+    StateTransactionSales stateTransactionSales;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_data_form);
         ButterKnife.bind(this);
+
+        sessionManagement = new SessionManagement(this);
+        stateTransactionSales = new StateTransactionSales(this);
     }
 }

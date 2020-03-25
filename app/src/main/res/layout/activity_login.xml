@@ -60,7 +60,6 @@
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/et_nik"
                             style="@style/edit_text_input"
-                            android:inputType="number"
                             android:hint="NIK" />
                     </com.google.android.material.textfield.TextInputLayout>
 

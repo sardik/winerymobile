@@ -215,7 +215,6 @@
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/card_bank_uob"
                     android:layout_marginTop="@dimen/default_margin_small"
-                    android:layout_marginBottom="@dimen/default_margin_small"
                     style="@style/card_bank_selection">
 
                     <LinearLayout
@@ -229,6 +228,27 @@
 
                         <ImageView
                             android:id="@+id/iv_uob"
+                            style="@style/iv_checked_bank"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_bank_mega"
+                    android:layout_marginTop="@dimen/default_margin_small"
+                    android:layout_marginBottom="@dimen/default_margin_small"
+                    style="@style/card_bank_selection">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            style="@style/tv_name_bank"
+                            android:id="@+id/tv_bank_mega"
+                            android:text="MEGA"/>
+
+                        <ImageView
+                            android:id="@+id/iv_mega"
                             style="@style/iv_checked_bank"/>
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>

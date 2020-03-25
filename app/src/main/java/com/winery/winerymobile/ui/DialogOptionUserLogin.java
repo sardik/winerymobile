@@ -44,6 +44,7 @@ public class DialogOptionUserLogin extends BottomSheetDialogFragment {
         Intent intent = new Intent(getContext(), LoginActivity.class);
         intent.putExtra("loginAs", "sales");
         startActivity(intent);
+        getActivity().finishAffinity();
     }
 
     @OnClick(R.id.verifikator) void loginverif(){
@@ -51,6 +52,7 @@ public class DialogOptionUserLogin extends BottomSheetDialogFragment {
         Intent intent = new Intent(getContext(), LoginActivity.class);
         intent.putExtra("loginAs", "verifikator");
         startActivity(intent);
+        getActivity().finishAffinity();
     }
 
     @OnClick(R.id.juru_tulis) void loginjurutulis(){
@@ -58,6 +60,7 @@ public class DialogOptionUserLogin extends BottomSheetDialogFragment {
         Intent intent = new Intent(getContext(), LoginActivity.class);
         intent.putExtra("loginAs", "jurutulis");
         startActivity(intent);
+        getActivity().finishAffinity();
     }
 
     public DialogOptionUserLogin() {

@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_gravity="bottom"
+    app:cardBackgroundColor="@color/colorPrimary"
     android:orientation="vertical"
     app:cardCornerRadius="@dimen/default_margin_small"
     tools:context=".ui.DialogOptionUserLogin">
@@ -12,7 +13,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/white"
         android:orientation="vertical">
 
         <LinearLayout
@@ -21,13 +21,12 @@
             android:orientation="vertical"
             android:layout_marginStart="@dimen/default_margin_small"
             android:layout_marginTop="@dimen/default_margin_small"
-            android:layout_marginEnd="@dimen/default_margin_small"
-            android:background="@android:color/white">
+            android:layout_marginEnd="@dimen/default_margin_small">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:textStyle="bold"
                 android:gravity="center"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
@@ -53,14 +52,13 @@
                         android:textStyle="bold"
                         android:textSize="@dimen/font_size_14"
                         android:text="Sales"
-                        android:textColor="@android:color/black"/>
+                        android:textColor="@android:color/white"/>
 
                     <ImageView
                         android:layout_width="@dimen/default_ic_size_medium"
                         android:layout_height="@dimen/default_ic_size_medium"
                         android:layout_alignParentEnd="true"
                         android:src="@drawable/ic_arrow_left"
-                        android:tint="@android:color/black"
                         android:rotation="180"/>
                 </RelativeLayout>
 
@@ -78,14 +76,13 @@
                         android:layout_centerInParent="true"
                         android:textStyle="bold"
                         android:textSize="@dimen/font_size_14"
-                        android:textColor="@android:color/black"/>
+                        android:textColor="@android:color/white"/>
 
                     <ImageView
                         android:layout_width="@dimen/default_ic_size_medium"
                         android:layout_height="@dimen/default_ic_size_medium"
                         android:layout_alignParentEnd="true"
                         android:src="@drawable/ic_arrow_left"
-                        android:tint="@android:color/black"
                         android:rotation="180"/>
                 </RelativeLayout>
 
@@ -103,14 +100,13 @@
                         android:layout_centerInParent="true"
                         android:textStyle="bold"
                         android:textSize="@dimen/font_size_14"
-                        android:textColor="@android:color/black"/>
+                        android:textColor="@android:color/white"/>
 
                     <ImageView
                         android:layout_width="@dimen/default_ic_size_medium"
                         android:layout_height="@dimen/default_ic_size_medium"
                         android:layout_alignParentEnd="true"
                         android:src="@drawable/ic_arrow_left"
-                        android:tint="@android:color/black"
                         android:rotation="180"/>
                 </RelativeLayout>
 

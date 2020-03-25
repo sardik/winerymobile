@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.winery.winerymobile.R;
+import com.winery.winerymobile.ui.dbhelper.StateTransactionSales;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -76,6 +77,12 @@ public class BankSubmissionForm extends AppCompatActivity {
     TextView tvBankUob;
     @BindView(R.id.iv_uob)
     ImageView ivUob;
+    @BindView(R.id.card_bank_mega)
+    com.google.android.material.card.MaterialCardView cardBankMega;
+    @BindView(R.id.tv_bank_mega)
+    TextView tvBankMega;
+    @BindView(R.id.iv_mega)
+    ImageView ivMega;
     @BindView(R.id.btn_next)
     com.google.android.material.button.MaterialButton btnNext;
     @BindView(R.id.btn_back)
@@ -86,10 +93,12 @@ public class BankSubmissionForm extends AppCompatActivity {
         Log.d("tag", "selectedBri: "+ivBri.isSelected());
         if(ivBri.isSelected()){
             ivBri.setSelected(false);
+            bri = "NO";
             ivBri.setColorFilter(ContextCompat.getColor(this, R.color.colorWhite), android.graphics.PorterDuff.Mode.MULTIPLY);
         }else{
             ivBri.setSelected(true);
             ivBri.setColorFilter(ContextCompat.getColor(this, R.color.green_600), android.graphics.PorterDuff.Mode.MULTIPLY);
+            bri = "YES";
         }
     }
 
@@ -97,9 +106,11 @@ public class BankSubmissionForm extends AppCompatActivity {
         if(ivBni.isSelected()){
             ivBni.setSelected(false);
             ivBni.setColorFilter(ContextCompat.getColor(this, R.color.colorWhite), android.graphics.PorterDuff.Mode.MULTIPLY);
+            bni = "NO";
         }else{
             ivBni.setSelected(true);
             ivBni.setColorFilter(ContextCompat.getColor(this, R.color.green_600), android.graphics.PorterDuff.Mode.MULTIPLY);
+            bni = "YES";
         }
     }
 
@@ -107,9 +118,11 @@ public class BankSubmissionForm extends AppCompatActivity {
         if(ivBca.isSelected()){
             ivBca.setSelected(false);
             ivBca.setColorFilter(ContextCompat.getColor(this, R.color.colorWhite), android.graphics.PorterDuff.Mode.MULTIPLY);
+            bca = "NO";
         }else{
             ivBca.setSelected(true);
             ivBca.setColorFilter(ContextCompat.getColor(this, R.color.green_600), android.graphics.PorterDuff.Mode.MULTIPLY);
+            bca = "YES";
         }
     }
 
@@ -117,9 +130,11 @@ public class BankSubmissionForm extends AppCompatActivity {
         if(ivCimb.isSelected()){
             ivCimb.setSelected(false);
             ivCimb.setColorFilter(ContextCompat.getColor(this, R.color.colorWhite), android.graphics.PorterDuff.Mode.MULTIPLY);
+            cimb = "NO";
         }else{
             ivCimb.setSelected(true);
             ivCimb.setColorFilter(ContextCompat.getColor(this, R.color.green_600), android.graphics.PorterDuff.Mode.MULTIPLY);
+            cimb = "YES";
         }
     }
 
@@ -127,9 +142,11 @@ public class BankSubmissionForm extends AppCompatActivity {
         if(ivMayapada.isSelected()){
             ivMayapada.setSelected(false);
             ivMayapada.setColorFilter(ContextCompat.getColor(this, R.color.colorWhite), android.graphics.PorterDuff.Mode.MULTIPLY);
+            mayapada = "NO";
         }else{
             ivMayapada.setSelected(true);
             ivMayapada.setColorFilter(ContextCompat.getColor(this, R.color.green_600), android.graphics.PorterDuff.Mode.MULTIPLY);
+            mayapada = "YES";
         }
     }
 
@@ -137,9 +154,11 @@ public class BankSubmissionForm extends AppCompatActivity {
         if(ivDbs.isSelected()){
             ivDbs.setSelected(false);
             ivDbs.setColorFilter(ContextCompat.getColor(this, R.color.colorWhite), android.graphics.PorterDuff.Mode.MULTIPLY);
+            dbs = "NO";
         }else{
             ivDbs.setSelected(true);
             ivDbs.setColorFilter(ContextCompat.getColor(this, R.color.green_600), android.graphics.PorterDuff.Mode.MULTIPLY);
+            dbs = "YES";
         }
     }
 
@@ -147,9 +166,11 @@ public class BankSubmissionForm extends AppCompatActivity {
         if(ivMnc.isSelected()){
             ivMnc.setSelected(false);
             ivMnc.setColorFilter(ContextCompat.getColor(this, R.color.colorWhite), android.graphics.PorterDuff.Mode.MULTIPLY);
+            mnc = "NO";
         }else{
             ivMnc.setSelected(true);
             ivMnc.setColorFilter(ContextCompat.getColor(this, R.color.green_600), android.graphics.PorterDuff.Mode.MULTIPLY);
+            mnc = "YES";
         }
     }
 
@@ -157,9 +178,23 @@ public class BankSubmissionForm extends AppCompatActivity {
         if(ivUob.isSelected()){
             ivUob.setSelected(false);
             ivUob.setColorFilter(ContextCompat.getColor(this, R.color.colorWhite), android.graphics.PorterDuff.Mode.MULTIPLY);
+            uob = "NO";
         }else{
             ivUob.setSelected(true);
             ivUob.setColorFilter(ContextCompat.getColor(this, R.color.green_600), android.graphics.PorterDuff.Mode.MULTIPLY);
+            uob = "YES";
+        }
+    }
+
+    @OnClick(R.id.card_bank_mega) void selectedMega(){
+        if(ivMega.isSelected()){
+            ivMega.setSelected(false);
+            ivMega.setColorFilter(ContextCompat.getColor(this, R.color.colorWhite), android.graphics.PorterDuff.Mode.MULTIPLY);
+            mega = "NO";
+        }else{
+            ivMega.setSelected(true);
+            ivMega.setColorFilter(ContextCompat.getColor(this, R.color.green_600), android.graphics.PorterDuff.Mode.MULTIPLY);
+            mega = "YES";
         }
     }
 
@@ -175,18 +210,24 @@ public class BankSubmissionForm extends AppCompatActivity {
             !ivMayapada.isSelected() &&
             !ivDbs.isSelected() &&
             !ivMnc.isSelected() &&
-            !ivUob.isSelected()){
+            !ivUob.isSelected() &&
+            !ivMega.isSelected()){
 
             selectionValidate();
         }else{
+            // saving state
+            stateTransactionSales.createStateBank(bri, bni, bca, cimb, mayapada, dbs, mnc, uob, mega);
             Intent intent = new Intent(this, CustomerDataForm.class);
             startActivity(intent);
+
         }
     }
 
 
 
-
+    StateTransactionSales stateTransactionSales;
+    String bri = "NO", bni = "NO", bca = "NO", cimb = "NO", mayapada = "NO", dbs = "NO",
+            mnc = "NO" , uob = "NO", mega = "NO";
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -202,6 +243,10 @@ public class BankSubmissionForm extends AppCompatActivity {
         ivDbs.setSelected(false);
         ivMnc.setSelected(false);
         ivUob.setSelected(false);
+        ivMega.setSelected(false);
+
+
+        stateTransactionSales = new StateTransactionSales(this);
     }
 
     public void selectionValidate(){

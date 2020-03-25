@@ -121,6 +121,7 @@
                                 android:id="@+id/et_date_brith"
                                 style="@style/edit_text_input"
                                 android:inputType="number"
+                                android:maxLength="2"
                                 android:hint="dd" />
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -153,7 +154,8 @@
                                 android:id="@+id/et_year_birth"
                                 style="@style/edit_text_input"
                                 android:inputType="number"
-                                android:hint="yy" />
+                                android:maxLength="4"
+                                android:hint="yyyy" />
                         </com.google.android.material.textfield.TextInputLayout>
                     </LinearLayout>
 

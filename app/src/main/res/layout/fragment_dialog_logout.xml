@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="bottom"
+    app:cardCornerRadius="@dimen/default_margin_small"
+    tools:context=".ui.DialogLogout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin_small"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_size_24"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@android:color/darker_gray"
+            android:text="Logout"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_size_14"
+            android:gravity="center"
+            android:textColor="@android:color/darker_gray"
+            android:text="Anda yakin ingin keluar?"/>
+
+
+        <LinearLayout
+            android:paddingTop="@dimen/default_margin_small"
+            android:paddingBottom="@dimen/default_margin_small"
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/default_margin_medium"
+            android:layout_marginEnd="@dimen/default_margin_medium"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_Yes"
+                style="@style/default_button"
+                android:layout_marginTop="0dp"
+                app:backgroundTint="@color/colorPrimary"
+                app:rippleColor="@color/deep_purple_200"
+                android:text="Ya"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_cancel"
+                style="@style/default_button"
+                android:layout_marginTop="0dp"
+                app:backgroundTint="@android:color/black"
+                android:textColor="@android:color/white"
+                app:rippleColor="@color/deep_purple_200"
+                android:text="Cancel"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

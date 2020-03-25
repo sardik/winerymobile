@@ -82,7 +82,7 @@
                     <ImageView
                         android:id="@+id/iv_user"
                         android:layout_width="@dimen/default_ic_size_large"
-                        android:layout_height="@dimen/default_ic_size_large"
+                        android:layout_height="100dp"
                         android:src="@drawable/logo_user"/>
 
                     <LinearLayout
@@ -93,6 +93,7 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tv_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@android:color/black"
@@ -100,12 +101,24 @@
                             android:text="Nama Lengkap"/>
 
                         <TextView
+                            android:id="@+id/tv_code"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@android:color/black"
                             android:textSize="@dimen/font_size_14"
                             android:text="1120294"/>
+
                     </LinearLayout>
+                    <TextView
+                        android:id="@+id/tv_position"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/font_size_14"
+                        android:layout_marginEnd="@dimen/default_margin_small"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentEnd="true"
+                        android:text="Divisi"/>
                 </RelativeLayout>
 
             </androidx.cardview.widget.CardView>
