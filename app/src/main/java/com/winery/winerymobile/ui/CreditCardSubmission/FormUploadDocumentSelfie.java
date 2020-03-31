@@ -232,6 +232,14 @@ public class FormUploadDocumentSelfie extends AppCompatActivity {
         stateTransactionSales = new StateTransactionSales(this);
         sessionManagement = new SessionManagement(this);
 
+        // get user data from session
+        HashMap<String, String> user = sessionManagement.getUserDetails();
+        String region = user.get(SessionManagement.KEY_REGION);
+
+        if(region.equals("MAKASSAR")){
+            ivSelfieMayapada.setVisibility(View.GONE);
+        }
+
     }
 
     @Override

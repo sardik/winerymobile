@@ -38,6 +38,10 @@ public class SessionManagement {
     public static final String KEY_SALES_CODE = "sales_code";
     public static final String KEY_STATUS = "status";
     public static final String KEY_PASSWORD = "password";
+    public static final String KEY_REGION = "password";
+    public static final String KEY_LOGIN_AS = "login_as";
+
+    public static final String KEY_TRANSACTION_ID = "transaction_id";
 
     // Constructor
     public SessionManagement(Context context){
@@ -49,7 +53,7 @@ public class SessionManagement {
     /**
      * Create login session
      * */
-    public void createLoginSession(String name, String alias, String position, String level, String sales_code, String status, String password){
+    public void createLoginSession(String name, String alias, String position, String level, String sales_code, String status, String password, String region, String login_as){
         // Storing login value as TRUE
         editor.putBoolean(IS_LOGIN, true);
 
@@ -61,6 +65,16 @@ public class SessionManagement {
         editor.putString(KEY_SALES_CODE, sales_code);
         editor.putString(KEY_STATUS, status);
         editor.putString(KEY_PASSWORD, password);
+        editor.putString(KEY_REGION, region);
+        editor.putString(KEY_LOGIN_AS, login_as);
+        // commit changes
+        editor.commit();
+    }
+
+    public void savetransactionID(String transaction_id){
+
+        // Storing name in pref
+        editor.putString(KEY_TRANSACTION_ID, transaction_id);
         // commit changes
         editor.commit();
     }
@@ -99,6 +113,17 @@ public class SessionManagement {
         user.put(KEY_ALIAS, pref.getString(KEY_ALIAS, null));
         user.put(KEY_SALES_CODE, pref.getString(KEY_SALES_CODE, null));
         user.put(KEY_POSITION, pref.getString(KEY_POSITION, null));
+        user.put(KEY_REGION, pref.getString(KEY_REGION, null));
+        user.put(KEY_LOGIN_AS, pref.getString(KEY_LOGIN_AS, null));
+
+        // return user
+        return user;
+    }
+
+    public HashMap<String, String> getTransactionID(){
+        HashMap<String, String> user = new HashMap<String, String>();
+        // user data
+        user.put(KEY_TRANSACTION_ID, pref.getString(KEY_TRANSACTION_ID, null));
 
         // return user
         return user;

@@ -30,18 +30,6 @@ import butterknife.ButterKnife;
 public class ParentHomeActivity extends AppCompatActivity {
 
     /** ButterKnife Code **/
-    @BindView(R.id.rl_header_home)
-    LinearLayout rlHeaderHome;
-    @BindView(R.id.search_bar)
-    androidx.cardview.widget.CardView searchBar;
-    @BindView(R.id.iv_user)
-    ImageView ivUser;
-    @BindView(R.id.tv_name)
-    TextView tvName;
-    @BindView(R.id.tv_code)
-    TextView tvCode;
-    @BindView(R.id.tv_position)
-    TextView tvPosition;
     @BindView(R.id.fragment)
     FrameLayout fragment;
     @BindView(R.id.navigation)
@@ -56,27 +44,11 @@ public class ParentHomeActivity extends AppCompatActivity {
     private Fragment messageFragment = null;
     private Fragment profileFragment = null;
 
-    SessionManagement sessionManagement;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parent_home);
         ButterKnife.bind(this);
-
-        sessionManagement = new SessionManagement(getApplicationContext());
-
-        // get user data from session
-        HashMap<String, String> user = sessionManagement.getUserDetails();
-        String name = user.get(SessionManagement.KEY_NAME);
-        String code = user.get(SessionManagement.KEY_SALES_CODE);
-        String position = user.get(SessionManagement.KEY_POSITION);
-
-        tvName.setText(name);
-        tvCode.setText(code);
-        tvPosition.setText(position);
-
-        Log.d("code ", "code "+code);
 
         bottomNavigationView = findViewById(R.id.navigation);
         initComponentNavigation();

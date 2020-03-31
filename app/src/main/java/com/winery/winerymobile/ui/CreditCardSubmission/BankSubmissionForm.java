@@ -12,7 +12,10 @@ import android.widget.TextView;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.winery.winerymobile.R;
+import com.winery.winerymobile.ui.dbhelper.SessionManagement;
 import com.winery.winerymobile.ui.dbhelper.StateTransactionSales;
+
+import java.util.HashMap;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -224,7 +227,7 @@ public class BankSubmissionForm extends AppCompatActivity {
     }
 
 
-
+    SessionManagement sessionManagement;
     StateTransactionSales stateTransactionSales;
     String bri = "NO", bni = "NO", bca = "NO", cimb = "NO", mayapada = "NO", dbs = "NO",
             mnc = "NO" , uob = "NO", mega = "NO";
@@ -234,6 +237,22 @@ public class BankSubmissionForm extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bank_submission_form);
         ButterKnife.bind(this);
+
+        sessionManagement = new SessionManagement(this);
+
+        // get user data from session
+        HashMap<String, String> user = sessionManagement.getUserDetails();
+        String name = user.get(SessionManagement.KEY_NAME);
+        String code = user.get(SessionManagement.KEY_SALES_CODE);
+        String position = user.get(SessionManagement.KEY_POSITION);
+        String region = user.get(SessionManagement.KEY_REGION);
+
+        if(region.equals("MAKASSAR")){
+            cardBankBca.setVisibility(View.GONE);
+            cardBankMayapada.setVisibility(View.GONE);
+            cardBankDbs.setVisibility(View.GONE);
+            cardBankMnc.setVisibility(View.GONE);
+        }
 
         ivBri.setSelected(false);
         ivBni.setSelected(false);

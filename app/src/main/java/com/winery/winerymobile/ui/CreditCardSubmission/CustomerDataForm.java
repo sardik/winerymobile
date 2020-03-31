@@ -4,7 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.InputFilter;
+import android.text.TextWatcher;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.ImageView;
+import android.widget.PopupMenu;
+import android.widget.Toast;
 
 import com.winery.winerymobile.R;
 import com.winery.winerymobile.ui.dbhelper.SessionManagement;
@@ -15,6 +23,8 @@ import java.util.HashMap;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+
+import static java.security.AccessController.getContext;
 
 public class CustomerDataForm extends AppCompatActivity {
 
@@ -81,8 +91,10 @@ public class CustomerDataForm extends AppCompatActivity {
     com.google.android.material.textfield.TextInputEditText etEmergencyName;
     @BindView(R.id.ti_emergency_relationship)
     com.google.android.material.textfield.TextInputLayout tiEmergencyRelationship;
+//    @BindView(R.id.et_emergency_relationship)
+//    com.google.android.material.textfield.TextInputEditText etEmergencyRelationship;
     @BindView(R.id.et_emergency_relationship)
-    com.google.android.material.textfield.TextInputEditText etEmergencyRelationship;
+    AutoCompleteTextView etEmergencyRelationship;
     @BindView(R.id.btn_next)
     com.google.android.material.button.MaterialButton btnNext;
     @BindView(R.id.btn_back)
@@ -185,6 +197,44 @@ public class CustomerDataForm extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_data_form);
         ButterKnife.bind(this);
+
+
+        StringBuilder sb=new StringBuilder();
+
+        String[] relationship = new String[] {"ORANG TUA", "SUAMI / ISTRI", "KAKAK", "ADIK",
+                                                "IPAR","PAMAN","BIBI","SEPUPU","KEPONAKAN","ANAK","MERTUA","SAUDARA"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.dropdown_menu_popup_item, relationship);
+        etEmergencyRelationship.setAdapter(adapter);
+
+        etDateBrith.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean hasFocus) {
+                if (!hasFocus) {
+                    if(etDateBrith.getText().toString().length() == 1){
+                        etDateBrith.setText("0"+etDateBrith.getText().toString());
+                    }
+                }
+            }
+        });
+
+        etMonthBirth.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean hasFocus) {
+                if (!hasFocus) {
+                    if(etMonthBirth.getText().toString().length() == 1){
+                        etMonthBirth.setText("0"+etMonthBirth.getText().toString());
+                    }
+                }
+            }
+        });
+
+        // Allcaps text
+        etName.setFilters(new InputFilter[]{new InputFilter.AllCaps()});
+        etMotherName.setFilters(new InputFilter[]{new InputFilter.AllCaps()});
+        etCompanyName.setFilters(new InputFilter[]{new InputFilter.AllCaps()});
+        etCompanyAddress.setFilters(new InputFilter[]{new InputFilter.AllCaps()});
+        etEmergencyRelationship.setFilters(new InputFilter[]{new InputFilter.AllCaps()});
+        etEmergencyName.setFilters(new InputFilter[]{new InputFilter.AllCaps()});
 
         sessionManagement = new SessionManagement(this);
         stateTransactionSales = new StateTransactionSales(this);

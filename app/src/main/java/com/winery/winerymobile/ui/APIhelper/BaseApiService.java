@@ -18,8 +18,18 @@ public interface BaseApiService {
     // login
     @FormUrlEncoded
     @POST("sales_login")
-    Call<ResponseBody> loginRequest(@Field("sales_code") String email,
+    Call<ResponseBody> loginRequestSales(@Field("sales_code") String email,
                                     @Field("password") String password);
+
+    @FormUrlEncoded
+    @POST("verify_login")
+    Call<ResponseBody> loginRequestVerif(@Field("verify_code") String email,
+                                         @Field("password") String password);
+
+    @FormUrlEncoded
+    @POST("juru_tulis_login")
+    Call<ResponseBody> loginRequestJurtul(@Field("juru_tulis_code") String email,
+                                         @Field("password") String password);
 
 //    @Multipart
 //    @POST("sales_input")
@@ -65,5 +75,62 @@ public interface BaseApiService {
     @FormUrlEncoded
     @POST("sales_change_password")
     Call<ResponseBody> ChangePasswordSalesRequest(@Field("sales_code") String salesCode,
-                                    @Field("new_password") String newPassword);
+                                    @Field("new_password") String newPassword,
+                                                  @Field("old_password") String oldPassword);
+
+    // change password verif
+    @FormUrlEncoded
+    @POST("verify_change_password")
+    Call<ResponseBody> ChangePasswordVerifRequest(@Field("verify_code") String salesCode,
+                                                  @Field("new_password") String newPassword,
+                                                  @Field("old_password") String oldPassword);
+
+    // change password jurtul
+    @FormUrlEncoded
+    @POST("juru_tulis_change_password")
+    Call<ResponseBody> ChangePasswordJurtulRequest(@Field("juru_tulis_code") String salesCode,
+                                                  @Field("new_password") String newPassword,
+                                                  @Field("old_password") String oldPassword);
+
+    // get history cc
+    @FormUrlEncoded
+    @POST("history_input_sales")
+    Call<ResponseBody> getListHistoryCc(@Field("start_date") String startDate,
+                                                   @Field("end_date") String endDate,
+                                                   @Field("sales_code") String salesCode);
+
+    // get verify transaction history cc
+    @FormUrlEncoded
+    @POST("verify_transaction_list")
+    Call<ResponseBody> getListVerifyTransactionList(@Field("start_date") String startDate,
+                                                    @Field("end_date") String endDate,
+                                                    @Field("verify_code") String verifyCode);
+
+
+    // history input verif
+    @FormUrlEncoded
+    @POST("history_input_verify")
+    Call<ResponseBody> getListVerifyHistoryInputVerif(@Field("start_date") String startDate,
+                                                    @Field("end_date") String endDate,
+                                                    @Field("verify_code") String verifyCode);
+
+    // get history cc detail
+    @FormUrlEncoded
+    @POST("detail_history_input_sales")
+    Call<ResponseBody> getListDetailHistoryCc(@Field("transaction_id") String transactionId);
+
+
+    // verivy input
+    @Multipart
+    @POST("verify_sales_input")
+    Call<ResponseBody> verifySalesInput(@Part MultipartBody.Part photoDataKotor,
+                                  @PartMap Map<String, RequestBody> text);
+
+
+    // get list pending data juru tulis
+    @FormUrlEncoded
+    @POST("juru_tulis_list")
+    Call<ResponseBody> getListdataPendingJurtul(@Field("start_date") String startDate,
+                                                @Field("end_date") String endDate,
+                                                @Field("juru_tulis_code") String jurtulCode);
 }

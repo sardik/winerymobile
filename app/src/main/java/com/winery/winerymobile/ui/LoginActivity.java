@@ -63,13 +63,23 @@ public class LoginActivity extends AppCompatActivity {
 
     @OnClick(R.id.btn_login) void login(){
 
+        Intent intent = getIntent();
+        String loginAs = intent.getStringExtra("loginAs");
+
         if(etNik.getText().toString().equals("") || etNik.getText().toString().equals(null)){
             tiNik.setError("Nik harus di isi");
         }else if(etPassword.getText().toString().equals("") || etPassword.getText().toString().equals(null)){
             tiPassword.setError("password harus di isi");
         }else{
             loading = ProgressDialog.show(mContext, null, "Harap Tunggu...", true, false);
-            requestLogin();
+
+            if(loginAs.equals("sales")){
+                requestLoginSales();
+            }else if(loginAs.equals("verifikator")){
+                requestLoginVerif();
+            }else if(loginAs.equals("jurutulis")){
+                requestLoginJurtul();
+            }
 
         }
     }
@@ -90,8 +100,8 @@ public class LoginActivity extends AppCompatActivity {
         sessionManagement = new SessionManagement(getApplicationContext());
     }
 
-    private void requestLogin(){
-        mApiService.loginRequest(etNik.getText().toString(), etPassword.getText().toString())
+    private void requestLoginSales(){
+        mApiService.loginRequestSales(etNik.getText().toString(), etPassword.getText().toString())
                 .enqueue(new Callback<ResponseBody>() {
                     @Override
                     public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
@@ -108,11 +118,116 @@ public class LoginActivity extends AppCompatActivity {
                                     String sales_code = jsonRESULTS.getJSONObject("data").getString("sales_code");
                                     String status = jsonRESULTS.getJSONObject("data").getString("status");
                                     String password = jsonRESULTS.getJSONObject("data").getString("password");
+                                    String region = jsonRESULTS.getJSONObject("data").getString("region");
+
+
+
+                                    // saving state
+                                    sessionManagement.createLoginSession(nama, alias, position, level, sales_code, status, password, region, "sales");
+
+                                    Intent intent = new Intent(LoginActivity.this, ParentHomeActivity.class);
+                                    startActivity(intent);
+                                    finish();
+                                } else {
+                                    // Jika login gagal
+                                    String error_message = jsonRESULTS.getString("message");
+                                    Toast.makeText(LoginActivity.this, error_message, Toast.LENGTH_SHORT).show();
+                                }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        } else {
+                            loading.dismiss();
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<ResponseBody> call, Throwable t) {
+                        Log.e("debug", "onFailure: ERROR > " + t.toString());
+                        loading.dismiss();
+                    }
+                });
+    }
+
+    private void requestLoginVerif(){
+        mApiService.loginRequestVerif(etNik.getText().toString(), etPassword.getText().toString())
+                .enqueue(new Callback<ResponseBody>() {
+                    @Override
+                    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                        if (response.isSuccessful()){
+                            loading.dismiss();
+                            try {
+                                JSONObject jsonRESULTS = new JSONObject(response.body().string());
+                                if (jsonRESULTS.getInt("status") == 200){
+
+                                    String nama = jsonRESULTS.getJSONObject("data").getString("name");
+                                    String alias = jsonRESULTS.getJSONObject("data").getString("alias");
+                                    String position = jsonRESULTS.getJSONObject("data").getString("position");
+                                    String level = jsonRESULTS.getJSONObject("data").getString("level");
+                                    String sales_code = jsonRESULTS.getJSONObject("data").getString("verify_code");
+                                    String status = jsonRESULTS.getJSONObject("data").getString("status");
+                                    String password = jsonRESULTS.getJSONObject("data").getString("password");
+                                    String region = "";
+
 
                                     Log.d("code ", "code "+sales_code);
 
                                     // saving state
-                                    sessionManagement.createLoginSession(nama, alias, position, level, sales_code, status, password);
+                                    sessionManagement.createLoginSession(nama, alias, position, level, sales_code, status, password, region, "verifikator");
+
+                                    Intent intent = new Intent(LoginActivity.this, ParentHomeActivity.class);
+                                    startActivity(intent);
+                                    finish();
+                                } else {
+                                    // Jika login gagal
+                                    String error_message = jsonRESULTS.getString("message");
+                                    Toast.makeText(LoginActivity.this, error_message, Toast.LENGTH_SHORT).show();
+                                }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        } else {
+                            loading.dismiss();
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<ResponseBody> call, Throwable t) {
+                        Log.e("debug", "onFailure: ERROR > " + t.toString());
+                        loading.dismiss();
+                    }
+                });
+    }
+
+    private void requestLoginJurtul(){
+        mApiService.loginRequestJurtul(etNik.getText().toString(), etPassword.getText().toString())
+                .enqueue(new Callback<ResponseBody>() {
+                    @Override
+                    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                        if (response.isSuccessful()){
+                            loading.dismiss();
+                            try {
+                                JSONObject jsonRESULTS = new JSONObject(response.body().string());
+                                if (jsonRESULTS.getInt("status") == 200){
+
+                                    String nama = jsonRESULTS.getJSONObject("data").getString("name");
+                                    String alias = jsonRESULTS.getJSONObject("data").getString("alias");
+                                    String position = jsonRESULTS.getJSONObject("data").getString("position");
+                                    String level = jsonRESULTS.getJSONObject("data").getString("level");
+                                    String sales_code = jsonRESULTS.getJSONObject("data").getString("juru_tulis_code");
+                                    String status = jsonRESULTS.getJSONObject("data").getString("status");
+                                    String password = jsonRESULTS.getJSONObject("data").getString("password");
+                                    String region = "";
+
+
+                                    Log.d("code ", "code "+sales_code);
+
+                                    // saving state
+                                    sessionManagement.createLoginSession(nama, alias, position, level, sales_code, status, password, region, "jurutulis" );
 
                                     Intent intent = new Intent(LoginActivity.this, ParentHomeActivity.class);
                                     startActivity(intent);

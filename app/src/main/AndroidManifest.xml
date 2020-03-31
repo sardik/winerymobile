@@ -5,16 +5,22 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
-<!--    android:networkSecurityConfig="@xml/network_security_config"-->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_winery_white"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".ui.ListHistoryEntryCC"></activity>
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".ui.JurtulTransaction.ListTransactionDetailPendingJurtul"></activity>
+        <activity android:name=".ui.JurtulTransaction.ListTransacationPendingJurtul" />
+        <activity android:name=".ui.DetailHistoryTransaksiInputVerif" />
+        <activity android:name=".ui.VerifikatorTransaction.FormSubmitData" />
+        <activity android:name=".ui.VerifikatorTransaction.ListTransactionDetailWaitingVerif" />
+        <activity android:name=".ui.VerifikatorTransaction.ListTransactionWaitingVerif" />
+        <activity android:name=".ui.DetailHistoryTransactionInputSales" />
+        <activity android:name=".ui.ListHistoryEntryCC" />
         <activity android:name=".ui.CreditCardSubmission.FormUploadDocumentSelfie" />
         <activity android:name=".ui.CreditCardSubmission.FormUploadDocument" />
         <activity

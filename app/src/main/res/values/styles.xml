@@ -54,6 +54,18 @@
         <item name="hintEnabled">false</item>
     </style>
 
+    <style name="text_input_basic_dropdown" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="android:layout_width">match_parent</item>
+        <item name="errorTextColor">@android:color/holo_red_dark</item>
+        <!--        <item name="errorIconDrawable">@null</item>-->
+        <!--        <item name="boxStrokeWidthFocused">0dp</item>-->
+        <!--        <item name="boxBackgroundColor">@android:color/white</item>-->
+        <item name="android:layout_height">wrap_content</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeColor">@android:color/black</item>
+        <item name="hintEnabled">false</item>
+    </style>
+
     <style name="edit_text_input">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -186,5 +198,11 @@
         <item name="android:textColor">@android:color/darker_gray</item>
         <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Caption</item>
         <item name="android:layout_alignParentStart">true</item>
+    </style>
+
+    <style name="tab_text_appereance">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">bold</item>
     </style>
 </resources>

@@ -11,91 +11,66 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:minHeight="?attr/actionBarSize">
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:minHeight="?attr/actionBarSize"
+                app:theme="@style/AppTheme">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Riwayat"
+                    android:gravity="center"
+                    android:layout_marginEnd="@dimen/default_margin_small"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/font_size_16"/>
+
+                <ImageView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="@dimen/default_ic_size_large"
+                    android:layout_height="@dimen/default_ic_size_large"
+                    style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+                    android:src="@drawable/logo_white"
+                    android:layout_marginEnd="@dimen/default_margin_small"
+                    android:layout_gravity="end"/>
+            </com.google.android.material.appbar.MaterialToolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="@dimen/default_margin_small"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:background="@android:color/white">
 
-            <LinearLayout
-                android:id="@+id/ll_menu_kartu_kredit"
-                style="@style/ll_container_item_menu_header">
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:background="@android:color/white"
+                app:tabGravity="fill"
+                app:tabTextAppearance="@style/tab_text_appereance"
+                app:tabSelectedTextColor="@color/colorPrimary"
+                app:tabTextColor="@android:color/black"
+                app:tabIndicatorColor="@color/colorPrimary"
+                app:tabMode="fixed" />
 
-                <com.google.android.material.card.MaterialCardView
-                    style="@style/rl_parent_image_item_menu"
-                    app:cardCornerRadius="10dp">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <ImageView
-                            style="@style/iv_item_menu_home"
-                            android:src="@drawable/ic_kartu_kredit"/>
-
-                    </RelativeLayout>
-
-                </com.google.android.material.card.MaterialCardView>
-
-                <TextView
-                    style="@style/tv_title_menu_home"
-                    android:text="Kartu Kredit" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/ll_menu_kartu_tambahan"
-                style="@style/ll_container_item_menu_header">
-
-                <com.google.android.material.card.MaterialCardView
-                    style="@style/rl_parent_image_item_menu"
-                    app:cardCornerRadius="10dp">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <ImageView
-                            style="@style/iv_item_menu_home"
-                            android:src="@drawable/ic_kartu_tambahan"/>
-
-                    </RelativeLayout>
-
-                </com.google.android.material.card.MaterialCardView>
-
-                <TextView
-                    style="@style/tv_title_menu_home"
-                    android:text="Kartu Tambahan"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/ll_menu_kta"
-                style="@style/ll_container_item_menu_header">
-
-                <com.google.android.material.card.MaterialCardView
-                    style="@style/rl_parent_image_item_menu"
-                    android:backgroundTint="@android:color/darker_gray"
-                    app:cardCornerRadius="10dp">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <ImageView
-                            style="@style/iv_item_menu_home"
-                            android:src="@drawable/ic_menu_kta"/>
-
-                    </RelativeLayout>
-
-                </com.google.android.material.card.MaterialCardView>
-
-                <TextView
-                    style="@style/tv_title_menu_home"
-                    android:textColor="@android:color/darker_gray"
-                    android:text="KTA"/>
-            </LinearLayout>
-
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_marginStart="@dimen/default_margin_small"
+                android:layout_marginEnd="@dimen/default_margin_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
 
     </LinearLayout>
