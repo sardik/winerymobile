@@ -324,6 +324,7 @@
                             android:orientation="vertical">
 
                             <RelativeLayout
+                                android:id="@+id/parent_status_bri"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -347,6 +348,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:id="@+id/parent_tgl_pengajuan_bri"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -370,6 +372,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:id="@+id/parent_verif_bri"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -393,6 +396,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:id="@+id/parent_tgl_submit_bri"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -416,6 +420,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:id="@+id/parent_status_balikan_bri"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -460,6 +465,7 @@
                             android:orientation="vertical">
 
                             <RelativeLayout
+                                android:id="@+id/parent_status_bni"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -483,6 +489,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:id="@+id/parent_tgl_pengajuan_bni"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -506,6 +513,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:id="@+id/parent_status_verif_bni"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -529,6 +537,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:id="@+id/parent_tgl_submit_bni"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -552,6 +561,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:id="@+id/parent_status_balikan_bni"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -596,6 +606,7 @@
                             android:orientation="vertical">
 
                             <RelativeLayout
+                                android:id="@+id/parent_status_bca"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -619,6 +630,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:id="@+id/parent_tgl_pengajuan_bca"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -642,6 +654,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:id="@+id/parent_status_verif_bca"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -665,6 +678,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:id="@+id/parent_tgl_submit_bca"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -688,6 +702,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:id="@+id/parent_status_balikan_bca"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -732,6 +747,7 @@
                             android:orientation="vertical">
 
                             <RelativeLayout
+                                android:id="@+id/parent_status_cimb"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -755,6 +771,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:id="@+id/parent_tgl_pengajuan_cimb"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -778,6 +795,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:id="@+id/parent_status_verif_cimb"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -801,6 +819,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:id="@+id/parent_tgl_submit_cimb"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -824,6 +843,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:id="@+id/parent_status_balikan_cimb"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -868,6 +888,7 @@
                             android:orientation="vertical">
 
                             <RelativeLayout
+                                android:id="@+id/parent_status_mayapada"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -891,6 +912,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:id="@+id/parent_tgl_pengajuan_mayapada"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -914,6 +936,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:id="@+id/parent_status_verif_mayapada"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -937,6 +960,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:id="@+id/parent_tgl_submit_mayapada"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -960,6 +984,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:id="@+id/parent_status_balikan_mayapada"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -1004,6 +1029,7 @@
                             android:orientation="vertical">
 
                             <RelativeLayout
+                                android:id="@+id/parent_status_dbs"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -1027,6 +1053,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:id="@+id/parent_tgl_pengajuan_dbs"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -1050,6 +1077,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:id="@+id/parent_status_verif_dbs"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -1073,6 +1101,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:id="@+id/parent_tgl_submit_dbs"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -1096,6 +1125,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:id="@+id/parent_status_balikan_dbs"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -1140,6 +1170,7 @@
                             android:orientation="vertical">
 
                             <RelativeLayout
+                                android:id="@+id/parent_status_mnc"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -1163,6 +1194,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:id="@+id/parent_tgl_pengajuan_mnc"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -1186,6 +1218,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:id="@+id/parent_status_verif_mnc"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -1209,6 +1242,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:id="@+id/parent_tgl_submit_mnc"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -1232,6 +1266,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:id="@+id/parent_status_balikan_mnc"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -1276,6 +1311,7 @@
                             android:orientation="vertical">
 
                             <RelativeLayout
+                                android:id="@+id/parent_status_uob"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -1299,6 +1335,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:id="@+id/parent_tgl_pengajuan_uob"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -1322,6 +1359,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:id="@+id/parent_status_verif_uob"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -1345,6 +1383,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:id="@+id/parent_tgl_submit_uob"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -1368,6 +1407,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:id="@+id/parent_status_balikan_uob"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -1413,6 +1453,7 @@
                             android:orientation="vertical">
 
                             <RelativeLayout
+                                android:id="@+id/parent_status_mega"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -1436,6 +1477,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:id="@+id/parent_tgl_pengajuan_mega"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -1459,6 +1501,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:id="@+id/parent_status_verif_mega"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -1482,6 +1525,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:id="@+id/parent_tgl_submit_mega"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -1505,12 +1549,13 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:id="@+id/parent_status_balikan_mega"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/default_padding_medium"
                                 android:layout_marginLeft="@dimen/default_margin_small"
                                 android:layout_marginRight="@dimen/default_margin_small"
-                                android:layout_marginBottom="@dimen/default_padding_small"
+                                android:layout_marginBottom="@dimen/default_padding_medium"
                                 android:orientation="horizontal">
 
                                 <TextView
@@ -1521,6 +1566,148 @@
 
                                 <TextView
                                     android:id="@+id/tv_status_mega"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:textColor="@android:color/black"
+                                    android:text="Reject"/>
+                            </RelativeLayout>
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_bank_panin"
+                        android:orientation="vertical"
+                        android:layout_marginStart="@dimen/default_padding_medium"
+                        android:layout_marginEnd="@dimen/default_padding_medium"
+                        android:layout_marginBottom="@dimen/default_margin_small"
+                        android:layout_width="match_parent"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="8dp"
+                        android:layout_marginTop="@dimen/default_padding_medium"
+                        app:cardElevation="6dp"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:id="@+id/parent_status_panin"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/default_padding_medium"
+                                android:layout_marginLeft="@dimen/default_margin_small"
+                                android:layout_marginRight="@dimen/default_margin_small"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:text="PANIN"/>
+
+                                <TextView
+                                    android:id="@+id/status_panin"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:textColor="@android:color/black"
+                                    android:text="YES"/>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/parent_tgl_pengajuan_panin"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/default_padding_medium"
+                                android:layout_marginLeft="@dimen/default_margin_small"
+                                android:layout_marginRight="@dimen/default_margin_small"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:text="Tgl Pengajuan"/>
+
+                                <TextView
+                                    android:id="@+id/tgl_pengajuan_panin"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:textColor="@android:color/black"
+                                    android:text="12 mar 2019"/>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/parent_status_verif_panin"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/default_padding_medium"
+                                android:layout_marginLeft="@dimen/default_margin_small"
+                                android:layout_marginRight="@dimen/default_margin_small"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:text="Verifikasi"/>
+
+                                <TextView
+                                    android:id="@+id/status_verif_panin"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:textColor="@android:color/black"
+                                    android:text="HTC"/>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/parent_tgl_submit_panin"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/default_padding_medium"
+                                android:layout_marginLeft="@dimen/default_margin_small"
+                                android:layout_marginRight="@dimen/default_margin_small"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:text="Tgl Submit"/>
+
+                                <TextView
+                                    android:id="@+id/tgl_submit_panin"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:textColor="@android:color/black"
+                                    android:text="12 mar 2019"/>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/parent_status_balikan_panin"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/default_padding_medium"
+                                android:layout_marginLeft="@dimen/default_margin_small"
+                                android:layout_marginRight="@dimen/default_margin_small"
+                                android:layout_marginBottom="@dimen/default_padding_medium"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:text="Status"/>
+
+                                <TextView
+                                    android:id="@+id/tv_status_panin"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentEnd="true"

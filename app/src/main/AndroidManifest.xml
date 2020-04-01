@@ -13,10 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.JurtulTransaction.ListTransactionDetailPendingJurtul"></activity>
+        <activity android:name=".ui.VerifikatorTransaction.FormSubmitSelectionBank"></activity>
+        <activity android:name=".ui.JurtulTransaction.ListTransactionDetailPendingJurtul" />
         <activity android:name=".ui.JurtulTransaction.ListTransacationPendingJurtul" />
         <activity android:name=".ui.DetailHistoryTransaksiInputVerif" />
-        <activity android:name=".ui.VerifikatorTransaction.FormSubmitData" />
+        <activity android:name=".ui.VerifikatorTransaction.UploadDataKotorVerif" />
         <activity android:name=".ui.VerifikatorTransaction.ListTransactionDetailWaitingVerif" />
         <activity android:name=".ui.VerifikatorTransaction.ListTransactionWaitingVerif" />
         <activity android:name=".ui.DetailHistoryTransactionInputSales" />

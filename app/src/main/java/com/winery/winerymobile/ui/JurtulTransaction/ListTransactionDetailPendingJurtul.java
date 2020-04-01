@@ -15,14 +15,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.winery.winerymobile.R;
 import com.winery.winerymobile.ui.APIhelper.BaseApiService;
 import com.winery.winerymobile.ui.APIhelper.UtilsApi;
-import com.winery.winerymobile.ui.VerifikatorTransaction.FormSubmitData;
-import com.winery.winerymobile.ui.VerifikatorTransaction.ListTransactionDetailWaitingVerif;
+import com.winery.winerymobile.ui.VerifikatorTransaction.UploadDataKotorVerif;
 import com.winery.winerymobile.ui.helper.ViewAnimation;
 
 import org.json.JSONException;
@@ -305,7 +301,7 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
 
     @OnClick(R.id.btn_submit)
     void gotoUploadForm() {
-        Intent intent = new Intent(this, FormSubmitData.class);
+        Intent intent = new Intent(this, UploadDataKotorVerif.class);
         startActivity(intent);
     }
 
@@ -558,12 +554,14 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
 
 
                                     // bank BRI
-                                    String StatusBri, VerifikasiBri, tanggalSubmitBri, statusappBri;
+                                    String StatusBri, VerifikasiBri, tanggalSubmitBri, statusappBri, tanggalJurtulBri;
                                     StatusBri = jsonRESULTS.getJSONObject("data").getString("bri");
                                     String tanggalPengajuanBri = jsonRESULTS.getJSONObject("data").getString("tanggal");
                                     VerifikasiBri = jsonRESULTS.getJSONObject("data").getString("verifbri");
                                     tanggalSubmitBri = jsonRESULTS.getJSONObject("data").getString("tanggalsubmitbri");
                                     statusappBri = jsonRESULTS.getJSONObject("data").getString("keteranganbalikanbri");
+                                    tanggalJurtulBri = jsonRESULTS.getJSONObject("data").getString("tanggaljurtulbri");
+
 
                                     if (!VerifikasiBri.equals("CTN")) {
                                         cardBankBri.setVisibility(View.GONE);

@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -72,112 +73,224 @@ public class DetailHistoryTransactionInputSales extends AppCompatActivity {
     TextView tvRelationship;
     @BindView(R.id.card_bank_bri)
     com.google.android.material.card.MaterialCardView cardBankBri;
+    @BindView(R.id.parent_status_bri)
+    RelativeLayout parentStatusBri;
     @BindView(R.id.status_bri)
     TextView statusBri;
+    @BindView(R.id.parent_tgl_pengajuan_bri)
+    RelativeLayout parentTglPengajuanBri;
     @BindView(R.id.tgl_pengajuan_bri)
     TextView tglPengajuanBri;
+    @BindView(R.id.parent_verif_bri)
+    RelativeLayout parentVerifBri;
     @BindView(R.id.status_verif_bri)
     TextView statusVerifBri;
+    @BindView(R.id.parent_tgl_submit_bri)
+    RelativeLayout parentTglSubmitBri;
     @BindView(R.id.tgl_submit_bri)
     TextView tglSubmitBri;
+    @BindView(R.id.parent_status_balikan_bri)
+    RelativeLayout parentStatusBalikanBri;
     @BindView(R.id.tv_status_bri)
     TextView tvStatusBri;
     @BindView(R.id.card_bank_bni)
     com.google.android.material.card.MaterialCardView cardBankBni;
+    @BindView(R.id.parent_status_bni)
+    RelativeLayout parentStatusBni;
     @BindView(R.id.status_bni)
     TextView statusBni;
+    @BindView(R.id.parent_tgl_pengajuan_bni)
+    RelativeLayout parentTglPengajuanBni;
     @BindView(R.id.tgl_pengajuan_bni)
     TextView tglPengajuanBni;
+    @BindView(R.id.parent_status_verif_bni)
+    RelativeLayout parentStatusVerifBni;
     @BindView(R.id.status_verif_bni)
     TextView statusVerifBni;
+    @BindView(R.id.parent_tgl_submit_bni)
+    RelativeLayout parentTglSubmitBni;
     @BindView(R.id.tgl_submit_bni)
     TextView tglSubmitBni;
+    @BindView(R.id.parent_status_balikan_bni)
+    RelativeLayout parentStatusBalikanBni;
     @BindView(R.id.tv_status_bni)
     TextView tvStatusBni;
     @BindView(R.id.card_bank_bca)
     com.google.android.material.card.MaterialCardView cardBankBca;
+    @BindView(R.id.parent_status_bca)
+    RelativeLayout parentStatusBca;
     @BindView(R.id.status_bca)
     TextView statusBca;
+    @BindView(R.id.parent_tgl_pengajuan_bca)
+    RelativeLayout parentTglPengajuanBca;
     @BindView(R.id.tgl_pengajuan_bca)
     TextView tglPengajuanBca;
+    @BindView(R.id.parent_status_verif_bca)
+    RelativeLayout parentStatusVerifBca;
     @BindView(R.id.status_verif_bca)
     TextView statusVerifBca;
+    @BindView(R.id.parent_tgl_submit_bca)
+    RelativeLayout parentTglSubmitBca;
     @BindView(R.id.tgl_submit_bca)
     TextView tglSubmitBca;
+    @BindView(R.id.parent_status_balikan_bca)
+    RelativeLayout parentStatusBalikanBca;
     @BindView(R.id.tv_status_bca)
     TextView tvStatusBca;
     @BindView(R.id.card_bank_cimb)
     com.google.android.material.card.MaterialCardView cardBankCimb;
+    @BindView(R.id.parent_status_cimb)
+    RelativeLayout parentStatusCimb;
     @BindView(R.id.status_cimb)
     TextView statusCimb;
+    @BindView(R.id.parent_tgl_pengajuan_cimb)
+    RelativeLayout parentTglPengajuanCimb;
     @BindView(R.id.tgl_pengajuan_cimb)
     TextView tglPengajuanCimb;
+    @BindView(R.id.parent_status_verif_cimb)
+    RelativeLayout parentStatusVerifCimb;
     @BindView(R.id.status_verif_cimb)
     TextView statusVerifCimb;
+    @BindView(R.id.parent_tgl_submit_cimb)
+    RelativeLayout parentTglSubmitCimb;
     @BindView(R.id.tgl_submit_cimb)
     TextView tglSubmitCimb;
+    @BindView(R.id.parent_status_balikan_cimb)
+    RelativeLayout parentStatusBalikanCimb;
     @BindView(R.id.tv_status_cimb)
     TextView tvStatusCimb;
     @BindView(R.id.card_bank_mayapada)
     com.google.android.material.card.MaterialCardView cardBankMayapada;
+    @BindView(R.id.parent_status_mayapada)
+    RelativeLayout parentStatusMayapada;
     @BindView(R.id.status_mayapada)
     TextView statusMayapada;
+    @BindView(R.id.parent_tgl_pengajuan_mayapada)
+    RelativeLayout parentTglPengajuanMayapada;
     @BindView(R.id.tgl_pengajuan_mayapada)
     TextView tglPengajuanMayapada;
+    @BindView(R.id.parent_status_verif_mayapada)
+    RelativeLayout parentStatusVerifMayapada;
     @BindView(R.id.status_verif_mayapada)
     TextView statusVerifMayapada;
+    @BindView(R.id.parent_tgl_submit_mayapada)
+    RelativeLayout parentTglSubmitMayapada;
     @BindView(R.id.tgl_submit_mayapada)
     TextView tglSubmitMayapada;
+    @BindView(R.id.parent_status_balikan_mayapada)
+    RelativeLayout parentStatusBalikanMayapada;
     @BindView(R.id.tv_status_mayapada)
     TextView tvStatusMayapada;
     @BindView(R.id.card_bank_dbs)
     com.google.android.material.card.MaterialCardView cardBankDbs;
+    @BindView(R.id.parent_status_dbs)
+    RelativeLayout parentStatusDbs;
     @BindView(R.id.status_dbs)
     TextView statusDbs;
+    @BindView(R.id.parent_tgl_pengajuan_dbs)
+    RelativeLayout parentTglPengajuanDbs;
     @BindView(R.id.tgl_pengajuan_dbs)
     TextView tglPengajuanDbs;
+    @BindView(R.id.parent_status_verif_dbs)
+    RelativeLayout parentStatusVerifDbs;
     @BindView(R.id.status_verif_dbs)
     TextView statusVerifDbs;
+    @BindView(R.id.parent_tgl_submit_dbs)
+    RelativeLayout parentTglSubmitDbs;
     @BindView(R.id.tgl_submit_dbs)
     TextView tglSubmitDbs;
+    @BindView(R.id.parent_status_balikan_dbs)
+    RelativeLayout parentStatusBalikanDbs;
     @BindView(R.id.tv_status_dbs)
     TextView tvStatusDbs;
     @BindView(R.id.card_bank_mnc)
     com.google.android.material.card.MaterialCardView cardBankMnc;
+    @BindView(R.id.parent_status_mnc)
+    RelativeLayout parentStatusMnc;
     @BindView(R.id.status_mnc)
     TextView statusMnc;
+    @BindView(R.id.parent_tgl_pengajuan_mnc)
+    RelativeLayout parentTglPengajuanMnc;
     @BindView(R.id.tgl_pengajuan_mnc)
     TextView tglPengajuanMnc;
+    @BindView(R.id.parent_status_verif_mnc)
+    RelativeLayout parentStatusVerifMnc;
     @BindView(R.id.status_verif_mnc)
     TextView statusVerifMnc;
+    @BindView(R.id.parent_tgl_submit_mnc)
+    RelativeLayout parentTglSubmitMnc;
     @BindView(R.id.tgl_submit_mnc)
     TextView tglSubmitMnc;
+    @BindView(R.id.parent_status_balikan_mnc)
+    RelativeLayout parentStatusBalikanMnc;
     @BindView(R.id.tv_status_mnc)
     TextView tvStatusMnc;
     @BindView(R.id.card_bank_uob)
     com.google.android.material.card.MaterialCardView cardBankUob;
+    @BindView(R.id.parent_status_uob)
+    RelativeLayout parentStatusUob;
     @BindView(R.id.status_uob)
     TextView statusUob;
+    @BindView(R.id.parent_tgl_pengajuan_uob)
+    RelativeLayout parentTglPengajuanUob;
     @BindView(R.id.tgl_pengajuan_uob)
     TextView tglPengajuanUob;
+    @BindView(R.id.parent_status_verif_uob)
+    RelativeLayout parentStatusVerifUob;
     @BindView(R.id.status_verif_uob)
     TextView statusVerifUob;
+    @BindView(R.id.parent_tgl_submit_uob)
+    RelativeLayout parentTglSubmitUob;
     @BindView(R.id.tgl_submit_uob)
     TextView tglSubmitUob;
+    @BindView(R.id.parent_status_balikan_uob)
+    RelativeLayout parentStatusBalikanUob;
     @BindView(R.id.tv_status_uob)
     TextView tvStatusUob;
     @BindView(R.id.card_bank_mega)
     com.google.android.material.card.MaterialCardView cardBankMega;
+    @BindView(R.id.parent_status_mega)
+    RelativeLayout parentStatusMega;
     @BindView(R.id.status_mega)
     TextView statusMega;
+    @BindView(R.id.parent_tgl_pengajuan_mega)
+    RelativeLayout parentTglPengajuanMega;
     @BindView(R.id.tgl_pengajuan_mega)
     TextView tglPengajuanMega;
+    @BindView(R.id.parent_status_verif_mega)
+    RelativeLayout parentStatusVerifMega;
     @BindView(R.id.status_verif_mega)
     TextView statusVerifMega;
+    @BindView(R.id.parent_tgl_submit_mega)
+    RelativeLayout parentTglSubmitMega;
     @BindView(R.id.tgl_submit_mega)
     TextView tglSubmitMega;
+    @BindView(R.id.parent_status_balikan_mega)
+    RelativeLayout parentStatusBalikanMega;
     @BindView(R.id.tv_status_mega)
     TextView tvStatusMega;
+    @BindView(R.id.card_bank_panin)
+    com.google.android.material.card.MaterialCardView cardBankPanin;
+    @BindView(R.id.parent_status_panin)
+    RelativeLayout parentStatusPanin;
+    @BindView(R.id.status_panin)
+    TextView statusPanin;
+    @BindView(R.id.parent_tgl_pengajuan_panin)
+    RelativeLayout parentTglPengajuanPanin;
+    @BindView(R.id.tgl_pengajuan_panin)
+    TextView tglPengajuanPanin;
+    @BindView(R.id.parent_status_verif_panin)
+    RelativeLayout parentStatusVerifPanin;
+    @BindView(R.id.status_verif_panin)
+    TextView statusVerifPanin;
+    @BindView(R.id.parent_tgl_submit_panin)
+    RelativeLayout parentTglSubmitPanin;
+    @BindView(R.id.tgl_submit_panin)
+    TextView tglSubmitPanin;
+    @BindView(R.id.parent_status_balikan_panin)
+    RelativeLayout parentStatusBalikanPanin;
+    @BindView(R.id.tv_status_panin)
+    TextView tvStatusPanin;
     /** ButterKnife Code **/
 
 
@@ -506,6 +619,42 @@ public class DetailHistoryTransactionInputSales extends AppCompatActivity {
                                     statusVerifMega.setText(VerifikasiMega);
                                     tglSubmitMega.setText(tanggalSubmitMega);
                                     tvStatusMega.setText(statusappMega);
+
+
+                                    // bank
+                                    statusUob.setText(StatusUob);
+                                    tglPengajuanUob.setText(tanggalPengajuanUob);
+                                    statusVerifUob.setText(VerifikasiUob);
+                                    tglSubmitUob.setText(tanggalSubmitUob);
+                                    tvStatusUob.setText(statusappUob);
+
+                                    // bank Panin
+                                    String StatusPanin, VerifikasiPanin, tanggalSubmitPanin, statusappPanin;
+                                    StatusPanin = jsonRESULTS.getJSONObject("data").getString("panin");
+                                    String tanggalPengajuanPanin = jsonRESULTS.getJSONObject("data").getString("tanggal");
+                                    VerifikasiPanin= jsonRESULTS.getJSONObject("data").getString("verifpanin");
+                                    tanggalSubmitPanin = jsonRESULTS.getJSONObject("data").getString("tanggalsubmitpanin");
+                                    statusappPanin = jsonRESULTS.getJSONObject("data").getString("keteranganbalikanpanin");
+
+                                    if(StatusPanin.equals("") || StatusPanin.equals("null")){
+                                        StatusPanin = "-";
+                                    }
+                                    if(VerifikasiPanin.equals("") || VerifikasiPanin.equals("null")){
+                                        VerifikasiPanin = "-";
+                                    }
+                                    if(tanggalSubmitPanin.equals("") || tanggalSubmitPanin.equals("null")){
+                                        tanggalSubmitPanin = "-";
+                                    }
+                                    if(statusappPanin.equals("") || statusappPanin.equals("null")){
+                                        statusappPanin = "-";
+                                    }
+
+                                    // bank
+                                    statusPanin.setText(StatusPanin);
+                                    tglPengajuanPanin.setText(tanggalPengajuanPanin);
+                                    statusVerifPanin.setText(VerifikasiPanin);
+                                    tglSubmitPanin.setText(tanggalSubmitPanin);
+                                    tvStatusPanin.setText(statusappPanin);
 
 
 

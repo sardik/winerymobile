@@ -33,6 +33,8 @@ public class StateTransactionSales {
     public static final String KEY_STATUS_MNC = "status_mnc";
     public static final String KEY_STATUS_UOB = "status_uob";
     public static final String KEY_STATUS_MEGA = "status_mega";
+    public static final String KEY_STATUS_PANIN = "status_panin";
+
 
     // input form
     public static final String KEY_NAMA = "nama";
@@ -60,7 +62,7 @@ public class StateTransactionSales {
     }
 
     public void createStateBank(String bri, String bni, String bca, String cimb, String mayapada,
-                                String dbs, String mnc, String uob, String mega){
+                                String dbs, String mnc, String uob, String mega, String panin){
 
         // Storing name in pref
         editor.putString(KEY_STATUS_BRI, bri);
@@ -72,6 +74,8 @@ public class StateTransactionSales {
         editor.putString(KEY_STATUS_MNC, mnc);
         editor.putString(KEY_STATUS_UOB, uob);
         editor.putString(KEY_STATUS_MEGA, mega);
+        editor.putString(KEY_STATUS_PANIN, panin);
+
         // commit changes
         editor.commit();
     }
@@ -89,6 +93,8 @@ public class StateTransactionSales {
         user.put(KEY_STATUS_MNC, pref.getString(KEY_STATUS_MNC, null));
         user.put(KEY_STATUS_UOB, pref.getString(KEY_STATUS_UOB, null));
         user.put(KEY_STATUS_MEGA, pref.getString(KEY_STATUS_MEGA, null));
+        user.put(KEY_STATUS_PANIN, pref.getString(KEY_STATUS_PANIN, null));
+
 
         // return user
         return user;

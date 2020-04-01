@@ -86,6 +86,12 @@ public class BankSubmissionForm extends AppCompatActivity {
     TextView tvBankMega;
     @BindView(R.id.iv_mega)
     ImageView ivMega;
+    @BindView(R.id.card_bank_panin)
+    com.google.android.material.card.MaterialCardView cardBankPanin;
+    @BindView(R.id.tv_bank_panin)
+    TextView tvBankPanin;
+    @BindView(R.id.iv_panin)
+    ImageView ivPanin;
     @BindView(R.id.btn_next)
     com.google.android.material.button.MaterialButton btnNext;
     @BindView(R.id.btn_back)
@@ -201,6 +207,18 @@ public class BankSubmissionForm extends AppCompatActivity {
         }
     }
 
+    @OnClick(R.id.card_bank_panin) void selectedPanin(){
+        if(ivPanin.isSelected()){
+            ivPanin.setSelected(false);
+            ivPanin.setColorFilter(ContextCompat.getColor(this, R.color.colorWhite), android.graphics.PorterDuff.Mode.MULTIPLY);
+            panin = "NO";
+        }else{
+            ivPanin.setSelected(true);
+            ivPanin.setColorFilter(ContextCompat.getColor(this, R.color.green_600), android.graphics.PorterDuff.Mode.MULTIPLY);
+            panin = "YES";
+        }
+    }
+
     @OnClick(R.id.btn_back) void back(){
         onBackPressed();
     }
@@ -214,12 +232,13 @@ public class BankSubmissionForm extends AppCompatActivity {
             !ivDbs.isSelected() &&
             !ivMnc.isSelected() &&
             !ivUob.isSelected() &&
-            !ivMega.isSelected()){
+            !ivMega.isSelected() &&
+            !ivPanin.isSelected()){
 
             selectionValidate();
         }else{
             // saving state
-            stateTransactionSales.createStateBank(bri, bni, bca, cimb, mayapada, dbs, mnc, uob, mega);
+            stateTransactionSales.createStateBank(bri, bni, bca, cimb, mayapada, dbs, mnc, uob, mega, panin);
             Intent intent = new Intent(this, CustomerDataForm.class);
             startActivity(intent);
 
@@ -230,7 +249,7 @@ public class BankSubmissionForm extends AppCompatActivity {
     SessionManagement sessionManagement;
     StateTransactionSales stateTransactionSales;
     String bri = "NO", bni = "NO", bca = "NO", cimb = "NO", mayapada = "NO", dbs = "NO",
-            mnc = "NO" , uob = "NO", mega = "NO";
+            mnc = "NO" , uob = "NO", mega = "NO", panin = "NO";
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -252,6 +271,7 @@ public class BankSubmissionForm extends AppCompatActivity {
             cardBankMayapada.setVisibility(View.GONE);
             cardBankDbs.setVisibility(View.GONE);
             cardBankMnc.setVisibility(View.GONE);
+            cardBankPanin.setVisibility(View.GONE);
         }
 
         ivBri.setSelected(false);
@@ -263,6 +283,7 @@ public class BankSubmissionForm extends AppCompatActivity {
         ivMnc.setSelected(false);
         ivUob.setSelected(false);
         ivMega.setSelected(false);
+        ivPanin.setSelected(false);
 
 
         stateTransactionSales = new StateTransactionSales(this);

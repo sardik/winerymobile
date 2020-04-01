@@ -178,11 +178,14 @@ public class FormUploadDocumentSelfie extends AppCompatActivity {
         String statusMayapada = bank.get(StateTransactionSales.KEY_STATUS_MAYAPADA);
         if(selectedImageKtp == null){
             bankValidation("Foto KTP tidak Boleh Kosong");
-        }else if(selectedImageNpwp == null) {
-            bankValidation("Foto NPWP tidak Boleh Kosong");
-        }else if(selectedImageIdCard == null) {
-            bankValidation("Foto ID Card tidak Boleh Kosong");
-        }else if(selectedImageBri == null && statusBri.equals("YES")) {
+        }
+//        else if(selectedImageNpwp == null) {
+//            bankValidation("Foto NPWP tidak Boleh Kosong");
+//        }
+//        else if(selectedImageIdCard == null) {
+//            bankValidation("Foto ID Card tidak Boleh Kosong");
+//        }
+        else if(selectedImageBri == null && statusBri.equals("YES")) {
             bankValidation("Foto selfie BRI tidak Boleh Kosong");
         }
         else if(selectedBni == null && statusBni.equals("YES")) {
@@ -418,6 +421,7 @@ public class FormUploadDocumentSelfie extends AppCompatActivity {
         map.put("mnc", createPartFromString(bank.get(StateTransactionSales.KEY_STATUS_MNC)));
         map.put("uob", createPartFromString(bank.get(StateTransactionSales.KEY_STATUS_UOB)));
         map.put("mega", createPartFromString(bank.get(StateTransactionSales.KEY_STATUS_MEGA)));
+        map.put("panin", createPartFromString(bank.get(StateTransactionSales.KEY_STATUS_PANIN)));
         map.put("nama", createPartFromString(user.get(StateTransactionSales.KEY_NAMA)));
         map.put("nik", createPartFromString(user.get(StateTransactionSales.KEY_NIK)));
         map.put("tanggal_lahir", createPartFromString(user.get(StateTransactionSales.KEY_TANGGAL_LAHIR)));
@@ -438,13 +442,21 @@ public class FormUploadDocumentSelfie extends AppCompatActivity {
         File filektp = Utils.createTempFile(gambarbitmapKtp, getApplicationContext());
         RequestBody reqFilektp = RequestBody.create(MediaType.parse("image/*"), filektp);
 
-        // npwp
-        File filenpwp = Utils.createTempFile(gambarbitmapNpwp, getApplicationContext());
-        RequestBody reqFilenpwp = RequestBody.create(MediaType.parse("image/*"), filenpwp);
+        // Npwp
+        MultipartBody.Part fileNpwp = null;
+        if(gambarbitmapNpwp != null) {
+            File filenpwp = Utils.createTempFile(gambarbitmapNpwp, getApplicationContext());
+            RequestBody reqFilenpwp = RequestBody.create(MediaType.parse("image/*"), filenpwp);
+            fileNpwp = MultipartBody.Part.createFormData("file_npwp", filenpwp.getName(), reqFilenpwp);
+        }
 
-        // idcard
-        File fileidcard = Utils.createTempFile(gambarbitmapKtpIdcard, getApplicationContext());
-        RequestBody reqFileidCard = RequestBody.create(MediaType.parse("image/*"), fileidcard);
+        // IDcard
+        MultipartBody.Part fileFotoId = null;
+        if(gambarbitmapKtpIdcard != null) {
+            File fileidcard = Utils.createTempFile(gambarbitmapKtpIdcard, getApplicationContext());
+            RequestBody reqFileidCard = RequestBody.create(MediaType.parse("image/*"), fileidcard);
+            fileFotoId = MultipartBody.Part.createFormData("file_foto_id", fileidcard.getName(), reqFileidCard);
+        }
 
         // CC
         MultipartBody.Part fileKartuKredit = null;
@@ -507,8 +519,6 @@ public class FormUploadDocumentSelfie extends AppCompatActivity {
         }
 
         MultipartBody.Part fileKtp = MultipartBody.Part.createFormData("file_ktp", filektp.getName(), reqFilektp);
-        MultipartBody.Part fileNpwp = MultipartBody.Part.createFormData("file_npwp", filenpwp.getName(), reqFilenpwp);
-        MultipartBody.Part fileFotoId = MultipartBody.Part.createFormData("file_foto_id", fileidcard.getName(), reqFileidCard);
 
 
         // finally, kirim map dan body pada param interface retrofit
