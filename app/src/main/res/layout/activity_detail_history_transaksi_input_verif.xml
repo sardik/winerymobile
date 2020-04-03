@@ -325,15 +325,7 @@
 
                     <com.google.android.material.card.MaterialCardView
                         android:id="@+id/card_bank_bri"
-                        android:orientation="vertical"
-                        android:layout_marginStart="@dimen/default_padding_medium"
-                        android:layout_marginEnd="@dimen/default_padding_medium"
-                        android:layout_width="match_parent"
-                        app:cardBackgroundColor="@android:color/white"
-                        app:cardCornerRadius="8dp"
-                        android:layout_marginTop="@dimen/default_padding_medium"
-                        app:cardElevation="6dp"
-                        android:layout_height="wrap_content">
+                        style="@style/card_bank_page_detail">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -466,15 +458,7 @@
 
                     <com.google.android.material.card.MaterialCardView
                         android:id="@+id/card_bank_bni"
-                        android:orientation="vertical"
-                        android:layout_marginStart="@dimen/default_padding_medium"
-                        android:layout_marginEnd="@dimen/default_padding_medium"
-                        android:layout_width="match_parent"
-                        app:cardBackgroundColor="@android:color/white"
-                        app:cardCornerRadius="8dp"
-                        android:layout_marginTop="@dimen/default_padding_medium"
-                        app:cardElevation="6dp"
-                        android:layout_height="wrap_content">
+                        style="@style/card_bank_page_detail">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -607,15 +591,7 @@
 
                     <com.google.android.material.card.MaterialCardView
                         android:id="@+id/card_bank_bca"
-                        android:orientation="vertical"
-                        android:layout_marginStart="@dimen/default_padding_medium"
-                        android:layout_marginEnd="@dimen/default_padding_medium"
-                        android:layout_width="match_parent"
-                        app:cardBackgroundColor="@android:color/white"
-                        app:cardCornerRadius="8dp"
-                        android:layout_marginTop="@dimen/default_padding_medium"
-                        app:cardElevation="6dp"
-                        android:layout_height="wrap_content">
+                        style="@style/card_bank_page_detail">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -748,15 +724,7 @@
 
                     <com.google.android.material.card.MaterialCardView
                         android:id="@+id/card_bank_cimb"
-                        android:layout_marginStart="@dimen/default_padding_medium"
-                        android:layout_marginEnd="@dimen/default_padding_medium"
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        app:cardBackgroundColor="@android:color/white"
-                        app:cardCornerRadius="8dp"
-                        android:layout_marginTop="@dimen/default_padding_medium"
-                        app:cardElevation="6dp"
-                        android:layout_height="wrap_content">
+                        style="@style/card_bank_page_detail">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -889,15 +857,7 @@
 
                     <com.google.android.material.card.MaterialCardView
                         android:id="@+id/card_bank_mayapada"
-                        android:orientation="vertical"
-                        android:layout_marginStart="@dimen/default_padding_medium"
-                        android:layout_marginEnd="@dimen/default_padding_medium"
-                        android:layout_width="match_parent"
-                        app:cardBackgroundColor="@android:color/white"
-                        app:cardCornerRadius="8dp"
-                        android:layout_marginTop="@dimen/default_padding_medium"
-                        app:cardElevation="6dp"
-                        android:layout_height="wrap_content">
+                        style="@style/card_bank_page_detail">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -1030,15 +990,7 @@
 
                     <com.google.android.material.card.MaterialCardView
                         android:id="@+id/card_bank_dbs"
-                        android:orientation="vertical"
-                        android:layout_marginStart="@dimen/default_padding_medium"
-                        android:layout_marginEnd="@dimen/default_padding_medium"
-                        android:layout_width="match_parent"
-                        app:cardBackgroundColor="@android:color/white"
-                        app:cardCornerRadius="8dp"
-                        android:layout_marginTop="@dimen/default_padding_medium"
-                        app:cardElevation="6dp"
-                        android:layout_height="wrap_content">
+                        style="@style/card_bank_page_detail">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -1171,15 +1123,7 @@
 
                     <com.google.android.material.card.MaterialCardView
                         android:id="@+id/card_bank_mnc"
-                        android:orientation="vertical"
-                        android:layout_marginStart="@dimen/default_padding_medium"
-                        android:layout_marginEnd="@dimen/default_padding_medium"
-                        android:layout_width="match_parent"
-                        app:cardBackgroundColor="@android:color/white"
-                        app:cardCornerRadius="8dp"
-                        android:layout_marginTop="@dimen/default_padding_medium"
-                        app:cardElevation="6dp"
-                        android:layout_height="wrap_content">
+                        style="@style/card_bank_page_detail">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -1312,15 +1256,7 @@
 
                     <com.google.android.material.card.MaterialCardView
                         android:id="@+id/card_bank_uob"
-                        android:orientation="vertical"
-                        android:layout_marginStart="@dimen/default_padding_medium"
-                        android:layout_marginEnd="@dimen/default_padding_medium"
-                        android:layout_width="match_parent"
-                        app:cardBackgroundColor="@android:color/white"
-                        app:cardCornerRadius="8dp"
-                        android:layout_marginTop="@dimen/default_padding_medium"
-                        app:cardElevation="6dp"
-                        android:layout_height="wrap_content">
+                        style="@style/card_bank_page_detail">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -1453,16 +1389,7 @@
 
                     <com.google.android.material.card.MaterialCardView
                         android:id="@+id/card_bank_mega"
-                        android:orientation="vertical"
-                        android:layout_marginStart="@dimen/default_padding_medium"
-                        android:layout_marginEnd="@dimen/default_padding_medium"
-                        android:layout_marginBottom="@dimen/default_margin_small"
-                        android:layout_width="match_parent"
-                        app:cardBackgroundColor="@android:color/white"
-                        app:cardCornerRadius="8dp"
-                        android:layout_marginTop="@dimen/default_padding_medium"
-                        app:cardElevation="6dp"
-                        android:layout_height="wrap_content">
+                        style="@style/card_bank_page_detail">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -1595,16 +1522,7 @@
 
                     <com.google.android.material.card.MaterialCardView
                         android:id="@+id/card_bank_panin"
-                        android:orientation="vertical"
-                        android:layout_marginStart="@dimen/default_padding_medium"
-                        android:layout_marginEnd="@dimen/default_padding_medium"
-                        android:layout_marginBottom="@dimen/default_margin_small"
-                        android:layout_width="match_parent"
-                        app:cardBackgroundColor="@android:color/white"
-                        app:cardCornerRadius="8dp"
-                        android:layout_marginTop="@dimen/default_padding_medium"
-                        app:cardElevation="6dp"
-                        android:layout_height="wrap_content">
+                        style="@style/card_bank_page_detail">
 
                         <LinearLayout
                             android:layout_width="match_parent"

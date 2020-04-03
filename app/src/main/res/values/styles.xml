@@ -136,8 +136,19 @@
         <item name="android:layout_marginEnd">@dimen/default_margin_small</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="backgroundTint">@android:color/white</item>
+        <item name="android:paddingBottom">@dimen/default_margin_small</item>
         <item name="cardElevation">4dp</item>
         <item name="rippleColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="card_bank_page_detail">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/default_padding_medium</item>
+        <item name="cardBackgroundColor">@android:color/white</item>
+        <item name="cardCornerRadius">8dp</item>
+        <item name="cardElevation">6dp</item>
     </style>
 
     <style name="tv_name_bank">

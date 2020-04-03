@@ -2,6 +2,7 @@ package com.winery.winerymobile.ui.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -84,6 +85,8 @@ public class ListHistoriCCVerif_JurtulAdapter extends RecyclerView.Adapter<Recyc
                     HashMap<String, String> user = sessionManagement.getUserDetails();
                     String loginAs = user.get(SessionManagement.KEY_LOGIN_AS);
 
+                    Log.d("loginAs", "onClick: "+loginAs);
+
                     if(loginAs.equals("sales")){
                         Intent intent = new Intent(ctx, DetailHistoryTransactionInputSales.class);
                         intent.putExtra("param", obj.getId());
@@ -95,6 +98,8 @@ public class ListHistoriCCVerif_JurtulAdapter extends RecyclerView.Adapter<Recyc
                     }else if(loginAs.equals("jurutulis")){
                         Intent intent = new Intent(ctx, DetailHistoryTransactionInputJurtul.class);
                         intent.putExtra("param", obj.getId());
+                        ctx.startActivity(intent);
+
                     }
 
                     // saving state

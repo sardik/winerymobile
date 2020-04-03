@@ -565,7 +565,7 @@ public class HistoryFragment extends Fragment {
                                             JSONObject jsonObject = m_jsonData.getJSONObject(i);
 
                                             String id = jsonObject.getString("id");
-                                            String dateInput = jsonObject.getString("tanggal_verif");
+                                            String dateInput = jsonObject.getString("date_input");
                                             String name = jsonObject.getString("name");
                                             String nik = jsonObject.getString("nik");
                                             String tanggalLahir = jsonObject.getString("tanggal_lahir");

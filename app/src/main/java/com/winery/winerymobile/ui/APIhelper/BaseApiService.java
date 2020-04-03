@@ -145,5 +145,5 @@ public interface BaseApiService {
     @POST("juru_tulis_history")
     Call<ResponseBody> getListJurtulHistoryInputJurtul(@Field("start_date") String startDate,
                                                       @Field("end_date") String endDate,
-                                                      @Field("juru_tulis_code") String verifyCode);
+                                                      @Field("juru_tulis_code") String juruTulisCode);
 }
