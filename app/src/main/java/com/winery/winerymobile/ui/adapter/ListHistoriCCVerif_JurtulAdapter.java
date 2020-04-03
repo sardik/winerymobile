@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.winery.winerymobile.R;
+import com.winery.winerymobile.ui.DetailHistoryTransactionInputJurtul;
 import com.winery.winerymobile.ui.DetailHistoryTransactionInputSales;
 import com.winery.winerymobile.ui.DetailHistoryTransaksiInputVerif;
 import com.winery.winerymobile.ui.VerifikatorTransaction.ListTransactionDetailWaitingVerif;
@@ -92,7 +93,7 @@ public class ListHistoriCCVerif_JurtulAdapter extends RecyclerView.Adapter<Recyc
                         intent.putExtra("param", obj.getId());
                         ctx.startActivity(intent);
                     }else if(loginAs.equals("jurutulis")){
-                        Intent intent = new Intent(ctx, DetailHistoryTransaksiInputVerif.class);
+                        Intent intent = new Intent(ctx, DetailHistoryTransactionInputJurtul.class);
                         intent.putExtra("param", obj.getId());
                     }
 

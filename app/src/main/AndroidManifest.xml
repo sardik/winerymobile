@@ -7,13 +7,15 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_winery_white"
+        android:icon="@mipmap/ic_winery2"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_winery2_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.VerifikatorTransaction.FormSubmitSelectionBank"></activity>
+        <activity android:name=".ui.DetailHistoryTransactionInputJurtul"></activity>
+        <activity android:name=".ui.JurtulTransaction.JurtulSubmissionForm" />
+        <activity android:name=".ui.VerifikatorTransaction.FormSubmitSelectionBank" />
         <activity android:name=".ui.JurtulTransaction.ListTransactionDetailPendingJurtul" />
         <activity android:name=".ui.JurtulTransaction.ListTransacationPendingJurtul" />
         <activity android:name=".ui.DetailHistoryTransaksiInputVerif" />

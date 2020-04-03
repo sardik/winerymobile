@@ -32,7 +32,10 @@ import com.google.android.material.snackbar.Snackbar;
 import com.winery.winerymobile.R;
 import com.winery.winerymobile.ui.APIhelper.BaseApiService;
 import com.winery.winerymobile.ui.APIhelper.UtilsApi;
+import com.winery.winerymobile.ui.CreditCardSubmission.BankSubmissionForm;
+import com.winery.winerymobile.ui.JurtulTransaction.ListTransacationPendingJurtul;
 import com.winery.winerymobile.ui.VerifikatorTransaction.ListTransactionDetailWaitingVerif;
+import com.winery.winerymobile.ui.VerifikatorTransaction.ListTransactionWaitingVerif;
 import com.winery.winerymobile.ui.adapter.LIstHistoriCCAdapter;
 import com.winery.winerymobile.ui.adapter.ListHistoriCCVerif_JurtulAdapter;
 import com.winery.winerymobile.ui.dbhelper.SessionManagement;
@@ -118,8 +121,8 @@ public class HistoryFragment extends Fragment {
     private void setupViewPager(ViewPager viewPager) {
         adapter = new SectionsPagerAdapter(getChildFragmentManager());
         adapter.addFragment(ListHistoryCC.newInstance(1), "Kartu Kredit");
-        adapter.addFragment(ListHistoryCC.newInstance(2), "Kartu tambahan");
-        adapter.addFragment(ListHistoryCC.newInstance(3), "KTA");
+        adapter.addFragment(BlankFragment.newInstance(2), "Kartu tambahan");
+        adapter.addFragment(BlankFragment.newInstance(3), "KTA");
         viewPager.setAdapter(adapter);
 
     };
@@ -155,6 +158,30 @@ public class HistoryFragment extends Fragment {
             return mFragmentTitleList.get(position);
         }
 
+    }
+
+    //////////////////////////////////  blank fragment /////////////////////////////////////////
+
+    public static class BlankFragment extends Fragment {
+
+
+        public BlankFragment() {
+        }
+
+        public static BlankFragment newInstance(int sectionNumber) {
+            BlankFragment fragment = new BlankFragment();
+            Bundle args = new Bundle();
+            fragment.setArguments(args);
+            return fragment;
+        }
+
+
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+            View rootView = inflater.inflate(R.layout.fragment_blank, container, false);
+
+            return rootView;
+        }
     }
 
     ////////////////////////////////// fragment item ///////////////////////////////////////////
@@ -254,6 +281,7 @@ public class HistoryFragment extends Fragment {
                     }else if(loginAs.equals("verifikator")){
                         requestGetHistoryInputVerif(etStartDate.getText().toString(), etEndDate.getText().toString());
                     }else if(loginAs.equals("jurutulis")){
+                        requestGetHistoryInputJurtul(etStartDate.getText().toString(), etEndDate.getText().toString());
 
                     }
                 }
@@ -299,7 +327,7 @@ public class HistoryFragment extends Fragment {
             }else if(loginAs.equals("verifikator")){
                 requestGetHistoryInputVerif("", "");
             }else if(loginAs.equals("jurutulis")){
-
+                requestGetHistoryInputJurtul("","");
             }
 
             etSearch.addTextChangedListener(new TextWatcher() {
@@ -316,8 +344,18 @@ public class HistoryFragment extends Fragment {
 
                 @Override
                 public void afterTextChanged(Editable s) {
+                    HashMap<String, String> user = sessionManagement.getUserDetails();
+                    String loginAs = user.get(SessionManagement.KEY_LOGIN_AS);
 
-                    lIstHistoriCCAdapter.getFilter().filter(s);
+                    if(loginAs.equals("sales")){
+                        lIstHistoriCCAdapter.getFilter().filter(s);
+                    }else if(loginAs.equals("verifikator")){
+                        listHistoriCCVerif_jurtulAdapter.getFilter().filter(s);
+                    }else if(loginAs.equals("jurutulis")){
+                        listHistoriCCVerif_jurtulAdapter.getFilter().filter(s);
+                    }
+
+
 
                 }
             });
@@ -369,6 +407,7 @@ public class HistoryFragment extends Fragment {
             return rootView;
         }
 
+        // list history input sales cc
         private void requestGetHistoryCc(String startDate, String endDate ){
             loading = ProgressDialog.show(getContext(), null, "Harap Tunggu...", true, false);
             HashMap<String, String> user = sessionManagement.getUserDetails();
@@ -435,6 +474,7 @@ public class HistoryFragment extends Fragment {
                     });
         }
 
+        // list history input verif
         private void requestGetHistoryInputVerif(String startDate, String endDate ){
             loading = ProgressDialog.show(getContext(), null, "Harap Tunggu...", true, false);
             HashMap<String, String> user = sessionManagement.getUserDetails();
@@ -500,6 +540,74 @@ public class HistoryFragment extends Fragment {
                         }
                     });
         }
+
+        // list history input jurtul
+        private void requestGetHistoryInputJurtul(String startDate, String endDate ){
+            loading = ProgressDialog.show(getContext(), null, "Harap Tunggu...", true, false);
+            HashMap<String, String> user = sessionManagement.getUserDetails();
+            String code = user.get(SessionManagement.KEY_SALES_CODE);
+
+            mApiService.getListJurtulHistoryInputJurtul(startDate, endDate,code)
+                    .enqueue(new Callback<ResponseBody>() {
+                        @Override
+                        public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                            if (response.isSuccessful()){
+
+                                try {
+                                    JSONObject jsonRESULTS = new JSONObject(response.body().string());
+                                    if (jsonRESULTS.getInt("status") == 200){
+
+                                        JSONArray m_jsonData = jsonRESULTS.getJSONArray("data");
+//                                        JSONArray arr_jsonArticle = m_jsonData.getJSONArray("articles");
+
+                                        historyCcList = new ArrayList<>();
+                                        for(int i = 0; i < m_jsonData.length(); i++) {
+                                            JSONObject jsonObject = m_jsonData.getJSONObject(i);
+
+                                            String id = jsonObject.getString("id");
+                                            String dateInput = jsonObject.getString("tanggal_verif");
+                                            String name = jsonObject.getString("name");
+                                            String nik = jsonObject.getString("nik");
+                                            String tanggalLahir = jsonObject.getString("tanggal_lahir");
+
+
+                                            historyCcList.add(new HistoryCc(id, dateInput, name, nik, tanggalLahir));
+                                        }
+                                        loading.dismiss();
+
+                                        if(m_jsonData.length() == 0){
+                                            tvNoData.setVisibility(View.VISIBLE);
+                                        }else{
+                                            tvNoData.setVisibility(View.GONE);
+                                            rvHistoryCc.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
+                                            listHistoriCCVerif_jurtulAdapter = new ListHistoriCCVerif_JurtulAdapter(getActivity(), historyCcList, R.layout.adapter_history_list);
+                                            rvHistoryCc.setAdapter(listHistoriCCVerif_jurtulAdapter);
+                                        }
+
+
+
+                                    } else {
+                                        String error_message = jsonRESULTS.getString("message");
+                                        Toast.makeText(getContext(), error_message, Toast.LENGTH_SHORT).show();
+                                    }
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+                            } else {
+                                loading.dismiss();
+                            }
+                        }
+
+                        @Override
+                        public void onFailure(Call<ResponseBody> call, Throwable t) {
+                            Log.e("debug", "onFailure: ERROR > " + t.toString());
+                            loading.dismiss();
+                        }
+                    });
+        }
+
 
         public void snackBarInfo(){
             Snackbar snackbar = Snackbar.make(getView().findViewById(R.id.btn_filter), "range maksimal filter 14 hari", Snackbar.LENGTH_SHORT)

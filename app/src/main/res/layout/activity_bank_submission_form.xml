@@ -255,7 +255,6 @@
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/card_bank_panin"
-                    android:layout_marginTop="@dimen/default_margin_small"
                     android:layout_marginBottom="@dimen/default_margin_small"
                     style="@style/card_bank_selection">
 

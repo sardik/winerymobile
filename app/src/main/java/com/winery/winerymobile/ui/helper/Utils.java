@@ -83,4 +83,10 @@ public class Utils {
 
         return (int)( (toDate.getTime() - fromDate.getTime()) / (1000 * 60 * 60 * 24));
     }
+
+    public static String getCurrentDateTime(){
+        SimpleDateFormat iso8601Format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String cur = iso8601Format.format(new Date());
+        return cur;
+    }
 }

@@ -133,4 +133,17 @@ public interface BaseApiService {
     Call<ResponseBody> getListdataPendingJurtul(@Field("start_date") String startDate,
                                                 @Field("end_date") String endDate,
                                                 @Field("juru_tulis_code") String jurtulCode);
+
+
+    // jurtul input
+    @Multipart
+    @POST("juru_tulis_input")
+    Call<ResponseBody> jurtulInput(@PartMap Map<String, RequestBody> text);
+
+    // history input jurtul
+    @FormUrlEncoded
+    @POST("juru_tulis_history")
+    Call<ResponseBody> getListJurtulHistoryInputJurtul(@Field("start_date") String startDate,
+                                                      @Field("end_date") String endDate,
+                                                      @Field("juru_tulis_code") String verifyCode);
 }

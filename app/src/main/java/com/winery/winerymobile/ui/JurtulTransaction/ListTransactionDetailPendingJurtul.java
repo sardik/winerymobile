@@ -19,12 +19,15 @@ import com.winery.winerymobile.R;
 import com.winery.winerymobile.ui.APIhelper.BaseApiService;
 import com.winery.winerymobile.ui.APIhelper.UtilsApi;
 import com.winery.winerymobile.ui.VerifikatorTransaction.UploadDataKotorVerif;
+import com.winery.winerymobile.ui.dbhelper.SessionManagement;
+import com.winery.winerymobile.ui.dbhelper.StateTransactionSales;
 import com.winery.winerymobile.ui.helper.ViewAnimation;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.HashMap;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -189,119 +192,231 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
     TextView tvSales;
     @BindView(R.id.card_bank_bri)
     com.google.android.material.card.MaterialCardView cardBankBri;
+    @BindView(R.id.parent_status_bri)
+    RelativeLayout parentStatusBri;
     @BindView(R.id.status_bri)
     TextView statusBri;
+    @BindView(R.id.parent_tgl_pengajuan_bri)
+    RelativeLayout parentTglPengajuanBri;
     @BindView(R.id.tgl_pengajuan_bri)
     TextView tglPengajuanBri;
+    @BindView(R.id.parent_verif_bri)
+    RelativeLayout parentVerifBri;
     @BindView(R.id.status_verif_bri)
     TextView statusVerifBri;
+    @BindView(R.id.parent_tgl_submit_bri)
+    RelativeLayout parentTglSubmitBri;
     @BindView(R.id.tgl_submit_bri)
     TextView tglSubmitBri;
+    @BindView(R.id.parent_status_balikan_bri)
+    RelativeLayout parentStatusBalikanBri;
     @BindView(R.id.tv_status_bri)
     TextView tvStatusBri;
     @BindView(R.id.card_bank_bni)
     com.google.android.material.card.MaterialCardView cardBankBni;
+    @BindView(R.id.parent_status_bni)
+    RelativeLayout parentStatusBni;
     @BindView(R.id.status_bni)
     TextView statusBni;
+    @BindView(R.id.parent_tgl_pengajuan_bni)
+    RelativeLayout parentTglPengajuanBni;
     @BindView(R.id.tgl_pengajuan_bni)
     TextView tglPengajuanBni;
+    @BindView(R.id.parent_status_verif_bni)
+    RelativeLayout parentStatusVerifBni;
     @BindView(R.id.status_verif_bni)
     TextView statusVerifBni;
+    @BindView(R.id.parent_tgl_submit_bni)
+    RelativeLayout parentTglSubmitBni;
     @BindView(R.id.tgl_submit_bni)
     TextView tglSubmitBni;
+    @BindView(R.id.parent_status_balikan_bni)
+    RelativeLayout parentStatusBalikanBni;
     @BindView(R.id.tv_status_bni)
     TextView tvStatusBni;
     @BindView(R.id.card_bank_bca)
     com.google.android.material.card.MaterialCardView cardBankBca;
+    @BindView(R.id.parent_status_bca)
+    RelativeLayout parentStatusBca;
     @BindView(R.id.status_bca)
     TextView statusBca;
+    @BindView(R.id.parent_tgl_pengajuan_bca)
+    RelativeLayout parentTglPengajuanBca;
     @BindView(R.id.tgl_pengajuan_bca)
     TextView tglPengajuanBca;
+    @BindView(R.id.parent_status_verif_bca)
+    RelativeLayout parentStatusVerifBca;
     @BindView(R.id.status_verif_bca)
     TextView statusVerifBca;
+    @BindView(R.id.parent_tgl_submit_bca)
+    RelativeLayout parentTglSubmitBca;
     @BindView(R.id.tgl_submit_bca)
     TextView tglSubmitBca;
+    @BindView(R.id.parent_status_balikan_bca)
+    RelativeLayout parentStatusBalikanBca;
     @BindView(R.id.tv_status_bca)
     TextView tvStatusBca;
     @BindView(R.id.card_bank_cimb)
     com.google.android.material.card.MaterialCardView cardBankCimb;
+    @BindView(R.id.parent_status_cimb)
+    RelativeLayout parentStatusCimb;
     @BindView(R.id.status_cimb)
     TextView statusCimb;
+    @BindView(R.id.parent_tgl_pengajuan_cimb)
+    RelativeLayout parentTglPengajuanCimb;
     @BindView(R.id.tgl_pengajuan_cimb)
     TextView tglPengajuanCimb;
+    @BindView(R.id.parent_status_verif_cimb)
+    RelativeLayout parentStatusVerifCimb;
     @BindView(R.id.status_verif_cimb)
     TextView statusVerifCimb;
+    @BindView(R.id.parent_tgl_submit_cimb)
+    RelativeLayout parentTglSubmitCimb;
     @BindView(R.id.tgl_submit_cimb)
     TextView tglSubmitCimb;
+    @BindView(R.id.parent_status_balikan_cimb)
+    RelativeLayout parentStatusBalikanCimb;
     @BindView(R.id.tv_status_cimb)
     TextView tvStatusCimb;
     @BindView(R.id.card_bank_mayapada)
     com.google.android.material.card.MaterialCardView cardBankMayapada;
+    @BindView(R.id.parent_status_mayapada)
+    RelativeLayout parentStatusMayapada;
     @BindView(R.id.status_mayapada)
     TextView statusMayapada;
+    @BindView(R.id.parent_tgl_pengajuan_mayapada)
+    RelativeLayout parentTglPengajuanMayapada;
     @BindView(R.id.tgl_pengajuan_mayapada)
     TextView tglPengajuanMayapada;
+    @BindView(R.id.parent_status_verif_mayapada)
+    RelativeLayout parentStatusVerifMayapada;
     @BindView(R.id.status_verif_mayapada)
     TextView statusVerifMayapada;
+    @BindView(R.id.parent_tgl_submit_mayapada)
+    RelativeLayout parentTglSubmitMayapada;
     @BindView(R.id.tgl_submit_mayapada)
     TextView tglSubmitMayapada;
+    @BindView(R.id.parent_status_balikan_mayapada)
+    RelativeLayout parentStatusBalikanMayapada;
     @BindView(R.id.tv_status_mayapada)
     TextView tvStatusMayapada;
     @BindView(R.id.card_bank_dbs)
     com.google.android.material.card.MaterialCardView cardBankDbs;
+    @BindView(R.id.parent_status_dbs)
+    RelativeLayout parentStatusDbs;
     @BindView(R.id.status_dbs)
     TextView statusDbs;
+    @BindView(R.id.parent_tgl_pengajuan_dbs)
+    RelativeLayout parentTglPengajuanDbs;
     @BindView(R.id.tgl_pengajuan_dbs)
     TextView tglPengajuanDbs;
+    @BindView(R.id.parent_status_verif_dbs)
+    RelativeLayout parentStatusVerifDbs;
     @BindView(R.id.status_verif_dbs)
     TextView statusVerifDbs;
+    @BindView(R.id.parent_tgl_submit_dbs)
+    RelativeLayout parentTglSubmitDbs;
     @BindView(R.id.tgl_submit_dbs)
     TextView tglSubmitDbs;
+    @BindView(R.id.parent_status_balikan_dbs)
+    RelativeLayout parentStatusBalikanDbs;
     @BindView(R.id.tv_status_dbs)
     TextView tvStatusDbs;
     @BindView(R.id.card_bank_mnc)
     com.google.android.material.card.MaterialCardView cardBankMnc;
+    @BindView(R.id.parent_status_mnc)
+    RelativeLayout parentStatusMnc;
     @BindView(R.id.status_mnc)
     TextView statusMnc;
+    @BindView(R.id.parent_tgl_pengajuan_mnc)
+    RelativeLayout parentTglPengajuanMnc;
     @BindView(R.id.tgl_pengajuan_mnc)
     TextView tglPengajuanMnc;
+    @BindView(R.id.parent_status_verif_mnc)
+    RelativeLayout parentStatusVerifMnc;
     @BindView(R.id.status_verif_mnc)
     TextView statusVerifMnc;
+    @BindView(R.id.parent_tgl_submit_mnc)
+    RelativeLayout parentTglSubmitMnc;
     @BindView(R.id.tgl_submit_mnc)
     TextView tglSubmitMnc;
+    @BindView(R.id.parent_status_balikan_mnc)
+    RelativeLayout parentStatusBalikanMnc;
     @BindView(R.id.tv_status_mnc)
     TextView tvStatusMnc;
     @BindView(R.id.card_bank_uob)
     com.google.android.material.card.MaterialCardView cardBankUob;
+    @BindView(R.id.parent_status_uob)
+    RelativeLayout parentStatusUob;
     @BindView(R.id.status_uob)
     TextView statusUob;
+    @BindView(R.id.parent_tgl_pengajuan_uob)
+    RelativeLayout parentTglPengajuanUob;
     @BindView(R.id.tgl_pengajuan_uob)
     TextView tglPengajuanUob;
+    @BindView(R.id.parent_status_verif_uob)
+    RelativeLayout parentStatusVerifUob;
     @BindView(R.id.status_verif_uob)
     TextView statusVerifUob;
+    @BindView(R.id.parent_tgl_submit_uob)
+    RelativeLayout parentTglSubmitUob;
     @BindView(R.id.tgl_submit_uob)
     TextView tglSubmitUob;
+    @BindView(R.id.parent_status_balikan_uob)
+    RelativeLayout parentStatusBalikanUob;
     @BindView(R.id.tv_status_uob)
     TextView tvStatusUob;
     @BindView(R.id.card_bank_mega)
     com.google.android.material.card.MaterialCardView cardBankMega;
+    @BindView(R.id.parent_status_mega)
+    RelativeLayout parentStatusMega;
     @BindView(R.id.status_mega)
     TextView statusMega;
+    @BindView(R.id.parent_tgl_pengajuan_mega)
+    RelativeLayout parentTglPengajuanMega;
     @BindView(R.id.tgl_pengajuan_mega)
     TextView tglPengajuanMega;
+    @BindView(R.id.parent_status_verif_mega)
+    RelativeLayout parentStatusVerifMega;
     @BindView(R.id.status_verif_mega)
     TextView statusVerifMega;
+    @BindView(R.id.parent_tgl_submit_mega)
+    RelativeLayout parentTglSubmitMega;
     @BindView(R.id.tgl_submit_mega)
     TextView tglSubmitMega;
+    @BindView(R.id.parent_status_balikan_mega)
+    RelativeLayout parentStatusBalikanMega;
     @BindView(R.id.tv_status_mega)
     TextView tvStatusMega;
+    @BindView(R.id.card_bank_panin)
+    com.google.android.material.card.MaterialCardView cardBankPanin;
+    @BindView(R.id.parent_status_panin)
+    RelativeLayout parentStatusPanin;
+    @BindView(R.id.status_panin)
+    TextView statusPanin;
+    @BindView(R.id.parent_tgl_pengajuan_panin)
+    RelativeLayout parentTglPengajuanPanin;
+    @BindView(R.id.tgl_pengajuan_panin)
+    TextView tglPengajuanPanin;
+    @BindView(R.id.parent_status_verif_panin)
+    RelativeLayout parentStatusVerifPanin;
+    @BindView(R.id.status_verif_panin)
+    TextView statusVerifPanin;
+    @BindView(R.id.parent_tgl_submit_panin)
+    RelativeLayout parentTglSubmitPanin;
+    @BindView(R.id.tgl_submit_panin)
+    TextView tglSubmitPanin;
+    @BindView(R.id.parent_status_balikan_panin)
+    RelativeLayout parentStatusBalikanPanin;
+    @BindView(R.id.tv_status_panin)
+    TextView tvStatusPanin;
     @BindView(R.id.btn_submit)
     com.google.android.material.button.MaterialButton btnSubmit;
     /** ButterKnife Code **/
 
     @OnClick(R.id.btn_submit)
     void gotoUploadForm() {
-        Intent intent = new Intent(this, UploadDataKotorVerif.class);
+        Intent intent = new Intent(this, JurtulSubmissionForm.class);
         startActivity(intent);
     }
 
@@ -367,6 +482,11 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
 
     ProgressDialog loading;
     BaseApiService mApiService;
+    StateTransactionSales stateTransactionSales;
+    SessionManagement sessionManagement;
+
+    String stateStatusBri, stateStatusBni, stateStatusBca, stateStatusCimb, stateStatusMayapada,
+            stateStatusDbs, stateStatusMnc, stateStatusUob, stateStatusMega, stateStatusPanin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -376,7 +496,15 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
         ButterKnife.bind(this);
 
         mApiService = UtilsApi.getAPIService();
+        stateTransactionSales = new StateTransactionSales(this);
+        sessionManagement = new SessionManagement(this);
         initToolbar();
+
+        HashMap<String, String> transactionID = sessionManagement.getTransactionID();
+
+        // get status from back stack
+        Log.d("transactionId", "onCreate: "+transactionID.get(sessionManagement.KEY_SALES_CODE));
+
 
         getListDetailHistoryCc();
     }
@@ -563,8 +691,12 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
                                     tanggalJurtulBri = jsonRESULTS.getJSONObject("data").getString("tanggaljurtulbri");
 
 
-                                    if (!VerifikasiBri.equals("CTN")) {
+                                    if (VerifikasiBri.equals("CTN") && tanggalJurtulBri.equals("null")) {
+                                        cardBankBri.setVisibility(View.VISIBLE);
+                                        stateStatusBri = "YES";
+                                    }else{
                                         cardBankBri.setVisibility(View.GONE);
+                                        stateStatusBri = "NO";
                                     }
 
                                     // bank
@@ -574,16 +706,24 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
                                     tglSubmitBri.setText(tanggalSubmitBri);
                                     tvStatusBri.setText(statusappBri);
 
+                                    parentTglSubmitBri.setVisibility(View.GONE);
+                                    parentStatusBalikanBri.setVisibility(View.GONE);
+
                                     // bank BNI
-                                    String StatusBni, VerifikasiBni, tanggalSubmitBni, statusappBni;
+                                    String StatusBni, VerifikasiBni, tanggalSubmitBni, statusappBni, tanggalJurtulBni;
                                     StatusBni = jsonRESULTS.getJSONObject("data").getString("bni");
                                     String tanggalPengajuanBni = jsonRESULTS.getJSONObject("data").getString("tanggal");
                                     VerifikasiBni = jsonRESULTS.getJSONObject("data").getString("verifbni");
                                     tanggalSubmitBni = jsonRESULTS.getJSONObject("data").getString("tanggalsubmitbni");
                                     statusappBni = jsonRESULTS.getJSONObject("data").getString("keteranganbalikanbni");
+                                    tanggalJurtulBni = jsonRESULTS.getJSONObject("data").getString("tanggaljurtulbni");
 
-                                    if (!VerifikasiBni.equals("CTN")) {
+                                    if (VerifikasiBni.equals("CTN") && tanggalJurtulBni.equals("null")) {
+                                        cardBankBni.setVisibility(View.VISIBLE);
+                                        stateStatusBni = "YES";
+                                    }else{
                                         cardBankBni.setVisibility(View.GONE);
+                                        stateStatusBni = "NO";
                                     }
 
                                     // bank
@@ -593,17 +733,25 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
                                     tglSubmitBni.setText(tanggalSubmitBni);
                                     tvStatusBni.setText(statusappBni);
 
+                                    parentTglSubmitBni.setVisibility(View.GONE);
+                                    parentStatusBalikanBni.setVisibility(View.GONE);
+
                                     // bank BCA
-                                    String StatusBca, VerifikasiBca, tanggalSubmitBca, statusappBca;
+                                    String StatusBca, VerifikasiBca, tanggalSubmitBca, statusappBca, tanggalJurtulBca;
                                     StatusBca = jsonRESULTS.getJSONObject("data").getString("bca");
                                     String tanggalPengajuanBca = jsonRESULTS.getJSONObject("data").getString("tanggal");
                                     VerifikasiBca = jsonRESULTS.getJSONObject("data").getString("verifbca");
                                     tanggalSubmitBca = jsonRESULTS.getJSONObject("data").getString("tanggalsubmitbca");
                                     statusappBca = jsonRESULTS.getJSONObject("data").getString("keteranganbalikanbca");
+                                    tanggalJurtulBca = jsonRESULTS.getJSONObject("data").getString("tanggaljurtulbca");
 
 
-                                    if (!VerifikasiBca.equals("CTN")) {
+                                    if (VerifikasiBca.equals("CTN") && tanggalJurtulBca.equals("null")) {
+                                        cardBankBca.setVisibility(View.VISIBLE);
+                                        stateStatusBca = "YES";
+                                    }else{
                                         cardBankBca.setVisibility(View.GONE);
+                                        stateStatusBca = "NO";
                                     }
 
                                     // bank
@@ -613,16 +761,25 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
                                     tglSubmitBca.setText(tanggalSubmitBca);
                                     tvStatusBca.setText(statusappBca);
 
+                                    parentTglSubmitBca.setVisibility(View.GONE);
+                                    parentStatusBalikanBca.setVisibility(View.GONE);
+
                                     // bank CIMB
-                                    String StatusCimb, VerifikasiCimb, tanggalSubmitCimb, statusappCimb;
+                                    String StatusCimb, VerifikasiCimb, tanggalSubmitCimb, statusappCimb, tanggalJurtulCimb;
                                     StatusCimb = jsonRESULTS.getJSONObject("data").getString("niaga");
                                     String tanggalPengajuanCimb = jsonRESULTS.getJSONObject("data").getString("tanggal");
                                     VerifikasiCimb = jsonRESULTS.getJSONObject("data").getString("verifniaga");
                                     tanggalSubmitCimb = jsonRESULTS.getJSONObject("data").getString("tanggalsubmitniaga");
                                     statusappCimb = jsonRESULTS.getJSONObject("data").getString("keteranganbalikanniaga");
+                                    tanggalJurtulCimb = jsonRESULTS.getJSONObject("data").getString("tanggaljurtulniaga");
 
-                                    if (!VerifikasiCimb.equals("CTN")) {
+
+                                    if (VerifikasiCimb.equals("CTN") && tanggalJurtulCimb.equals("null")) {
+                                        cardBankCimb.setVisibility(View.VISIBLE);
+                                        stateStatusCimb = "YES";
+                                    }else{
                                         cardBankCimb.setVisibility(View.GONE);
+                                        stateStatusCimb = "NO";
                                     }
 
                                     // bank
@@ -632,16 +789,25 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
                                     tglSubmitCimb.setText(tanggalSubmitCimb);
                                     tvStatusCimb.setText(statusappCimb);
 
+                                    parentTglSubmitCimb.setVisibility(View.GONE);
+                                    parentStatusBalikanCimb.setVisibility(View.GONE);
+
                                     // bank Mayapada
-                                    String StatusMayapada, VerifikasiMayapada, tanggalSubmitMayapada, statusappMayapada;
+                                    String StatusMayapada, VerifikasiMayapada, tanggalSubmitMayapada, statusappMayapada, tanggalJurtulMayapada;
                                     StatusMayapada = jsonRESULTS.getJSONObject("data").getString("mayapada");
                                     String tanggalPengajuanMayapada = jsonRESULTS.getJSONObject("data").getString("tanggal");
                                     VerifikasiMayapada = jsonRESULTS.getJSONObject("data").getString("verifmayapada");
                                     tanggalSubmitMayapada = jsonRESULTS.getJSONObject("data").getString("tanggalsubmitmayapada");
                                     statusappMayapada = jsonRESULTS.getJSONObject("data").getString("keteranganbalikanmayapada");
+                                    tanggalJurtulMayapada = jsonRESULTS.getJSONObject("data").getString("tanggaljurtulmayapada");
 
-                                    if (!VerifikasiMayapada.equals("CTN")) {
+
+                                    if (VerifikasiMayapada.equals("CTN") && tanggalJurtulMayapada.equals("null")) {
+                                        cardBankMayapada.setVisibility(View.VISIBLE);
+                                        stateStatusMayapada = "YES";
+                                    }else{
                                         cardBankMayapada.setVisibility(View.GONE);
+                                        stateStatusMayapada = "NO";
                                     }
 
                                     // bank
@@ -651,15 +817,24 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
                                     tglSubmitMayapada.setText(tanggalSubmitMayapada);
                                     tvStatusMayapada.setText(statusappMayapada);
 
+                                    parentTglSubmitMayapada.setVisibility(View.GONE);
+                                    parentStatusBalikanMayapada.setVisibility(View.GONE);
+
                                     // bank Dbs
-                                    String StatusDbs, VerifikasiDbs, tanggalSubmitDbs, statusappDbs;
+                                    String StatusDbs, VerifikasiDbs, tanggalSubmitDbs, statusappDbs, tanggalJurtulDbs;
                                     StatusDbs = jsonRESULTS.getJSONObject("data").getString("dbs");
                                     String tanggalPengajuanDbs = jsonRESULTS.getJSONObject("data").getString("tanggal");
                                     VerifikasiDbs = jsonRESULTS.getJSONObject("data").getString("verifdbs");
                                     tanggalSubmitDbs = jsonRESULTS.getJSONObject("data").getString("tanggalsubmitdbs");
                                     statusappDbs = jsonRESULTS.getJSONObject("data").getString("keteranganbalikandbs");
+                                    tanggalJurtulDbs = jsonRESULTS.getJSONObject("data").getString("tanggaljurtuldbs");
 
-                                    if (!VerifikasiDbs.equals("CTN")) {
+
+                                    if (VerifikasiDbs.equals("CTN") && tanggalJurtulDbs.equals("null")) {
+                                        cardBankDbs.setVisibility(View.VISIBLE);
+                                        stateStatusDbs = "YES";
+                                    }else{
+                                        stateStatusDbs = "NO";
                                         cardBankDbs.setVisibility(View.GONE);
                                     }
 
@@ -670,16 +845,25 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
                                     tglSubmitDbs.setText(tanggalSubmitDbs);
                                     tvStatusDbs.setText(statusappDbs);
 
+                                    parentTglSubmitDbs.setVisibility(View.GONE);
+                                    parentStatusBalikanDbs.setVisibility(View.GONE);
+
                                     // bank MNC
-                                    String StatusMnc, VerifikasiMnc, tanggalSubmitMnc, statusappMnc;
+                                    String StatusMnc, VerifikasiMnc, tanggalSubmitMnc, statusappMnc, tanggalJurtulMnc;
                                     StatusMnc = jsonRESULTS.getJSONObject("data").getString("mnc");
                                     String tanggalPengajuanMnc = jsonRESULTS.getJSONObject("data").getString("tanggal");
                                     VerifikasiMnc = jsonRESULTS.getJSONObject("data").getString("verifmnc");
                                     tanggalSubmitMnc = jsonRESULTS.getJSONObject("data").getString("tanggalsubmitmnc");
                                     statusappMnc = jsonRESULTS.getJSONObject("data").getString("keteranganbalikanmnc");
+                                    tanggalJurtulMnc = jsonRESULTS.getJSONObject("data").getString("tanggaljurtulmnc");
 
-                                    if (!VerifikasiMnc.equals("CTN")) {
+
+                                    if (VerifikasiMnc.equals("CTN") && tanggalJurtulMnc.equals("null")) {
+                                        cardBankMnc.setVisibility(View.VISIBLE);
+                                        stateStatusMnc = "YES";
+                                    }else{
                                         cardBankMnc.setVisibility(View.GONE);
+                                        stateStatusMnc = "NO";
                                     }
 
                                     // bank
@@ -689,16 +873,26 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
                                     tglSubmitMnc.setText(tanggalSubmitMnc);
                                     tvStatusMnc.setText(statusappMnc);
 
+                                    parentTglSubmitMnc.setVisibility(View.GONE);
+                                    parentStatusBalikanMnc.setVisibility(View.GONE);
+
                                     // bank UOB
-                                    String StatusUob, VerifikasiUob, tanggalSubmitUob, statusappUob;
+                                    String StatusUob, VerifikasiUob, tanggalSubmitUob, statusappUob, tanggalJurtuUob;
                                     StatusUob = jsonRESULTS.getJSONObject("data").getString("uob");
                                     String tanggalPengajuanUob = jsonRESULTS.getJSONObject("data").getString("tanggal");
                                     VerifikasiUob = jsonRESULTS.getJSONObject("data").getString("verifuob");
                                     tanggalSubmitUob = jsonRESULTS.getJSONObject("data").getString("tanggalsubmituob");
                                     statusappUob = jsonRESULTS.getJSONObject("data").getString("keteranganbalikanuob");
+                                    tanggalJurtuUob = jsonRESULTS.getJSONObject("data").getString("tanggaljurtuluob");
 
-                                    if (!VerifikasiUob.equals("CTN")) {
+
+                                    if (VerifikasiUob.equals("CTN") && tanggalJurtuUob.equals("null")) {
+                                        cardBankUob.setVisibility(View.VISIBLE);
+                                        stateStatusUob = "YES";
+                                    }else{
+                                        stateStatusUob = "NO";
                                         cardBankUob.setVisibility(View.GONE);
+
                                     }
 
                                     // bank
@@ -708,15 +902,24 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
                                     tglSubmitUob.setText(tanggalSubmitUob);
                                     tvStatusUob.setText(statusappUob);
 
+                                    parentTglSubmitUob.setVisibility(View.GONE);
+                                    parentStatusBalikanUob.setVisibility(View.GONE);
+
                                     // bank Mega
-                                    String StatusMega, VerifikasiMega, tanggalSubmitMega, statusappMega;
+                                    String StatusMega, VerifikasiMega, tanggalSubmitMega, statusappMega, tanggalJurtumega;
                                     StatusMega = jsonRESULTS.getJSONObject("data").getString("mega");
                                     String tanggalPengajuanMega = jsonRESULTS.getJSONObject("data").getString("tanggal");
                                     VerifikasiMega = jsonRESULTS.getJSONObject("data").getString("verifmega");
                                     tanggalSubmitMega = jsonRESULTS.getJSONObject("data").getString("tanggalsubmitmega");
                                     statusappMega = jsonRESULTS.getJSONObject("data").getString("keteranganbalikanmega");
+                                    tanggalJurtumega = jsonRESULTS.getJSONObject("data").getString("tanggaljurtulmega");
 
-                                    if (!VerifikasiMega.equals("CTN")) {
+
+                                    if (VerifikasiMega.equals("CTN") && tanggalJurtumega.equals("null")) {
+                                        cardBankMega.setVisibility(View.VISIBLE);
+                                        stateStatusMega = "YES";
+                                    }else{
+                                        stateStatusMega = "NO";
                                         cardBankMega.setVisibility(View.GONE);
                                     }
 
@@ -726,6 +929,44 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
                                     statusVerifMega.setText(VerifikasiMega);
                                     tglSubmitMega.setText(tanggalSubmitMega);
                                     tvStatusMega.setText(statusappMega);
+
+                                    parentTglSubmitMega.setVisibility(View.GONE);
+                                    parentStatusBalikanMega.setVisibility(View.GONE);
+
+                                    // bank Mega
+                                    String StatusPanin, VerifikasiPanin, tanggalSubmitPanin, statusappPanin, tanggalJurtulPanin;
+                                    StatusPanin = jsonRESULTS.getJSONObject("data").getString("panin");
+                                    String tanggalPengajuanPanin = jsonRESULTS.getJSONObject("data").getString("tanggal");
+                                    VerifikasiPanin = jsonRESULTS.getJSONObject("data").getString("verifpanin");
+                                    tanggalSubmitPanin = jsonRESULTS.getJSONObject("data").getString("tanggalsubmitpanin");
+                                    statusappPanin = jsonRESULTS.getJSONObject("data").getString("keteranganbalikanpanin");
+                                    tanggalJurtulPanin = jsonRESULTS.getJSONObject("data").getString("tanggaljurtulpanin");
+
+
+                                    if (VerifikasiPanin.equals("CTN") && tanggalJurtulPanin.equals("null")) {
+                                        cardBankPanin.setVisibility(View.VISIBLE);
+                                        stateStatusPanin = "YES";
+                                    }else{
+                                        cardBankPanin.setVisibility(View.GONE);
+                                        stateStatusPanin = "NO";
+                                    }
+
+                                    // bank
+                                    statusPanin.setText(StatusPanin);
+                                    tglPengajuanPanin.setText(tanggalPengajuanPanin);
+                                    statusVerifPanin.setText(VerifikasiPanin);
+                                    tglSubmitPanin.setText(tanggalSubmitPanin);
+                                    tvStatusPanin.setText(statusappPanin);
+
+                                    parentTglSubmitPanin.setVisibility(View.GONE);
+                                    parentStatusBalikanPanin.setVisibility(View.GONE);
+
+
+
+                                    // save state of bank status by pending
+                                    stateTransactionSales.createStateBank(stateStatusBri,stateStatusBni,stateStatusBca,
+                                            stateStatusCimb,stateStatusMayapada,stateStatusDbs,stateStatusMnc,stateStatusUob,
+                                            stateStatusMega,stateStatusPanin);
 
 
                                 } else {

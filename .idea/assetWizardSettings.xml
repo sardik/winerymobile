@@ -51,7 +51,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="scalingPercent" value="80" />
+                                                <entry key="scalingPercent" value="67" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -62,9 +62,8 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
-                                      <entry key="backgroundColor" value="b81dff" />
-                                      <entry key="foregroundImage" value="$PROJECT_DIR$/app/src/main/res/drawable/logo_white.png" />
-                                      <entry key="outputName" value="ic_winery_white" />
+                                      <entry key="foregroundImage" value="$USER_HOME$/Downloads/logowinery2_purple.jpeg" />
+                                      <entry key="outputName" value="ic_winery2" />
                                     </map>
                                   </option>
                                 </PersistentState>
