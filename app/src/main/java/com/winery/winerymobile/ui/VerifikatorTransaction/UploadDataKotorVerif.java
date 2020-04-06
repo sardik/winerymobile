@@ -5,15 +5,25 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 
+import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
+import android.hardware.Camera;
+import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.os.StrictMode;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -23,6 +33,7 @@ import com.winery.winerymobile.R;
 import com.winery.winerymobile.ui.APIhelper.BaseApiService;
 import com.winery.winerymobile.ui.APIhelper.UtilsApi;
 import com.winery.winerymobile.ui.CreditCardSubmission.DialogSuccess;
+import com.winery.winerymobile.ui.CreditCardSubmission.FormUploadDocumentSelfie;
 import com.winery.winerymobile.ui.dbhelper.SessionManagement;
 import com.winery.winerymobile.ui.dbhelper.StateTransactionSales;
 import com.winery.winerymobile.ui.helper.Utils;
@@ -30,11 +41,16 @@ import com.winery.winerymobile.ui.helper.Utils;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
+import java.util.Locale;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -65,9 +81,10 @@ public class UploadDataKotorVerif extends AppCompatActivity {
     /** ButterKnife Code **/
 
     @OnClick(R.id.container_iv_ktp) void getPhotoKTP(){
-        Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
-        photoPickerIntent.setType("image/*");
-        startActivityForResult(photoPickerIntent, CHANGE_IMAGE_DATA_KOTOR);
+//        Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
+//        photoPickerIntent.setType("image/*");
+//        startActivityForResult(photoPickerIntent, CHANGE_IMAGE_DATA_KOTOR);
+        selectImage(REQUEST_CAMERA_DATA_KOTOR, SELECT_FILE_DATA_KOTOR);
     }
 
     @OnClick(R.id.btn_submit) void submitData(){
@@ -87,11 +104,26 @@ public class UploadDataKotorVerif extends AppCompatActivity {
     StateTransactionSales stateTransactionSales;
     Bitmap selectedImageDataKotor = null;
 
+    Intent intent;
+    Uri fileUri;
+
+    Bitmap bitmap, decoded;
+    public final int REQUEST_CAMERA_DATA_KOTOR = 0;
+    public final int SELECT_FILE_DATA_KOTOR = 1;
+
+
+    int bitmap_size = 40; // image quality 1 - 100;
+    int max_resolution_image = 800;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_upload_file_datakotor_verif);
         ButterKnife.bind(this);
+
+        StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
+        StrictMode.setVmPolicy(builder.build());
+
 
         mApiService = UtilsApi.getAPIService();
         sessionManagement = new SessionManagement(this);
@@ -103,19 +135,42 @@ public class UploadDataKotorVerif extends AppCompatActivity {
     @Override
     protected void onActivityResult(int reqCode, int resultCode, Intent data) {
         super.onActivityResult(reqCode, resultCode, data);
-        if (reqCode == CHANGE_IMAGE_DATA_KOTOR) {
-            if (resultCode == RESULT_OK) {
+        if (resultCode == Activity.RESULT_OK) {
+            if (reqCode == REQUEST_CAMERA_DATA_KOTOR) {
                 try {
-                    final Uri imageUri = data.getData();
-                    final InputStream imageStream = getContentResolver().openInputStream(imageUri);
-                    selectedImageDataKotor = BitmapFactory.decodeStream(imageStream);
-                    ivKtp.setImageBitmap(selectedImageDataKotor);
-                } catch (FileNotFoundException e) {
+                    Log.e("CAMERA", fileUri.getPath());
+                    String file = fileUri.getPath();
+                    BitmapFactory.Options bounds = new BitmapFactory.Options();
+                    bounds.inJustDecodeBounds = true;
+                    BitmapFactory.decodeFile(file, bounds);
+
+                    BitmapFactory.Options opts = new BitmapFactory.Options();
+                    Bitmap bm = BitmapFactory.decodeFile(file, opts);
+                    ExifInterface exif = new ExifInterface(file);
+                    String orientString = exif.getAttribute(ExifInterface.TAG_ORIENTATION);
+                    int orientation = orientString != null ? Integer.parseInt(orientString) :  ExifInterface.ORIENTATION_NORMAL;
+
+                    int rotationAngle = 0;
+                    if (orientation == ExifInterface.ORIENTATION_ROTATE_90) rotationAngle = 90;
+                    if (orientation == ExifInterface.ORIENTATION_ROTATE_180) rotationAngle = 180;
+                    if (orientation == ExifInterface.ORIENTATION_ROTATE_270) rotationAngle = 270;
+
+                    Matrix matrix = new Matrix();
+                    matrix.setRotate(rotationAngle, (float) bm.getWidth() / 2, (float) bm.getHeight() / 2);
+                    selectedImageDataKotor = Bitmap.createBitmap(bm, 0, 0, bounds.outWidth, bounds.outHeight, matrix, true);
+//                    selectedImageDataKotor = BitmapFactory.decodeFile(fileUri.getPath());
+                    setToImageView(getResizedBitmap(selectedImageDataKotor, max_resolution_image),ivKtp);
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
+            } else if (reqCode == SELECT_FILE_DATA_KOTOR && data != null && data.getData() != null) {
+                try {
 
-            } else {
-
+                    selectedImageDataKotor = MediaStore.Images.Media.getBitmap(UploadDataKotorVerif.this.getContentResolver(), data.getData());
+                    setToImageView(getResizedBitmap(selectedImageDataKotor, max_resolution_image), ivKtp);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }
@@ -138,6 +193,47 @@ public class UploadDataKotorVerif extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    private void selectImage(int RequestCamera, int requestFile) {
+//        ivKtp.setImageResource(0);
+        final CharSequence[] items = {"Take Photo", "Choose from Library",
+                "Cancel"};
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(UploadDataKotorVerif.this);
+        builder.setTitle("Add Photo!");
+        builder.setIcon(R.mipmap.ic_winery2);
+        builder.setItems(items, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int item) {
+                if (items[item].equals("Take Photo")) {
+                    intent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+                    fileUri = getOutputMediaFileUri();
+                    intent.putExtra(android.provider.MediaStore.EXTRA_OUTPUT, fileUri);
+                    startActivityForResult(intent, RequestCamera);
+                } else if (items[item].equals("Choose from Library")) {
+                    intent = new Intent();
+                    intent.setType("image/*");
+                    intent.setAction(Intent.ACTION_GET_CONTENT);
+                    startActivityForResult(Intent.createChooser(intent, "Select Picture"), requestFile);
+                } else if (items[item].equals("Cancel")) {
+                    dialog.dismiss();
+                }
+            }
+        });
+        builder.show();
+    }
+
+
+    // Set Image
+    private void setToImageView(Bitmap bmp, ImageView imageView) {
+        //compress image
+        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+        bmp.compress(Bitmap.CompressFormat.JPEG, bitmap_size, bytes);
+        decoded = BitmapFactory.decodeStream(new ByteArrayInputStream(bytes.toByteArray()));
+
+        //menampilkan gambar yang dipilih dari camera/gallery ke ImageView
+        imageView.setImageBitmap(decoded);
     }
 
     public void submitCollectionData(Bitmap gambarDataKotor) {
@@ -230,5 +326,46 @@ public class UploadDataKotorVerif extends AppCompatActivity {
         View sbView = snackbar.getView();
         sbView.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimary));
         snackbar.show();
+    }
+
+    // Untuk resize bitmap
+    public Bitmap getResizedBitmap(Bitmap image, int maxSize) {
+        int width = image.getWidth();
+        int height = image.getHeight();
+
+        float bitmapRatio = (float) width / (float) height;
+        if (bitmapRatio > 1) {
+            width = maxSize;
+            height = (int) (width / bitmapRatio);
+        } else {
+            height = maxSize;
+            width = (int) (height * bitmapRatio);
+        }
+        return Bitmap.createScaledBitmap(image, width, height, true);
+    }
+
+    public Uri getOutputMediaFileUri() {
+        return Uri.fromFile(getOutputMediaFile());
+    }
+
+    private static File getOutputMediaFile() {
+
+        // External sdcard location
+        File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), "DeKa");
+
+        // Create the storage directory if it does not exist
+        if (!mediaStorageDir.exists()) {
+            if (!mediaStorageDir.mkdirs()) {
+                Log.e("Monitoring", "Oops! Failed create Monitoring directory");
+                return null;
+            }
+        }
+
+        // Create a media file name
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date());
+        File mediaFile;
+        mediaFile = new File(mediaStorageDir.getPath() + File.separator + "Win" + timeStamp + ".jpg");
+
+        return mediaFile;
     }
 }

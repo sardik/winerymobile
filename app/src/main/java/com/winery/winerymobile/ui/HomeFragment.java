@@ -4,6 +4,7 @@ package com.winery.winerymobile.ui;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -15,6 +16,7 @@ import android.widget.TextView;
 
 import com.winery.winerymobile.R;
 import com.winery.winerymobile.ui.CreditCardSubmission.BankSubmissionForm;
+import com.winery.winerymobile.ui.DuplicateCheckCustomer.ChildMenuOtherFragment;
 import com.winery.winerymobile.ui.JurtulTransaction.ListTransacationPendingJurtul;
 import com.winery.winerymobile.ui.VerifikatorTransaction.ListTransactionWaitingVerif;
 import com.winery.winerymobile.ui.dbhelper.SessionManagement;
@@ -60,6 +62,10 @@ public class HomeFragment extends Fragment {
     LinearLayout llReportKartuTambahan;
     @BindView(R.id.ll_report_kta)
     LinearLayout llReportKta;
+    @BindView(R.id.ll_product)
+    LinearLayout llProduct;
+    @BindView(R.id.ll_menu_container_lainnya)
+    LinearLayout llMenuContainerLainnya;
     /** ButterKnife Code **/
 
 
@@ -78,6 +84,13 @@ public class HomeFragment extends Fragment {
         }
 
     }
+
+    @OnClick(R.id.ll_menu_container_lainnya) void getMenuOther(){
+        ChildMenuOtherFragment bottomSheetFragment = new ChildMenuOtherFragment();
+        bottomSheetFragment.show(getFragmentManager(), bottomSheetFragment.getTag());
+
+    }
+
 
     SessionManagement sessionManagement;
 

@@ -50,6 +50,8 @@ public class StateTransactionSales {
     public static final String KEY_HUBUNGAN = "hubungan";
     public static final String KEY_SALES_CODE = "sales_code";
     public static final String KEY_SALES_NAME = "sales_name";
+    public static final String KEY_HADIAH = "hadiah";
+
 
 
 
@@ -103,7 +105,7 @@ public class StateTransactionSales {
     public void createStateInpuForm(String nama, String nik, String tanggal_lahir, String handphone_1,
                                     String handphone_2,String nama_ibu_kandung,String nama_perusahaan,
                                     String alamat_perusahaan,String telephone_kantor,String nama_emergency_contact,
-                                    String hubungan,String sales_code, String sales_name){
+                                    String hubungan,String sales_code, String sales_name, String hadiah){
 
         // Storing name in pref
         editor.putString(KEY_NAMA, nama);
@@ -119,6 +121,7 @@ public class StateTransactionSales {
         editor.putString(KEY_HUBUNGAN, hubungan);
         editor.putString(KEY_SALES_CODE, sales_code);
         editor.putString(KEY_SALES_NAME, sales_name);
+        editor.putString(KEY_HADIAH, hadiah);
 
         // commit changes
         editor.commit();
@@ -141,6 +144,7 @@ public class StateTransactionSales {
         user.put(KEY_HUBUNGAN, pref.getString(KEY_HUBUNGAN, null));
         user.put(KEY_SALES_CODE, pref.getString(KEY_SALES_CODE, null));
         user.put(KEY_SALES_NAME, pref.getString(KEY_SALES_NAME, null));
+        user.put(KEY_HADIAH, pref.getString(KEY_HADIAH, null));
 
         // return user
         return user;

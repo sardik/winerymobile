@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="bottom"
+    tools:context=".ui.DuplicateCheckCustomer.ChildMenuOtherFragment">
+
+    <RelativeLayout
+        android:id="@+id/rl_parent_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:layout_gravity="top"
+        android:gravity="center_horizontal">
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="40dp"
+            android:layout_height="3dp"
+            android:layout_marginTop="@dimen/default_padding_small"
+            android:background="@android:color/darker_gray"
+            android:padding="@dimen/default_padding_medium" />
+        <View
+            android:layout_below="@+id/view1"
+            android:layout_width="40dp"
+            android:layout_height="3dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="@dimen/default_padding_small"
+            android:background="@android:color/darker_gray"
+            android:padding="@dimen/default_padding_medium" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@android:color/white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lainnya"
+            android:layout_marginStart="@dimen/default_margin_small"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/font_size_18"
+            android:textStyle="bold"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_menu_check_dup"
+            style="@style/card_bank_page_detail">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/default_padding_medium"
+                android:paddingBottom="@dimen/default_padding_medium"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+                    
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/icon_ek_dup"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Cek Dup"
+                        android:gravity="center"
+                        android:textSize="@dimen/font_size_14"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_margin="@dimen/default_padding_small"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/black"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/default_padding_small"
+                        android:text="Untuk melihat apakah nasabah sebelumnya pernah melakukan pengajuan"
+                        android:textSize="@dimen/font_size_10"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,12 +1,15 @@
 package com.winery.winerymobile.ui.CreditCardSubmission;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.InputFilter;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -15,14 +18,31 @@ import android.widget.PopupMenu;
 import android.widget.Toast;
 
 import com.winery.winerymobile.R;
+import com.winery.winerymobile.ui.APIhelper.BaseApiService;
+import com.winery.winerymobile.ui.APIhelper.UtilsApi;
+import com.winery.winerymobile.ui.VerifikatorTransaction.ListTransactionWaitingVerif;
+import com.winery.winerymobile.ui.adapter.LIstHistoriCCAdapter;
 import com.winery.winerymobile.ui.dbhelper.SessionManagement;
 import com.winery.winerymobile.ui.dbhelper.StateTransactionSales;
+import com.winery.winerymobile.ui.model.HadiahList;
+import com.winery.winerymobile.ui.model.HistoryCc;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 import static java.security.AccessController.getContext;
 
@@ -91,6 +111,14 @@ public class CustomerDataForm extends AppCompatActivity {
     com.google.android.material.textfield.TextInputEditText etEmergencyName;
     @BindView(R.id.ti_emergency_relationship)
     com.google.android.material.textfield.TextInputLayout tiEmergencyRelationship;
+    @BindView(R.id.ti_hadiah)
+    com.google.android.material.textfield.TextInputLayout tiHadiah;
+    @BindView(R.id.et_hadiah)
+    AutoCompleteTextView etHadiah;
+    @BindView(R.id.ti_hadiah_referensi)
+    com.google.android.material.textfield.TextInputLayout tiHadiahReferensi;
+    @BindView(R.id.et_hadiah_referensi)
+    AutoCompleteTextView etHadiahReferensi;
 //    @BindView(R.id.et_emergency_relationship)
 //    com.google.android.material.textfield.TextInputEditText etEmergencyRelationship;
     @BindView(R.id.et_emergency_relationship)
@@ -157,6 +185,11 @@ public class CustomerDataForm extends AppCompatActivity {
             tiEmergencyRelationship.requestFocus();
 
         }
+        else if(etHadiah.getText().toString().equals("")){
+            tiHadiah.setError("hadiah harus di isi");
+            tiHadiah.requestFocus();
+
+        }
         else{
 
             HashMap<String, String> user = sessionManagement.getUserDetails();
@@ -165,7 +198,7 @@ public class CustomerDataForm extends AppCompatActivity {
 
             nama = etName.getText().toString();
             nik = etNik.getText().toString();
-            tanggal_lahir = etYearBirth.getText().toString()+"-"+etMonthBirth.getText().toString()+"-"+etDateBrith.getText().toString();
+            tanggal_lahir = etDateBrith.getText().toString()+"/"+etMonthBirth.getText().toString()+"/"+etYearBirth.getText().toString();
             bln_lahir = etMonthBirth.getText().toString();
             thn_lahir = etYearBirth.getText().toString();
             handphone_1 = etHp1.getText().toString();
@@ -176,9 +209,18 @@ public class CustomerDataForm extends AppCompatActivity {
             telephone_kantor = etCompanyPhone.getText().toString();
             nama_emergency_contact = etEmergencyName.getText().toString();
             hubungan = etEmergencyRelationship.getText().toString();
+            hadiah = etHadiah.getText().toString();
 
+            if(etHadiahReferensi.getText().toString().equals("")){
+                hadiah_referensi = "-NON HADIAH";
+            }else{
+                hadiah_referensi = etHadiahReferensi.getText().toString();
+            }
+
+
+            hadiah_explode = hadiah+hadiah_referensi;
             stateTransactionSales.createStateInpuForm(nama, nik, tanggal_lahir, handphone_1, handphone_2,nama_ibu_kandung,
-                    nama_perusahaan,alamat_perusahaan,telephone_kantor,nama_emergency_contact,hubungan,sales_code,sales_name);
+                    nama_perusahaan,alamat_perusahaan,telephone_kantor,nama_emergency_contact,hubungan,sales_code,sales_name, hadiah_explode);
             Intent intent = new Intent(this, FormUploadDocumentSelfie.class);
             startActivity(intent);
         }
@@ -187,10 +229,15 @@ public class CustomerDataForm extends AppCompatActivity {
     String nama, nik, tanggal_lahir,bln_lahir,thn_lahir, handphone_1,
     handphone_2, nama_ibu_kandung, nama_perusahaan,
     alamat_perusahaan, telephone_kantor, nama_emergency_contact,
-    hubungan, sales_code, sales_name;
+    hubungan, sales_code, sales_name, hadiah, hadiah_referensi, hadiah_explode;
 
     SessionManagement sessionManagement;
     StateTransactionSales stateTransactionSales;
+
+    BaseApiService mApiService;
+    ProgressDialog loading;
+    List<HadiahList> hadiahList;
+
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -198,6 +245,9 @@ public class CustomerDataForm extends AppCompatActivity {
         setContentView(R.layout.activity_customer_data_form);
         ButterKnife.bind(this);
 
+        mApiService = UtilsApi.getAPIService();
+
+        requestGetDataHadiah();
 
         StringBuilder sb=new StringBuilder();
 
@@ -235,8 +285,67 @@ public class CustomerDataForm extends AppCompatActivity {
         etCompanyAddress.setFilters(new InputFilter[]{new InputFilter.AllCaps()});
         etEmergencyRelationship.setFilters(new InputFilter[]{new InputFilter.AllCaps()});
         etEmergencyName.setFilters(new InputFilter[]{new InputFilter.AllCaps()});
+        etHadiah.setFilters(new InputFilter[]{new InputFilter.AllCaps()});
+        etHadiahReferensi.setFilters(new InputFilter[]{new InputFilter.AllCaps()});
 
         sessionManagement = new SessionManagement(this);
         stateTransactionSales = new StateTransactionSales(this);
     }
+
+    private void requestGetDataHadiah(){
+        loading = ProgressDialog.show(CustomerDataForm.this, null, "Harap Tunggu...", true, false);
+
+        mApiService.getListDataHadiah()
+                .enqueue(new Callback<ResponseBody>() {
+                    @Override
+                    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                        if (response.isSuccessful()){
+
+                            try {
+                                JSONObject jsonRESULTS = new JSONObject(response.body().string());
+                                if (jsonRESULTS.getInt("status") == 200){
+
+                                    JSONArray m_jsonData = jsonRESULTS.getJSONArray("data");
+//                                        JSONArray arr_jsonArticle = m_jsonData.getJSONArray("articles");
+                                    ArrayList<String> hadiah = new ArrayList<String>();
+
+                                    hadiahList = new ArrayList<>();
+                                    for(int i = 0; i < m_jsonData.length(); i++) {
+                                        JSONObject jsonObject = m_jsonData.getJSONObject(i);
+
+                                        String id = jsonObject.getString("id");
+                                        String namaBarang = jsonObject.getString("nama_barang");
+                                        String jenis = jsonObject.getString("jenis");
+                                        String foto = jsonObject.getString("foto");
+
+                                        hadiah.add(namaBarang);
+
+                                    }
+                                    ArrayAdapter<String> adapter = new ArrayAdapter<>(getApplicationContext(), R.layout.dropdown_menu_popup_item, hadiah);
+                                    etHadiah.setAdapter(adapter);
+                                    etHadiahReferensi.setAdapter(adapter);
+                                    loading.dismiss();
+
+                                } else {
+                                    String error_message = jsonRESULTS.getString("message");
+                                    Toast.makeText(CustomerDataForm.this, error_message, Toast.LENGTH_SHORT).show();
+                                }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        } else {
+                            loading.dismiss();
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<ResponseBody> call, Throwable t) {
+                        Log.e("debug", "onFailure: ERROR > " + t.toString());
+                        loading.dismiss();
+                    }
+                });
+    }
+
 }

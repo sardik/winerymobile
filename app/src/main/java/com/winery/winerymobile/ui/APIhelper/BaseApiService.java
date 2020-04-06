@@ -8,6 +8,7 @@ import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.Part;
@@ -56,6 +57,11 @@ public interface BaseApiService {
 //                                  @Field("sales_code") String sales_code,
 //                                  @Field("sales_name") String sales_name);
 
+
+    // get list hadiah
+
+    @GET("hadiah_list")
+    Call<ResponseBody> getListDataHadiah();
 
     @Multipart
     @POST("sales_input")
@@ -146,4 +152,10 @@ public interface BaseApiService {
     Call<ResponseBody> getListJurtulHistoryInputJurtul(@Field("start_date") String startDate,
                                                       @Field("end_date") String endDate,
                                                       @Field("juru_tulis_code") String juruTulisCode);
+
+    // get check dup
+    @FormUrlEncoded
+    @POST("check_duplicate")
+    Call<ResponseBody> getCheckDuplicateData(@Field("nik") String nik,
+                                                @Field("dob") String dob);
 }

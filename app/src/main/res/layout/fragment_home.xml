@@ -347,7 +347,6 @@
 
                 <com.google.android.material.card.MaterialCardView
                     style="@style/rl_parent_image_item_menu"
-                    android:backgroundTint="@android:color/darker_gray"
                     app:cardCornerRadius="10dp">
 
                     <RelativeLayout
@@ -367,7 +366,7 @@
                 <TextView
                     style="@style/tv_title_menu_home"
                     android:text="Lainnya"
-                    android:textColor="@android:color/darker_gray"
+                    android:textColor="@android:color/black"
                     android:gravity="center"/>
             </LinearLayout>
 

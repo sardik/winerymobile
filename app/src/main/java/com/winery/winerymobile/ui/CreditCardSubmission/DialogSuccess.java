@@ -35,7 +35,7 @@ public class DialogSuccess extends BottomSheetDialogFragment {
     /** ButterKnife Code **/
 
     @OnClick(R.id.btn_home) void gotohome(){
-        Intent intent = new Intent(getContext(), ParentHomeActivity.class);
+            Intent intent = new Intent(getContext(), ParentHomeActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }

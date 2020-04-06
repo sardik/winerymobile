@@ -51,7 +51,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="scalingPercent" value="67" />
+                                                <entry key="scalingPercent" value="57" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -62,8 +62,9 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
-                                      <entry key="foregroundImage" value="$USER_HOME$/Downloads/logowinery2_purple.jpeg" />
-                                      <entry key="outputName" value="ic_winery2" />
+                                      <entry key="backgroundColor" value="ffffff" />
+                                      <entry key="foregroundImage" value="$USER_HOME$/Downloads/icon winmobile 01/icon_apps.png" />
+                                      <entry key="outputName" value="ic_winery3" />
                                     </map>
                                   </option>
                                 </PersistentState>

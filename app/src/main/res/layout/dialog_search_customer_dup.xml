@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="0dp"
+    style="@style/card_bank_page_detail">
+
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin_small">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="CEK DUP"
+                android:layout_marginLeft="@dimen/default_margin_small"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_size_16"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:layout_gravity="end"
+                android:src="@drawable/ic_cancel_purple_900_24dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="@dimen/default_margin_small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="NIK"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ti_nik"
+            style="@style/text_input_basic">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_nik"
+                style="@style/edit_text_input"
+                android:inputType="number"
+                android:maxLength="16"
+                android:hint="NIK" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_marginTop="@dimen/default_margin_small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="Tanggal lahir"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_date_birth"
+                style="@style/text_input_basic"
+                android:layout_weight="1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_date_brith"
+                    style="@style/edit_text_input"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:hint="dd" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="@dimen/default_margin_small"
+                android:layout_height="match_parent"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_month_birth"
+                style="@style/text_input_basic"
+                android:layout_weight="1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_month_birth"
+                    style="@style/edit_text_input"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:hint="mm" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="@dimen/default_margin_small"
+                android:layout_height="match_parent"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_year_birth"
+                style="@style/text_input_basic"
+                android:layout_weight="1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_year_birth"
+                    style="@style/edit_text_input"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:hint="yyyy" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_search"
+                style="@style/default_button"
+                android:layout_marginTop="@dimen/default_margin_small"
+                app:backgroundTint="@color/colorPrimary"
+                app:rippleColor="@color/deep_purple_200"
+                android:text="Cari"/>
+
+            <androidx.core.widget.ContentLoadingProgressBar
+                android:id="@+id/content_loading"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@android:color/white"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

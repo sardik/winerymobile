@@ -365,6 +365,44 @@
 
                     </com.google.android.material.textfield.TextInputLayout>
 
+                    <TextView
+                        android:layout_marginTop="@dimen/default_margin_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:text="Hadiah"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/text_input_basic_dropdown"
+                        android:id="@+id/ti_hadiah">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/et_hadiah"
+                            android:hint="Hadiah"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:layout_marginTop="@dimen/default_margin_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:text="Hadiah Referensi"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/text_input_basic_dropdown"
+                        android:id="@+id/ti_hadiah_referensi">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/et_hadiah_referensi"
+                            android:hint="Hadiah Referensi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
                 </LinearLayout>
 
                 <LinearLayout

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     tools:context=".ui.SplashScreen">
 
     <RelativeLayout
@@ -12,8 +13,9 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/logo_grape"/>
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content"
+            android:src="@drawable/winmobile_putih"/>
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,8 +1,16 @@
 package com.winery.winerymobile.ui.helper;
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.os.Environment;
+import android.util.DisplayMetrics;
+import android.view.ViewGroup;
+import android.widget.FrameLayout;
+
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.winery.winerymobile.R;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -52,7 +60,7 @@ public class Utils {
 
     public static String getDateThreeLetter(String datePromo){
         String cur = "";
-        SimpleDateFormat formattedDate = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat formattedDate = new SimpleDateFormat("dd/MM/yyyy");
         SimpleDateFormat format1 = new SimpleDateFormat("d MMM yyyy");
         Date date = new Date();
         try {
@@ -88,5 +96,29 @@ public class Utils {
         SimpleDateFormat iso8601Format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String cur = iso8601Format.format(new Date());
         return cur;
+    }
+
+    // setup dimension of bottom sheet dialog
+    public static void setupFullHeight(BottomSheetDialog bottomSheetDialog, Context context, Double percentPoint) {
+        FrameLayout bottomSheet = (FrameLayout) bottomSheetDialog.findViewById(R.id.design_bottom_sheet);
+        bottomSheet.setBackground(null);
+        BottomSheetBehavior behavior = BottomSheetBehavior.from(bottomSheet);
+        BottomSheetBehavior.from(bottomSheet).setSkipCollapsed(true);
+        BottomSheetBehavior.from(bottomSheet).setHideable(true);
+        ViewGroup.LayoutParams layoutParams = bottomSheet.getLayoutParams();
+
+        int windowHeight = getWindowHeight(context, percentPoint);
+        if (layoutParams != null) {
+            layoutParams.height = windowHeight;
+        }
+        bottomSheet.setLayoutParams(layoutParams);
+        behavior.setState(BottomSheetBehavior.STATE_EXPANDED);
+    }
+
+    private static int getWindowHeight(Context context, Double percentPoint) {
+        // Calculate window height for fullscreen use
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        ((Activity) context).getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+        return (int) (displayMetrics.heightPixels *percentPoint);
     }
 }
