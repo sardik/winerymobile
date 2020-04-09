@@ -105,6 +105,14 @@ public class CustomerDataForm extends AppCompatActivity {
     com.google.android.material.textfield.TextInputLayout tiCompanyPhone;
     @BindView(R.id.et_company_phone)
     com.google.android.material.textfield.TextInputEditText etCompanyPhone;
+    @BindView(R.id.ti_company_phone_ext)
+    com.google.android.material.textfield.TextInputLayout tiCompanyPhoneExt;
+    @BindView(R.id.et_company_phone_ext)
+    com.google.android.material.textfield.TextInputEditText etCompanyPhoneExt;
+    @BindView(R.id.ti_emergency_telp)
+    com.google.android.material.textfield.TextInputLayout tiEmergencyTelp;
+    @BindView(R.id.et_emergency_telp)
+    com.google.android.material.textfield.TextInputEditText etEmergencyTelp;
     @BindView(R.id.ti_emergency_name)
     com.google.android.material.textfield.TextInputLayout tiEmergencyName;
     @BindView(R.id.et_emergency_name)
@@ -180,6 +188,10 @@ public class CustomerDataForm extends AppCompatActivity {
             tiEmergencyName.setError("nama emergency contact harus di isi");
             etEmergencyName.requestFocus();
         }
+        else if(etEmergencyTelp.getText().toString().equals("")){
+            tiEmergencyTelp.setError("telp emergency contact harus di isi");
+            etEmergencyTelp.requestFocus();
+        }
         else if(etEmergencyRelationship.getText().toString().equals("")){
             tiEmergencyRelationship.setError("hubungan harus di isi");
             tiEmergencyRelationship.requestFocus();
@@ -206,8 +218,10 @@ public class CustomerDataForm extends AppCompatActivity {
             nama_ibu_kandung = etMotherName.getText().toString();
             nama_perusahaan = etCompanyName.getText().toString();
             alamat_perusahaan = etCompanyAddress.getText().toString();
-            telephone_kantor = etCompanyPhone.getText().toString();
+            telephone_kantor = etCompanyPhone.getText().toString()+etCompanyPhoneExt.getText().toString();
             nama_emergency_contact = etEmergencyName.getText().toString();
+            telp_emergency_contact = etEmergencyTelp.getText().toString();
+
             hubungan = etEmergencyRelationship.getText().toString();
             hadiah = etHadiah.getText().toString();
 
@@ -217,10 +231,11 @@ public class CustomerDataForm extends AppCompatActivity {
                 hadiah_referensi = etHadiahReferensi.getText().toString();
             }
 
-
             hadiah_explode = hadiah+hadiah_referensi;
+
+
             stateTransactionSales.createStateInpuForm(nama, nik, tanggal_lahir, handphone_1, handphone_2,nama_ibu_kandung,
-                    nama_perusahaan,alamat_perusahaan,telephone_kantor,nama_emergency_contact,hubungan,sales_code,sales_name, hadiah_explode);
+                    nama_perusahaan,alamat_perusahaan,telephone_kantor,nama_emergency_contact,hubungan,sales_code,sales_name, hadiah_explode, telp_emergency_contact);
             Intent intent = new Intent(this, FormUploadDocumentSelfie.class);
             startActivity(intent);
         }
@@ -228,7 +243,7 @@ public class CustomerDataForm extends AppCompatActivity {
 
     String nama, nik, tanggal_lahir,bln_lahir,thn_lahir, handphone_1,
     handphone_2, nama_ibu_kandung, nama_perusahaan,
-    alamat_perusahaan, telephone_kantor, nama_emergency_contact,
+    alamat_perusahaan, telephone_kantor, nama_emergency_contact, telp_emergency_contact,
     hubungan, sales_code, sales_name, hadiah, hadiah_referensi, hadiah_explode;
 
     SessionManagement sessionManagement;

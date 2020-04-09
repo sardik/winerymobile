@@ -49,6 +49,7 @@
 
         <androidx.core.widget.NestedScrollView
             android:id="@+id/nested"
+            android:visibility="invisible"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:scrollbars="none">
@@ -68,6 +69,84 @@
                     android:id="@+id/ll_section1">
 
                     <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/default_padding_medium"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Nama"/>
+
+                        <TextView
+                            android:id="@+id/tv_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:text="Ahmad Taufik"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/default_padding_medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Tanggal Lahir"/>
+
+                        <TextView
+                            android:id="@+id/tv_dob"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:text="21 Mar 1998"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/default_padding_medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Nama Perusahaan"/>
+
+                        <TextView
+                            android:id="@+id/tv_company_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:text="PT. TAUFIK SEJAHTERA"/>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/default_padding_medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="File Data Kotor"/>
+
+                        <ImageView
+                            android:id="@+id/iv_data_kotor"
+                            android:scaleType="fitXY"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"/>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:visibility="gone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
@@ -148,24 +227,7 @@
                                     android:text="00010212121"/>
                             </LinearLayout>
 
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="@dimen/default_padding_medium"
-                                android:orientation="vertical">
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Nama"/>
-
-                                <TextView
-                                    android:id="@+id/tv_name"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:textColor="@android:color/black"
-                                    android:text="Ahmad Taufik"/>
-                            </LinearLayout>
 
                             <LinearLayout
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -186,24 +248,7 @@
                                     android:text="Jakarta"/>
                             </LinearLayout>
 
-                            <LinearLayout
-                                android:layout_marginTop="@dimen/default_padding_medium"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Tanggal Lahir"/>
-
-                                <TextView
-                                    android:id="@+id/tv_dob"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:textColor="@android:color/black"
-                                    android:text="21 Mar 1998"/>
-                            </LinearLayout>
 
                             <LinearLayout
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -579,6 +624,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:visibility="gone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
@@ -640,24 +686,7 @@
                                     android:text="-"/>
                             </LinearLayout>
 
-                            <LinearLayout
-                                android:layout_marginTop="@dimen/default_padding_medium"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Nama Perusahaan"/>
-
-                                <TextView
-                                    android:id="@+id/tv_company_name"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:textColor="@android:color/black"
-                                    android:text="PT. TAUFIK SEJAHTERA"/>
-                            </LinearLayout>
 
                             <LinearLayout
                                 android:layout_marginTop="@dimen/default_padding_medium"
@@ -911,6 +940,7 @@
 
 
                     <LinearLayout
+                        android:visibility="gone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
@@ -1109,6 +1139,7 @@
 
 
                     <LinearLayout
+                        android:visibility="gone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"

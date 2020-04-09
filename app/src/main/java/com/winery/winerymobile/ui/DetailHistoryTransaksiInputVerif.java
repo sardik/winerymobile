@@ -749,6 +749,8 @@ public class DetailHistoryTransaksiInputVerif extends AppCompatActivity {
                                     parentTglSubmitPanin.setVisibility(View.GONE);
                                     parentStatusBalikanPanin.setVisibility(View.GONE);
 
+                                    nested.setVisibility(View.VISIBLE);
+
 
 
                                 } else {

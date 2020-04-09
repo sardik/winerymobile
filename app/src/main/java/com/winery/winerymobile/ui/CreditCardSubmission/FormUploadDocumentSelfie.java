@@ -948,6 +948,10 @@ public class FormUploadDocumentSelfie extends AppCompatActivity {
         map.put("sales_code", createPartFromString(session.get(sessionManagement.KEY_SALES_CODE)));
         map.put("sales_name", createPartFromString(session.get(sessionManagement.KEY_NAME)));
         map.put("hadiah", createPartFromString(user.get(StateTransactionSales.KEY_HADIAH)));
+        map.put("emergency_contact", createPartFromString(user.get(StateTransactionSales.KEY_TELP_EMERGENCY_KONTAK)));
+
+
+
 
 
 

@@ -67,6 +67,10 @@ public class ListCheckDataDuplicate extends AppCompatActivity {
     TextView tvEmergencyContact;
     @BindView(R.id.tv_relationship)
     TextView tvRelationship;
+    @BindView(R.id.tv_sales)
+    TextView tvSales;
+    @BindView(R.id.tv_hadiah)
+    TextView tvHadiah;
     @BindView(R.id.card_bank_bri)
     com.google.android.material.card.MaterialCardView cardBankBri;
     @BindView(R.id.parent_status_bri)
@@ -349,317 +353,323 @@ public class ListCheckDataDuplicate extends AppCompatActivity {
                                 JSONObject jsonRESULTS = new JSONObject(response.body().string());
                                 if (jsonRESULTS.getInt("status") == 200){
 
-//                                    String id = jsonRESULTS.getJSONObject("data").getString("id");
-//                                    String tanggal = jsonRESULTS.getJSONObject("data").getString("tanggal");
-//                                    String nik = jsonRESULTS.getJSONObject("data").getString("nik");
-//                                    String nama = jsonRESULTS.getJSONObject("data").getString("nama");
-//                                    String dob = jsonRESULTS.getJSONObject("data").getString("dob");
-//                                    String telepon = jsonRESULTS.getJSONObject("data").getString("telepon");
-//                                    String ibu = jsonRESULTS.getJSONObject("data").getString("ibu");
-//                                    String perusahaan = jsonRESULTS.getJSONObject("data").getString("perusahaan");
-//                                    String alamatkantor = jsonRESULTS.getJSONObject("data").getString("alamatkantor");
-//                                    String teleponkantor = jsonRESULTS.getJSONObject("data").getString("teleponkantor");
-//                                    String econtact = jsonRESULTS.getJSONObject("data").getString("econtact");
-//                                    String hubunganecontact = jsonRESULTS.getJSONObject("data").getString("hubunganecontact");
-//
-//                                    tvName.setText(nama);
-//                                    tvNik.setText(nik);
-//                                    tvDob.setText(dob);
-//                                    tvHandphone.setText(telepon);
-//                                    tvMotherName.setText(ibu);
-//                                    tvCompanyName.setText(perusahaan);
-//                                    tvCompanyAddress.setText(alamatkantor);
-//                                    tvCompanyPhone.setText(teleponkantor);
-//                                    tvEmergencyContact.setText(econtact);
-//                                    tvRelationship.setText(hubunganecontact);
-//
-//                                    // bank BRI
-//                                    String StatusBri,VerifikasiBri,tanggalSubmitBri, statusappBri;
-//                                    StatusBri = jsonRESULTS.getJSONObject("data").getString("bri");
-//                                    String tanggalPengajuanBri = jsonRESULTS.getJSONObject("data").getString("tanggal");
-//                                    VerifikasiBri = jsonRESULTS.getJSONObject("data").getString("verifbri");
-//                                    tanggalSubmitBri = jsonRESULTS.getJSONObject("data").getString("tanggalsubmitbri");
-//                                    statusappBri = jsonRESULTS.getJSONObject("data").getString("keteranganbalikanbri");
-//
-//                                    if(StatusBri.equals("") || StatusBri.equals("null")){
-//                                        StatusBri = "-";
-//                                    }
-//                                    if(VerifikasiBri.equals("") || VerifikasiBri.equals("null")){
-//                                        VerifikasiBri = "-";
-//                                    }
-//                                    if(tanggalSubmitBri.equals("") || tanggalSubmitBri.equals("null")){
-//                                        tanggalSubmitBri = "-";
-//                                    }
-//                                    if(statusappBri.equals("") || statusappBri.equals("null")){
-//                                        statusappBri = "-";
-//                                    }
-//
-//                                    // bank
-//                                    statusBri.setText(StatusBri);
-//                                    tglPengajuanBri.setText(tanggalPengajuanBri);
-//                                    statusVerifBri.setText(VerifikasiBri);
-//                                    tglSubmitBri.setText(tanggalSubmitBri);
-//                                    tvStatusBri.setText(statusappBri);
-//
-//                                    // bank BNI
-//                                    String StatusBni, VerifikasiBni, tanggalSubmitBni, statusappBni;
-//                                    StatusBni = jsonRESULTS.getJSONObject("data").getString("bni");
-//                                    String tanggalPengajuanBni = jsonRESULTS.getJSONObject("data").getString("tanggal");
-//                                    VerifikasiBni = jsonRESULTS.getJSONObject("data").getString("verifbni");
-//                                    tanggalSubmitBni = jsonRESULTS.getJSONObject("data").getString("tanggalsubmitbni");
-//                                    statusappBni = jsonRESULTS.getJSONObject("data").getString("keteranganbalikanbni");
-//
-//                                    if(StatusBni.equals("") || StatusBni.equals("null")){
-//                                        StatusBni = "-";
-//                                    }
-//                                    if(VerifikasiBni.equals("") || VerifikasiBni.equals("null")){
-//                                        VerifikasiBni = "-";
-//                                    }
-//                                    if(tanggalSubmitBni.equals("") || tanggalSubmitBni.equals("null")){
-//                                        tanggalSubmitBni = "-";
-//                                    }
-//                                    if(statusappBni.equals("") || statusappBni.equals("null")){
-//                                        statusappBni = "-";
-//                                    }
-//
-//                                    // bank
-//                                    statusBni.setText(StatusBni);
-//                                    tglPengajuanBni.setText(tanggalPengajuanBni);
-//                                    statusVerifBni.setText(VerifikasiBni);
-//                                    tglSubmitBni.setText(tanggalSubmitBni);
-//                                    tvStatusBni.setText(statusappBni);
-//
-//                                    // bank BCA
-//                                    String StatusBca, VerifikasiBca, tanggalSubmitBca, statusappBca;
-//                                    StatusBca = jsonRESULTS.getJSONObject("data").getString("bca");
-//                                    String tanggalPengajuanBca = jsonRESULTS.getJSONObject("data").getString("tanggal");
-//                                    VerifikasiBca = jsonRESULTS.getJSONObject("data").getString("verifbca");
-//                                    tanggalSubmitBca = jsonRESULTS.getJSONObject("data").getString("tanggalsubmitbca");
-//                                    statusappBca = jsonRESULTS.getJSONObject("data").getString("keteranganbalikanbca");
-//
-//                                    if(StatusBca.equals("") || StatusBca.equals("null")){
-//                                        StatusBca = "-";
-//                                    }
-//                                    if(VerifikasiBca.equals("") || VerifikasiBca.equals("null")){
-//                                        VerifikasiBca = "-";
-//                                    }
-//                                    if(tanggalSubmitBca.equals("") || tanggalSubmitBca.equals("null")){
-//                                        tanggalSubmitBca = "-";
-//                                    }
-//                                    if(statusappBca.equals("") || statusappBca.equals("null")){
-//                                        statusappBca = "-";
-//                                    }
-//
-//                                    // bank
-//                                    statusBca.setText(StatusBca);
-//                                    tglPengajuanBca.setText(tanggalPengajuanBca);
-//                                    statusVerifBca.setText(VerifikasiBca);
-//                                    tglSubmitBca.setText(tanggalSubmitBca);
-//                                    tvStatusBca.setText(statusappBca);
-//
-//                                    // bank CIMB
-//                                    String StatusCimb,VerifikasiCimb, tanggalSubmitCimb,statusappCimb;
-//                                    StatusCimb = jsonRESULTS.getJSONObject("data").getString("niaga");
-//                                    String tanggalPengajuanCimb = jsonRESULTS.getJSONObject("data").getString("tanggal");
-//                                    VerifikasiCimb = jsonRESULTS.getJSONObject("data").getString("verifniaga");
-//                                    tanggalSubmitCimb = jsonRESULTS.getJSONObject("data").getString("tanggalsubmitniaga");
-//                                    statusappCimb = jsonRESULTS.getJSONObject("data").getString("keteranganbalikanniaga");
-//
-//                                    if(StatusCimb.equals("") || StatusCimb.equals("null")){
-//                                        StatusCimb = "-";
-//                                    }
-//                                    if(VerifikasiCimb.equals("") || VerifikasiCimb.equals("null")){
-//                                        VerifikasiCimb = "-";
-//                                    }
-//                                    if(tanggalSubmitCimb.equals("") || tanggalSubmitCimb.equals("null")){
-//                                        tanggalSubmitCimb = "-";
-//                                    }
-//                                    if(statusappCimb.equals("") || statusappCimb.equals("null")){
-//                                        statusappCimb = "-";
-//                                    }
-//
-//                                    // bank
-//                                    statusCimb.setText(StatusCimb);
-//                                    tglPengajuanCimb.setText(tanggalPengajuanCimb);
-//                                    statusVerifCimb.setText(VerifikasiCimb);
-//                                    tglSubmitCimb.setText(tanggalSubmitCimb);
-//                                    tvStatusCimb.setText(statusappCimb);
-//
-//                                    // bank Mayapada
-//                                    String StatusMayapada, VerifikasiMayapada, tanggalSubmitMayapada, statusappMayapada;
-//                                    StatusMayapada = jsonRESULTS.getJSONObject("data").getString("mayapada");
-//                                    String tanggalPengajuanMayapada = jsonRESULTS.getJSONObject("data").getString("tanggal");
-//                                    VerifikasiMayapada = jsonRESULTS.getJSONObject("data").getString("verifmayapada");
-//                                    tanggalSubmitMayapada = jsonRESULTS.getJSONObject("data").getString("tanggalsubmitmayapada");
-//                                    statusappMayapada= jsonRESULTS.getJSONObject("data").getString("keteranganbalikanmayapada");
-//
-//                                    if(StatusMayapada.equals("") || StatusMayapada.equals("null")){
-//                                        StatusMayapada = "-";
-//                                    }
-//                                    if(VerifikasiMayapada.equals("") || VerifikasiMayapada.equals("null")){
-//                                        VerifikasiMayapada = "-";
-//                                    }
-//                                    if(tanggalSubmitMayapada.equals("") || tanggalSubmitMayapada.equals("null")){
-//                                        tanggalSubmitMayapada = "-";
-//                                    }
-//                                    if(statusappMayapada.equals("") || statusappMayapada.equals("null")){
-//                                        statusappMayapada = "-";
-//                                    }
-//
-//                                    // bank
-//                                    statusMayapada.setText(StatusMayapada);
-//                                    tglPengajuanMayapada.setText(tanggalPengajuanMayapada);
-//                                    statusVerifMayapada.setText(VerifikasiMayapada);
-//                                    tglSubmitMayapada.setText(tanggalSubmitMayapada);
-//                                    tvStatusMayapada.setText(statusappMayapada);
-//
-//                                    // bank Dbs
-//                                    String StatusDbs, VerifikasiDbs, tanggalSubmitDbs, statusappDbs;
-//                                    StatusDbs = jsonRESULTS.getJSONObject("data").getString("dbs");
-//                                    String tanggalPengajuanDbs = jsonRESULTS.getJSONObject("data").getString("tanggal");
-//                                    VerifikasiDbs = jsonRESULTS.getJSONObject("data").getString("verifdbs");
-//                                    tanggalSubmitDbs = jsonRESULTS.getJSONObject("data").getString("tanggalsubmitdbs");
-//                                    statusappDbs = jsonRESULTS.getJSONObject("data").getString("keteranganbalikandbs");
-//
-//                                    if(StatusDbs.equals("") || StatusDbs.equals("null")){
-//                                        StatusDbs = "-";
-//                                    }
-//                                    if(VerifikasiDbs.equals("") || VerifikasiDbs.equals("null")){
-//                                        VerifikasiDbs = "-";
-//                                    }
-//                                    if(tanggalSubmitDbs.equals("") || tanggalSubmitDbs.equals("null")){
-//                                        tanggalSubmitDbs = "-";
-//                                    }
-//                                    if(statusappDbs.equals("") || statusappDbs.equals("null")){
-//                                        statusappDbs = "-";
-//                                    }
-//
-//                                    // bank
-//                                    statusDbs.setText(StatusDbs);
-//                                    tglPengajuanDbs.setText(tanggalPengajuanDbs);
-//                                    statusVerifDbs.setText(VerifikasiDbs);
-//                                    tglSubmitDbs.setText(tanggalSubmitDbs);
-//                                    tvStatusDbs.setText(statusappDbs);
-//
-//                                    // bank MNC
-//                                    String StatusMnc, VerifikasiMnc, tanggalSubmitMnc, statusappMnc;
-//                                    StatusMnc = jsonRESULTS.getJSONObject("data").getString("mnc");
-//                                    String tanggalPengajuanMnc = jsonRESULTS.getJSONObject("data").getString("tanggal");
-//                                    VerifikasiMnc = jsonRESULTS.getJSONObject("data").getString("verifmnc");
-//                                    tanggalSubmitMnc = jsonRESULTS.getJSONObject("data").getString("tanggalsubmitmnc");
-//                                    statusappMnc = jsonRESULTS.getJSONObject("data").getString("keteranganbalikanmnc");
-//
-//                                    if(StatusMnc.equals("") || StatusMnc.equals("null")){
-//                                        StatusMnc = "-";
-//                                    }
-//                                    if(VerifikasiMnc.equals("") || VerifikasiMnc.equals("null")){
-//                                        VerifikasiMnc = "-";
-//                                    }
-//                                    if(tanggalSubmitMnc.equals("") || tanggalSubmitMnc.equals("null")){
-//                                        tanggalSubmitMnc = "-";
-//                                    }
-//                                    if(statusappMnc.equals("") || statusappMnc.equals("null")){
-//                                        statusappMnc = "-";
-//                                    }
-//
-//                                    // bank
-//                                    statusMnc.setText(StatusMnc);
-//                                    tglPengajuanMnc.setText(tanggalPengajuanMnc);
-//                                    statusVerifMnc.setText(VerifikasiMnc);
-//                                    tglSubmitMnc.setText(tanggalSubmitMnc);
-//                                    tvStatusMnc.setText(statusappMnc);
-//
-//                                    // bank UOB
-//                                    String StatusUob, VerifikasiUob, tanggalSubmitUob, statusappUob;
-//                                    StatusUob = jsonRESULTS.getJSONObject("data").getString("uob");
-//                                    String tanggalPengajuanUob = jsonRESULTS.getJSONObject("data").getString("tanggal");
-//                                    VerifikasiUob = jsonRESULTS.getJSONObject("data").getString("verifuob");
-//                                    tanggalSubmitUob = jsonRESULTS.getJSONObject("data").getString("tanggalsubmituob");
-//                                    statusappUob = jsonRESULTS.getJSONObject("data").getString("keteranganbalikanuob");
-//
-//                                    if(StatusUob.equals("") || StatusUob.equals("null")){
-//                                        StatusUob = "-";
-//                                    }
-//                                    if(VerifikasiUob.equals("") || VerifikasiUob.equals("null")){
-//                                        VerifikasiUob = "-";
-//                                    }
-//                                    if(tanggalSubmitUob.equals("") || tanggalSubmitUob.equals("null")){
-//                                        tanggalSubmitUob = "-";
-//                                    }
-//                                    if(statusappUob.equals("") || statusappUob.equals("null")){
-//                                        statusappUob = "-";
-//                                    }
-//
-//                                    // bank
-//                                    statusUob.setText(StatusUob);
-//                                    tglPengajuanUob.setText(tanggalPengajuanUob);
-//                                    statusVerifUob.setText(VerifikasiUob);
-//                                    tglSubmitUob.setText(tanggalSubmitUob);
-//                                    tvStatusUob.setText(statusappUob);
-//
-//                                    // bank Mega
-//                                    String StatusMega, VerifikasiMega, tanggalSubmitMega, statusappMega;
-//                                    StatusMega = jsonRESULTS.getJSONObject("data").getString("mega");
-//                                    String tanggalPengajuanMega = jsonRESULTS.getJSONObject("data").getString("tanggal");
-//                                    VerifikasiMega = jsonRESULTS.getJSONObject("data").getString("verifmega");
-//                                    tanggalSubmitMega = jsonRESULTS.getJSONObject("data").getString("tanggalsubmitmega");
-//                                    statusappMega = jsonRESULTS.getJSONObject("data").getString("keteranganbalikanmega");
-//
-//                                    if(StatusMega.equals("") || StatusMega.equals("null")){
-//                                        StatusMega = "-";
-//                                    }
-//                                    if(VerifikasiMega.equals("") || VerifikasiMega.equals("null")){
-//                                        VerifikasiMega = "-";
-//                                    }
-//                                    if(tanggalSubmitMega.equals("") || tanggalSubmitMega.equals("null")){
-//                                        tanggalSubmitMega = "-";
-//                                    }
-//                                    if(statusappMega.equals("") || statusappMega.equals("null")){
-//                                        statusappMega = "-";
-//                                    }
-//
-//                                    // bank
-//                                    statusMega.setText(StatusMega);
-//                                    tglPengajuanMega.setText(tanggalPengajuanMega);
-//                                    statusVerifMega.setText(VerifikasiMega);
-//                                    tglSubmitMega.setText(tanggalSubmitMega);
-//                                    tvStatusMega.setText(statusappMega);
-//
-//
-//                                    // bank
-//                                    statusUob.setText(StatusUob);
-//                                    tglPengajuanUob.setText(tanggalPengajuanUob);
-//                                    statusVerifUob.setText(VerifikasiUob);
-//                                    tglSubmitUob.setText(tanggalSubmitUob);
-//                                    tvStatusUob.setText(statusappUob);
-//
-//                                    // bank Panin
-//                                    String StatusPanin, VerifikasiPanin, tanggalSubmitPanin, statusappPanin;
-//                                    StatusPanin = jsonRESULTS.getJSONObject("data").getString("panin");
-//                                    String tanggalPengajuanPanin = jsonRESULTS.getJSONObject("data").getString("tanggal");
-//                                    VerifikasiPanin= jsonRESULTS.getJSONObject("data").getString("verifpanin");
-//                                    tanggalSubmitPanin = jsonRESULTS.getJSONObject("data").getString("tanggalsubmitpanin");
-//                                    statusappPanin = jsonRESULTS.getJSONObject("data").getString("keteranganbalikanpanin");
-//
-//                                    if(StatusPanin.equals("") || StatusPanin.equals("null")){
-//                                        StatusPanin = "-";
-//                                    }
-//                                    if(VerifikasiPanin.equals("") || VerifikasiPanin.equals("null")){
-//                                        VerifikasiPanin = "-";
-//                                    }
-//                                    if(tanggalSubmitPanin.equals("") || tanggalSubmitPanin.equals("null")){
-//                                        tanggalSubmitPanin = "-";
-//                                    }
-//                                    if(statusappPanin.equals("") || statusappPanin.equals("null")){
-//                                        statusappPanin = "-";
-//                                    }
-//
-//                                    // bank
-//                                    statusPanin.setText(StatusPanin);
-//                                    tglPengajuanPanin.setText(tanggalPengajuanPanin);
-//                                    statusVerifPanin.setText(VerifikasiPanin);
-//                                    tglSubmitPanin.setText(tanggalSubmitPanin);
-//                                    tvStatusPanin.setText(statusappPanin);
+                                    String id = jsonRESULTS.getJSONObject("data").getString("id");
+                                    String tanggal = jsonRESULTS.getJSONObject("data").getString("tanggal");
+                                    String nik = jsonRESULTS.getJSONObject("data").getString("nik");
+                                    String nama = jsonRESULTS.getJSONObject("data").getString("nama");
+                                    String dob = jsonRESULTS.getJSONObject("data").getString("dob");
+                                    String telepon = jsonRESULTS.getJSONObject("data").getString("telepon");
+                                    String ibu = jsonRESULTS.getJSONObject("data").getString("ibu");
+                                    String perusahaan = jsonRESULTS.getJSONObject("data").getString("perusahaan");
+                                    String alamatkantor = jsonRESULTS.getJSONObject("data").getString("alamatkantor");
+                                    String teleponkantor = jsonRESULTS.getJSONObject("data").getString("teleponkantor");
+                                    String econtact = jsonRESULTS.getJSONObject("data").getString("econtact");
+                                    String hubunganecontact = jsonRESULTS.getJSONObject("data").getString("hubunganecontact");
+                                    String salesname = jsonRESULTS.getJSONObject("data").getString("salesname");
+                                    String salescode = jsonRESULTS.getJSONObject("data").getString("salescode");
+                                    String hadiah = jsonRESULTS.getJSONObject("data").getString("hadiah");
+
+
+                                    tvName.setText(nama);
+                                    tvNik.setText(nik);
+                                    tvDob.setText(dob);
+                                    tvHandphone.setText(telepon);
+                                    tvMotherName.setText(ibu);
+                                    tvCompanyName.setText(perusahaan);
+                                    tvCompanyAddress.setText(alamatkantor);
+                                    tvCompanyPhone.setText(teleponkantor);
+                                    tvEmergencyContact.setText(econtact);
+                                    tvRelationship.setText(hubunganecontact);
+                                    tvSales.setText(salesname+" ("+salescode+")");
+                                    tvHadiah.setText(hadiah);
+
+                                    // bank BRI
+                                    String StatusBri,VerifikasiBri,tanggalSubmitBri, statusappBri;
+                                    StatusBri = jsonRESULTS.getJSONObject("data").getString("bri");
+                                    String tanggalPengajuanBri = jsonRESULTS.getJSONObject("data").getString("tanggal");
+                                    VerifikasiBri = jsonRESULTS.getJSONObject("data").getString("verifbri");
+                                    tanggalSubmitBri = jsonRESULTS.getJSONObject("data").getString("tanggalsubmitbri");
+                                    statusappBri = jsonRESULTS.getJSONObject("data").getString("keteranganbalikanbri");
+
+                                    if(StatusBri.equals("") || StatusBri.equals("null")){
+                                        StatusBri = "-";
+                                    }
+                                    if(VerifikasiBri.equals("") || VerifikasiBri.equals("null")){
+                                        VerifikasiBri = "-";
+                                    }
+                                    if(tanggalSubmitBri.equals("") || tanggalSubmitBri.equals("null")){
+                                        tanggalSubmitBri = "-";
+                                    }
+                                    if(statusappBri.equals("") || statusappBri.equals("null")){
+                                        statusappBri = "-";
+                                    }
+
+                                    // bank
+                                    statusBri.setText(StatusBri);
+                                    tglPengajuanBri.setText(tanggalPengajuanBri);
+                                    statusVerifBri.setText(VerifikasiBri);
+                                    tglSubmitBri.setText(tanggalSubmitBri);
+                                    tvStatusBri.setText(statusappBri);
+
+                                    // bank BNI
+                                    String StatusBni, VerifikasiBni, tanggalSubmitBni, statusappBni;
+                                    StatusBni = jsonRESULTS.getJSONObject("data").getString("bni");
+                                    String tanggalPengajuanBni = jsonRESULTS.getJSONObject("data").getString("tanggal");
+                                    VerifikasiBni = jsonRESULTS.getJSONObject("data").getString("verifbni");
+                                    tanggalSubmitBni = jsonRESULTS.getJSONObject("data").getString("tanggalsubmitbni");
+                                    statusappBni = jsonRESULTS.getJSONObject("data").getString("keteranganbalikanbni");
+
+                                    if(StatusBni.equals("") || StatusBni.equals("null")){
+                                        StatusBni = "-";
+                                    }
+                                    if(VerifikasiBni.equals("") || VerifikasiBni.equals("null")){
+                                        VerifikasiBni = "-";
+                                    }
+                                    if(tanggalSubmitBni.equals("") || tanggalSubmitBni.equals("null")){
+                                        tanggalSubmitBni = "-";
+                                    }
+                                    if(statusappBni.equals("") || statusappBni.equals("null")){
+                                        statusappBni = "-";
+                                    }
+
+                                    // bank
+                                    statusBni.setText(StatusBni);
+                                    tglPengajuanBni.setText(tanggalPengajuanBni);
+                                    statusVerifBni.setText(VerifikasiBni);
+                                    tglSubmitBni.setText(tanggalSubmitBni);
+                                    tvStatusBni.setText(statusappBni);
+
+                                    // bank BCA
+                                    String StatusBca, VerifikasiBca, tanggalSubmitBca, statusappBca;
+                                    StatusBca = jsonRESULTS.getJSONObject("data").getString("bca");
+                                    String tanggalPengajuanBca = jsonRESULTS.getJSONObject("data").getString("tanggal");
+                                    VerifikasiBca = jsonRESULTS.getJSONObject("data").getString("verifbca");
+                                    tanggalSubmitBca = jsonRESULTS.getJSONObject("data").getString("tanggalsubmitbca");
+                                    statusappBca = jsonRESULTS.getJSONObject("data").getString("keteranganbalikanbca");
+
+                                    if(StatusBca.equals("") || StatusBca.equals("null")){
+                                        StatusBca = "-";
+                                    }
+                                    if(VerifikasiBca.equals("") || VerifikasiBca.equals("null")){
+                                        VerifikasiBca = "-";
+                                    }
+                                    if(tanggalSubmitBca.equals("") || tanggalSubmitBca.equals("null")){
+                                        tanggalSubmitBca = "-";
+                                    }
+                                    if(statusappBca.equals("") || statusappBca.equals("null")){
+                                        statusappBca = "-";
+                                    }
+
+                                    // bank
+                                    statusBca.setText(StatusBca);
+                                    tglPengajuanBca.setText(tanggalPengajuanBca);
+                                    statusVerifBca.setText(VerifikasiBca);
+                                    tglSubmitBca.setText(tanggalSubmitBca);
+                                    tvStatusBca.setText(statusappBca);
+
+                                    // bank CIMB
+                                    String StatusCimb,VerifikasiCimb, tanggalSubmitCimb,statusappCimb;
+                                    StatusCimb = jsonRESULTS.getJSONObject("data").getString("niaga");
+                                    String tanggalPengajuanCimb = jsonRESULTS.getJSONObject("data").getString("tanggal");
+                                    VerifikasiCimb = jsonRESULTS.getJSONObject("data").getString("verifniaga");
+                                    tanggalSubmitCimb = jsonRESULTS.getJSONObject("data").getString("tanggalsubmitniaga");
+                                    statusappCimb = jsonRESULTS.getJSONObject("data").getString("keteranganbalikanniaga");
+
+                                    if(StatusCimb.equals("") || StatusCimb.equals("null")){
+                                        StatusCimb = "-";
+                                    }
+                                    if(VerifikasiCimb.equals("") || VerifikasiCimb.equals("null")){
+                                        VerifikasiCimb = "-";
+                                    }
+                                    if(tanggalSubmitCimb.equals("") || tanggalSubmitCimb.equals("null")){
+                                        tanggalSubmitCimb = "-";
+                                    }
+                                    if(statusappCimb.equals("") || statusappCimb.equals("null")){
+                                        statusappCimb = "-";
+                                    }
+
+                                    // bank
+                                    statusCimb.setText(StatusCimb);
+                                    tglPengajuanCimb.setText(tanggalPengajuanCimb);
+                                    statusVerifCimb.setText(VerifikasiCimb);
+                                    tglSubmitCimb.setText(tanggalSubmitCimb);
+                                    tvStatusCimb.setText(statusappCimb);
+
+                                    // bank Mayapada
+                                    String StatusMayapada, VerifikasiMayapada, tanggalSubmitMayapada, statusappMayapada;
+                                    StatusMayapada = jsonRESULTS.getJSONObject("data").getString("mayapada");
+                                    String tanggalPengajuanMayapada = jsonRESULTS.getJSONObject("data").getString("tanggal");
+                                    VerifikasiMayapada = jsonRESULTS.getJSONObject("data").getString("verifmayapada");
+                                    tanggalSubmitMayapada = jsonRESULTS.getJSONObject("data").getString("tanggalsubmitmayapada");
+                                    statusappMayapada= jsonRESULTS.getJSONObject("data").getString("keteranganbalikanmayapada");
+
+                                    if(StatusMayapada.equals("") || StatusMayapada.equals("null")){
+                                        StatusMayapada = "-";
+                                    }
+                                    if(VerifikasiMayapada.equals("") || VerifikasiMayapada.equals("null")){
+                                        VerifikasiMayapada = "-";
+                                    }
+                                    if(tanggalSubmitMayapada.equals("") || tanggalSubmitMayapada.equals("null")){
+                                        tanggalSubmitMayapada = "-";
+                                    }
+                                    if(statusappMayapada.equals("") || statusappMayapada.equals("null")){
+                                        statusappMayapada = "-";
+                                    }
+
+                                    // bank
+                                    statusMayapada.setText(StatusMayapada);
+                                    tglPengajuanMayapada.setText(tanggalPengajuanMayapada);
+                                    statusVerifMayapada.setText(VerifikasiMayapada);
+                                    tglSubmitMayapada.setText(tanggalSubmitMayapada);
+                                    tvStatusMayapada.setText(statusappMayapada);
+
+                                    // bank Dbs
+                                    String StatusDbs, VerifikasiDbs, tanggalSubmitDbs, statusappDbs;
+                                    StatusDbs = jsonRESULTS.getJSONObject("data").getString("dbs");
+                                    String tanggalPengajuanDbs = jsonRESULTS.getJSONObject("data").getString("tanggal");
+                                    VerifikasiDbs = jsonRESULTS.getJSONObject("data").getString("verifdbs");
+                                    tanggalSubmitDbs = jsonRESULTS.getJSONObject("data").getString("tanggalsubmitdbs");
+                                    statusappDbs = jsonRESULTS.getJSONObject("data").getString("keteranganbalikandbs");
+
+                                    if(StatusDbs.equals("") || StatusDbs.equals("null")){
+                                        StatusDbs = "-";
+                                    }
+                                    if(VerifikasiDbs.equals("") || VerifikasiDbs.equals("null")){
+                                        VerifikasiDbs = "-";
+                                    }
+                                    if(tanggalSubmitDbs.equals("") || tanggalSubmitDbs.equals("null")){
+                                        tanggalSubmitDbs = "-";
+                                    }
+                                    if(statusappDbs.equals("") || statusappDbs.equals("null")){
+                                        statusappDbs = "-";
+                                    }
+
+                                    // bank
+                                    statusDbs.setText(StatusDbs);
+                                    tglPengajuanDbs.setText(tanggalPengajuanDbs);
+                                    statusVerifDbs.setText(VerifikasiDbs);
+                                    tglSubmitDbs.setText(tanggalSubmitDbs);
+                                    tvStatusDbs.setText(statusappDbs);
+
+                                    // bank MNC
+                                    String StatusMnc, VerifikasiMnc, tanggalSubmitMnc, statusappMnc;
+                                    StatusMnc = jsonRESULTS.getJSONObject("data").getString("mnc");
+                                    String tanggalPengajuanMnc = jsonRESULTS.getJSONObject("data").getString("tanggal");
+                                    VerifikasiMnc = jsonRESULTS.getJSONObject("data").getString("verifmnc");
+                                    tanggalSubmitMnc = jsonRESULTS.getJSONObject("data").getString("tanggalsubmitmnc");
+                                    statusappMnc = jsonRESULTS.getJSONObject("data").getString("keteranganbalikanmnc");
+
+                                    if(StatusMnc.equals("") || StatusMnc.equals("null")){
+                                        StatusMnc = "-";
+                                    }
+                                    if(VerifikasiMnc.equals("") || VerifikasiMnc.equals("null")){
+                                        VerifikasiMnc = "-";
+                                    }
+                                    if(tanggalSubmitMnc.equals("") || tanggalSubmitMnc.equals("null")){
+                                        tanggalSubmitMnc = "-";
+                                    }
+                                    if(statusappMnc.equals("") || statusappMnc.equals("null")){
+                                        statusappMnc = "-";
+                                    }
+
+                                    // bank
+                                    statusMnc.setText(StatusMnc);
+                                    tglPengajuanMnc.setText(tanggalPengajuanMnc);
+                                    statusVerifMnc.setText(VerifikasiMnc);
+                                    tglSubmitMnc.setText(tanggalSubmitMnc);
+                                    tvStatusMnc.setText(statusappMnc);
+
+                                    // bank UOB
+                                    String StatusUob, VerifikasiUob, tanggalSubmitUob, statusappUob;
+                                    StatusUob = jsonRESULTS.getJSONObject("data").getString("uob");
+                                    String tanggalPengajuanUob = jsonRESULTS.getJSONObject("data").getString("tanggal");
+                                    VerifikasiUob = jsonRESULTS.getJSONObject("data").getString("verifuob");
+                                    tanggalSubmitUob = jsonRESULTS.getJSONObject("data").getString("tanggalsubmituob");
+                                    statusappUob = jsonRESULTS.getJSONObject("data").getString("keteranganbalikanuob");
+
+                                    if(StatusUob.equals("") || StatusUob.equals("null")){
+                                        StatusUob = "-";
+                                    }
+                                    if(VerifikasiUob.equals("") || VerifikasiUob.equals("null")){
+                                        VerifikasiUob = "-";
+                                    }
+                                    if(tanggalSubmitUob.equals("") || tanggalSubmitUob.equals("null")){
+                                        tanggalSubmitUob = "-";
+                                    }
+                                    if(statusappUob.equals("") || statusappUob.equals("null")){
+                                        statusappUob = "-";
+                                    }
+
+                                    // bank
+                                    statusUob.setText(StatusUob);
+                                    tglPengajuanUob.setText(tanggalPengajuanUob);
+                                    statusVerifUob.setText(VerifikasiUob);
+                                    tglSubmitUob.setText(tanggalSubmitUob);
+                                    tvStatusUob.setText(statusappUob);
+
+                                    // bank Mega
+                                    String StatusMega, VerifikasiMega, tanggalSubmitMega, statusappMega;
+                                    StatusMega = jsonRESULTS.getJSONObject("data").getString("mega");
+                                    String tanggalPengajuanMega = jsonRESULTS.getJSONObject("data").getString("tanggal");
+                                    VerifikasiMega = jsonRESULTS.getJSONObject("data").getString("verifmega");
+                                    tanggalSubmitMega = jsonRESULTS.getJSONObject("data").getString("tanggalsubmitmega");
+                                    statusappMega = jsonRESULTS.getJSONObject("data").getString("keteranganbalikanmega");
+
+                                    if(StatusMega.equals("") || StatusMega.equals("null")){
+                                        StatusMega = "-";
+                                    }
+                                    if(VerifikasiMega.equals("") || VerifikasiMega.equals("null")){
+                                        VerifikasiMega = "-";
+                                    }
+                                    if(tanggalSubmitMega.equals("") || tanggalSubmitMega.equals("null")){
+                                        tanggalSubmitMega = "-";
+                                    }
+                                    if(statusappMega.equals("") || statusappMega.equals("null")){
+                                        statusappMega = "-";
+                                    }
+
+                                    // bank
+                                    statusMega.setText(StatusMega);
+                                    tglPengajuanMega.setText(tanggalPengajuanMega);
+                                    statusVerifMega.setText(VerifikasiMega);
+                                    tglSubmitMega.setText(tanggalSubmitMega);
+                                    tvStatusMega.setText(statusappMega);
+
+
+                                    // bank
+                                    statusUob.setText(StatusUob);
+                                    tglPengajuanUob.setText(tanggalPengajuanUob);
+                                    statusVerifUob.setText(VerifikasiUob);
+                                    tglSubmitUob.setText(tanggalSubmitUob);
+                                    tvStatusUob.setText(statusappUob);
+
+                                    // bank Panin
+                                    String StatusPanin, VerifikasiPanin, tanggalSubmitPanin, statusappPanin;
+                                    StatusPanin = jsonRESULTS.getJSONObject("data").getString("panin");
+                                    String tanggalPengajuanPanin = jsonRESULTS.getJSONObject("data").getString("tanggal");
+                                    VerifikasiPanin= jsonRESULTS.getJSONObject("data").getString("verifpanin");
+                                    tanggalSubmitPanin = jsonRESULTS.getJSONObject("data").getString("tanggalsubmitpanin");
+                                    statusappPanin = jsonRESULTS.getJSONObject("data").getString("keteranganbalikanpanin");
+
+                                    if(StatusPanin.equals("") || StatusPanin.equals("null")){
+                                        StatusPanin = "-";
+                                    }
+                                    if(VerifikasiPanin.equals("") || VerifikasiPanin.equals("null")){
+                                        VerifikasiPanin = "-";
+                                    }
+                                    if(tanggalSubmitPanin.equals("") || tanggalSubmitPanin.equals("null")){
+                                        tanggalSubmitPanin = "-";
+                                    }
+                                    if(statusappPanin.equals("") || statusappPanin.equals("null")){
+                                        statusappPanin = "-";
+                                    }
+
+                                    // bank
+                                    statusPanin.setText(StatusPanin);
+                                    tglPengajuanPanin.setText(tanggalPengajuanPanin);
+                                    statusVerifPanin.setText(VerifikasiPanin);
+                                    tglSubmitPanin.setText(tanggalSubmitPanin);
+                                    tvStatusPanin.setText(statusappPanin);
 
                                     nested.setVisibility(View.VISIBLE);
                                     llParentBlankData.setVisibility(View.GONE);

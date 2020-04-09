@@ -124,8 +124,8 @@ public class JurtulSubmissionForm extends AppCompatActivity {
         Log.d("tag", "selectedBri: "+ivBri.isSelected());
         if(ivBri.isSelected()){
             ivBri.setSelected(false);
-            dateJurtulBri = "null";
-            JurtulBri = "null";
+            dateJurtulBri = "";
+            JurtulBri = "";
             ivBri.setColorFilter(ContextCompat.getColor(this, R.color.colorWhite), android.graphics.PorterDuff.Mode.MULTIPLY);
         }else{
             ivBri.setSelected(true);
@@ -139,8 +139,8 @@ public class JurtulSubmissionForm extends AppCompatActivity {
         if(ivBni.isSelected()){
             ivBni.setSelected(false);
             ivBni.setColorFilter(ContextCompat.getColor(this, R.color.colorWhite), android.graphics.PorterDuff.Mode.MULTIPLY);
-            dateJurtulBni = "null";
-            JurtulBni = "null";
+            dateJurtulBni = "";
+            JurtulBni = "";
         }else{
             ivBni.setSelected(true);
             ivBni.setColorFilter(ContextCompat.getColor(this, R.color.green_600), android.graphics.PorterDuff.Mode.MULTIPLY);
@@ -153,8 +153,8 @@ public class JurtulSubmissionForm extends AppCompatActivity {
         if(ivBca.isSelected()){
             ivBca.setSelected(false);
             ivBca.setColorFilter(ContextCompat.getColor(this, R.color.colorWhite), android.graphics.PorterDuff.Mode.MULTIPLY);
-            dateJurtulBca = "null";
-            JurtulBca = "null";
+            dateJurtulBca = "";
+            JurtulBca = "";
         }else{
             ivBca.setSelected(true);
             ivBca.setColorFilter(ContextCompat.getColor(this, R.color.green_600), android.graphics.PorterDuff.Mode.MULTIPLY);
@@ -167,8 +167,8 @@ public class JurtulSubmissionForm extends AppCompatActivity {
         if(ivCimb.isSelected()){
             ivCimb.setSelected(false);
             ivCimb.setColorFilter(ContextCompat.getColor(this, R.color.colorWhite), android.graphics.PorterDuff.Mode.MULTIPLY);
-            dateJurtulCimb = "null";
-            JurtulCimb = "null";
+            dateJurtulCimb = "";
+            JurtulCimb = "";
         }else{
             ivCimb.setSelected(true);
             ivCimb.setColorFilter(ContextCompat.getColor(this, R.color.green_600), android.graphics.PorterDuff.Mode.MULTIPLY);
@@ -181,8 +181,8 @@ public class JurtulSubmissionForm extends AppCompatActivity {
         if(ivMayapada.isSelected()){
             ivMayapada.setSelected(false);
             ivMayapada.setColorFilter(ContextCompat.getColor(this, R.color.colorWhite), android.graphics.PorterDuff.Mode.MULTIPLY);
-            dateJurtulMayapada = "null";
-            JurtulMayapada = "null";
+            dateJurtulMayapada = "";
+            JurtulMayapada = "";
         }else{
             ivMayapada.setSelected(true);
             ivMayapada.setColorFilter(ContextCompat.getColor(this, R.color.green_600), android.graphics.PorterDuff.Mode.MULTIPLY);
@@ -195,8 +195,8 @@ public class JurtulSubmissionForm extends AppCompatActivity {
         if(ivDbs.isSelected()){
             ivDbs.setSelected(false);
             ivDbs.setColorFilter(ContextCompat.getColor(this, R.color.colorWhite), android.graphics.PorterDuff.Mode.MULTIPLY);
-            dateJurtulDbs = "null";
-            JurtulDbs = "null";
+            dateJurtulDbs = "";
+            JurtulDbs = "";
         }else{
             ivDbs.setSelected(true);
             ivDbs.setColorFilter(ContextCompat.getColor(this, R.color.green_600), android.graphics.PorterDuff.Mode.MULTIPLY);
@@ -209,8 +209,8 @@ public class JurtulSubmissionForm extends AppCompatActivity {
         if(ivMnc.isSelected()){
             ivMnc.setSelected(false);
             ivMnc.setColorFilter(ContextCompat.getColor(this, R.color.colorWhite), android.graphics.PorterDuff.Mode.MULTIPLY);
-            dateJurtulMnc = "null";
-            JurtulMnc = "null";
+            dateJurtulMnc = "";
+            JurtulMnc = "";
         }else{
             ivMnc.setSelected(true);
             ivMnc.setColorFilter(ContextCompat.getColor(this, R.color.green_600), android.graphics.PorterDuff.Mode.MULTIPLY);
@@ -223,8 +223,8 @@ public class JurtulSubmissionForm extends AppCompatActivity {
         if(ivUob.isSelected()){
             ivUob.setSelected(false);
             ivUob.setColorFilter(ContextCompat.getColor(this, R.color.colorWhite), android.graphics.PorterDuff.Mode.MULTIPLY);
-            dateJurtulUob = "null";
-            JurtulUob = "null";
+            dateJurtulUob = "";
+            JurtulUob = "";
         }else{
             ivUob.setSelected(true);
             ivUob.setColorFilter(ContextCompat.getColor(this, R.color.green_600), android.graphics.PorterDuff.Mode.MULTIPLY);
@@ -237,8 +237,8 @@ public class JurtulSubmissionForm extends AppCompatActivity {
         if(ivMega.isSelected()){
             ivMega.setSelected(false);
             ivMega.setColorFilter(ContextCompat.getColor(this, R.color.colorWhite), android.graphics.PorterDuff.Mode.MULTIPLY);
-            dateJurtulMega = "null";
-            JurtulMega = "null";
+            dateJurtulMega = "";
+            JurtulMega = "";
         }else{
             ivMega.setSelected(true);
             ivMega.setColorFilter(ContextCompat.getColor(this, R.color.green_600), android.graphics.PorterDuff.Mode.MULTIPLY);
@@ -251,8 +251,8 @@ public class JurtulSubmissionForm extends AppCompatActivity {
         if(ivPanin.isSelected()){
             ivPanin.setSelected(false);
             ivPanin.setColorFilter(ContextCompat.getColor(this, R.color.colorWhite), android.graphics.PorterDuff.Mode.MULTIPLY);
-            dateJurtulPanin = "null";
-            JurtulPanin = "null";
+            dateJurtulPanin = "";
+            JurtulPanin = "";
         }else{
             ivPanin.setSelected(true);
             ivPanin.setColorFilter(ContextCompat.getColor(this, R.color.green_600), android.graphics.PorterDuff.Mode.MULTIPLY);

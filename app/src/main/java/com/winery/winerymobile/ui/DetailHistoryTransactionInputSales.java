@@ -656,7 +656,7 @@ public class DetailHistoryTransactionInputSales extends AppCompatActivity {
                                     tglSubmitPanin.setText(tanggalSubmitPanin);
                                     tvStatusPanin.setText(statusappPanin);
 
-
+                                    nested.setVisibility(View.VISIBLE);
 
                                 } else {
                                     // Jika login gagal

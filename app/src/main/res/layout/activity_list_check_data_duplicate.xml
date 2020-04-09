@@ -92,7 +92,6 @@
 
         <androidx.core.widget.NestedScrollView
             android:id="@+id/nested"
-            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:scrollbars="none">
@@ -176,6 +175,45 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:text="Sales"/>
+
+                        <TextView
+                            android:id="@+id/tv_sales"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:text="Zola"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/default_padding_medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Hadiah"/>
+
+                        <TextView
+                            android:id="@+id/tv_hadiah"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:text="21 Mar 1998"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/default_padding_medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:text="Handphone"/>
 
                         <TextView
@@ -190,6 +228,7 @@
                         android:layout_marginTop="@dimen/default_padding_medium"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:visibility="gone"
                         android:orientation="vertical">
 
                         <TextView
@@ -209,6 +248,7 @@
                         android:layout_marginTop="@dimen/default_padding_medium"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:visibility="gone"
                         android:orientation="vertical">
 
                         <TextView
@@ -228,6 +268,7 @@
                         android:layout_marginTop="@dimen/default_padding_medium"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:visibility="gone"
                         android:orientation="vertical">
 
                         <TextView
@@ -247,6 +288,7 @@
                         android:layout_marginTop="@dimen/default_padding_medium"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:visibility="gone"
                         android:orientation="vertical">
 
                         <TextView
@@ -266,6 +308,7 @@
                         android:layout_marginTop="@dimen/default_padding_medium"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:visibility="gone"
                         android:orientation="vertical">
 
                         <TextView
@@ -285,6 +328,7 @@
                         android:layout_marginTop="@dimen/default_padding_medium"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:visibility="gone"
                         android:orientation="vertical">
 
                         <TextView
@@ -318,7 +362,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="STATUS PENGAJUAN"
+                        android:text="PENGAJUAN"
                         android:layout_marginStart="@dimen/default_padding_medium"
                         android:layout_marginEnd="@dimen/default_padding_medium"
                         android:textColor="@android:color/darker_gray"
@@ -340,6 +384,7 @@
                                 android:layout_marginTop="@dimen/default_padding_medium"
                                 android:layout_marginLeft="@dimen/default_margin_small"
                                 android:layout_marginRight="@dimen/default_margin_small"
+                                android:layout_marginBottom="@dimen/default_margin_small"
                                 android:orientation="horizontal">
 
                                 <TextView
@@ -358,6 +403,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:visibility="gone"
                                 android:id="@+id/parent_tgl_pengajuan_bri"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -382,6 +428,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:visibility="gone"
                                 android:id="@+id/parent_verif_bri"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -406,6 +453,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:visibility="gone"
                                 android:id="@+id/parent_tgl_submit_bri"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -430,6 +478,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:visibility="gone"
                                 android:id="@+id/parent_status_balikan_bri"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -473,6 +522,7 @@
                                 android:layout_marginTop="@dimen/default_padding_medium"
                                 android:layout_marginLeft="@dimen/default_margin_small"
                                 android:layout_marginRight="@dimen/default_margin_small"
+                                android:layout_marginBottom="@dimen/default_margin_small"
                                 android:orientation="horizontal">
 
                                 <TextView
@@ -494,6 +544,7 @@
                                 android:id="@+id/parent_tgl_pengajuan_bni"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:visibility="gone"
                                 android:layout_marginTop="@dimen/default_padding_medium"
                                 android:layout_marginLeft="@dimen/default_margin_small"
                                 android:layout_marginRight="@dimen/default_margin_small"
@@ -515,6 +566,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:visibility="gone"
                                 android:id="@+id/parent_status_verif_bni"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -539,6 +591,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:visibility="gone"
                                 android:id="@+id/parent_tgl_submit_bni"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -563,6 +616,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:visibility="gone"
                                 android:id="@+id/parent_status_balikan_bni"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -606,6 +660,7 @@
                                 android:layout_marginTop="@dimen/default_padding_medium"
                                 android:layout_marginLeft="@dimen/default_margin_small"
                                 android:layout_marginRight="@dimen/default_margin_small"
+                                android:layout_marginBottom="@dimen/default_margin_small"
                                 android:orientation="horizontal">
 
                                 <TextView
@@ -624,6 +679,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:visibility="gone"
                                 android:id="@+id/parent_tgl_pengajuan_bca"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -648,6 +704,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:visibility="gone"
                                 android:id="@+id/parent_status_verif_bca"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -672,6 +729,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:visibility="gone"
                                 android:id="@+id/parent_tgl_submit_bca"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -696,6 +754,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:visibility="gone"
                                 android:id="@+id/parent_status_balikan_bca"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -739,6 +798,7 @@
                                 android:layout_marginTop="@dimen/default_padding_medium"
                                 android:layout_marginLeft="@dimen/default_margin_small"
                                 android:layout_marginRight="@dimen/default_margin_small"
+                                android:layout_marginBottom="@dimen/default_margin_small"
                                 android:orientation="horizontal">
 
                                 <TextView
@@ -757,6 +817,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:visibility="gone"
                                 android:id="@+id/parent_tgl_pengajuan_cimb"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -781,6 +842,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:visibility="gone"
                                 android:id="@+id/parent_status_verif_cimb"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -805,6 +867,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:visibility="gone"
                                 android:id="@+id/parent_tgl_submit_cimb"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -829,6 +892,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:visibility="gone"
                                 android:id="@+id/parent_status_balikan_cimb"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -872,6 +936,7 @@
                                 android:layout_marginTop="@dimen/default_padding_medium"
                                 android:layout_marginLeft="@dimen/default_margin_small"
                                 android:layout_marginRight="@dimen/default_margin_small"
+                                android:layout_marginBottom="@dimen/default_margin_small"
                                 android:orientation="horizontal">
 
                                 <TextView
@@ -890,6 +955,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:visibility="gone"
                                 android:id="@+id/parent_tgl_pengajuan_mayapada"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -914,6 +980,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:visibility="gone"
                                 android:id="@+id/parent_status_verif_mayapada"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -938,6 +1005,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:visibility="gone"
                                 android:id="@+id/parent_tgl_submit_mayapada"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -962,6 +1030,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:visibility="gone"
                                 android:id="@+id/parent_status_balikan_mayapada"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -1005,6 +1074,7 @@
                                 android:layout_marginTop="@dimen/default_padding_medium"
                                 android:layout_marginLeft="@dimen/default_margin_small"
                                 android:layout_marginRight="@dimen/default_margin_small"
+                                android:layout_marginBottom="@dimen/default_margin_small"
                                 android:orientation="horizontal">
 
                                 <TextView
@@ -1023,6 +1093,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:visibility="gone"
                                 android:id="@+id/parent_tgl_pengajuan_dbs"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -1047,6 +1118,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:visibility="gone"
                                 android:id="@+id/parent_status_verif_dbs"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -1071,6 +1143,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:visibility="gone"
                                 android:id="@+id/parent_tgl_submit_dbs"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -1095,6 +1168,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:visibility="gone"
                                 android:id="@+id/parent_status_balikan_dbs"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -1138,6 +1212,7 @@
                                 android:layout_marginTop="@dimen/default_padding_medium"
                                 android:layout_marginLeft="@dimen/default_margin_small"
                                 android:layout_marginRight="@dimen/default_margin_small"
+                                android:layout_marginBottom="@dimen/default_margin_small"
                                 android:orientation="horizontal">
 
                                 <TextView
@@ -1156,6 +1231,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:visibility="gone"
                                 android:id="@+id/parent_tgl_pengajuan_mnc"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -1180,6 +1256,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:visibility="gone"
                                 android:id="@+id/parent_status_verif_mnc"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -1204,6 +1281,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:visibility="gone"
                                 android:id="@+id/parent_tgl_submit_mnc"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -1228,6 +1306,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:visibility="gone"
                                 android:id="@+id/parent_status_balikan_mnc"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -1271,6 +1350,7 @@
                                 android:layout_marginTop="@dimen/default_padding_medium"
                                 android:layout_marginLeft="@dimen/default_margin_small"
                                 android:layout_marginRight="@dimen/default_margin_small"
+                                android:layout_marginBottom="@dimen/default_margin_small"
                                 android:orientation="horizontal">
 
                                 <TextView
@@ -1289,6 +1369,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:visibility="gone"
                                 android:id="@+id/parent_tgl_pengajuan_uob"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -1313,6 +1394,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:visibility="gone"
                                 android:id="@+id/parent_status_verif_uob"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -1337,6 +1419,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:visibility="gone"
                                 android:id="@+id/parent_tgl_submit_uob"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -1361,6 +1444,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:visibility="gone"
                                 android:id="@+id/parent_status_balikan_uob"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -1404,6 +1488,7 @@
                                 android:layout_marginTop="@dimen/default_padding_medium"
                                 android:layout_marginLeft="@dimen/default_margin_small"
                                 android:layout_marginRight="@dimen/default_margin_small"
+                                android:layout_marginBottom="@dimen/default_margin_small"
                                 android:orientation="horizontal">
 
                                 <TextView
@@ -1422,6 +1507,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:visibility="gone"
                                 android:id="@+id/parent_tgl_pengajuan_mega"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -1446,6 +1532,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:visibility="gone"
                                 android:id="@+id/parent_status_verif_mega"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -1470,6 +1557,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:visibility="gone"
                                 android:id="@+id/parent_tgl_submit_mega"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -1494,6 +1582,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:visibility="gone"
                                 android:id="@+id/parent_status_balikan_mega"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -1537,6 +1626,7 @@
                                 android:layout_marginTop="@dimen/default_padding_medium"
                                 android:layout_marginLeft="@dimen/default_margin_small"
                                 android:layout_marginRight="@dimen/default_margin_small"
+                                android:layout_marginBottom="@dimen/default_margin_small"
                                 android:orientation="horizontal">
 
                                 <TextView
@@ -1555,6 +1645,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:visibility="gone"
                                 android:id="@+id/parent_tgl_pengajuan_panin"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -1579,6 +1670,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:visibility="gone"
                                 android:id="@+id/parent_status_verif_panin"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -1603,6 +1695,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:visibility="gone"
                                 android:id="@+id/parent_tgl_submit_panin"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -1627,6 +1720,7 @@
                             </RelativeLayout>
 
                             <RelativeLayout
+                                android:visibility="gone"
                                 android:id="@+id/parent_status_balikan_panin"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"

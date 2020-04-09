@@ -49,6 +49,7 @@
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nested"
+        android:visibility="invisible"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scrollbars="none">
@@ -89,6 +90,7 @@
                 android:layout_marginTop="@dimen/default_padding_medium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:visibility="gone"
                 android:orientation="vertical">
 
                 <TextView
@@ -127,6 +129,7 @@
                 android:layout_marginTop="@dimen/default_padding_medium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:visibility="gone"
                 android:orientation="vertical">
 
                 <TextView
@@ -146,6 +149,7 @@
                 android:layout_marginTop="@dimen/default_padding_medium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:visibility="gone"
                 android:orientation="vertical">
 
                 <TextView
@@ -184,6 +188,7 @@
                 android:layout_marginTop="@dimen/default_padding_medium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:visibility="gone"
                 android:orientation="vertical">
 
                 <TextView
@@ -203,6 +208,7 @@
                 android:layout_marginTop="@dimen/default_padding_medium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:visibility="gone"
                 android:orientation="vertical">
 
                 <TextView
@@ -222,6 +228,7 @@
                 android:layout_marginTop="@dimen/default_padding_medium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:visibility="gone"
                 android:orientation="vertical">
 
                 <TextView
@@ -241,6 +248,7 @@
                 android:layout_marginTop="@dimen/default_padding_medium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:visibility="gone"
                 android:orientation="vertical">
 
                 <TextView

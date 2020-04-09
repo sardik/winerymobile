@@ -15,10 +15,14 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.winery.winerymobile.R;
 import com.winery.winerymobile.ui.APIhelper.BaseApiService;
 import com.winery.winerymobile.ui.APIhelper.UtilsApi;
 import com.winery.winerymobile.ui.JurtulTransaction.ListTransactionDetailPendingJurtul;
+import com.winery.winerymobile.ui.VerifikatorTransaction.ListTransactionDetailWaitingVerif;
 import com.winery.winerymobile.ui.dbhelper.SessionManagement;
 import com.winery.winerymobile.ui.dbhelper.StateTransactionSales;
 import com.winery.winerymobile.ui.helper.ViewAnimation;
@@ -48,6 +52,8 @@ public class DetailHistoryTransactionInputJurtul extends AppCompatActivity {
     ImageView toolbarTitle;
     @BindView(R.id.nested)
     androidx.core.widget.NestedScrollView nested;
+    @BindView(R.id.iv_data_kotor)
+    ImageView ivDataKotor;
     @BindView(R.id.ll_section1)
     LinearLayout llSection1;
     @BindView(R.id.ll_child1_ll_section2)
@@ -593,6 +599,18 @@ public class DetailHistoryTransactionInputJurtul extends AppCompatActivity {
                                     String pendidikan = jsonRESULTS.getJSONObject("data").getString("pendidikan");
                                     String ibu = jsonRESULTS.getJSONObject("data").getString("ibu");
 
+                                    String imageDatakotor = jsonRESULTS.getJSONObject("data").getString("url_data_kotor");
+
+                                    // fetch image
+                                    Glide.with(DetailHistoryTransactionInputJurtul.this).
+                                            load(imageDatakotor)
+                                            .placeholder(R.drawable.ic_camera)
+                                            .diskCacheStrategy(DiskCacheStrategy.NONE)
+                                            .skipMemoryCache(true)
+                                            .transition(DrawableTransitionOptions.withCrossFade(100))
+                                            .into(ivDataKotor);
+
+
                                     tvName.setText(nama);
                                     tvNik.setText(nik);
                                     tvNpwp.setText(npwp);
@@ -976,6 +994,8 @@ public class DetailHistoryTransactionInputJurtul extends AppCompatActivity {
 
                                     parentTglSubmitPanin.setVisibility(View.GONE);
                                     parentStatusBalikanPanin.setVisibility(View.GONE);
+
+                                    nested.setVisibility(View.VISIBLE);
 
                                 } else {
                                     // Jika login gagal

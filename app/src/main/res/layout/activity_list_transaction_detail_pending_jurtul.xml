@@ -49,6 +49,7 @@
 
         <androidx.core.widget.NestedScrollView
             android:id="@+id/nested"
+            android:visibility="invisible"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:scrollbars="none">
@@ -66,6 +67,167 @@
                     android:layout_marginStart="@dimen/default_margin_small"
                     android:layout_marginEnd="@dimen/default_margin_small"
                     android:id="@+id/ll_section1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/ll_child1_ll_section6">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_child1_ll_section6"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/default_margin_small"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="FILE DOKUMEN"
+                                android:layout_marginEnd="@dimen/default_padding_medium"
+                                android:textColor="@android:color/darker_gray"
+                                android:layout_alignParentStart="true"
+                                android:textSize="@dimen/font_size_14"/>
+
+                            <ImageView
+                                android:id="@+id/iv_chevron_payment_method6"
+                                android:layout_width="@dimen/default_ic_size_small"
+                                android:layout_height="@dimen/default_ic_size_small"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/ic_expand_more_black_24dp"/>
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/default_padding_small"
+                            android:layout_marginBottom="@dimen/default_padding_small"
+                            android:background="@android:color/black"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/ll_data_doc"
+                            android:visibility="gone"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_marginTop="@dimen/default_padding_medium"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="File KTP"/>
+
+                                <ImageView
+                                    android:id="@+id/iv_ktp"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/ic_camera"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="200dp"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_marginTop="@dimen/default_padding_medium"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="File NPWP"/>
+
+                                <ImageView
+                                    android:id="@+id/iv_npwp"
+                                    android:scaleType="fitXY"
+                                    android:layout_width="match_parent"
+                                    android:src="@drawable/ic_camera"
+                                    android:layout_height="200dp"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_marginTop="@dimen/default_padding_medium"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="File Data Kotor"/>
+
+                                <ImageView
+                                    android:id="@+id/iv_data_kotor"
+                                    android:scaleType="fitXY"
+                                    android:layout_width="match_parent"
+                                    android:src="@drawable/ic_camera"
+                                    android:layout_height="200dp"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_marginTop="@dimen/default_padding_medium"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="File Slip"/>
+
+                                <ImageView
+                                    android:id="@+id/iv_slip_gaji"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/ic_camera"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="200dp"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_marginTop="@dimen/default_padding_medium"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="File SPT"/>
+
+                                <ImageView
+                                    android:id="@+id/iv_spt"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/ic_camera"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="200dp"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_marginTop="@dimen/default_padding_medium"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="File Kartu Kredit"/>
+
+                                <ImageView
+                                    android:id="@+id/iv_cc"
+                                    android:scaleType="fitXY"
+                                    android:layout_width="match_parent"
+                                    android:src="@drawable/ic_camera"
+                                    android:layout_height="200dp"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
 
                     <LinearLayout
                         android:layout_width="match_parent"

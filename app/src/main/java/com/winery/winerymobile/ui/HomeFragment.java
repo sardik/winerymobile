@@ -109,6 +109,14 @@ public class HomeFragment extends Fragment {
         String code = user.get(SessionManagement.KEY_SALES_CODE);
         String position = user.get(SessionManagement.KEY_POSITION);
 
+        String loginAs = user.get(SessionManagement.KEY_LOGIN_AS);
+
+        if(loginAs.equals("sales")){
+            llMenuContainerLainnya.setVisibility(View.VISIBLE);
+        }else{
+            llMenuContainerLainnya.setVisibility(View.INVISIBLE);
+        }
+
         tvName.setText(name);
         tvCode.setText(code);
         tvPosition.setText(position);

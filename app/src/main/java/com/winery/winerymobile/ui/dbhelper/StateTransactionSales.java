@@ -47,6 +47,7 @@ public class StateTransactionSales {
     public static final String KEY_ALAMAT_PERUSAHAAN = "alamat_perusahaan";
     public static final String KEY_TELEPHONE_KANTOR = "telephone_kantor";
     public static final String KEY_NAMA_EMERGENCY_KONTAK = "nama_emergency_contact";
+    public static final String KEY_TELP_EMERGENCY_KONTAK = "telpon_emergency_contact";
     public static final String KEY_HUBUNGAN = "hubungan";
     public static final String KEY_SALES_CODE = "sales_code";
     public static final String KEY_SALES_NAME = "sales_name";
@@ -105,7 +106,8 @@ public class StateTransactionSales {
     public void createStateInpuForm(String nama, String nik, String tanggal_lahir, String handphone_1,
                                     String handphone_2,String nama_ibu_kandung,String nama_perusahaan,
                                     String alamat_perusahaan,String telephone_kantor,String nama_emergency_contact,
-                                    String hubungan,String sales_code, String sales_name, String hadiah){
+                                    String hubungan,String sales_code, String sales_name, String hadiah,
+                                    String telp_emergency_contact){
 
         // Storing name in pref
         editor.putString(KEY_NAMA, nama);
@@ -118,6 +120,7 @@ public class StateTransactionSales {
         editor.putString(KEY_ALAMAT_PERUSAHAAN, alamat_perusahaan);
         editor.putString(KEY_TELEPHONE_KANTOR, telephone_kantor);
         editor.putString(KEY_NAMA_EMERGENCY_KONTAK, nama_emergency_contact);
+        editor.putString(KEY_TELP_EMERGENCY_KONTAK, telp_emergency_contact);
         editor.putString(KEY_HUBUNGAN, hubungan);
         editor.putString(KEY_SALES_CODE, sales_code);
         editor.putString(KEY_SALES_NAME, sales_name);
@@ -141,6 +144,7 @@ public class StateTransactionSales {
         user.put(KEY_ALAMAT_PERUSAHAAN, pref.getString(KEY_ALAMAT_PERUSAHAAN, null));
         user.put(KEY_TELEPHONE_KANTOR, pref.getString(KEY_TELEPHONE_KANTOR, null));
         user.put(KEY_NAMA_EMERGENCY_KONTAK, pref.getString(KEY_NAMA_EMERGENCY_KONTAK, null));
+        user.put(KEY_TELP_EMERGENCY_KONTAK, pref.getString(KEY_TELP_EMERGENCY_KONTAK, null));
         user.put(KEY_HUBUNGAN, pref.getString(KEY_HUBUNGAN, null));
         user.put(KEY_SALES_CODE, pref.getString(KEY_SALES_CODE, null));
         user.put(KEY_SALES_NAME, pref.getString(KEY_SALES_NAME, null));

@@ -15,9 +15,13 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.winery.winerymobile.R;
 import com.winery.winerymobile.ui.APIhelper.BaseApiService;
 import com.winery.winerymobile.ui.APIhelper.UtilsApi;
+import com.winery.winerymobile.ui.DetailHistoryTransaksiInputVerif;
 import com.winery.winerymobile.ui.VerifikatorTransaction.UploadDataKotorVerif;
 import com.winery.winerymobile.ui.dbhelper.SessionManagement;
 import com.winery.winerymobile.ui.dbhelper.StateTransactionSales;
@@ -50,6 +54,26 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
     androidx.core.widget.NestedScrollView nested;
     @BindView(R.id.ll_section1)
     LinearLayout llSection1;
+    @BindView(R.id.ll_child1_ll_section6)
+    LinearLayout llChild1LlSection6;
+    @BindView(R.id.rl_child1_ll_section6)
+    RelativeLayout rlChild1LlSection6;
+    @BindView(R.id.iv_chevron_payment_method6)
+    ImageView ivChevronPaymentMethod6;
+    @BindView(R.id.ll_data_doc)
+    LinearLayout llDataDoc;
+    @BindView(R.id.iv_ktp)
+    ImageView ivKtp;
+    @BindView(R.id.iv_npwp)
+    ImageView ivNpwp;
+    @BindView(R.id.iv_data_kotor)
+    ImageView ivDataKotor;
+    @BindView(R.id.iv_slip_gaji)
+    ImageView ivSlipGaji;
+    @BindView(R.id.iv_spt)
+    ImageView ivSpt;
+    @BindView(R.id.iv_cc)
+    ImageView ivCc;
     @BindView(R.id.ll_child1_ll_section2)
     LinearLayout llChild1LlSection2;
     @BindView(R.id.rl_child1_ll_section2)
@@ -420,6 +444,21 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @OnClick(R.id.rl_child1_ll_section6) void showDataFile(){
+
+        if(ivChevronPaymentMethod6.isSelected()) {
+            ivChevronPaymentMethod6.setSelected(false);
+            ivChevronPaymentMethod6.setImageResource(R.drawable.ic_expand_more_black_24dp);
+            ViewAnimation.collapse(llDataDoc);
+
+        }else{
+            ivChevronPaymentMethod6.setSelected(true);
+            ivChevronPaymentMethod6.setImageResource(R.drawable.ic_expand_less_black_24dp);
+            ViewAnimation.expand(llDataDoc);
+
+        }
+    }
+
     @OnClick(R.id.rl_child1_ll_section2) void showDataCustomer(){
 
         if(ivChevronPaymentMethod1.isSelected()) {
@@ -564,6 +603,81 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
                                     String tanggungan = jsonRESULTS.getJSONObject("data").getString("tanggungan");
                                     String pendidikan = jsonRESULTS.getJSONObject("data").getString("pendidikan");
                                     String ibu = jsonRESULTS.getJSONObject("data").getString("ibu");
+                                    String imageKtp = jsonRESULTS.getJSONObject("data").getString("url_ktp");
+                                    String imageDataKotor = jsonRESULTS.getJSONObject("data").getString("url_data_kotor");
+                                    String imageNpwp = jsonRESULTS.getJSONObject("data").getString("url_npwp");
+                                    String imageSlipGaji = jsonRESULTS.getJSONObject("data").getString("url_slip_gaji");
+                                    String imageSpt = jsonRESULTS.getJSONObject("data").getString("url_spt");
+                                    String imageKartuKredit = jsonRESULTS.getJSONObject("data").getString("url_kartu_kredit");
+
+
+                                    // fetch image
+                                    Glide.with(ListTransactionDetailPendingJurtul.this).
+                                            load(imageKtp)
+                                            .placeholder(R.drawable.ic_camera)
+                                            .diskCacheStrategy(DiskCacheStrategy.NONE)
+                                            .skipMemoryCache(true)
+                                            .transition(DrawableTransitionOptions.withCrossFade(100))
+                                            .into(ivKtp);
+
+                                    // fetch image
+                                    Glide.with(ListTransactionDetailPendingJurtul.this).
+                                            load(imageNpwp)
+                                            .placeholder(R.drawable.ic_camera)
+                                            .diskCacheStrategy(DiskCacheStrategy.NONE)
+                                            .skipMemoryCache(true)
+                                            .transition(DrawableTransitionOptions.withCrossFade(100))
+                                            .into(ivNpwp);
+
+                                    // fetch image slip gaji
+                                    Glide.with(ListTransactionDetailPendingJurtul.this).
+                                            load(imageSlipGaji)
+                                            .placeholder(R.drawable.ic_camera)
+                                            .diskCacheStrategy(DiskCacheStrategy.NONE)
+                                            .skipMemoryCache(true)
+                                            .transition(DrawableTransitionOptions.withCrossFade(100))
+                                            .into(ivSlipGaji);
+
+
+                                     // fetch image spt
+                                    Glide.with(ListTransactionDetailPendingJurtul.this).
+                                            load(imageSpt)
+                                            .placeholder(R.color.grey_20)
+                                            .diskCacheStrategy(DiskCacheStrategy.NONE)
+                                            .skipMemoryCache(true)
+                                            .transition(DrawableTransitionOptions.withCrossFade(100))
+                                            .into(ivSpt);
+
+
+                                    // fetch image kartu kredit
+                                    Glide.with(ListTransactionDetailPendingJurtul.this).
+                                            load(imageKartuKredit)
+                                            .placeholder(R.drawable.ic_camera)
+                                            .diskCacheStrategy(DiskCacheStrategy.NONE)
+                                            .skipMemoryCache(true)
+                                            .transition(DrawableTransitionOptions.withCrossFade(100))
+                                            .into(ivCc);
+
+                                    // fetch image
+                                    Glide.with(ListTransactionDetailPendingJurtul.this).
+                                            load(imageKtp)
+                                            .placeholder(R.drawable.ic_camera)
+                                            .diskCacheStrategy(DiskCacheStrategy.NONE)
+                                            .skipMemoryCache(true)
+                                            .transition(DrawableTransitionOptions.withCrossFade(100))
+                                            .into(ivKtp);
+
+
+                                    // fetch image dokumen data kotor
+                                    Glide.with(ListTransactionDetailPendingJurtul.this).
+                                            load(imageDataKotor)
+                                            .placeholder(R.drawable.ic_camera)
+                                            .diskCacheStrategy(DiskCacheStrategy.NONE)
+                                            .skipMemoryCache(true)
+                                            .transition(DrawableTransitionOptions.withCrossFade(100))
+                                            .into(ivDataKotor);
+
+
 
                                     tvName.setText(nama);
                                     tvNik.setText(nik);
@@ -691,7 +805,7 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
                                     tanggalJurtulBri = jsonRESULTS.getJSONObject("data").getString("tanggaljurtulbri");
 
 
-                                    if (VerifikasiBri.equals("CTN") && tanggalJurtulBri.equals("null")) {
+                                    if (VerifikasiBri.equals("CTN") && (tanggalJurtulBri.equals("null") || tanggalJurtulBri.equals(""))) {
                                         cardBankBri.setVisibility(View.VISIBLE);
                                         stateStatusBri = "YES";
                                     }else{
@@ -718,7 +832,7 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
                                     statusappBni = jsonRESULTS.getJSONObject("data").getString("keteranganbalikanbni");
                                     tanggalJurtulBni = jsonRESULTS.getJSONObject("data").getString("tanggaljurtulbni");
 
-                                    if (VerifikasiBni.equals("CTN") && tanggalJurtulBni.equals("null")) {
+                                    if (VerifikasiBni.equals("CTN") && (tanggalJurtulBni.equals("null") || tanggalJurtulBni.equals(""))) {
                                         cardBankBni.setVisibility(View.VISIBLE);
                                         stateStatusBni = "YES";
                                     }else{
@@ -746,7 +860,7 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
                                     tanggalJurtulBca = jsonRESULTS.getJSONObject("data").getString("tanggaljurtulbca");
 
 
-                                    if (VerifikasiBca.equals("CTN") && tanggalJurtulBca.equals("null")) {
+                                    if (VerifikasiBca.equals("CTN") && (tanggalJurtulBca.equals("null") || tanggalJurtulBca.equals(""))) {
                                         cardBankBca.setVisibility(View.VISIBLE);
                                         stateStatusBca = "YES";
                                     }else{
@@ -774,7 +888,7 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
                                     tanggalJurtulCimb = jsonRESULTS.getJSONObject("data").getString("tanggaljurtulniaga");
 
 
-                                    if (VerifikasiCimb.equals("CTN") && tanggalJurtulCimb.equals("null")) {
+                                    if (VerifikasiCimb.equals("CTN") && (tanggalJurtulCimb.equals("null") || tanggalJurtulCimb.equals(""))) {
                                         cardBankCimb.setVisibility(View.VISIBLE);
                                         stateStatusCimb = "YES";
                                     }else{
@@ -802,7 +916,7 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
                                     tanggalJurtulMayapada = jsonRESULTS.getJSONObject("data").getString("tanggaljurtulmayapada");
 
 
-                                    if (VerifikasiMayapada.equals("CTN") && tanggalJurtulMayapada.equals("null")) {
+                                    if (VerifikasiMayapada.equals("CTN") && (tanggalJurtulMayapada.equals("null") || tanggalJurtulMayapada.equals(""))) {
                                         cardBankMayapada.setVisibility(View.VISIBLE);
                                         stateStatusMayapada = "YES";
                                     }else{
@@ -830,7 +944,7 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
                                     tanggalJurtulDbs = jsonRESULTS.getJSONObject("data").getString("tanggaljurtuldbs");
 
 
-                                    if (VerifikasiDbs.equals("CTN") && tanggalJurtulDbs.equals("null")) {
+                                    if (VerifikasiDbs.equals("CTN") && (tanggalJurtulDbs.equals("null") || tanggalJurtulDbs.equals(""))) {
                                         cardBankDbs.setVisibility(View.VISIBLE);
                                         stateStatusDbs = "YES";
                                     }else{
@@ -858,7 +972,7 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
                                     tanggalJurtulMnc = jsonRESULTS.getJSONObject("data").getString("tanggaljurtulmnc");
 
 
-                                    if (VerifikasiMnc.equals("CTN") && tanggalJurtulMnc.equals("null")) {
+                                    if (VerifikasiMnc.equals("CTN") && (tanggalJurtulMnc.equals("null") || tanggalJurtulMnc.equals(""))) {
                                         cardBankMnc.setVisibility(View.VISIBLE);
                                         stateStatusMnc = "YES";
                                     }else{
@@ -886,7 +1000,7 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
                                     tanggalJurtuUob = jsonRESULTS.getJSONObject("data").getString("tanggaljurtuluob");
 
 
-                                    if (VerifikasiUob.equals("CTN") && tanggalJurtuUob.equals("null")) {
+                                    if (VerifikasiUob.equals("CTN") && (tanggalJurtuUob.equals("null") || tanggalJurtuUob.equals(""))) {
                                         cardBankUob.setVisibility(View.VISIBLE);
                                         stateStatusUob = "YES";
                                     }else{
@@ -915,7 +1029,7 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
                                     tanggalJurtumega = jsonRESULTS.getJSONObject("data").getString("tanggaljurtulmega");
 
 
-                                    if (VerifikasiMega.equals("CTN") && tanggalJurtumega.equals("null")) {
+                                    if (VerifikasiMega.equals("CTN") && (tanggalJurtumega.equals("null") || tanggalJurtumega.equals(""))) {
                                         cardBankMega.setVisibility(View.VISIBLE);
                                         stateStatusMega = "YES";
                                     }else{
@@ -943,7 +1057,7 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
                                     tanggalJurtulPanin = jsonRESULTS.getJSONObject("data").getString("tanggaljurtulpanin");
 
 
-                                    if (VerifikasiPanin.equals("CTN") && tanggalJurtulPanin.equals("null")) {
+                                    if (VerifikasiPanin.equals("CTN") && (tanggalJurtulPanin.equals("null") || tanggalJurtulPanin.equals(""))) {
                                         cardBankPanin.setVisibility(View.VISIBLE);
                                         stateStatusPanin = "YES";
                                     }else{
@@ -968,6 +1082,7 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
                                             stateStatusCimb,stateStatusMayapada,stateStatusDbs,stateStatusMnc,stateStatusUob,
                                             stateStatusMega,stateStatusPanin);
 
+                                    nested.setVisibility(View.VISIBLE);
 
                                 } else {
                                     // Jika login gagal
