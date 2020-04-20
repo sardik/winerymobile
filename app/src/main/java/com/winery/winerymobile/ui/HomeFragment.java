@@ -4,6 +4,7 @@ package com.winery.winerymobile.ui;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
@@ -26,6 +27,7 @@ import java.util.HashMap;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.Unbinder;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -93,6 +95,8 @@ public class HomeFragment extends Fragment {
 
 
     SessionManagement sessionManagement;
+    private Unbinder unbinder;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -100,6 +104,13 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_home, container, false);
         ButterKnife.bind(this, view);
+
+        return view;
+    }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
 
         sessionManagement = new SessionManagement(getContext());
 
@@ -120,8 +131,7 @@ public class HomeFragment extends Fragment {
         tvName.setText(name);
         tvCode.setText(code);
         tvPosition.setText(position);
-
-        return view;
     }
+
 
 }

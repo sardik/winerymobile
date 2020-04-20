@@ -335,6 +335,8 @@ public class DetailHistoryTransaksiInputVerif extends AppCompatActivity {
 
     private void getListDetailHistoryCc(){
         loading = ProgressDialog.show(this, null, "Harap Tunggu...", true, false);
+        loading.setCanceledOnTouchOutside(false);
+
 
         Intent intent = getIntent();
         String idTransaction = intent.getStringExtra("param");

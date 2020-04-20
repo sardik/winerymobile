@@ -383,6 +383,7 @@ public class JurtulSubmissionForm extends AppCompatActivity {
     public void submitCollectionData() {
 
         loading = ProgressDialog.show(this, null, "Harap Tunggu...", true, false);
+        loading.setCanceledOnTouchOutside(false);
 
         HashMap<String, String> session = sessionManagement.getUserDetails();
         HashMap<String, String> transactionID = sessionManagement.getTransactionID();

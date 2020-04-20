@@ -91,7 +91,7 @@ public class UploadDataKotorVerif extends AppCompatActivity {
         if(selectedImageDataKotor == null) {
             errorValidation("Foto Dokumen tidak boleh ksosong");
         }else {
-
+            containerIvKtp.setEnabled(false);
             submitCollectionData(selectedImageDataKotor);
         }
     }
@@ -112,7 +112,7 @@ public class UploadDataKotorVerif extends AppCompatActivity {
     public final int SELECT_FILE_DATA_KOTOR = 1;
 
 
-    int bitmap_size = 40; // image quality 1 - 100;
+    int bitmap_size = 70; // image quality 1 - 100;
     int max_resolution_image = 800;
 
     @Override
@@ -239,6 +239,7 @@ public class UploadDataKotorVerif extends AppCompatActivity {
     public void submitCollectionData(Bitmap gambarDataKotor) {
 
         loading = ProgressDialog.show(this, null, "Harap Tunggu...", true, false);
+        loading.setCanceledOnTouchOutside(false);
 
         HashMap<String, String> session = sessionManagement.getUserDetails();
         HashMap<String, String> transactionID = sessionManagement.getTransactionID();

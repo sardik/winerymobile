@@ -110,6 +110,7 @@
         <item name="android:textColor">@android:color/black</item>
         <item name="android:layout_marginTop">@dimen/default_padding_small</item>
         <item name="android:fontFamily">@font/expressway_rg</item>
+        <item name="android:gravity">center</item>
         <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Caption</item>
     </style>
 
@@ -125,8 +126,8 @@
     </style>
 
     <style name="iv_item_menu_home">
-        <item name="android:layout_width">@dimen/default_ic_size_large</item>
-        <item name="android:layout_height">@dimen/default_ic_size_large</item>
+        <item name="android:layout_width">@dimen/default_ic_size_xlarge</item>
+        <item name="android:layout_height">@dimen/default_ic_size_xlarge</item>
         <item name="android:layout_centerInParent">true</item>
     </style>
 

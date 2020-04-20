@@ -25,6 +25,7 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -110,6 +111,8 @@ public class FormUploadDocumentSelfie extends AppCompatActivity {
     LinearLayout containerIvCimb;
     @BindView(R.id.iv_selfie_cimb)
     ImageView ivSelfieCimb;
+    @BindView(R.id.tv_container_mayapada)
+    TextView tvContainerMayapada;
     @BindView(R.id.container_iv_mayapada)
     LinearLayout containerIvMayapada;
     @BindView(R.id.iv_selfie_mayapada)
@@ -125,84 +128,86 @@ public class FormUploadDocumentSelfie extends AppCompatActivity {
     }
 
     @OnClick(R.id.container_iv_ktp) void getPhotoKTP(){
-//        Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
-//        photoPickerIntent.setType("image/*");
-//        startActivityForResult(photoPickerIntent, CHANGE_IMAGE_KTP);
-        selectImage(REQUEST_CAMERA_KTP, SELECT_FILE_KTP);
+        Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
+        photoPickerIntent.setType("image/*");
+        startActivityForResult(photoPickerIntent, CHANGE_IMAGE_KTP);
+//        selectImage(REQUEST_CAMERA_KTP, SELECT_FILE_KTP);
     }
 
     @OnClick(R.id.container_iv_npwp) void getPhotoNPWP(){
-//        Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
-//        photoPickerIntent.setType("image/*");
-//        startActivityForResult(photoPickerIntent, CHANGE_IMAGE_NPWP);
-        selectImage(REQUEST_CAMERA_NPWP, SELECT_FILE_NPWP);
+        Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
+        photoPickerIntent.setType("image/*");
+        startActivityForResult(photoPickerIntent, CHANGE_IMAGE_NPWP);
+//        selectImage(REQUEST_CAMERA_NPWP, SELECT_FILE_NPWP);
     }
 
     @OnClick(R.id.container_iv_idcard) void getPhotoIDcard(){
-//        Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
-//        photoPickerIntent.setType("image/*");
-//        startActivityForResult(photoPickerIntent, CHANGE_IMAGE_IDCARD);
+        Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
+        photoPickerIntent.setType("image/*");
+        startActivityForResult(photoPickerIntent, CHANGE_IMAGE_IDCARD);
 
-        selectImage(REQUEST_CAMERA_ID_CARD, SELECT_FILE_ID_CARD);
+//        selectImage(REQUEST_CAMERA_ID_CARD, SELECT_FILE_ID_CARD);
     }
 
     @OnClick(R.id.container_iv_cc) void getPhotoCC(){
-//        Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
-//        photoPickerIntent.setType("image/*");
-//        startActivityForResult(photoPickerIntent, CHANGE_IMAGE_CC);
+        Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
+        photoPickerIntent.setType("image/*");
+        startActivityForResult(photoPickerIntent, CHANGE_IMAGE_CC);
 
-        selectImage(REQUEST_CAMERA_KARTU_KREDIT, SELECT_FILE_KARTU_KREDIT);
+//        selectImage(REQUEST_CAMERA_KARTU_KREDIT, SELECT_FILE_KARTU_KREDIT);
     }
 
     @OnClick(R.id.container_iv_supportdoc1) void getPhotoSupport1(){
-//        Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
-//        photoPickerIntent.setType("image/*");
-//        startActivityForResult(photoPickerIntent, CHANGE_IMAGE_SUPPORT1);
-        selectImage(REQUEST_CAMERA_DOC_PENDUKUNG1, SELECT_FILE_DOC_PENDUKUNG1);
+        Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
+        photoPickerIntent.setType("image/*");
+        startActivityForResult(photoPickerIntent, CHANGE_IMAGE_SUPPORT1);
+//        selectImage(REQUEST_CAMERA_DOC_PENDUKUNG1, SELECT_FILE_DOC_PENDUKUNG1);
     }
 
     @OnClick(R.id.container_iv_supportdoc2) void getPhotoSupport2(){
-//        Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
-//        photoPickerIntent.setType("image/*");
-//        startActivityForResult(photoPickerIntent, CHANGE_IMAGE_SUPPORT2);
-        selectImage(REQUEST_CAMERA_DOC_PENDUKUNG2, SELECT_FILE_DOC_PENDUKUNG2);
+        Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
+        photoPickerIntent.setType("image/*");
+        startActivityForResult(photoPickerIntent, CHANGE_IMAGE_SUPPORT2);
+//        selectImage(REQUEST_CAMERA_DOC_PENDUKUNG2, SELECT_FILE_DOC_PENDUKUNG2);
 
     }
 
     @OnClick(R.id.container_iv_bri) void getPhotobri(){
-//        Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
-//        photoPickerIntent.setType("image/*");
-//        startActivityForResult(photoPickerIntent, CHANGE_IMAGE_BRI);
-        selectImage(REQUEST_CAMERA_BRI, SELECT_FILE_BRI);
+        Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
+        photoPickerIntent.setType("image/*");
+        startActivityForResult(photoPickerIntent, CHANGE_IMAGE_BRI);
+//        selectImage(REQUEST_CAMERA_BRI, SELECT_FILE_BRI);
 
     }
 
     @OnClick(R.id.container_iv_bni) void getPhotobni(){
-//        Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
-//        photoPickerIntent.setType("image/*");
-//        startActivityForResult(photoPickerIntent, CHANGE_IMAGE_BNI);
-        selectImage(REQUEST_CAMERA_BNI, SELECT_FILE_BNI);
+        Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
+        photoPickerIntent.setType("image/*");
+        startActivityForResult(photoPickerIntent, CHANGE_IMAGE_BNI);
+//        selectImage(REQUEST_CAMERA_BNI, SELECT_FILE_BNI);
 
     }
 
     @OnClick(R.id.container_iv_cimb) void getPhotoCimb(){
-//        Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
-//        photoPickerIntent.setType("image/*");
-//        startActivityForResult(photoPickerIntent, CHANGE_IMAGE_CIMB);
-        selectImage(REQUEST_CAMERA_CIMB, SELECT_FILE_CIMB);
+        Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
+        photoPickerIntent.setType("image/*");
+        startActivityForResult(photoPickerIntent, CHANGE_IMAGE_CIMB);
+//        selectImage(REQUEST_CAMERA_CIMB, SELECT_FILE_CIMB);
 
     }
 
     @OnClick(R.id.container_iv_mayapada) void getPhotoMayapada(){
-//        Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
-//        photoPickerIntent.setType("image/*");
-//        startActivityForResult(photoPickerIntent, CHANGE_IMAGE_MAYAPADA);
-        selectImage(REQUEST_CAMERA_MAYAPADA, SELECT_FILE_DOC_MAYAPADA);
+        Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
+        photoPickerIntent.setType("image/*");
+        startActivityForResult(photoPickerIntent, CHANGE_IMAGE_MAYAPADA);
+//        selectImage(REQUEST_CAMERA_MAYAPADA, SELECT_FILE_DOC_MAYAPADA);
 
     }
 
 
     @OnClick(R.id.btn_submit) void submitData(){
+        loading = ProgressDialog.show(this, null, "Harap Tunggu...", true, false);
+        loading.setCanceledOnTouchOutside(false);
         HashMap<String, String> bank = stateTransactionSales.getListBank();
         String statusBri = bank.get(StateTransactionSales.KEY_STATUS_BRI);
         String statusBni = bank.get(StateTransactionSales.KEY_STATUS_BNI);
@@ -210,6 +215,7 @@ public class FormUploadDocumentSelfie extends AppCompatActivity {
         String statusMayapada = bank.get(StateTransactionSales.KEY_STATUS_MAYAPADA);
         if(selectedImageKtp == null){
             bankValidation("Foto KTP tidak Boleh Kosong");
+            loading.dismiss();
         }
 //        else if(selectedImageNpwp == null) {
 //            bankValidation("Foto NPWP tidak Boleh Kosong");
@@ -219,17 +225,33 @@ public class FormUploadDocumentSelfie extends AppCompatActivity {
 //        }
         else if(selectedImageBri == null && statusBri.equals("YES")) {
             bankValidation("Foto selfie BRI tidak Boleh Kosong");
+            loading.dismiss();
+
         }
         else if(selectedBni == null && statusBni.equals("YES")) {
             bankValidation("Foto selfie BNI tidak Boleh Kosong");
+            loading.dismiss();
+
         }
         else if(selectedCimb == null && statusCimb.equals("YES")) {
             bankValidation("Foto selfie CIMB Niaga tidak Boleh Kosong");
+            loading.dismiss();
+
         }
         else if(selectedMayapada == null && statusMayapada.equals("YES")) {
             bankValidation("Foto selfie Mayapada tidak Boleh Kosong");
-        }else {
 
+        }else {
+            containerIvKtp.setEnabled(false);
+            containerIvNpwp.setEnabled(false);
+            containerIvIdcard.setEnabled(false);
+            containerIvCc.setEnabled(false);
+            containerIvSupportdoc1.setEnabled(false);
+            containerIvSupportdoc2.setEnabled(false);
+            containerIvBri.setEnabled(false);
+            containerIvBni.setEnabled(false);
+            containerIvCimb.setEnabled(false);
+            containerIvMayapada.setEnabled(false);
             submitCollectionData(selectedImageKtp, selectedImageNpwp, selectedImageIdCard, selectedImageCC,
                     selectedImageDoc1, selectedImageDoc2, selectedImageBri, selectedBni, selectedCimb, selectedMayapada);
         }
@@ -292,8 +314,8 @@ public class FormUploadDocumentSelfie extends AppCompatActivity {
     public final int REQUEST_CAMERA_DOC_PENDUKUNG2 = 18;
     public final int SELECT_FILE_DOC_PENDUKUNG2 = 19;
 
-    int bitmap_size = 40; // image quality 1 - 100;
-    int max_resolution_image = 800;
+    int bitmap_size = 70; // image quality 1 - 100;
+    int max_resolution_image = 400; //800
 
     Camera camera;
 
@@ -317,7 +339,8 @@ public class FormUploadDocumentSelfie extends AppCompatActivity {
         String region = user.get(SessionManagement.KEY_REGION);
 
         if(region.equals("MAKASSAR")){
-            ivSelfieMayapada.setVisibility(View.GONE);
+            containerIvMayapada.setVisibility(View.INVISIBLE);
+            tvContainerMayapada.setVisibility(View.INVISIBLE);
         }
 
     }
@@ -326,595 +349,598 @@ public class FormUploadDocumentSelfie extends AppCompatActivity {
     protected void onActivityResult(int reqCode, int resultCode, Intent data) {
         super.onActivityResult(reqCode, resultCode, data);
 
-        if (resultCode == Activity.RESULT_OK) {
-            if (reqCode == REQUEST_CAMERA_KTP) {
+        if (reqCode == CHANGE_IMAGE_KTP) {
+            if (resultCode == RESULT_OK) {
                 try {
-                    Log.e("CAMERA", fileUri.getPath());
-
-                    String file = fileUri.getPath();
-                    BitmapFactory.Options bounds = new BitmapFactory.Options();
-                    bounds.inJustDecodeBounds = true;
-                    BitmapFactory.decodeFile(file, bounds);
-
-                    BitmapFactory.Options opts = new BitmapFactory.Options();
-                    Bitmap bm = BitmapFactory.decodeFile(file, opts);
-                    ExifInterface exif = new ExifInterface(file);
-                    String orientString = exif.getAttribute(ExifInterface.TAG_ORIENTATION);
-                    int orientation = orientString != null ? Integer.parseInt(orientString) :  ExifInterface.ORIENTATION_NORMAL;
-
-                    int rotationAngle = 0;
-                    if (orientation == ExifInterface.ORIENTATION_ROTATE_90) rotationAngle = 90;
-                    if (orientation == ExifInterface.ORIENTATION_ROTATE_180) rotationAngle = 180;
-                    if (orientation == ExifInterface.ORIENTATION_ROTATE_270) rotationAngle = 270;
-
-                    Matrix matrix = new Matrix();
-                    matrix.setRotate(rotationAngle, (float) bm.getWidth() / 2, (float) bm.getHeight() / 2);
-                    selectedImageKtp = Bitmap.createBitmap(bm, 0, 0, bounds.outWidth, bounds.outHeight, matrix, true);
-                    setToImageView(getResizedBitmap(selectedImageKtp, max_resolution_image),ivKtp);
-                } catch (Exception e) {
+                    final Uri imageUri = data.getData();
+                    final InputStream imageStream = getContentResolver().openInputStream(imageUri);
+                    selectedImageKtp = BitmapFactory.decodeStream(imageStream);
+                    ivKtp.setImageBitmap(selectedImageKtp);
+                } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
-            } else if (reqCode == SELECT_FILE_KTP && data != null && data.getData() != null) {
-                try {
 
-                    selectedImageKtp = MediaStore.Images.Media.getBitmap(FormUploadDocumentSelfie.this.getContentResolver(), data.getData());
-                    setToImageView(getResizedBitmap(selectedImageKtp, max_resolution_image), ivKtp);
-                } catch (IOException e) {
+            } else {
+
+            }
+        }else if (reqCode == CHANGE_IMAGE_NPWP){
+            if (resultCode == RESULT_OK) {
+                try {
+                    final Uri imageUri = data.getData();
+                    final InputStream imageStream = getContentResolver().openInputStream(imageUri);
+                    selectedImageNpwp = BitmapFactory.decodeStream(imageStream);
+                    ivNpwp.setImageBitmap(selectedImageNpwp);
+                } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
+
+            } else {
+
+            }
+        }else if (reqCode == CHANGE_IMAGE_IDCARD){
+            if (resultCode == RESULT_OK) {
+                try {
+                    final Uri imageUri = data.getData();
+                    final InputStream imageStream = getContentResolver().openInputStream(imageUri);
+                    selectedImageIdCard = BitmapFactory.decodeStream(imageStream);
+                    ivIdcard.setImageBitmap(selectedImageIdCard);
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+
+            } else {
+
+            }
+        }
+        else if (reqCode == CHANGE_IMAGE_CC){
+            if (resultCode == RESULT_OK) {
+                try {
+                    final Uri imageUri = data.getData();
+                    final InputStream imageStream = getContentResolver().openInputStream(imageUri);
+                    selectedImageCC = BitmapFactory.decodeStream(imageStream);
+                    ivCc.setImageBitmap(selectedImageCC);
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+
+            } else {
+
+            }
+        }
+        else if (reqCode == CHANGE_IMAGE_SUPPORT1){
+            if (resultCode == RESULT_OK) {
+                try {
+                    final Uri imageUri = data.getData();
+                    final InputStream imageStream = getContentResolver().openInputStream(imageUri);
+                    selectedImageDoc1 = BitmapFactory.decodeStream(imageStream);
+                    ivSupportdoc1.setImageBitmap(selectedImageDoc1);
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+
+            } else {
+
+            }
+        }
+        else if (reqCode == CHANGE_IMAGE_SUPPORT2) {
+            if (resultCode == RESULT_OK) {
+                try {
+                    final Uri imageUri = data.getData();
+                    final InputStream imageStream = getContentResolver().openInputStream(imageUri);
+                    selectedImageDoc2 = BitmapFactory.decodeStream(imageStream);
+                    ivSupportdoc2.setImageBitmap(selectedImageDoc2);
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+
+            } else {
+
+            }
+        }else if (reqCode == CHANGE_IMAGE_BRI) {
+            if (resultCode == RESULT_OK) {
+                try {
+                    final Uri imageUri = data.getData();
+                    final InputStream imageStream = getContentResolver().openInputStream(imageUri);
+                    selectedImageBri = BitmapFactory.decodeStream(imageStream);
+                    ivBriSelfie.setImageBitmap(selectedImageBri);
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+
+            } else {
+
+            }
+        }
+        if (reqCode == CHANGE_IMAGE_BNI) {
+            if (resultCode == RESULT_OK) {
+                try {
+                    final Uri imageUri = data.getData();
+                    final InputStream imageStream = getContentResolver().openInputStream(imageUri);
+                    selectedBni = BitmapFactory.decodeStream(imageStream);
+                    ivBniSelfie.setImageBitmap(selectedBni);
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+
+            } else {
+
+            }
+        }
+        if (reqCode == CHANGE_IMAGE_CIMB) {
+            if (resultCode == RESULT_OK) {
+                try {
+                    final Uri imageUri = data.getData();
+                    final InputStream imageStream = getContentResolver().openInputStream(imageUri);
+                    selectedCimb = BitmapFactory.decodeStream(imageStream);
+                    ivSelfieCimb.setImageBitmap(selectedCimb);
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+
+            } else {
+
+            }
+        }
+        if (reqCode == CHANGE_IMAGE_MAYAPADA) {
+            if (resultCode == RESULT_OK) {
+                try {
+                    final Uri imageUri = data.getData();
+                    final InputStream imageStream = getContentResolver().openInputStream(imageUri);
+                    selectedMayapada = BitmapFactory.decodeStream(imageStream);
+                    ivSelfieMayapada.setImageBitmap(selectedMayapada);
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+
+            } else {
+
             }
         }
 
-        if (resultCode == Activity.RESULT_OK) {
-            if (reqCode == REQUEST_CAMERA_NPWP) {
-                try {
-                    Log.e("CAMERA", fileUri.getPath());
-                    String file = fileUri.getPath();
-                    BitmapFactory.Options bounds = new BitmapFactory.Options();
-                    bounds.inJustDecodeBounds = true;
-                    BitmapFactory.decodeFile(file, bounds);
-
-                    BitmapFactory.Options opts = new BitmapFactory.Options();
-                    Bitmap bm = BitmapFactory.decodeFile(file, opts);
-                    ExifInterface exif = new ExifInterface(file);
-                    String orientString = exif.getAttribute(ExifInterface.TAG_ORIENTATION);
-                    int orientation = orientString != null ? Integer.parseInt(orientString) :  ExifInterface.ORIENTATION_NORMAL;
-
-                    int rotationAngle = 0;
-                    if (orientation == ExifInterface.ORIENTATION_ROTATE_90) rotationAngle = 90;
-                    if (orientation == ExifInterface.ORIENTATION_ROTATE_180) rotationAngle = 180;
-                    if (orientation == ExifInterface.ORIENTATION_ROTATE_270) rotationAngle = 270;
-
-                    Matrix matrix = new Matrix();
-                    matrix.setRotate(rotationAngle, (float) bm.getWidth() / 2, (float) bm.getHeight() / 2);
-                    selectedImageNpwp = Bitmap.createBitmap(bm, 0, 0, bounds.outWidth, bounds.outHeight, matrix, true);
-//                    selectedImageNpwp = BitmapFactory.decodeFile(fileUri.getPath());
-                    setToImageView(getResizedBitmap(selectedImageNpwp, max_resolution_image), ivNpwp);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            } else if (reqCode == SELECT_FILE_NPWP && data != null && data.getData() != null) {
-                try {
-
-                    selectedImageNpwp = MediaStore.Images.Media.getBitmap(FormUploadDocumentSelfie.this.getContentResolver(), data.getData());
-                    setToImageView(getResizedBitmap(selectedImageNpwp, max_resolution_image), ivNpwp);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-
-        if (resultCode == Activity.RESULT_OK) {
-            if (reqCode == REQUEST_CAMERA_ID_CARD) {
-                try {
-                    Log.e("CAMERA", fileUri.getPath());
-                    String file = fileUri.getPath();
-                    BitmapFactory.Options bounds = new BitmapFactory.Options();
-                    bounds.inJustDecodeBounds = true;
-                    BitmapFactory.decodeFile(file, bounds);
-
-                    BitmapFactory.Options opts = new BitmapFactory.Options();
-                    Bitmap bm = BitmapFactory.decodeFile(file, opts);
-                    ExifInterface exif = new ExifInterface(file);
-                    String orientString = exif.getAttribute(ExifInterface.TAG_ORIENTATION);
-                    int orientation = orientString != null ? Integer.parseInt(orientString) :  ExifInterface.ORIENTATION_NORMAL;
-
-                    int rotationAngle = 0;
-                    if (orientation == ExifInterface.ORIENTATION_ROTATE_90) rotationAngle = 90;
-                    if (orientation == ExifInterface.ORIENTATION_ROTATE_180) rotationAngle = 180;
-                    if (orientation == ExifInterface.ORIENTATION_ROTATE_270) rotationAngle = 270;
-
-                    Matrix matrix = new Matrix();
-                    matrix.setRotate(rotationAngle, (float) bm.getWidth() / 2, (float) bm.getHeight() / 2);
-                    selectedImageIdCard = Bitmap.createBitmap(bm, 0, 0, bounds.outWidth, bounds.outHeight, matrix, true);
-//                    selectedImageIdCard = BitmapFactory.decodeFile(fileUri.getPath());
-                    setToImageView(getResizedBitmap(selectedImageIdCard, max_resolution_image), ivIdcard);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            } else if (reqCode == SELECT_FILE_ID_CARD && data != null && data.getData() != null) {
-                try {
-
-                    selectedImageIdCard = MediaStore.Images.Media.getBitmap(FormUploadDocumentSelfie.this.getContentResolver(), data.getData());
-                    setToImageView(getResizedBitmap(selectedImageIdCard, max_resolution_image), ivIdcard);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-
-        if (resultCode == Activity.RESULT_OK) {
-            if (reqCode == REQUEST_CAMERA_KARTU_KREDIT) {
-                try {
-                    Log.e("CAMERA", fileUri.getPath());
-
-                    String file = fileUri.getPath();
-                    BitmapFactory.Options bounds = new BitmapFactory.Options();
-                    bounds.inJustDecodeBounds = true;
-                    BitmapFactory.decodeFile(file, bounds);
-
-                    BitmapFactory.Options opts = new BitmapFactory.Options();
-                    Bitmap bm = BitmapFactory.decodeFile(file, opts);
-                    ExifInterface exif = new ExifInterface(file);
-                    String orientString = exif.getAttribute(ExifInterface.TAG_ORIENTATION);
-                    int orientation = orientString != null ? Integer.parseInt(orientString) :  ExifInterface.ORIENTATION_NORMAL;
-
-                    int rotationAngle = 0;
-                    if (orientation == ExifInterface.ORIENTATION_ROTATE_90) rotationAngle = 90;
-                    if (orientation == ExifInterface.ORIENTATION_ROTATE_180) rotationAngle = 180;
-                    if (orientation == ExifInterface.ORIENTATION_ROTATE_270) rotationAngle = 270;
-
-                    Matrix matrix = new Matrix();
-                    matrix.setRotate(rotationAngle, (float) bm.getWidth() / 2, (float) bm.getHeight() / 2);
-                    selectedImageCC = Bitmap.createBitmap(bm, 0, 0, bounds.outWidth, bounds.outHeight, matrix, true);
-//                    selectedImageCC = BitmapFactory.decodeFile(fileUri.getPath());
-                    setToImageView(getResizedBitmap(selectedImageCC, max_resolution_image), ivCc);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            } else if (reqCode == SELECT_FILE_KARTU_KREDIT && data != null && data.getData() != null) {
-                try {
-
-                    selectedImageCC = MediaStore.Images.Media.getBitmap(FormUploadDocumentSelfie.this.getContentResolver(), data.getData());
-                    setToImageView(getResizedBitmap(selectedImageCC, max_resolution_image), ivCc);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-
-        if (resultCode == Activity.RESULT_OK) {
-            if (reqCode == REQUEST_CAMERA_DOC_PENDUKUNG1) {
-                try {
-                    Log.e("CAMERA", fileUri.getPath());
-                    String file = fileUri.getPath();
-                    BitmapFactory.Options bounds = new BitmapFactory.Options();
-                    bounds.inJustDecodeBounds = true;
-                    BitmapFactory.decodeFile(file, bounds);
-
-                    BitmapFactory.Options opts = new BitmapFactory.Options();
-                    Bitmap bm = BitmapFactory.decodeFile(file, opts);
-                    ExifInterface exif = new ExifInterface(file);
-                    String orientString = exif.getAttribute(ExifInterface.TAG_ORIENTATION);
-                    int orientation = orientString != null ? Integer.parseInt(orientString) :  ExifInterface.ORIENTATION_NORMAL;
-
-                    int rotationAngle = 0;
-                    if (orientation == ExifInterface.ORIENTATION_ROTATE_90) rotationAngle = 90;
-                    if (orientation == ExifInterface.ORIENTATION_ROTATE_180) rotationAngle = 180;
-                    if (orientation == ExifInterface.ORIENTATION_ROTATE_270) rotationAngle = 270;
-
-                    Matrix matrix = new Matrix();
-                    matrix.setRotate(rotationAngle, (float) bm.getWidth() / 2, (float) bm.getHeight() / 2);
-                    selectedImageDoc1 = Bitmap.createBitmap(bm, 0, 0, bounds.outWidth, bounds.outHeight, matrix, true);
-//                    selectedImageDoc1 = BitmapFactory.decodeFile(fileUri.getPath());
-                    setToImageView(getResizedBitmap(selectedImageDoc1, max_resolution_image), ivSupportdoc1);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            } else if (reqCode == SELECT_FILE_DOC_PENDUKUNG1 && data != null && data.getData() != null) {
-                try {
-
-                    selectedImageDoc1 = MediaStore.Images.Media.getBitmap(FormUploadDocumentSelfie.this.getContentResolver(), data.getData());
-                    setToImageView(getResizedBitmap(selectedImageDoc1, max_resolution_image), ivSupportdoc1);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-
-        if (resultCode == Activity.RESULT_OK) {
-            if (reqCode == REQUEST_CAMERA_DOC_PENDUKUNG2) {
-                try {
-                    Log.e("CAMERA", fileUri.getPath());
-
-                    String file = fileUri.getPath();
-                    BitmapFactory.Options bounds = new BitmapFactory.Options();
-                    bounds.inJustDecodeBounds = true;
-                    BitmapFactory.decodeFile(file, bounds);
-
-                    BitmapFactory.Options opts = new BitmapFactory.Options();
-                    Bitmap bm = BitmapFactory.decodeFile(file, opts);
-                    ExifInterface exif = new ExifInterface(file);
-                    String orientString = exif.getAttribute(ExifInterface.TAG_ORIENTATION);
-                    int orientation = orientString != null ? Integer.parseInt(orientString) :  ExifInterface.ORIENTATION_NORMAL;
-
-                    int rotationAngle = 0;
-                    if (orientation == ExifInterface.ORIENTATION_ROTATE_90) rotationAngle = 90;
-                    if (orientation == ExifInterface.ORIENTATION_ROTATE_180) rotationAngle = 180;
-                    if (orientation == ExifInterface.ORIENTATION_ROTATE_270) rotationAngle = 270;
-
-                    Matrix matrix = new Matrix();
-                    matrix.setRotate(rotationAngle, (float) bm.getWidth() / 2, (float) bm.getHeight() / 2);
-                    selectedImageDoc2 = Bitmap.createBitmap(bm, 0, 0, bounds.outWidth, bounds.outHeight, matrix, true);
-//                    selectedImageDoc2 = BitmapFactory.decodeFile(fileUri.getPath());
-                    setToImageView(getResizedBitmap(selectedImageDoc2, max_resolution_image), ivSupportdoc2);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            } else if (reqCode == SELECT_FILE_DOC_PENDUKUNG2 && data != null && data.getData() != null) {
-                try {
-
-                    selectedImageDoc2 = MediaStore.Images.Media.getBitmap(FormUploadDocumentSelfie.this.getContentResolver(), data.getData());
-                    setToImageView(getResizedBitmap(selectedImageDoc2, max_resolution_image), ivSupportdoc2);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-
-        if (resultCode == Activity.RESULT_OK) {
-            if (reqCode == REQUEST_CAMERA_BRI) {
-                try {
-                    Log.e("CAMERA", fileUri.getPath());
-
-                    String file = fileUri.getPath();
-                    BitmapFactory.Options bounds = new BitmapFactory.Options();
-                    bounds.inJustDecodeBounds = true;
-                    BitmapFactory.decodeFile(file, bounds);
-
-                    BitmapFactory.Options opts = new BitmapFactory.Options();
-                    Bitmap bm = BitmapFactory.decodeFile(file, opts);
-                    ExifInterface exif = new ExifInterface(file);
-                    String orientString = exif.getAttribute(ExifInterface.TAG_ORIENTATION);
-                    int orientation = orientString != null ? Integer.parseInt(orientString) :  ExifInterface.ORIENTATION_NORMAL;
-
-                    int rotationAngle = 0;
-                    if (orientation == ExifInterface.ORIENTATION_ROTATE_90) rotationAngle = 90;
-                    if (orientation == ExifInterface.ORIENTATION_ROTATE_180) rotationAngle = 180;
-                    if (orientation == ExifInterface.ORIENTATION_ROTATE_270) rotationAngle = 270;
-
-                    Matrix matrix = new Matrix();
-                    matrix.setRotate(rotationAngle, (float) bm.getWidth() / 2, (float) bm.getHeight() / 2);
-                    selectedImageBri = Bitmap.createBitmap(bm, 0, 0, bounds.outWidth, bounds.outHeight, matrix, true);
-//                    selectedImageBri = BitmapFactory.decodeFile(fileUri.getPath());
-                    setToImageView(getResizedBitmap(selectedImageBri, max_resolution_image), ivBriSelfie);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            } else if (reqCode == SELECT_FILE_BRI && data != null && data.getData() != null) {
-                try {
-
-                    selectedImageBri = MediaStore.Images.Media.getBitmap(FormUploadDocumentSelfie.this.getContentResolver(), data.getData());
-                    setToImageView(getResizedBitmap(selectedImageBri, max_resolution_image), ivBriSelfie);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-
-        if (resultCode == Activity.RESULT_OK) {
-            if (reqCode == REQUEST_CAMERA_BNI) {
-                try {
-                    Log.e("CAMERA", fileUri.getPath());
-                    String file = fileUri.getPath();
-                    BitmapFactory.Options bounds = new BitmapFactory.Options();
-                    bounds.inJustDecodeBounds = true;
-                    BitmapFactory.decodeFile(file, bounds);
-
-                    BitmapFactory.Options opts = new BitmapFactory.Options();
-                    Bitmap bm = BitmapFactory.decodeFile(file, opts);
-                    ExifInterface exif = new ExifInterface(file);
-                    String orientString = exif.getAttribute(ExifInterface.TAG_ORIENTATION);
-                    int orientation = orientString != null ? Integer.parseInt(orientString) :  ExifInterface.ORIENTATION_NORMAL;
-
-                    int rotationAngle = 0;
-                    if (orientation == ExifInterface.ORIENTATION_ROTATE_90) rotationAngle = 90;
-                    if (orientation == ExifInterface.ORIENTATION_ROTATE_180) rotationAngle = 180;
-                    if (orientation == ExifInterface.ORIENTATION_ROTATE_270) rotationAngle = 270;
-
-                    Matrix matrix = new Matrix();
-                    matrix.setRotate(rotationAngle, (float) bm.getWidth() / 2, (float) bm.getHeight() / 2);
-                    selectedBni = Bitmap.createBitmap(bm, 0, 0, bounds.outWidth, bounds.outHeight, matrix, true);
-
-//                    selectedBni = BitmapFactory.decodeFile(fileUri.getPath());
-                    setToImageView(getResizedBitmap(selectedBni, max_resolution_image), ivBniSelfie);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            } else if (reqCode == SELECT_FILE_BNI && data != null && data.getData() != null) {
-                try {
-
-                    selectedBni = MediaStore.Images.Media.getBitmap(FormUploadDocumentSelfie.this.getContentResolver(), data.getData());
-                    setToImageView(getResizedBitmap(selectedBni, max_resolution_image), ivBniSelfie);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-
-        if (resultCode == Activity.RESULT_OK) {
-            if (reqCode == REQUEST_CAMERA_CIMB) {
-                try {
-                    Log.e("CAMERA", fileUri.getPath());
-                    String file = fileUri.getPath();
-                    BitmapFactory.Options bounds = new BitmapFactory.Options();
-                    bounds.inJustDecodeBounds = true;
-                    BitmapFactory.decodeFile(file, bounds);
-
-                    BitmapFactory.Options opts = new BitmapFactory.Options();
-                    Bitmap bm = BitmapFactory.decodeFile(file, opts);
-                    ExifInterface exif = new ExifInterface(file);
-                    String orientString = exif.getAttribute(ExifInterface.TAG_ORIENTATION);
-                    int orientation = orientString != null ? Integer.parseInt(orientString) :  ExifInterface.ORIENTATION_NORMAL;
-
-                    int rotationAngle = 0;
-                    if (orientation == ExifInterface.ORIENTATION_ROTATE_90) rotationAngle = 90;
-                    if (orientation == ExifInterface.ORIENTATION_ROTATE_180) rotationAngle = 180;
-                    if (orientation == ExifInterface.ORIENTATION_ROTATE_270) rotationAngle = 270;
-
-                    Matrix matrix = new Matrix();
-                    matrix.setRotate(rotationAngle, (float) bm.getWidth() / 2, (float) bm.getHeight() / 2);
-                    selectedCimb = Bitmap.createBitmap(bm, 0, 0, bounds.outWidth, bounds.outHeight, matrix, true);
-//                    selectedCimb = BitmapFactory.decodeFile(fileUri.getPath());
-                    setToImageView(getResizedBitmap(selectedCimb, max_resolution_image), ivSelfieCimb);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            } else if (reqCode == SELECT_FILE_CIMB && data != null && data.getData() != null) {
-                try {
-
-                    selectedCimb = MediaStore.Images.Media.getBitmap(FormUploadDocumentSelfie.this.getContentResolver(), data.getData());
-                    setToImageView(getResizedBitmap(selectedCimb, max_resolution_image), ivSelfieCimb);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-
-        if (resultCode == Activity.RESULT_OK) {
-            if (reqCode == REQUEST_CAMERA_MAYAPADA) {
-                try {
-                    Log.e("CAMERA", fileUri.getPath());
-                    String file = fileUri.getPath();
-                    BitmapFactory.Options bounds = new BitmapFactory.Options();
-                    bounds.inJustDecodeBounds = true;
-                    BitmapFactory.decodeFile(file, bounds);
-
-                    BitmapFactory.Options opts = new BitmapFactory.Options();
-                    Bitmap bm = BitmapFactory.decodeFile(file, opts);
-                    ExifInterface exif = new ExifInterface(file);
-                    String orientString = exif.getAttribute(ExifInterface.TAG_ORIENTATION);
-                    int orientation = orientString != null ? Integer.parseInt(orientString) :  ExifInterface.ORIENTATION_NORMAL;
-
-                    int rotationAngle = 0;
-                    if (orientation == ExifInterface.ORIENTATION_ROTATE_90) rotationAngle = 90;
-                    if (orientation == ExifInterface.ORIENTATION_ROTATE_180) rotationAngle = 180;
-                    if (orientation == ExifInterface.ORIENTATION_ROTATE_270) rotationAngle = 270;
-
-                    Matrix matrix = new Matrix();
-                    matrix.setRotate(rotationAngle, (float) bm.getWidth() / 2, (float) bm.getHeight() / 2);
-                    selectedMayapada = Bitmap.createBitmap(bm, 0, 0, bounds.outWidth, bounds.outHeight, matrix, true);
-//                    selectedMayapada = BitmapFactory.decodeFile(fileUri.getPath());
-                    setToImageView(getResizedBitmap(selectedMayapada, max_resolution_image), ivSelfieMayapada);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            } else if (reqCode == SELECT_FILE_DOC_MAYAPADA && data != null && data.getData() != null) {
-                try {
-
-                    selectedMayapada = MediaStore.Images.Media.getBitmap(FormUploadDocumentSelfie.this.getContentResolver(), data.getData());
-                    setToImageView(getResizedBitmap(selectedMayapada, max_resolution_image), ivSelfieMayapada);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-//        if (reqCode == CHANGE_IMAGE_KTP) {
-//            if (resultCode == RESULT_OK) {
+//        if (resultCode == Activity.RESULT_OK) {
+//            if (reqCode == REQUEST_CAMERA_KTP) {
 //                try {
-//                    final Uri imageUri = data.getData();
-//                    final InputStream imageStream = getContentResolver().openInputStream(imageUri);
-//                    selectedImageKtp = BitmapFactory.decodeStream(imageStream);
-//                    ivKtp.setImageBitmap(selectedImageKtp);
-//                } catch (FileNotFoundException e) {
+//                    Log.e("CAMERA", fileUri.getPath());
+//
+//                    String file = fileUri.getPath();
+//                    BitmapFactory.Options bounds = new BitmapFactory.Options();
+//                    bounds.inJustDecodeBounds = true;
+//                    BitmapFactory.decodeFile(file, bounds);
+//
+//                    BitmapFactory.Options opts = new BitmapFactory.Options();
+//                    Bitmap bm = BitmapFactory.decodeFile(file, opts);
+//                    ExifInterface exif = new ExifInterface(file);
+//                    String orientString = exif.getAttribute(ExifInterface.TAG_ORIENTATION);
+//                    int orientation = orientString != null ? Integer.parseInt(orientString) :  ExifInterface.ORIENTATION_NORMAL;
+//
+//                    int rotationAngle = 0;
+//                    if (orientation == ExifInterface.ORIENTATION_ROTATE_90) rotationAngle = 90;
+//                    if (orientation == ExifInterface.ORIENTATION_ROTATE_180) rotationAngle = 180;
+//                    if (orientation == ExifInterface.ORIENTATION_ROTATE_270) rotationAngle = 270;
+//
+//                    Matrix matrix = new Matrix();
+//                    matrix.setRotate(rotationAngle, (float) bm.getWidth() / 2, (float) bm.getHeight() / 2);
+//                    selectedImageKtp = Bitmap.createBitmap(bm, 0, 0, bounds.outWidth, bounds.outHeight, matrix, true);
+//                    setToImageView(getResizedBitmap(selectedImageKtp, max_resolution_image),ivKtp);
+//                } catch (Exception e) {
 //                    e.printStackTrace();
 //                }
-//
-//            } else {
-//
-//            }
-//        }else if (reqCode == CHANGE_IMAGE_NPWP){
-//            if (resultCode == RESULT_OK) {
+//            } else if (reqCode == SELECT_FILE_KTP && data != null && data.getData() != null) {
 //                try {
-//                    final Uri imageUri = data.getData();
-//                    final InputStream imageStream = getContentResolver().openInputStream(imageUri);
-//                    selectedImageNpwp = BitmapFactory.decodeStream(imageStream);
-//                    ivNpwp.setImageBitmap(selectedImageNpwp);
-//                } catch (FileNotFoundException e) {
+//
+//                    selectedImageKtp = MediaStore.Images.Media.getBitmap(FormUploadDocumentSelfie.this.getContentResolver(), data.getData());
+//                    setToImageView(getResizedBitmap(selectedImageKtp, max_resolution_image), ivKtp);
+//                } catch (IOException e) {
 //                    e.printStackTrace();
 //                }
-//
-//            } else {
-//
-//            }
-//        }else if (reqCode == CHANGE_IMAGE_IDCARD){
-//            if (resultCode == RESULT_OK) {
-//                try {
-//                    final Uri imageUri = data.getData();
-//                    final InputStream imageStream = getContentResolver().openInputStream(imageUri);
-//                    selectedImageIdCard = BitmapFactory.decodeStream(imageStream);
-//                    ivIdcard.setImageBitmap(selectedImageIdCard);
-//                } catch (FileNotFoundException e) {
-//                    e.printStackTrace();
-//                }
-//
-//            } else {
-//
 //            }
 //        }
-//        else if (reqCode == CHANGE_IMAGE_CC){
-//            if (resultCode == RESULT_OK) {
+//
+//        if (resultCode == Activity.RESULT_OK) {
+//            if (reqCode == REQUEST_CAMERA_NPWP) {
 //                try {
-//                    final Uri imageUri = data.getData();
-//                    final InputStream imageStream = getContentResolver().openInputStream(imageUri);
-//                    selectedImageCC = BitmapFactory.decodeStream(imageStream);
-//                    ivCc.setImageBitmap(selectedImageCC);
-//                } catch (FileNotFoundException e) {
+//                    Log.e("CAMERA", fileUri.getPath());
+//                    String file = fileUri.getPath();
+//                    BitmapFactory.Options bounds = new BitmapFactory.Options();
+//                    bounds.inJustDecodeBounds = true;
+//                    BitmapFactory.decodeFile(file, bounds);
+//
+//                    BitmapFactory.Options opts = new BitmapFactory.Options();
+//                    Bitmap bm = BitmapFactory.decodeFile(file, opts);
+//                    ExifInterface exif = new ExifInterface(file);
+//                    String orientString = exif.getAttribute(ExifInterface.TAG_ORIENTATION);
+//                    int orientation = orientString != null ? Integer.parseInt(orientString) :  ExifInterface.ORIENTATION_NORMAL;
+//
+//                    int rotationAngle = 0;
+//                    if (orientation == ExifInterface.ORIENTATION_ROTATE_90) rotationAngle = 90;
+//                    if (orientation == ExifInterface.ORIENTATION_ROTATE_180) rotationAngle = 180;
+//                    if (orientation == ExifInterface.ORIENTATION_ROTATE_270) rotationAngle = 270;
+//
+//                    Matrix matrix = new Matrix();
+//                    matrix.setRotate(rotationAngle, (float) bm.getWidth() / 2, (float) bm.getHeight() / 2);
+//                    selectedImageNpwp = Bitmap.createBitmap(bm, 0, 0, bounds.outWidth, bounds.outHeight, matrix, true);
+////                    selectedImageNpwp = BitmapFactory.decodeFile(fileUri.getPath());
+//                    setToImageView(getResizedBitmap(selectedImageNpwp, max_resolution_image), ivNpwp);
+//                } catch (Exception e) {
 //                    e.printStackTrace();
 //                }
+//            } else if (reqCode == SELECT_FILE_NPWP && data != null && data.getData() != null) {
+//                try {
 //
-//            } else {
-//
+//                    selectedImageNpwp = MediaStore.Images.Media.getBitmap(FormUploadDocumentSelfie.this.getContentResolver(), data.getData());
+//                    setToImageView(getResizedBitmap(selectedImageNpwp, max_resolution_image), ivNpwp);
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
 //            }
 //        }
-//        else if (reqCode == CHANGE_IMAGE_SUPPORT1){
-//            if (resultCode == RESULT_OK) {
+//
+//        if (resultCode == Activity.RESULT_OK) {
+//            if (reqCode == REQUEST_CAMERA_ID_CARD) {
 //                try {
-//                    final Uri imageUri = data.getData();
-//                    final InputStream imageStream = getContentResolver().openInputStream(imageUri);
-//                    selectedImageDoc1 = BitmapFactory.decodeStream(imageStream);
-//                    ivSupportdoc1.setImageBitmap(selectedImageDoc1);
-//                } catch (FileNotFoundException e) {
+//                    Log.e("CAMERA", fileUri.getPath());
+//                    String file = fileUri.getPath();
+//                    BitmapFactory.Options bounds = new BitmapFactory.Options();
+//                    bounds.inJustDecodeBounds = true;
+//                    BitmapFactory.decodeFile(file, bounds);
+//
+//                    BitmapFactory.Options opts = new BitmapFactory.Options();
+//                    Bitmap bm = BitmapFactory.decodeFile(file, opts);
+//                    ExifInterface exif = new ExifInterface(file);
+//                    String orientString = exif.getAttribute(ExifInterface.TAG_ORIENTATION);
+//                    int orientation = orientString != null ? Integer.parseInt(orientString) :  ExifInterface.ORIENTATION_NORMAL;
+//
+//                    int rotationAngle = 0;
+//                    if (orientation == ExifInterface.ORIENTATION_ROTATE_90) rotationAngle = 90;
+//                    if (orientation == ExifInterface.ORIENTATION_ROTATE_180) rotationAngle = 180;
+//                    if (orientation == ExifInterface.ORIENTATION_ROTATE_270) rotationAngle = 270;
+//
+//                    Matrix matrix = new Matrix();
+//                    matrix.setRotate(rotationAngle, (float) bm.getWidth() / 2, (float) bm.getHeight() / 2);
+//                    selectedImageIdCard = Bitmap.createBitmap(bm, 0, 0, bounds.outWidth, bounds.outHeight, matrix, true);
+////                    selectedImageIdCard = BitmapFactory.decodeFile(fileUri.getPath());
+//                    setToImageView(getResizedBitmap(selectedImageIdCard, max_resolution_image), ivIdcard);
+//                } catch (Exception e) {
 //                    e.printStackTrace();
 //                }
+//            } else if (reqCode == SELECT_FILE_ID_CARD && data != null && data.getData() != null) {
+//                try {
 //
-//            } else {
-//
+//                    selectedImageIdCard = MediaStore.Images.Media.getBitmap(FormUploadDocumentSelfie.this.getContentResolver(), data.getData());
+//                    setToImageView(getResizedBitmap(selectedImageIdCard, max_resolution_image), ivIdcard);
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
 //            }
 //        }
-//        else if (reqCode == CHANGE_IMAGE_SUPPORT2) {
-//            if (resultCode == RESULT_OK) {
+//
+//        if (resultCode == Activity.RESULT_OK) {
+//            if (reqCode == REQUEST_CAMERA_KARTU_KREDIT) {
 //                try {
-//                    final Uri imageUri = data.getData();
-//                    final InputStream imageStream = getContentResolver().openInputStream(imageUri);
-//                    selectedImageDoc2 = BitmapFactory.decodeStream(imageStream);
-//                    ivSupportdoc2.setImageBitmap(selectedImageDoc2);
-//                } catch (FileNotFoundException e) {
+//                    Log.e("CAMERA", fileUri.getPath());
+//
+//                    String file = fileUri.getPath();
+//                    BitmapFactory.Options bounds = new BitmapFactory.Options();
+//                    bounds.inJustDecodeBounds = true;
+//                    BitmapFactory.decodeFile(file, bounds);
+//
+//                    BitmapFactory.Options opts = new BitmapFactory.Options();
+//                    Bitmap bm = BitmapFactory.decodeFile(file, opts);
+//                    ExifInterface exif = new ExifInterface(file);
+//                    String orientString = exif.getAttribute(ExifInterface.TAG_ORIENTATION);
+//                    int orientation = orientString != null ? Integer.parseInt(orientString) :  ExifInterface.ORIENTATION_NORMAL;
+//
+//                    int rotationAngle = 0;
+//                    if (orientation == ExifInterface.ORIENTATION_ROTATE_90) rotationAngle = 90;
+//                    if (orientation == ExifInterface.ORIENTATION_ROTATE_180) rotationAngle = 180;
+//                    if (orientation == ExifInterface.ORIENTATION_ROTATE_270) rotationAngle = 270;
+//
+//                    Matrix matrix = new Matrix();
+//                    matrix.setRotate(rotationAngle, (float) bm.getWidth() / 2, (float) bm.getHeight() / 2);
+//                    selectedImageCC = Bitmap.createBitmap(bm, 0, 0, bounds.outWidth, bounds.outHeight, matrix, true);
+////                    selectedImageCC = BitmapFactory.decodeFile(fileUri.getPath());
+//                    setToImageView(getResizedBitmap(selectedImageCC, max_resolution_image), ivCc);
+//                } catch (Exception e) {
 //                    e.printStackTrace();
 //                }
-//
-//            } else {
-//
-//            }
-//        }else if (reqCode == CHANGE_IMAGE_BRI) {
-//            if (resultCode == RESULT_OK) {
+//            } else if (reqCode == SELECT_FILE_KARTU_KREDIT && data != null && data.getData() != null) {
 //                try {
-//                    final Uri imageUri = data.getData();
-//                    final InputStream imageStream = getContentResolver().openInputStream(imageUri);
-//                    selectedImageBri = BitmapFactory.decodeStream(imageStream);
-//                    ivBriSelfie.setImageBitmap(selectedImageBri);
-//                } catch (FileNotFoundException e) {
+//
+//                    selectedImageCC = MediaStore.Images.Media.getBitmap(FormUploadDocumentSelfie.this.getContentResolver(), data.getData());
+//                    setToImageView(getResizedBitmap(selectedImageCC, max_resolution_image), ivCc);
+//                } catch (IOException e) {
 //                    e.printStackTrace();
 //                }
-//
-//            } else {
-//
-//            }
-//        }
-//        if (reqCode == CHANGE_IMAGE_BNI) {
-//            if (resultCode == RESULT_OK) {
-//                try {
-//                    final Uri imageUri = data.getData();
-//                    final InputStream imageStream = getContentResolver().openInputStream(imageUri);
-//                    selectedBni = BitmapFactory.decodeStream(imageStream);
-//                    ivBniSelfie.setImageBitmap(selectedBni);
-//                } catch (FileNotFoundException e) {
-//                    e.printStackTrace();
-//                }
-//
-//            } else {
-//
 //            }
 //        }
-//        if (reqCode == CHANGE_IMAGE_CIMB) {
-//            if (resultCode == RESULT_OK) {
+//
+//        if (resultCode == Activity.RESULT_OK) {
+//            if (reqCode == REQUEST_CAMERA_DOC_PENDUKUNG1) {
 //                try {
-//                    final Uri imageUri = data.getData();
-//                    final InputStream imageStream = getContentResolver().openInputStream(imageUri);
-//                    selectedCimb = BitmapFactory.decodeStream(imageStream);
-//                    ivSelfieCimb.setImageBitmap(selectedCimb);
-//                } catch (FileNotFoundException e) {
+//                    Log.e("CAMERA", fileUri.getPath());
+//                    String file = fileUri.getPath();
+//                    BitmapFactory.Options bounds = new BitmapFactory.Options();
+//                    bounds.inJustDecodeBounds = true;
+//                    BitmapFactory.decodeFile(file, bounds);
+//
+//                    BitmapFactory.Options opts = new BitmapFactory.Options();
+//                    Bitmap bm = BitmapFactory.decodeFile(file, opts);
+//                    ExifInterface exif = new ExifInterface(file);
+//                    String orientString = exif.getAttribute(ExifInterface.TAG_ORIENTATION);
+//                    int orientation = orientString != null ? Integer.parseInt(orientString) :  ExifInterface.ORIENTATION_NORMAL;
+//
+//                    int rotationAngle = 0;
+//                    if (orientation == ExifInterface.ORIENTATION_ROTATE_90) rotationAngle = 90;
+//                    if (orientation == ExifInterface.ORIENTATION_ROTATE_180) rotationAngle = 180;
+//                    if (orientation == ExifInterface.ORIENTATION_ROTATE_270) rotationAngle = 270;
+//
+//                    Matrix matrix = new Matrix();
+//                    matrix.setRotate(rotationAngle, (float) bm.getWidth() / 2, (float) bm.getHeight() / 2);
+//                    selectedImageDoc1 = Bitmap.createBitmap(bm, 0, 0, bounds.outWidth, bounds.outHeight, matrix, true);
+////                    selectedImageDoc1 = BitmapFactory.decodeFile(fileUri.getPath());
+//                    setToImageView(getResizedBitmap(selectedImageDoc1, max_resolution_image), ivSupportdoc1);
+//                } catch (Exception e) {
 //                    e.printStackTrace();
 //                }
+//            } else if (reqCode == SELECT_FILE_DOC_PENDUKUNG1 && data != null && data.getData() != null) {
+//                try {
 //
-//            } else {
-//
+//                    selectedImageDoc1 = MediaStore.Images.Media.getBitmap(FormUploadDocumentSelfie.this.getContentResolver(), data.getData());
+//                    setToImageView(getResizedBitmap(selectedImageDoc1, max_resolution_image), ivSupportdoc1);
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
 //            }
 //        }
-//        if (reqCode == CHANGE_IMAGE_MAYAPADA) {
-//            if (resultCode == RESULT_OK) {
+//
+//        if (resultCode == Activity.RESULT_OK) {
+//            if (reqCode == REQUEST_CAMERA_DOC_PENDUKUNG2) {
 //                try {
-//                    final Uri imageUri = data.getData();
-//                    final InputStream imageStream = getContentResolver().openInputStream(imageUri);
-//                    selectedMayapada = BitmapFactory.decodeStream(imageStream);
-//                    ivSelfieMayapada.setImageBitmap(selectedMayapada);
-//                } catch (FileNotFoundException e) {
+//                    Log.e("CAMERA", fileUri.getPath());
+//
+//                    String file = fileUri.getPath();
+//                    BitmapFactory.Options bounds = new BitmapFactory.Options();
+//                    bounds.inJustDecodeBounds = true;
+//                    BitmapFactory.decodeFile(file, bounds);
+//
+//                    BitmapFactory.Options opts = new BitmapFactory.Options();
+//                    Bitmap bm = BitmapFactory.decodeFile(file, opts);
+//                    ExifInterface exif = new ExifInterface(file);
+//                    String orientString = exif.getAttribute(ExifInterface.TAG_ORIENTATION);
+//                    int orientation = orientString != null ? Integer.parseInt(orientString) :  ExifInterface.ORIENTATION_NORMAL;
+//
+//                    int rotationAngle = 0;
+//                    if (orientation == ExifInterface.ORIENTATION_ROTATE_90) rotationAngle = 90;
+//                    if (orientation == ExifInterface.ORIENTATION_ROTATE_180) rotationAngle = 180;
+//                    if (orientation == ExifInterface.ORIENTATION_ROTATE_270) rotationAngle = 270;
+//
+//                    Matrix matrix = new Matrix();
+//                    matrix.setRotate(rotationAngle, (float) bm.getWidth() / 2, (float) bm.getHeight() / 2);
+//                    selectedImageDoc2 = Bitmap.createBitmap(bm, 0, 0, bounds.outWidth, bounds.outHeight, matrix, true);
+////                    selectedImageDoc2 = BitmapFactory.decodeFile(fileUri.getPath());
+//                    setToImageView(getResizedBitmap(selectedImageDoc2, max_resolution_image), ivSupportdoc2);
+//                } catch (Exception e) {
 //                    e.printStackTrace();
 //                }
+//            } else if (reqCode == SELECT_FILE_DOC_PENDUKUNG2 && data != null && data.getData() != null) {
+//                try {
 //
-//            } else {
+//                    selectedImageDoc2 = MediaStore.Images.Media.getBitmap(FormUploadDocumentSelfie.this.getContentResolver(), data.getData());
+//                    setToImageView(getResizedBitmap(selectedImageDoc2, max_resolution_image), ivSupportdoc2);
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        }
 //
+//        if (resultCode == Activity.RESULT_OK) {
+//            if (reqCode == REQUEST_CAMERA_BRI) {
+//                try {
+//                    Log.e("CAMERA", fileUri.getPath());
+//
+//                    String file = fileUri.getPath();
+//                    BitmapFactory.Options bounds = new BitmapFactory.Options();
+//                    bounds.inJustDecodeBounds = true;
+//                    BitmapFactory.decodeFile(file, bounds);
+//
+//                    BitmapFactory.Options opts = new BitmapFactory.Options();
+//                    Bitmap bm = BitmapFactory.decodeFile(file, opts);
+//                    ExifInterface exif = new ExifInterface(file);
+//                    String orientString = exif.getAttribute(ExifInterface.TAG_ORIENTATION);
+//                    int orientation = orientString != null ? Integer.parseInt(orientString) :  ExifInterface.ORIENTATION_NORMAL;
+//
+//                    int rotationAngle = 0;
+//                    if (orientation == ExifInterface.ORIENTATION_ROTATE_90) rotationAngle = 90;
+//                    if (orientation == ExifInterface.ORIENTATION_ROTATE_180) rotationAngle = 180;
+//                    if (orientation == ExifInterface.ORIENTATION_ROTATE_270) rotationAngle = 270;
+//
+//                    Matrix matrix = new Matrix();
+//                    matrix.setRotate(rotationAngle, (float) bm.getWidth() / 2, (float) bm.getHeight() / 2);
+//                    selectedImageBri = Bitmap.createBitmap(bm, 0, 0, bounds.outWidth, bounds.outHeight, matrix, true);
+////                    selectedImageBri = BitmapFactory.decodeFile(fileUri.getPath());
+//                    setToImageView(getResizedBitmap(selectedImageBri, max_resolution_image), ivBriSelfie);
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//                }
+//            } else if (reqCode == SELECT_FILE_BRI && data != null && data.getData() != null) {
+//                try {
+//
+//                    selectedImageBri = MediaStore.Images.Media.getBitmap(FormUploadDocumentSelfie.this.getContentResolver(), data.getData());
+//                    setToImageView(getResizedBitmap(selectedImageBri, max_resolution_image), ivBriSelfie);
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        }
+//
+//        if (resultCode == Activity.RESULT_OK) {
+//            if (reqCode == REQUEST_CAMERA_BNI) {
+//                try {
+//                    Log.e("CAMERA", fileUri.getPath());
+//                    String file = fileUri.getPath();
+//                    BitmapFactory.Options bounds = new BitmapFactory.Options();
+//                    bounds.inJustDecodeBounds = true;
+//                    BitmapFactory.decodeFile(file, bounds);
+//
+//                    BitmapFactory.Options opts = new BitmapFactory.Options();
+//                    Bitmap bm = BitmapFactory.decodeFile(file, opts);
+//                    ExifInterface exif = new ExifInterface(file);
+//                    String orientString = exif.getAttribute(ExifInterface.TAG_ORIENTATION);
+//                    int orientation = orientString != null ? Integer.parseInt(orientString) :  ExifInterface.ORIENTATION_NORMAL;
+//
+//                    int rotationAngle = 0;
+//                    if (orientation == ExifInterface.ORIENTATION_ROTATE_90) rotationAngle = 90;
+//                    if (orientation == ExifInterface.ORIENTATION_ROTATE_180) rotationAngle = 180;
+//                    if (orientation == ExifInterface.ORIENTATION_ROTATE_270) rotationAngle = 270;
+//
+//                    Matrix matrix = new Matrix();
+//                    matrix.setRotate(rotationAngle, (float) bm.getWidth() / 2, (float) bm.getHeight() / 2);
+//                    selectedBni = Bitmap.createBitmap(bm, 0, 0, bounds.outWidth, bounds.outHeight, matrix, true);
+//
+////                    selectedBni = BitmapFactory.decodeFile(fileUri.getPath());
+//                    setToImageView(getResizedBitmap(selectedBni, max_resolution_image), ivBniSelfie);
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//                }
+//            } else if (reqCode == SELECT_FILE_BNI && data != null && data.getData() != null) {
+//                try {
+//
+//                    selectedBni = MediaStore.Images.Media.getBitmap(FormUploadDocumentSelfie.this.getContentResolver(), data.getData());
+//                    setToImageView(getResizedBitmap(selectedBni, max_resolution_image), ivBniSelfie);
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        }
+//
+//        if (resultCode == Activity.RESULT_OK) {
+//            if (reqCode == REQUEST_CAMERA_CIMB) {
+//                try {
+//                    Log.e("CAMERA", fileUri.getPath());
+//                    String file = fileUri.getPath();
+//                    BitmapFactory.Options bounds = new BitmapFactory.Options();
+//                    bounds.inJustDecodeBounds = true;
+//                    BitmapFactory.decodeFile(file, bounds);
+//
+//                    BitmapFactory.Options opts = new BitmapFactory.Options();
+//                    Bitmap bm = BitmapFactory.decodeFile(file, opts);
+//                    ExifInterface exif = new ExifInterface(file);
+//                    String orientString = exif.getAttribute(ExifInterface.TAG_ORIENTATION);
+//                    int orientation = orientString != null ? Integer.parseInt(orientString) :  ExifInterface.ORIENTATION_NORMAL;
+//
+//                    int rotationAngle = 0;
+//                    if (orientation == ExifInterface.ORIENTATION_ROTATE_90) rotationAngle = 90;
+//                    if (orientation == ExifInterface.ORIENTATION_ROTATE_180) rotationAngle = 180;
+//                    if (orientation == ExifInterface.ORIENTATION_ROTATE_270) rotationAngle = 270;
+//
+//                    Matrix matrix = new Matrix();
+//                    matrix.setRotate(rotationAngle, (float) bm.getWidth() / 2, (float) bm.getHeight() / 2);
+//                    selectedCimb = Bitmap.createBitmap(bm, 0, 0, bounds.outWidth, bounds.outHeight, matrix, true);
+////                    selectedCimb = BitmapFactory.decodeFile(fileUri.getPath());
+//                    setToImageView(getResizedBitmap(selectedCimb, max_resolution_image), ivSelfieCimb);
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//                }
+//            } else if (reqCode == SELECT_FILE_CIMB && data != null && data.getData() != null) {
+//                try {
+//
+//                    selectedCimb = MediaStore.Images.Media.getBitmap(FormUploadDocumentSelfie.this.getContentResolver(), data.getData());
+//                    setToImageView(getResizedBitmap(selectedCimb, max_resolution_image), ivSelfieCimb);
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        }
+//
+//        if (resultCode == Activity.RESULT_OK) {
+//            if (reqCode == REQUEST_CAMERA_MAYAPADA) {
+//                try {
+//                    Log.e("CAMERA", fileUri.getPath());
+//                    String file = fileUri.getPath();
+//                    BitmapFactory.Options bounds = new BitmapFactory.Options();
+//                    bounds.inJustDecodeBounds = true;
+//                    BitmapFactory.decodeFile(file, bounds);
+//
+//                    BitmapFactory.Options opts = new BitmapFactory.Options();
+//                    Bitmap bm = BitmapFactory.decodeFile(file, opts);
+//                    ExifInterface exif = new ExifInterface(file);
+//                    String orientString = exif.getAttribute(ExifInterface.TAG_ORIENTATION);
+//                    int orientation = orientString != null ? Integer.parseInt(orientString) :  ExifInterface.ORIENTATION_NORMAL;
+//
+//                    int rotationAngle = 0;
+//                    if (orientation == ExifInterface.ORIENTATION_ROTATE_90) rotationAngle = 90;
+//                    if (orientation == ExifInterface.ORIENTATION_ROTATE_180) rotationAngle = 180;
+//                    if (orientation == ExifInterface.ORIENTATION_ROTATE_270) rotationAngle = 270;
+//
+//                    Matrix matrix = new Matrix();
+//                    matrix.setRotate(rotationAngle, (float) bm.getWidth() / 2, (float) bm.getHeight() / 2);
+//                    selectedMayapada = Bitmap.createBitmap(bm, 0, 0, bounds.outWidth, bounds.outHeight, matrix, true);
+////                    selectedMayapada = BitmapFactory.decodeFile(fileUri.getPath());
+//                    setToImageView(getResizedBitmap(selectedMayapada, max_resolution_image), ivSelfieMayapada);
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//                }
+//            } else if (reqCode == SELECT_FILE_DOC_MAYAPADA && data != null && data.getData() != null) {
+//                try {
+//
+//                    selectedMayapada = MediaStore.Images.Media.getBitmap(FormUploadDocumentSelfie.this.getContentResolver(), data.getData());
+//                    setToImageView(getResizedBitmap(selectedMayapada, max_resolution_image), ivSelfieMayapada);
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
 //            }
 //        }
     }
 
-    private void selectImage(int RequestCamera, int requestFile) {
-//        ivKtp.setImageResource(0);
-        final CharSequence[] items = {"Take Photo", "Choose from Library",
-                "Cancel"};
-
-        AlertDialog.Builder builder = new AlertDialog.Builder(FormUploadDocumentSelfie.this);
-        builder.setTitle("Add Photo!");
-        builder.setIcon(R.mipmap.ic_winery2);
-        builder.setItems(items, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int item) {
-                if (items[item].equals("Take Photo")) {
-                    intent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
-                    fileUri = getOutputMediaFileUri();
-                    intent.putExtra(android.provider.MediaStore.EXTRA_OUTPUT, fileUri);
-                    startActivityForResult(intent, RequestCamera);
-                } else if (items[item].equals("Choose from Library")) {
-                    intent = new Intent();
-                    intent.setType("image/*");
-                    intent.setAction(Intent.ACTION_GET_CONTENT);
-                    startActivityForResult(Intent.createChooser(intent, "Select Picture"), requestFile);
-                } else if (items[item].equals("Cancel")) {
-                    dialog.dismiss();
-                }
-            }
-        });
-        builder.show();
-    }
+//    private void selectImage(int RequestCamera, int requestFile) {
+////        ivKtp.setImageResource(0);
+//        final CharSequence[] items = {"Take Photo", "Choose from Library",
+//                "Cancel"};
+//
+//        AlertDialog.Builder builder = new AlertDialog.Builder(FormUploadDocumentSelfie.this);
+//        builder.setTitle("Add Photo!");
+//        builder.setIcon(R.mipmap.ic_winery2);
+//        builder.setItems(items, new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int item) {
+//                if (items[item].equals("Take Photo")) {
+//                    intent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+//                    fileUri = getOutputMediaFileUri();
+//                    intent.putExtra(android.provider.MediaStore.EXTRA_OUTPUT, fileUri);
+//                    startActivityForResult(intent, RequestCamera);
+//
+//                } else if (items[item].equals("Choose from Library")) {
+//                    intent = new Intent();
+//                    intent.setType("image/*");
+//                    intent.setAction(Intent.ACTION_GET_CONTENT);
+//                    startActivityForResult(Intent.createChooser(intent, "Select Picture"), requestFile);
+//                } else if (items[item].equals("Cancel")) {
+//                    dialog.dismiss();
+//                }
+//            }
+//        });
+//        builder.show();
+//    }
 
 
     // Set Image
-    private void setToImageView(Bitmap bmp, ImageView imageView) {
-        //compress image
-        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
-        bmp.compress(Bitmap.CompressFormat.JPEG, bitmap_size, bytes);
-        decoded = BitmapFactory.decodeStream(new ByteArrayInputStream(bytes.toByteArray()));
-
-        //menampilkan gambar yang dipilih dari camera/gallery ke ImageView
-        imageView.setImageBitmap(decoded);
-    }
+//    private void setToImageView(Bitmap bmp, ImageView imageView) {
+//        //compress image
+//
+//        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+//        bmp.compress(Bitmap.CompressFormat.JPEG, bitmap_size, bytes);
+//        decoded = BitmapFactory.decodeStream(new ByteArrayInputStream(bytes.toByteArray()));
+//
+//        //menampilkan gambar yang dipilih dari camera/gallery ke ImageView
+//        imageView.setImageBitmap(decoded);
+//    }
 
     public void submitCollectionData(Bitmap gambarbitmapKtp, Bitmap gambarbitmapNpwp, Bitmap gambarbitmapKtpIdcard,
                             Bitmap gambarbitmapCC, Bitmap gambarbitmapDoc1, Bitmap gambarbitmapDoc2,
                             Bitmap gambarbitmapBri, Bitmap gambarbitmapBni, Bitmap gambarbitmapCimb,
                             Bitmap gambarbitmapMayapada) {
 
-        loading = ProgressDialog.show(this, null, "Harap Tunggu...", true, false);
+
 
         HashMap<String, String> bank = stateTransactionSales.getListBank();
         HashMap<String, String> user = stateTransactionSales.getInputForm();
@@ -949,11 +975,6 @@ public class FormUploadDocumentSelfie extends AppCompatActivity {
         map.put("sales_name", createPartFromString(session.get(sessionManagement.KEY_NAME)));
         map.put("hadiah", createPartFromString(user.get(StateTransactionSales.KEY_HADIAH)));
         map.put("emergency_contact", createPartFromString(user.get(StateTransactionSales.KEY_TELP_EMERGENCY_KONTAK)));
-
-
-
-
-
 
         //convert gambar jadi File terlebih dahulu dengan memanggil createTempFile.
         // foto ktp
@@ -1098,63 +1119,63 @@ public class FormUploadDocumentSelfie extends AppCompatActivity {
     }
 
     // Untuk resize bitmap
-    public Bitmap getResizedBitmap(Bitmap image, int maxSize) {
-        int width = image.getWidth();
-        int height = image.getHeight();
-
-        float bitmapRatio = (float) width / (float) height;
-        if (bitmapRatio > 1) {
-            width = maxSize;
-            height = (int) (width / bitmapRatio);
-        } else {
-            height = maxSize;
-            width = (int) (height * bitmapRatio);
-        }
-        return Bitmap.createScaledBitmap(image, width, height, true);
-    }
-
-    public Uri getOutputMediaFileUri() {
-        return Uri.fromFile(getOutputMediaFile());
-    }
-
-    private static File getOutputMediaFile() {
-
-        // External sdcard location
-        File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), "DeKa");
-
-        // Create the storage directory if it does not exist
-        if (!mediaStorageDir.exists()) {
-            if (!mediaStorageDir.mkdirs()) {
-                Log.e("Monitoring", "Oops! Failed create Monitoring directory");
-                return null;
-            }
-        }
-
-        // Create a media file name
-        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date());
-        File mediaFile;
-        mediaFile = new File(mediaStorageDir.getPath() + File.separator + "Win" + timeStamp + ".jpg");
-
-        return mediaFile;
-    }
-
-    public void rotate(Uri imageUri){
-        File imageFile = new File(imageUri.toString());
-
-        try {
-            ExifInterface exif = new ExifInterface(imageFile.getAbsolutePath());
-            int orientation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION,
-                    ExifInterface.ORIENTATION_NORMAL);
-            int rotate = 0;
-            switch(orientation) {
-                case  ExifInterface.ORIENTATION_ROTATE_270:
-                    rotate-=90;break;
-                case  ExifInterface.ORIENTATION_ROTATE_180:
-                    rotate-=90;break;
-                case  ExifInterface.ORIENTATION_ROTATE_90:
-                    rotate-=90;break;
-            }
-        } catch (IOException e) {
-        }
-    }
+//    public Bitmap getResizedBitmap(Bitmap image, int maxSize) {
+//        int width = image.getWidth();
+//        int height = image.getHeight();
+//
+//        float bitmapRatio = (float) width / (float) height;
+//        if (bitmapRatio > 1) {
+//            width = maxSize;
+//            height = (int) (width / bitmapRatio);
+//        } else {
+//            height = maxSize;
+//            width = (int) (height * bitmapRatio);
+//        }
+//        return Bitmap.createScaledBitmap(image, width, height, true);
+//    }
+//
+//    public Uri getOutputMediaFileUri() {
+//        return Uri.fromFile(getOutputMediaFile());
+//    }
+//
+//    private static File getOutputMediaFile() {
+//
+//        // External sdcard location
+//        File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), "DeKa");
+//
+//        // Create the storage directory if it does not exist
+//        if (!mediaStorageDir.exists()) {
+//            if (!mediaStorageDir.mkdirs()) {
+//                Log.e("Monitoring", "Oops! Failed create Monitoring directory");
+//                return null;
+//            }
+//        }
+//
+//        // Create a media file name
+//        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date());
+//        File mediaFile;
+//        mediaFile = new File(mediaStorageDir.getPath() + File.separator + "Win" + timeStamp + ".webp");
+//
+//        return mediaFile;
+//    }
+//
+//    public void rotate(Uri imageUri){
+//        File imageFile = new File(imageUri.toString());
+//
+//        try {
+//            ExifInterface exif = new ExifInterface(imageFile.getAbsolutePath());
+//            int orientation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION,
+//                    ExifInterface.ORIENTATION_NORMAL);
+//            int rotate = 0;
+//            switch(orientation) {
+//                case  ExifInterface.ORIENTATION_ROTATE_270:
+//                    rotate-=90;break;
+//                case  ExifInterface.ORIENTATION_ROTATE_180:
+//                    rotate-=90;break;
+//                case  ExifInterface.ORIENTATION_ROTATE_90:
+//                    rotate-=90;break;
+//            }
+//        } catch (IOException e) {
+//        }
+//    }
 }

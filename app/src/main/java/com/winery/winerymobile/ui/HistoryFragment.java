@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -61,6 +62,7 @@ import java.util.concurrent.TimeUnit;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.Unbinder;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -85,6 +87,7 @@ public class HistoryFragment extends Fragment {
     /** ButterKnife Code **/
 
     SectionsPagerAdapter adapter;
+    private Unbinder unbinder;
 
     public HistoryFragment() {
         // Required empty public constructor
@@ -315,6 +318,13 @@ public class HistoryFragment extends Fragment {
             View rootView = inflater.inflate(R.layout.fragment_list_history_cc, container, false);
             ButterKnife.bind(this,rootView);
 
+            return rootView;
+        }
+
+        @Override
+        public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+            super.onViewCreated(view, savedInstanceState);
+
             sessionManagement = new SessionManagement(getContext());
             mApiService = UtilsApi.getAPIService();
             myCalendar = Calendar.getInstance();
@@ -403,10 +413,7 @@ public class HistoryFragment extends Fragment {
 
                 }
             });
-
-            return rootView;
         }
-
         // list history input sales cc
         private void requestGetHistoryCc(String startDate, String endDate ){
             loading = ProgressDialog.show(getContext(), null, "Harap Tunggu...", true, false);
@@ -616,6 +623,7 @@ public class HistoryFragment extends Fragment {
             sbView.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.colorPrimary));
             snackbar.show();
         }
+
     }
 
 

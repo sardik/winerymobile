@@ -339,6 +339,7 @@ public class ListCheckDataDuplicate extends AppCompatActivity {
 
     private void getDataCheckDuplicate(){
         loading = ProgressDialog.show(this, null, "Harap Tunggu...", true, false);
+        loading.setCanceledOnTouchOutside(false);
 
         Intent intent = getIntent();
         String nik = intent.getStringExtra("nik");

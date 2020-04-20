@@ -14,9 +14,12 @@ import android.widget.RelativeLayout;
 import com.winery.winerymobile.R;
 import com.winery.winerymobile.ui.CreditCardSubmission.DialogSuccess;
 
+import java.security.PrivateKey;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.Unbinder;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -39,6 +42,8 @@ public class AccountFragment extends Fragment {
     @BindView(R.id.rl_logout)
     RelativeLayout rlLogout;
     /** ButterKnife Code **/
+
+    private Unbinder unbinder;
 
     @OnClick(R.id.rl_logout) void logout(){
         DialogLogout bottomSheetFragment = new DialogLogout();

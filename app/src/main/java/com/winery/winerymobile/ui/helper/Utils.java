@@ -27,7 +27,7 @@ public class Utils {
                 , System.currentTimeMillis() +"_image.webp");
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
 
-        bitmap.compress(Bitmap.CompressFormat.WEBP,0, bos);
+        bitmap.compress(Bitmap.CompressFormat.WEBP,50, bos);
         byte[] bitmapdata = bos.toByteArray();
         //write the bytes in file
 

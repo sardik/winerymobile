@@ -1,10 +1,13 @@
 package com.winery.winerymobile.ui.VerifikatorTransaction;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -18,6 +21,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
+import com.github.chrisbanes.photoview.PhotoView;
 import com.winery.winerymobile.R;
 import com.winery.winerymobile.ui.APIhelper.BaseApiService;
 import com.winery.winerymobile.ui.APIhelper.UtilsApi;
@@ -297,6 +301,12 @@ public class ListTransactionDetailWaitingVerif extends AppCompatActivity {
     com.google.android.material.button.MaterialButton btnSubmit;
     /** ButterKnife Code **/
 
+    String imageKtp;
+
+    @OnClick(R.id.iv_ktp) void pinchZoomKtp(){
+        pinchToZoom(imageKtp);
+    }
+
     @OnClick(R.id.btn_submit) void gotoSelectionBank(){
         // saving state
         stateTransactionSales.createStateBank(statusBri.getText().toString(), statusBni.getText().toString(),
@@ -344,20 +354,20 @@ public class ListTransactionDetailWaitingVerif extends AppCompatActivity {
         }
     }
 
-    private void getListDetailHistoryCc(){
+    private void getListDetailHistoryCc() {
         loading = ProgressDialog.show(this, null, "Harap Tunggu...", true, false);
-
+        loading.setCanceledOnTouchOutside(false);
         Intent intent = getIntent();
         String idTransaction = intent.getStringExtra("param");
         mApiService.getListDetailHistoryCc(idTransaction)
                 .enqueue(new Callback<ResponseBody>() {
                     @Override
                     public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                        if (response.isSuccessful()){
+                        if (response.isSuccessful()) {
                             loading.dismiss();
                             try {
                                 JSONObject jsonRESULTS = new JSONObject(response.body().string());
-                                if (jsonRESULTS.getInt("status") == 200){
+                                if (jsonRESULTS.getInt("status") == 200) {
 
                                     String id = jsonRESULTS.getJSONObject("data").getString("id");
                                     String tanggal = jsonRESULTS.getJSONObject("data").getString("tanggal");
@@ -373,7 +383,7 @@ public class ListTransactionDetailWaitingVerif extends AppCompatActivity {
                                     String hubunganecontact = jsonRESULTS.getJSONObject("data").getString("hubunganecontact");
                                     String salesname = jsonRESULTS.getJSONObject("data").getString("salesname");
                                     String salescode = jsonRESULTS.getJSONObject("data").getString("salescode");
-                                    String imageKtp = jsonRESULTS.getJSONObject("data").getString("url_ktp");
+                                    imageKtp = jsonRESULTS.getJSONObject("data").getString("url_ktp");
 
 
                                     tvName.setText(nama);
@@ -386,7 +396,7 @@ public class ListTransactionDetailWaitingVerif extends AppCompatActivity {
                                     tvCompanyPhone.setText(teleponkantor);
                                     tvEmergencyContact.setText(econtact);
                                     tvRelationship.setText(hubunganecontact);
-                                    tvSales.setText(salesname+" - "+salescode);
+                                    tvSales.setText(salesname + " - " + salescode);
 
                                     // fetch image
                                     Glide.with(ListTransactionDetailWaitingVerif.this).
@@ -398,23 +408,23 @@ public class ListTransactionDetailWaitingVerif extends AppCompatActivity {
                                             .into(ivKtp);
 
                                     // bank BRI
-                                    String StatusBri,VerifikasiBri,tanggalSubmitBri, statusappBri;
+                                    String StatusBri, VerifikasiBri, tanggalSubmitBri, statusappBri;
                                     StatusBri = jsonRESULTS.getJSONObject("data").getString("bri");
                                     String tanggalPengajuanBri = jsonRESULTS.getJSONObject("data").getString("tanggal");
                                     VerifikasiBri = jsonRESULTS.getJSONObject("data").getString("verifbri");
                                     tanggalSubmitBri = jsonRESULTS.getJSONObject("data").getString("tanggalsubmitbri");
                                     statusappBri = jsonRESULTS.getJSONObject("data").getString("keteranganbalikanbri");
 
-                                    if(StatusBri.equals("") || StatusBri.equals("null")){
+                                    if (StatusBri.equals("") || StatusBri.equals("null")) {
                                         StatusBri = "-";
                                     }
-                                    if(VerifikasiBri.equals("") || VerifikasiBri.equals("null")){
+                                    if (VerifikasiBri.equals("") || VerifikasiBri.equals("null")) {
                                         VerifikasiBri = "-";
                                     }
-                                    if(tanggalSubmitBri.equals("") || tanggalSubmitBri.equals("null")){
+                                    if (tanggalSubmitBri.equals("") || tanggalSubmitBri.equals("null")) {
                                         tanggalSubmitBri = "-";
                                     }
-                                    if(statusappBri.equals("") || statusappBri.equals("null")){
+                                    if (statusappBri.equals("") || statusappBri.equals("null")) {
                                         statusappBri = "-";
                                     }
 
@@ -438,16 +448,16 @@ public class ListTransactionDetailWaitingVerif extends AppCompatActivity {
                                     tanggalSubmitBni = jsonRESULTS.getJSONObject("data").getString("tanggalsubmitbni");
                                     statusappBni = jsonRESULTS.getJSONObject("data").getString("keteranganbalikanbni");
 
-                                    if(StatusBni.equals("") || StatusBni.equals("null")){
+                                    if (StatusBni.equals("") || StatusBni.equals("null")) {
                                         StatusBni = "-";
                                     }
-                                    if(VerifikasiBni.equals("") || VerifikasiBni.equals("null")){
+                                    if (VerifikasiBni.equals("") || VerifikasiBni.equals("null")) {
                                         VerifikasiBni = "-";
                                     }
-                                    if(tanggalSubmitBni.equals("") || tanggalSubmitBni.equals("null")){
+                                    if (tanggalSubmitBni.equals("") || tanggalSubmitBni.equals("null")) {
                                         tanggalSubmitBni = "-";
                                     }
-                                    if(statusappBni.equals("") || statusappBni.equals("null")){
+                                    if (statusappBni.equals("") || statusappBni.equals("null")) {
                                         statusappBni = "-";
                                     }
 
@@ -471,16 +481,16 @@ public class ListTransactionDetailWaitingVerif extends AppCompatActivity {
                                     tanggalSubmitBca = jsonRESULTS.getJSONObject("data").getString("tanggalsubmitbca");
                                     statusappBca = jsonRESULTS.getJSONObject("data").getString("keteranganbalikanbca");
 
-                                    if(StatusBca.equals("") || StatusBca.equals("null")){
+                                    if (StatusBca.equals("") || StatusBca.equals("null")) {
                                         StatusBca = "-";
                                     }
-                                    if(VerifikasiBca.equals("") || VerifikasiBca.equals("null")){
+                                    if (VerifikasiBca.equals("") || VerifikasiBca.equals("null")) {
                                         VerifikasiBca = "-";
                                     }
-                                    if(tanggalSubmitBca.equals("") || tanggalSubmitBca.equals("null")){
+                                    if (tanggalSubmitBca.equals("") || tanggalSubmitBca.equals("null")) {
                                         tanggalSubmitBca = "-";
                                     }
-                                    if(statusappBca.equals("") || statusappBca.equals("null")){
+                                    if (statusappBca.equals("") || statusappBca.equals("null")) {
                                         statusappBca = "-";
                                     }
 
@@ -497,23 +507,23 @@ public class ListTransactionDetailWaitingVerif extends AppCompatActivity {
                                     parentStatusBalikanBca.setVisibility(View.GONE);
 
                                     // bank CIMB
-                                    String StatusCimb,VerifikasiCimb, tanggalSubmitCimb,statusappCimb;
+                                    String StatusCimb, VerifikasiCimb, tanggalSubmitCimb, statusappCimb;
                                     StatusCimb = jsonRESULTS.getJSONObject("data").getString("niaga");
                                     String tanggalPengajuanCimb = jsonRESULTS.getJSONObject("data").getString("tanggal");
                                     VerifikasiCimb = jsonRESULTS.getJSONObject("data").getString("verifniaga");
                                     tanggalSubmitCimb = jsonRESULTS.getJSONObject("data").getString("tanggalsubmitniaga");
                                     statusappCimb = jsonRESULTS.getJSONObject("data").getString("keteranganbalikanniaga");
 
-                                    if(StatusCimb.equals("") || StatusCimb.equals("null")){
+                                    if (StatusCimb.equals("") || StatusCimb.equals("null")) {
                                         StatusCimb = "-";
                                     }
-                                    if(VerifikasiCimb.equals("") || VerifikasiCimb.equals("null")){
+                                    if (VerifikasiCimb.equals("") || VerifikasiCimb.equals("null")) {
                                         VerifikasiCimb = "-";
                                     }
-                                    if(tanggalSubmitCimb.equals("") || tanggalSubmitCimb.equals("null")){
+                                    if (tanggalSubmitCimb.equals("") || tanggalSubmitCimb.equals("null")) {
                                         tanggalSubmitCimb = "-";
                                     }
-                                    if(statusappCimb.equals("") || statusappCimb.equals("null")){
+                                    if (statusappCimb.equals("") || statusappCimb.equals("null")) {
                                         statusappCimb = "-";
                                     }
 
@@ -535,18 +545,18 @@ public class ListTransactionDetailWaitingVerif extends AppCompatActivity {
                                     String tanggalPengajuanMayapada = jsonRESULTS.getJSONObject("data").getString("tanggal");
                                     VerifikasiMayapada = jsonRESULTS.getJSONObject("data").getString("verifmayapada");
                                     tanggalSubmitMayapada = jsonRESULTS.getJSONObject("data").getString("tanggalsubmitmayapada");
-                                    statusappMayapada= jsonRESULTS.getJSONObject("data").getString("keteranganbalikanmayapada");
+                                    statusappMayapada = jsonRESULTS.getJSONObject("data").getString("keteranganbalikanmayapada");
 
-                                    if(StatusMayapada.equals("") || StatusMayapada.equals("null")){
+                                    if (StatusMayapada.equals("") || StatusMayapada.equals("null")) {
                                         StatusMayapada = "-";
                                     }
-                                    if(VerifikasiMayapada.equals("") || VerifikasiMayapada.equals("null")){
+                                    if (VerifikasiMayapada.equals("") || VerifikasiMayapada.equals("null")) {
                                         VerifikasiMayapada = "-";
                                     }
-                                    if(tanggalSubmitMayapada.equals("") || tanggalSubmitMayapada.equals("null")){
+                                    if (tanggalSubmitMayapada.equals("") || tanggalSubmitMayapada.equals("null")) {
                                         tanggalSubmitMayapada = "-";
                                     }
-                                    if(statusappMayapada.equals("") || statusappMayapada.equals("null")){
+                                    if (statusappMayapada.equals("") || statusappMayapada.equals("null")) {
                                         statusappMayapada = "-";
                                     }
 
@@ -570,16 +580,16 @@ public class ListTransactionDetailWaitingVerif extends AppCompatActivity {
                                     tanggalSubmitDbs = jsonRESULTS.getJSONObject("data").getString("tanggalsubmitdbs");
                                     statusappDbs = jsonRESULTS.getJSONObject("data").getString("keteranganbalikandbs");
 
-                                    if(StatusDbs.equals("") || StatusDbs.equals("null")){
+                                    if (StatusDbs.equals("") || StatusDbs.equals("null")) {
                                         StatusDbs = "-";
                                     }
-                                    if(VerifikasiDbs.equals("") || VerifikasiDbs.equals("null")){
+                                    if (VerifikasiDbs.equals("") || VerifikasiDbs.equals("null")) {
                                         VerifikasiDbs = "-";
                                     }
-                                    if(tanggalSubmitDbs.equals("") || tanggalSubmitDbs.equals("null")){
+                                    if (tanggalSubmitDbs.equals("") || tanggalSubmitDbs.equals("null")) {
                                         tanggalSubmitDbs = "-";
                                     }
-                                    if(statusappDbs.equals("") || statusappDbs.equals("null")){
+                                    if (statusappDbs.equals("") || statusappDbs.equals("null")) {
                                         statusappDbs = "-";
                                     }
 
@@ -604,16 +614,16 @@ public class ListTransactionDetailWaitingVerif extends AppCompatActivity {
                                     tanggalSubmitMnc = jsonRESULTS.getJSONObject("data").getString("tanggalsubmitmnc");
                                     statusappMnc = jsonRESULTS.getJSONObject("data").getString("keteranganbalikanmnc");
 
-                                    if(StatusMnc.equals("") || StatusMnc.equals("null")){
+                                    if (StatusMnc.equals("") || StatusMnc.equals("null")) {
                                         StatusMnc = "-";
                                     }
-                                    if(VerifikasiMnc.equals("") || VerifikasiMnc.equals("null")){
+                                    if (VerifikasiMnc.equals("") || VerifikasiMnc.equals("null")) {
                                         VerifikasiMnc = "-";
                                     }
-                                    if(tanggalSubmitMnc.equals("") || tanggalSubmitMnc.equals("null")){
+                                    if (tanggalSubmitMnc.equals("") || tanggalSubmitMnc.equals("null")) {
                                         tanggalSubmitMnc = "-";
                                     }
-                                    if(statusappMnc.equals("") || statusappMnc.equals("null")){
+                                    if (statusappMnc.equals("") || statusappMnc.equals("null")) {
                                         statusappMnc = "-";
                                     }
 
@@ -636,16 +646,16 @@ public class ListTransactionDetailWaitingVerif extends AppCompatActivity {
                                     tanggalSubmitUob = jsonRESULTS.getJSONObject("data").getString("tanggalsubmituob");
                                     statusappUob = jsonRESULTS.getJSONObject("data").getString("keteranganbalikanuob");
 
-                                    if(StatusUob.equals("") || StatusUob.equals("null")){
+                                    if (StatusUob.equals("") || StatusUob.equals("null")) {
                                         StatusUob = "-";
                                     }
-                                    if(VerifikasiUob.equals("") || VerifikasiUob.equals("null")){
+                                    if (VerifikasiUob.equals("") || VerifikasiUob.equals("null")) {
                                         VerifikasiUob = "-";
                                     }
-                                    if(tanggalSubmitUob.equals("") || tanggalSubmitUob.equals("null")){
+                                    if (tanggalSubmitUob.equals("") || tanggalSubmitUob.equals("null")) {
                                         tanggalSubmitUob = "-";
                                     }
-                                    if(statusappUob.equals("") || statusappUob.equals("null")){
+                                    if (statusappUob.equals("") || statusappUob.equals("null")) {
                                         statusappUob = "-";
                                     }
 
@@ -668,16 +678,16 @@ public class ListTransactionDetailWaitingVerif extends AppCompatActivity {
                                     tanggalSubmitMega = jsonRESULTS.getJSONObject("data").getString("tanggalsubmitmega");
                                     statusappMega = jsonRESULTS.getJSONObject("data").getString("keteranganbalikanmega");
 
-                                    if(StatusMega.equals("") || StatusMega.equals("null")){
+                                    if (StatusMega.equals("") || StatusMega.equals("null")) {
                                         StatusMega = "-";
                                     }
-                                    if(VerifikasiMega.equals("") || VerifikasiMega.equals("null")){
+                                    if (VerifikasiMega.equals("") || VerifikasiMega.equals("null")) {
                                         VerifikasiMega = "-";
                                     }
-                                    if(tanggalSubmitMega.equals("") || tanggalSubmitMega.equals("null")){
+                                    if (tanggalSubmitMega.equals("") || tanggalSubmitMega.equals("null")) {
                                         tanggalSubmitMega = "-";
                                     }
-                                    if(statusappMega.equals("") || statusappMega.equals("null")){
+                                    if (statusappMega.equals("") || statusappMega.equals("null")) {
                                         statusappMega = "-";
                                     }
 
@@ -696,20 +706,20 @@ public class ListTransactionDetailWaitingVerif extends AppCompatActivity {
                                     String StatusPanin, VerifikasiPanin, tanggalSubmitPanin, statusappPanin;
                                     StatusPanin = jsonRESULTS.getJSONObject("data").getString("panin");
                                     String tanggalPengajuanPanin = jsonRESULTS.getJSONObject("data").getString("tanggal");
-                                    VerifikasiPanin= jsonRESULTS.getJSONObject("data").getString("verifpanin");
+                                    VerifikasiPanin = jsonRESULTS.getJSONObject("data").getString("verifpanin");
                                     tanggalSubmitPanin = jsonRESULTS.getJSONObject("data").getString("tanggalsubmitpanin");
                                     statusappPanin = jsonRESULTS.getJSONObject("data").getString("keteranganbalikanpanin");
 
-                                    if(StatusPanin.equals("") || StatusPanin.equals("null")){
+                                    if (StatusPanin.equals("") || StatusPanin.equals("null")) {
                                         StatusPanin = "-";
                                     }
-                                    if(VerifikasiPanin.equals("") || VerifikasiPanin.equals("null")){
+                                    if (VerifikasiPanin.equals("") || VerifikasiPanin.equals("null")) {
                                         VerifikasiPanin = "-";
                                     }
-                                    if(tanggalSubmitPanin.equals("") || tanggalSubmitPanin.equals("null")){
+                                    if (tanggalSubmitPanin.equals("") || tanggalSubmitPanin.equals("null")) {
                                         tanggalSubmitPanin = "-";
                                     }
-                                    if(statusappPanin.equals("") || statusappPanin.equals("null")){
+                                    if (statusappPanin.equals("") || statusappPanin.equals("null")) {
                                         statusappPanin = "-";
                                     }
 
@@ -725,7 +735,6 @@ public class ListTransactionDetailWaitingVerif extends AppCompatActivity {
                                     parentStatusBalikanPanin.setVisibility(View.GONE);
 
                                     nested.setVisibility(View.VISIBLE);
-
 
 
                                 } else {
@@ -750,4 +759,32 @@ public class ListTransactionDetailWaitingVerif extends AppCompatActivity {
                     }
                 });
     }
-}
+
+        public void pinchToZoom(String imageName){
+            AlertDialog.Builder mBuilder = new AlertDialog.Builder(ListTransactionDetailWaitingVerif.this);
+            View mView = getLayoutInflater().inflate(R.layout.layout_photo_viewer, null);
+            PhotoView photoView = mView.findViewById(R.id.imageView);
+            Glide.with(ListTransactionDetailWaitingVerif.this).
+                    load(imageName)
+                    .placeholder(R.drawable.ic_camera)
+                    .diskCacheStrategy(DiskCacheStrategy.NONE)
+                    .skipMemoryCache(true)
+                    .transition(DrawableTransitionOptions.withCrossFade(100))
+                    .into(photoView);
+            mBuilder.setView(mView);
+
+            AlertDialog mDialog;
+            mDialog = mBuilder.create();
+            mDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+
+            ImageView closeButton = mView.findViewById(R.id.imageView_close);
+            closeButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mDialog.dismiss();
+                }
+            });
+            mDialog.show();
+        }
+    }

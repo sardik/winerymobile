@@ -124,7 +124,7 @@ public class FormSubmitSelectionBank extends AppCompatActivity {
 
         // inisialisasi list status bank
         String[] statusBank = new String[] {"CTN", "HTC", "IVN", "NVA",
-                "CBC","UDF","NTE","UNC","STS","ADN","BCU"};
+                "CBC","UDF","ADN","BCU","NTE"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.dropdown_menu_popup_item, statusBank);
 
         stateTransactionSales = new StateTransactionSales(this);

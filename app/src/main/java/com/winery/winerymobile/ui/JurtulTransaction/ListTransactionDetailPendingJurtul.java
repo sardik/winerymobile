@@ -1,10 +1,13 @@
 package com.winery.winerymobile.ui.JurtulTransaction;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -18,9 +21,11 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
+import com.github.chrisbanes.photoview.PhotoView;
 import com.winery.winerymobile.R;
 import com.winery.winerymobile.ui.APIhelper.BaseApiService;
 import com.winery.winerymobile.ui.APIhelper.UtilsApi;
+import com.winery.winerymobile.ui.DetailHistoryTransactionInputJurtul;
 import com.winery.winerymobile.ui.DetailHistoryTransaksiInputVerif;
 import com.winery.winerymobile.ui.VerifikatorTransaction.UploadDataKotorVerif;
 import com.winery.winerymobile.ui.dbhelper.SessionManagement;
@@ -438,6 +443,36 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
     com.google.android.material.button.MaterialButton btnSubmit;
     /** ButterKnife Code **/
 
+    String imageKtp,imageDataKotor,imageNpwp,imageSlipGaji,imageSpt,imageKartuKredit;
+
+    @OnClick(R.id.iv_data_kotor) void pinchZoomDataKotor(){
+        pinchToZoom(imageDataKotor);
+    }
+
+    @OnClick(R.id.iv_ktp) void pinchZoomKtp(){
+        pinchToZoom(imageKtp);
+    }
+
+    @OnClick(R.id.iv_npwp) void pinchZoomNpwp(){
+        pinchToZoom(imageNpwp);
+    }
+
+    @OnClick(R.id.iv_spt) void pinchZoomDataSpt(){
+        pinchToZoom(imageSpt);
+    }
+
+    @OnClick(R.id.iv_slip_gaji) void pinchZoomDataSlip(){
+        pinchToZoom(imageSlipGaji);
+
+    }
+
+    @OnClick(R.id.iv_cc) void pinchZoomDataCC(){
+        pinchToZoom(imageKartuKredit);
+    }
+
+
+
+
     @OnClick(R.id.btn_submit)
     void gotoUploadForm() {
         Intent intent = new Intent(this, JurtulSubmissionForm.class);
@@ -570,6 +605,7 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
 
     private void getListDetailHistoryCc() {
         loading = ProgressDialog.show(this, null, "Harap Tunggu...", true, false);
+        loading.setCanceledOnTouchOutside(false);
 
         Intent intent = getIntent();
         String idTransaction = intent.getStringExtra("param");
@@ -603,13 +639,12 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
                                     String tanggungan = jsonRESULTS.getJSONObject("data").getString("tanggungan");
                                     String pendidikan = jsonRESULTS.getJSONObject("data").getString("pendidikan");
                                     String ibu = jsonRESULTS.getJSONObject("data").getString("ibu");
-                                    String imageKtp = jsonRESULTS.getJSONObject("data").getString("url_ktp");
-                                    String imageDataKotor = jsonRESULTS.getJSONObject("data").getString("url_data_kotor");
-                                    String imageNpwp = jsonRESULTS.getJSONObject("data").getString("url_npwp");
-                                    String imageSlipGaji = jsonRESULTS.getJSONObject("data").getString("url_slip_gaji");
-                                    String imageSpt = jsonRESULTS.getJSONObject("data").getString("url_spt");
-                                    String imageKartuKredit = jsonRESULTS.getJSONObject("data").getString("url_kartu_kredit");
-
+                                    imageKtp = jsonRESULTS.getJSONObject("data").getString("url_ktp");
+                                    imageDataKotor = jsonRESULTS.getJSONObject("data").getString("url_data_kotor");
+                                    imageNpwp = jsonRESULTS.getJSONObject("data").getString("url_npwp");
+                                    imageSlipGaji = jsonRESULTS.getJSONObject("data").getString("url_slip_gaji");
+                                    imageSpt = jsonRESULTS.getJSONObject("data").getString("url_spt");
+                                    imageKartuKredit = jsonRESULTS.getJSONObject("data").getString("url_kartu_kredit");
 
                                     // fetch image
                                     Glide.with(ListTransactionDetailPendingJurtul.this).
@@ -1105,5 +1140,34 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
                         loading.dismiss();
                     }
                 });
+    }
+
+
+    public void pinchToZoom(String imageName){
+        AlertDialog.Builder mBuilder = new AlertDialog.Builder(ListTransactionDetailPendingJurtul.this);
+        View mView = getLayoutInflater().inflate(R.layout.layout_photo_viewer, null);
+        PhotoView photoView = mView.findViewById(R.id.imageView);
+        Glide.with(ListTransactionDetailPendingJurtul.this).
+                load(imageName)
+                .placeholder(R.drawable.ic_camera)
+                .diskCacheStrategy(DiskCacheStrategy.NONE)
+                .skipMemoryCache(true)
+                .transition(DrawableTransitionOptions.withCrossFade(100))
+                .into(photoView);
+        mBuilder.setView(mView);
+
+        AlertDialog mDialog;
+        mDialog = mBuilder.create();
+        mDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+
+        ImageView closeButton = mView.findViewById(R.id.imageView_close);
+        closeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mDialog.dismiss();
+            }
+        });
+        mDialog.show();
     }
 }

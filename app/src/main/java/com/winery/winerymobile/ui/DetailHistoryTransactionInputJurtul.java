@@ -1,5 +1,6 @@
 package com.winery.winerymobile.ui;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -18,6 +19,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
+import com.github.chrisbanes.photoview.PhotoView;
 import com.winery.winerymobile.R;
 import com.winery.winerymobile.ui.APIhelper.BaseApiService;
 import com.winery.winerymobile.ui.APIhelper.UtilsApi;
@@ -458,6 +460,23 @@ public class DetailHistoryTransactionInputJurtul extends AppCompatActivity {
     TextView tvStatusPanin;
     /** ButterKnife Code **/
 
+//    @OnClick(R.id.iv_data_kotor) void pinchZoom(){
+//        AlertDialog.Builder mBuilder = new AlertDialog.Builder(DetailHistoryTransactionInputJurtul.this);
+//        View mView = getLayoutInflater().inflate(R.layout.layout_photo_viewer, null);
+//        PhotoView photoView = mView.findViewById(R.id.imageView);
+//        Glide.with(DetailHistoryTransactionInputJurtul.this).
+//                load(imageDataKotor)
+//                .placeholder(R.drawable.ic_camera)
+//                .diskCacheStrategy(DiskCacheStrategy.NONE)
+//                .skipMemoryCache(true)
+//                .transition(DrawableTransitionOptions.withCrossFade(100))
+//                .into(photoView);
+////        photoView.setIMa(imageDataKotor);
+//        mBuilder.setView(mView);
+//        AlertDialog mDialog = mBuilder.create();
+//        mDialog.show();
+//    }
+
     @OnClick(R.id.rl_child1_ll_section2) void showDataCustomer(){
 
         if(ivChevronPaymentMethod1.isSelected()) {
@@ -522,6 +541,8 @@ public class DetailHistoryTransactionInputJurtul extends AppCompatActivity {
     BaseApiService mApiService;
     StateTransactionSales stateTransactionSales;
     SessionManagement sessionManagement;
+
+    String imageDataKotor;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -565,6 +586,7 @@ public class DetailHistoryTransactionInputJurtul extends AppCompatActivity {
 
     private void getListDetailHistoryCc() {
         loading = ProgressDialog.show(this, null, "Harap Tunggu...", true, false);
+        loading.setCanceledOnTouchOutside(false);
 
         Intent intent = getIntent();
         String idTransaction = intent.getStringExtra("param");
@@ -599,11 +621,11 @@ public class DetailHistoryTransactionInputJurtul extends AppCompatActivity {
                                     String pendidikan = jsonRESULTS.getJSONObject("data").getString("pendidikan");
                                     String ibu = jsonRESULTS.getJSONObject("data").getString("ibu");
 
-                                    String imageDatakotor = jsonRESULTS.getJSONObject("data").getString("url_data_kotor");
+                                    imageDataKotor = jsonRESULTS.getJSONObject("data").getString("url_data_kotor");
 
                                     // fetch image
                                     Glide.with(DetailHistoryTransactionInputJurtul.this).
-                                            load(imageDatakotor)
+                                            load(imageDataKotor)
                                             .placeholder(R.drawable.ic_camera)
                                             .diskCacheStrategy(DiskCacheStrategy.NONE)
                                             .skipMemoryCache(true)

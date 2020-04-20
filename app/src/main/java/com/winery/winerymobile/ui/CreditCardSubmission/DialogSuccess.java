@@ -2,6 +2,7 @@ package com.winery.winerymobile.ui.CreditCardSubmission;
 
 
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,6 +21,8 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.winery.winerymobile.R;
 import com.winery.winerymobile.ui.ParentHomeActivity;
 
+import java.io.File;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -37,6 +40,7 @@ public class DialogSuccess extends BottomSheetDialogFragment {
     @OnClick(R.id.btn_home) void gotohome(){
             Intent intent = new Intent(getContext(), ParentHomeActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        deleteCache(getContext());
         startActivity(intent);
     }
     public DialogSuccess() {
@@ -70,6 +74,29 @@ public class DialogSuccess extends BottomSheetDialogFragment {
 
         return view;
 
+    }
+
+    public static void deleteCache(Context context) {
+        try {
+            File dir = context.getCacheDir();
+            deleteDir(dir);
+        } catch (Exception e) {}
+    }
+    public static boolean deleteDir(File dir) {
+        if (dir != null && dir.isDirectory()) {
+            String[] children = dir.list();
+            for (int i = 0; i < children.length; i++) {
+                boolean success = deleteDir(new File(dir, children[i]));
+                if (!success) {
+                    return false;
+                }
+            }
+            return dir.delete();
+        } else if(dir!= null && dir.isFile()) {
+            return dir.delete();
+        } else {
+            return false;
+        }
     }
 
 }
