@@ -114,4 +114,20 @@ public class ParentHomeActivity extends AppCompatActivity {
         sbView.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimary));
         snackbar.show();
     }
+
+    @Override
+    protected void onStop(){
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+    @Override
+    public void onBackPressed(){
+        super.onBackPressed();
+        finishAffinity();
+    }
 }

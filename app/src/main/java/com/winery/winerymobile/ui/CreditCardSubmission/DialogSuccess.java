@@ -10,6 +10,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +20,7 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.winery.winerymobile.R;
+import com.winery.winerymobile.ui.AppMain;
 import com.winery.winerymobile.ui.ParentHomeActivity;
 
 import java.io.File;
@@ -39,7 +41,7 @@ public class DialogSuccess extends BottomSheetDialogFragment {
 
     @OnClick(R.id.btn_home) void gotohome(){
             Intent intent = new Intent(getContext(), ParentHomeActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
         deleteCache(getContext());
         startActivity(intent);
     }
@@ -97,6 +99,18 @@ public class DialogSuccess extends BottomSheetDialogFragment {
         } else {
             return false;
         }
+    }
+
+    @Override
+    public void onStop(){
+        super.onStop();
+    }
+
+    @Override
+    public void onDestroy() {
+        deleteCache(getContext());
+        Log.d("destroy", "onDestroy: bisa");
+        super.onDestroy();
     }
 
 }

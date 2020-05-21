@@ -20,6 +20,7 @@ import com.winery.winerymobile.ui.APIhelper.BaseApiService;
 import com.winery.winerymobile.ui.APIhelper.UtilsApi;
 import com.winery.winerymobile.ui.CreditCardSubmission.CustomerDataForm;
 import com.winery.winerymobile.ui.CreditCardSubmission.DialogSuccess;
+import com.winery.winerymobile.ui.DetailHistoryTransaksiInputVerif;
 import com.winery.winerymobile.ui.VerifikatorTransaction.UploadDataKotorVerif;
 import com.winery.winerymobile.ui.dbhelper.SessionManagement;
 import com.winery.winerymobile.ui.dbhelper.StateTransactionSales;
@@ -263,6 +264,7 @@ public class JurtulSubmissionForm extends AppCompatActivity {
 
     @OnClick(R.id.btn_back) void back(){
         onBackPressed();
+        finish();
     }
 
     @OnClick(R.id.btn_submit) void next(){
@@ -447,6 +449,8 @@ public class JurtulSubmissionForm extends AppCompatActivity {
                     @Override
                     public void onFailure(Call<ResponseBody> call, Throwable t) {
                         Log.e("debug", "onFailure: ERROR > " + t.toString());
+                        String error_message = "server error silahkan coba lagi";
+                        Toast.makeText(JurtulSubmissionForm.this, error_message, Toast.LENGTH_SHORT).show();
                         loading.dismiss();
                     }
                 }
@@ -468,5 +472,17 @@ public class JurtulSubmissionForm extends AppCompatActivity {
         View sbView = snackbar.getView();
         sbView.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimary));
         snackbar.show();
+    }
+
+    @Override
+    protected void onStop(){
+        Log.d("onstop", "onStop: jalanbanksubmissionform");
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        Log.d("odestroy", "onDestroy: jalanbanksubmissionform");
+        super.onDestroy();
     }
 }

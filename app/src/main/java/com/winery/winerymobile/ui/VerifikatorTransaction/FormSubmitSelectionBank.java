@@ -101,6 +101,7 @@ public class FormSubmitSelectionBank extends AppCompatActivity {
 
     @OnClick(R.id.btn_back) void back(){
         onBackPressed();
+        finish();
     }
 
     @OnClick(R.id.btn_next) void next() {
@@ -273,5 +274,17 @@ public class FormSubmitSelectionBank extends AppCompatActivity {
         etStatusUob.setAdapter(adapter);
         etStatusMega.setAdapter(adapter);
         etStatusPanin.setAdapter(adapter);
+    }
+
+    @Override
+    protected void onStop(){
+        Log.d("onstop", "onStop: jalanbanksubmissionform");
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        Log.d("odestroy", "onDestroy: jalanbanksubmissionform");
+        super.onDestroy();
     }
 }

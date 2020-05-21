@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.winery.winerymobile.R;
+import com.winery.winerymobile.ui.AppMain;
 import com.winery.winerymobile.ui.dbhelper.SessionManagement;
 import com.winery.winerymobile.ui.dbhelper.StateTransactionSales;
 
@@ -221,6 +222,7 @@ public class BankSubmissionForm extends AppCompatActivity {
 
     @OnClick(R.id.btn_back) void back(){
         onBackPressed();
+        finish();
     }
 
     @OnClick(R.id.btn_next) void next(){
@@ -295,5 +297,18 @@ public class BankSubmissionForm extends AppCompatActivity {
         View sbView = snackbar.getView();
         sbView.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimary));
         snackbar.show();
+    }
+
+    @Override
+    protected void onStop(){
+        Log.d("onstop", "onStop: jalanbanksubmissionform");
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        Log.d("odestroy", "onDestroy: jalanbanksubmissionform");
+        super.onDestroy();
+//        AppMain.getRefWatcher(BankSubmissionForm.this).watch(this);
     }
 }

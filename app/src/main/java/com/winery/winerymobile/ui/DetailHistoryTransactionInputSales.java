@@ -322,6 +322,7 @@ public class DetailHistoryTransactionInputSales extends AppCompatActivity {
         switch (item.getItemId()) {
             case android.R.id.home:
                 onBackPressed();
+                finish();
                 return true;
 
             default:
@@ -678,8 +679,20 @@ public class DetailHistoryTransactionInputSales extends AppCompatActivity {
                     @Override
                     public void onFailure(Call<ResponseBody> call, Throwable t) {
                         Log.e("debug", "onFailure: ERROR > " + t.toString());
+                        String error_message = "server error silahkan coba lagi";
+                        Toast.makeText(DetailHistoryTransactionInputSales.this, error_message, Toast.LENGTH_SHORT).show();
                         loading.dismiss();
                     }
                 });
+    }
+
+    @Override
+    protected void onStop(){
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 }

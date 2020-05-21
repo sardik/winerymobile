@@ -25,6 +25,7 @@ import com.github.chrisbanes.photoview.PhotoView;
 import com.winery.winerymobile.R;
 import com.winery.winerymobile.ui.APIhelper.BaseApiService;
 import com.winery.winerymobile.ui.APIhelper.UtilsApi;
+import com.winery.winerymobile.ui.CreditCardSubmission.FormUploadDocumentSelfie;
 import com.winery.winerymobile.ui.DetailHistoryTransactionInputJurtul;
 import com.winery.winerymobile.ui.DetailHistoryTransaksiInputVerif;
 import com.winery.winerymobile.ui.VerifikatorTransaction.UploadDataKotorVerif;
@@ -596,6 +597,7 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
         switch (item.getItemId()) {
             case android.R.id.home:
                 onBackPressed();
+                finish();
                 return true;
 
             default:
@@ -720,7 +722,8 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
                                     tvTempatLahir.setText(tempatLahir);
                                     tvDob.setText(dob);
                                     tvGender.setText(jenisKelamin);
-                                    tvHandphone.setText(telepon);
+                                    tvTelepon.setText(telepon);
+                                    tvHandphone.setText(handphone);
                                     tvEmail.setText(email);
                                     tvKewarganegaraan.setText(kewarganegaraan);
                                     tvReligion.setText(agama);
@@ -1137,6 +1140,8 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
                     @Override
                     public void onFailure(Call<ResponseBody> call, Throwable t) {
                         Log.e("debug", "onFailure: ERROR > " + t.toString());
+                        String error_message = "server error silahkan coba lagi";
+                        Toast.makeText(getApplicationContext(), error_message, Toast.LENGTH_SHORT).show();
                         loading.dismiss();
                     }
                 });
@@ -1169,5 +1174,17 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
             }
         });
         mDialog.show();
+    }
+
+    @Override
+    protected void onStop(){
+        Log.d("onstop", "onStop: jalanbanksubmissionform");
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        Log.d("odestroy", "onDestroy: jalanbanksubmissionform");
+        super.onDestroy();
     }
 }

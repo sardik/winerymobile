@@ -11,7 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91a83a6e-fce3-41fc-96f6-c562d7fc99ab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_chrisbanes_PhotoView_2_3_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_multidex_multidex_2_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_haha_haha_2_0_3_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_leakcanary_leakcanary_analyzer_1_5_1_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_leakcanary_leakcanary_android_1_5_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_leakcanary_leakcanary_android_no_op_1_5_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_leakcanary_leakcanary_watcher_1_5_1_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -22,60 +27,54 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/debug/app-debug.apk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/debug/output.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/debug/winerymobiledebug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/debug/winerymobiledebug.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/release/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/release/output.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/release/winerymobilerelease.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/release/winerymobilerelease.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/APIhelper/BaseApiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/APIhelper/BaseApiService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/APIhelper/RetrofitClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/APIhelper/RetrofitClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/AccountFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/AccountFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/CreditCardSubmission/BankSubmissionForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/CreditCardSubmission/BankSubmissionForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/CreditCardSubmission/CustomerDataForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/CreditCardSubmission/CustomerDataForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/CreditCardSubmission/DialogSuccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/CreditCardSubmission/DialogSuccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/CreditCardSubmission/FormUploadDocument.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/CreditCardSubmission/FormUploadDocument.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/CreditCardSubmission/FormUploadDocumentSelfie.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/CreditCardSubmission/FormUploadDocumentSelfie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/DetailHistoryTransactionInputJurtul.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/DetailHistoryTransactionInputJurtul.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/DetailHistoryTransactionInputSales.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/DetailHistoryTransactionInputSales.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/DetailHistoryTransaksiInputVerif.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/DetailHistoryTransaksiInputVerif.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/DuplicateCheckCustomer/ChildMenuOtherFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/DuplicateCheckCustomer/ChildMenuOtherFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/DuplicateCheckCustomer/ListCheckDataDuplicate.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/DuplicateCheckCustomer/ListCheckDataDuplicate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/HistoryFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/HistoryFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/HomeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/HomeFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/JurtulTransaction/JurtulSubmissionForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/JurtulTransaction/JurtulSubmissionForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/JurtulTransaction/ListTransacationPendingJurtul.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/JurtulTransaction/ListTransacationPendingJurtul.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/JurtulTransaction/ListTransactionDetailPendingJurtul.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/JurtulTransaction/ListTransactionDetailPendingJurtul.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/LoginActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/ParentHomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/ParentHomeActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/UpdatePassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/UpdatePassword.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/VerifikatorTransaction/FormSubmitSelectionBank.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/VerifikatorTransaction/FormSubmitSelectionBank.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/VerifikatorTransaction/ListTransactionDetailWaitingVerif.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/VerifikatorTransaction/ListTransactionDetailWaitingVerif.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/VerifikatorTransaction/ListTransactionWaitingVerif.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/VerifikatorTransaction/ListTransactionWaitingVerif.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/VerifikatorTransaction/UploadDataKotorVerif.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/VerifikatorTransaction/UploadDataKotorVerif.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/helper/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/helper/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_dot.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_dot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_product.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/icon_ek_dup.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/winmobile_putih.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_camera.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/logo_grape.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/logo_user.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/logo_white.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/logo_white.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_bank_submission_form.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_bank_submission_form.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_customer_data_form.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_customer_data_form.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_detail_history_transaction_input_jurtul.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_detail_history_transaction_input_jurtul.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_detail_history_transaction_input_sales.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_detail_history_transaction_input_sales.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_detail_history_transaksi_input_verif.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_detail_history_transaksi_input_verif.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_form_submit_selection_bank.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_form_submit_selection_bank.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_form_upload_document.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_form_upload_document.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_form_upload_document_selfie.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_form_upload_document_selfie.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_form_upload_file_datakotor_verif.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_form_upload_file_datakotor_verif.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_jurtul_submission_form.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_jurtul_submission_form.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_list_check_data_duplicate.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_list_check_data_duplicate.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_list_history_entry_cc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_list_history_entry_cc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_list_transacation_pending_jurtul.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_list_transacation_pending_jurtul.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_list_transaction_detail_pending_jurtul.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_list_transaction_detail_pending_jurtul.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_list_transaction_detail_waiting_verif.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_list_transaction_detail_waiting_verif.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_list_transaction_waiting_verif.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_list_transaction_waiting_verif.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash_screen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash_screen.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_account.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_account.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_dialog_success.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_dialog_success.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_history.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/dialog_search_customer_dup.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/dialog_search_customer_dup.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/androidx/recyclerview/group-index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/androidx/recyclerview/group-index.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/androidx/test/espresso/group-index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/androidx/test/espresso/group-index.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/androidx/test/ext/group-index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/androidx/test/ext/group-index.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +85,7 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="7fa6cccb" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_5x_API_29" />
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
@@ -97,13 +96,81 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/HistoryFragment.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/AppMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7680">
-              <caret line="626" column="5" selection-start-line="626" selection-start-column="5" selection-end-line="626" selection-end-column="5" />
+            <state relative-caret-position="345">
+              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
               <folding>
-                <element signature="class#SectionsPagerAdapter#0;class#HistoryFragment#0" />
-                <element signature="class#BlankFragment#0;class#HistoryFragment#0" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/DuplicateCheckCustomer/ListCheckDataDuplicate.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="768">
+              <caret line="398" column="48" selection-start-line="398" selection-start-column="48" selection-end-line="398" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/APIhelper/BaseApiService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="355">
+              <caret line="158" column="57" selection-start-line="158" selection-start-column="57" selection-end-line="158" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/DuplicateCheckCustomer/ChildMenuOtherFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="183" column="20" selection-start-line="183" selection-start-column="20" selection-end-line="184" selection-end-column="101" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_search_customer_dup.xml">
+          <provider editor-type-id="android-designer2" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="246">
+              <caret line="65" column="45" selection-start-line="65" selection-start-column="45" selection-end-line="65" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <provider editor-type-id="android-manifest" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_list_transaction_detail_waiting_verif.xml">
+          <provider editor-type-id="android-designer2" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4890">
+              <caret line="326" column="51" selection-start-line="326" selection-start-column="51" selection-end-line="326" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/helper/Utils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1095">
+              <caret line="95" column="16" selection-start-line="95" selection-start-column="16" selection-end-line="95" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -119,88 +186,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/AccountFragment.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/UpdatePassword.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="69" column="5" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
+            <state relative-caret-position="3150">
+              <caret line="249" column="4" selection-start-line="249" selection-start-column="4" selection-end-line="259" selection-end-column="5" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/VerifikatorTransaction/FormSubmitSelectionBank.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="65">
-              <caret line="126" column="47" selection-start-line="126" selection-start-column="47" selection-end-line="126" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/VerifikatorTransaction/ListTransactionDetailWaitingVerif.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6671">
-              <caret line="305" column="33" selection-start-line="305" selection-start-column="33" selection-end-line="305" selection-end-column="33" />
-              <folding>
-                <element signature="e#10999#11000#0" expanded="true" />
-                <element signature="e#11036#11037#0" expanded="true" />
-                <element signature="e#40027#40028#0" expanded="true" />
-                <element signature="e#40084#40085#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/DetailHistoryTransactionInputJurtul.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7297">
-              <caret line="470" column="25" selection-start-line="470" selection-start-column="25" selection-end-line="470" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/JurtulTransaction/ListTransacationPendingJurtul.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/JurtulTransaction/ListTransactionDetailPendingJurtul.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="1171" column="5" selection-start-line="1145" selection-start-column="4" selection-end-line="1171" selection-end-column="5" />
-              <folding>
-                <element signature="e#16251#16252#0" expanded="true" />
-                <element signature="e#16294#16295#0" expanded="true" />
-                <element signature="e#16342#16343#0" expanded="true" />
-                <element signature="e#16379#16380#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/CreditCardSubmission/FormUploadDocumentSelfie.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13095">
-              <caret line="937" column="16" selection-start-line="937" selection-start-column="16" selection-end-line="937" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_form_upload_document.xml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="1485">
-              <caret line="99" column="55" selection-start-line="99" selection-start-column="55" selection-end-line="99" selection-end-column="55" />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer2" />
         </entry>
       </file>
     </leaf>
@@ -210,43 +201,43 @@
       <list>
         <option value="Interface" />
         <option value="resourceFile" />
-        <option value="Class" />
         <option value="layoutResourceFile_vertical" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>KEY_LOGIN_AS</find>
-      <find>jurutulis</find>
-      <find>parent_tgl_jurtul_</find>
-      <find>/parent_</find>
-      <find>/parent_tgl_jurtul_</find>
-      <find>/card_bank_bri</find>
-      <find>/card_bank</find>
-      <find>KEY_TANGGAL_LAHIR</find>
-      <find>null</find>
-      <find>ll_da</find>
-      <find>R2</find>
-      <find>gambarbitmapNpwp</find>
-      <find>loading = ProgressDialog.show(this,</find>
-      <find>Toast</find>
-      <find>.jpg</find>
-      <find>.WEBP</find>
-      <find>foto</find>
+      <find>signingConfigs</find>
+      <find>version</find>
+      <find>FITRIM</find>
+      <find>context</find>
+      <find>getContentResolver</find>
+      <find>glide</find>
+      <find>conte</find>
+      <find>dateJurtulUob</find>
+      <find>tgl_pengajuan</find>
       <find>iv</find>
-      <find>NON</find>
-      <find>layout_photo_view</find>
-      <find>transpare</find>
-      <find>ic_camera</find>
-      <find>NestedScrollView</find>
-      <find>ivData</find>
-      <find>@drawable/logo_white</find>
-      <find>@drawable/winputih</find>
-      <find>winputih</find>
-      <find>wel</find>
-      <find>Context</find>
-      <find>buildTypes</find>
+      <find>multidex</find>
+      <find>SpellCheckerSession</find>
+      <find>onDestroy: bisa</find>
+      <find>onDestroy</find>
+      <find>AppMain.getRefWatcher</find>
+      <find>&quot;dob&quot;</find>
+      <find>PT. TAUFIK SEJAHTERA</find>
+      <find>00010212121</find>
+      <find>21 Mar 1998</find>
+      <find>09853843843</find>
+      <find>Ibu Taufik</find>
+      <find>Jl. Arya Santika no 35, jurang mangu barat bintaro tangerang selatan</find>
+      <find>0213475485</find>
+      <find>Ayah Taufik</find>
+      <find>12 mar 2019</find>
+      <find>HTC</find>
+      <find>YES</find>
+      <find>Ahmad Taufik</find>
+      <find>12-09</find>
+      <find>Sales N</find>
     </findStrings>
     <replaceStrings>
       <replace>default_margin_xlarge</replace>
@@ -261,11 +252,12 @@
       <replace>Tgl Verif</replace>
       <replace>R</replace>
       <replace>@drawable/winputih</replace>
+      <replace>-</replace>
     </replaceStrings>
   </component>
   <component name="GenerateSignedApkSettings">
     <option name="KEY_STORE_PATH" value="$PROJECT_DIR$/../Winery Doc/Untitled" />
-    <option name="KEY_ALIAS" value="key0" />
+    <option name="KEY_ALIAS" value="winery" />
     <option name="BUILD_TARGET_KEY" value="apk" />
   </component>
   <component name="Git.Settings">
@@ -274,31 +266,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/dropdown_menu_popup_item.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_child_menu_other.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/dialog_search_customer_dup.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/APIhelper/BaseApiService.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/DuplicateCheckCustomer/ChildMenuOtherFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/JurtulTransaction/ListTransacationPendingJurtul.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/dbhelper/StateTransactionSales.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/CreditCardSubmission/CustomerDataForm.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/DetailHistoryTransaksiInputVerif.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/DetailHistoryTransactionInputSales.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/JurtulTransaction/JurtulSubmissionForm.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/DuplicateCheckCustomer/ListCheckDataDuplicate.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/helper/Utils.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/VerifikatorTransaction/UploadDataKotorVerif.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/CreditCardSubmission/FormUploadDocumentSelfie.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/DetailHistoryTransactionInputJurtul.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_photo_viewer.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/JurtulTransaction/ListTransactionDetailPendingJurtul.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_dialog_success.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_splash_screen.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_list_history_entry_cc.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_list_transaction_waiting_verif.xml" />
@@ -307,28 +274,53 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_history.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_form_upload_document_selfie.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_bank_submission_form.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_list_transaction_detail_waiting_verif.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_account.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_detail_history_transaction_input_sales.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_form_upload_file_datakotor_verif.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_detail_history_transaksi_input_verif.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_list_transacation_pending_jurtul.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_list_transaction_detail_pending_jurtul.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_form_submit_selection_bank.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_detail_history_transaction_input_jurtul.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_jurtul_submission_form.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_list_check_data_duplicate.xml" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/HistoryFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/CreditCardSubmission/DialogSuccess.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/HomeFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/AccountFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/helper/RestrictedSocketFactory.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/APIhelper/RetrofitClient.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/CreditCardSubmission/FormUploadDocument.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/LoginActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/DetailHistoryTransactionInputSales.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/UpdatePassword.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/DetailHistoryTransactionInputJurtul.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/DetailHistoryTransaksiInputVerif.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/VerifikatorTransaction/FormSubmitSelectionBank.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/VerifikatorTransaction/ListTransactionWaitingVerif.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/JurtulTransaction/JurtulSubmissionForm.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/JurtulTransaction/ListTransacationPendingJurtul.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/JurtulTransaction/ListTransactionDetailPendingJurtul.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/ParentHomeActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/HistoryFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/AccountFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/HomeFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/helper/Utils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/VerifikatorTransaction/UploadDataKotorVerif.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/VerifikatorTransaction/ListTransactionDetailWaitingVerif.java" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/CreditCardSubmission/BankSubmissionForm.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/AppMain.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/CreditCardSubmission/CustomerDataForm.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/CreditCardSubmission/DialogSuccess.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/CreditCardSubmission/FormUploadDocumentSelfie.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/DuplicateCheckCustomer/ListCheckDataDuplicate.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/APIhelper/BaseApiService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/dialog_search_customer_dup.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_list_transaction_detail_pending_jurtul.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_list_transaction_detail_waiting_verif.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_detail_history_transaction_input_jurtul.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_list_check_data_duplicate.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/DuplicateCheckCustomer/ChildMenuOtherFragment.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="724" />
@@ -338,7 +330,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -349,6 +340,11 @@
             <path>
               <item name="WineryMobile" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="manifests" type="f94875db:AndroidManifestsGroupNode" />
+            </path>
+            <path>
+              <item name="WineryMobile" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
             </path>
             <path>
@@ -362,14 +358,7 @@
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="ui" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="JurtulTransaction" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WineryMobile" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="ui" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="VerifikatorTransaction" type="462c0819:PsiDirectoryNode" />
+              <item name="DuplicateCheckCustomer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WineryMobile" type="1abcf292:AndroidViewProjectNode" />
@@ -381,19 +370,21 @@
       </pane>
       <pane id="ProjectPane" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Nexus_6_API_28" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-03-25T03:37:58.817Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Galaxy_Nexus_API_23" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-04-22T18:59:41.537Z" />
     <property name="ExportApk.ApkPath" value="$PROJECT_DIR$/app" />
     <property name="ExportApk.BuildVariants" value="debug&#10;release" />
+    <property name="ExportApk.SignV1" value="true" />
     <property name="ExportApk.SignV2" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable-hdpi" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable-hdpi" />
-    <property name="settings.editor.selected.configurable" value="preferences.externalDependencies" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -512,7 +503,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="724" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" />
       <window_info id="Image Layers" order="1" />
@@ -521,7 +513,7 @@
       <window_info id="Capture Tool" order="4" />
       <window_info id="Resources Explorer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="7" visible="true" weight="0.32875606" />
+      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.32875606" />
       <window_info id="Captures" order="8" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="0" weight="0.32876712" />
       <window_info anchor="bottom" id="Logcat" order="1" weight="0.3780822" />
@@ -529,9 +521,9 @@
       <window_info anchor="bottom" id="Debug" order="3" />
       <window_info anchor="bottom" id="Terminal" order="4" />
       <window_info anchor="bottom" id="Version Control" order="5" />
-      <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.50080776" side_tool="true" weight="0.32911393" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49919224" visible="true" weight="0.32911393" />
-      <window_info anchor="bottom" id="Android Profiler" order="8" show_stripe_button="false" weight="0.32876712" />
+      <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.5088853" side_tool="true" weight="0.29452056" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.4911147" visible="true" weight="0.29452056" />
+      <window_info anchor="bottom" id="Android Profiler" order="8" weight="0.32876712" />
       <window_info anchor="bottom" id="Run" order="9" weight="0.32876712" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="right" id="Gradle" order="1" />
@@ -544,305 +536,319 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.fragment/fragment/1.1.0/b9ebb04df2cb0cad4419af3c658690bc82aa5706/fragment-1.1.0-sources.jar!/androidx/fragment/app/Fragment.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/logging-interceptor/3.4.1/e5d9af3c2648debe5da3e6f87786cef314d7f0e0/logging-interceptor-3.4.1-sources.jar!/okhttp3/logging/HttpLoggingInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36360">
-          <caret line="2599" selection-start-line="2599" selection-end-line="2599" />
+        <state relative-caret-position="-1581">
+          <caret line="116" column="9" selection-start-line="116" selection-start-column="9" selection-end-line="116" selection-end-column="9" />
+          <folding>
+            <element signature="e#3309#3310#0" expanded="true" />
+            <element signature="e#3339#3340#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/JurtulTransaction/JurtulSubmissionForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="380" selection-start-line="380" selection-end-line="380" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/dbhelper/StateTransactionSales.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2145">
-          <caret line="146" column="84" selection-start-line="146" selection-start-column="84" selection-end-line="146" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/CreditCardSubmission/CustomerDataForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2835">
-          <caret line="235" selection-start-line="235" selection-end-line="235" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_customer_data_form.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/APIhelper/RetrofitClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="358" column="52" selection-start-line="358" selection-start-column="52" selection-end-line="358" selection-end-column="52" />
-          <folding>
-            <element signature="e#15399#15428#0" expanded="true" />
-            <element signature="e#17217#17246#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/VerifikatorTransaction/ListTransactionWaitingVerif.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1354">
-          <caret line="141" column="19" selection-start-line="141" selection-start-column="19" selection-end-line="141" selection-end-column="19" />
+          <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_detail_history_transaction_input_sales.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/helper/RestrictedSocketFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/DetailHistoryTransactionInputSales.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="658" column="71" selection-start-line="658" selection-start-column="71" selection-end-line="658" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_camera.png" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/DetailHistoryTransaksiInputVerif.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5325">
-          <caret line="390" selection-start-line="390" selection-end-line="390" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_list_transaction_detail_waiting_verif.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4110">
-          <caret line="274" column="35" selection-start-line="259" selection-start-column="20" selection-end-line="274" selection-end-column="35" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.fragment/fragment/1.1.0/b9ebb04df2cb0cad4419af3c658690bc82aa5706/fragment-1.1.0-sources.jar!/androidx/fragment/app/FragmentActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="653" column="16" selection-start-line="653" selection-start-column="16" selection-end-line="653" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-29/android/graphics/Bitmap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="795" column="25" selection-start-line="795" selection-start-column="25" selection-end-line="795" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-29/android/graphics/BitmapFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="540" column="25" selection-start-line="540" selection-start-column="25" selection-end-line="540" selection-end-column="25" />
-          <folding>
-            <element signature="e#24721#24722#0" expanded="true" />
-            <element signature="e#24770#24771#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_detail_history_transaction_input_jurtul.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="139" column="34" selection-start-line="139" selection-start-column="34" selection-end-line="139" selection-end-column="34" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_list_transaction_detail_pending_jurtul.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="163" column="48" selection-start-line="163" selection-start-column="48" selection-end-line="163" selection-end-column="48" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/helper/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
+        <state relative-caret-position="524">
+          <caret line="40" column="43" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_form_upload_document_selfie.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="458" column="68" selection-start-line="449" selection-start-column="24" selection-end-line="458" selection-end-column="68" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/CreditCardSubmission/BankSubmissionForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2372">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/VerifikatorTransaction/UploadDataKotorVerif.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="93" column="45" selection-start-line="93" selection-start-column="45" selection-end-line="93" selection-end-column="45" />
+        <state relative-caret-position="450">
+          <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="48" selection-end-column="5" />
+          <folding>
+            <element signature="e#1236#1237#0" expanded="true" />
+            <element signature="e#1266#1267#0" expanded="true" />
+            <element signature="e#1314#1315#0" expanded="true" />
+            <element signature="e#1347#1348#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_photo_viewer.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/SplashScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="34" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
+        <state relative-caret-position="-419">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_kartu_kredit.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/logo_user.png" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_product.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/DialogOptionUserLogin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        <state relative-caret-position="380">
+          <caret line="65" column="11" selection-start-line="65" selection-start-column="11" selection-end-line="65" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_list_check_data_duplicate.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/CreditCardSubmission/FormUploadDocument.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="60" column="39" selection-start-line="60" selection-start-column="39" selection-end-line="60" selection-end-column="39" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_dialog_success.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/logo_white.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="59" column="33" selection-start-line="59" selection-start-column="33" selection-end-line="59" selection-end-column="51" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_splash_screen.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1680">
-          <caret line="112" column="43" selection-start-line="112" selection-start-column="43" selection-end-line="112" selection-end-column="43" />
+        <state relative-caret-position="-3599">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/DetailHistoryTransaksiInputVerif.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+        <state relative-caret-position="410">
+          <caret line="793" column="5" selection-start-line="793" selection-start-column="5" selection-end-line="793" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_list_history_entry_cc.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/VerifikatorTransaction/ListTransactionWaitingVerif.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="51" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="51" />
+        <state relative-caret-position="410">
+          <caret line="334" column="5" selection-start-line="334" selection-start-column="5" selection-end-line="334" selection-end-column="5" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_detail_history_transaksi_input_verif.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/JurtulTransaction/ListTransacationPendingJurtul.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="44" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
+        <state relative-caret-position="410">
+          <caret line="343" column="5" selection-start-line="343" selection-start-column="5" selection-end-line="343" selection-end-column="5" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/jre/jdk/Contents/Home/jre/lib/rt.jar!/java/lang/Class.class">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/JurtulTransaction/ListTransactionDetailPendingJurtul.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        <state relative-caret-position="647">
+          <caret line="1181" column="12" selection-start-line="1181" selection-start-column="12" selection-end-line="1181" selection-end-column="12" />
+          <folding>
+            <element signature="e#60317#60318#0" expanded="true" />
+            <element signature="e#60366#60367#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/proguard-rules.pro">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/ParentHomeActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1515">
+          <caret line="130" column="25" selection-start-line="130" selection-start-column="25" selection-end-line="130" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/DetailHistoryTransactionInputJurtul.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15240">
+          <caret line="1057" column="5" selection-start-line="1057" selection-start-column="5" selection-end-line="1057" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="56" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-29/android/content/ContextWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="538" selection-start-line="538" selection-end-line="538" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/DetailHistoryTransactionInputSales.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="688" column="4" selection-start-line="688" selection-start-column="4" selection-end-line="696" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/AccountFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="79" column="5" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/HistoryFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="635" column="4" selection-start-line="635" selection-start-column="4" selection-end-line="643" selection-end-column="5" />
+          <folding>
+            <element signature="class#SectionsPagerAdapter#0;class#HistoryFragment#0" />
+            <element signature="class#BlankFragment#0;class#HistoryFragment#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/ListHistoryEntryCC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="265" column="4" selection-start-line="265" selection-start-column="4" selection-end-line="273" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-29/android/widget/ImageView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="749" column="16" selection-start-line="749" selection-start-column="16" selection-end-line="749" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/CreditCardSubmission/DialogSuccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="79" column="16" selection-start-line="79" selection-start-column="16" selection-end-line="79" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/HomeFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1620">
-          <caret line="134" selection-start-line="134" selection-end-line="134" />
+        <state relative-caret-position="1755">
+          <caret line="144" column="55" selection-start-line="144" selection-start-column="55" selection-end-line="144" selection-end-column="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="70" selection-start-line="33" selection-start-column="70" selection-end-line="33" selection-end-column="70" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_form_upload_document_selfie.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1455">
+          <caret line="97" column="40" selection-start-line="97" selection-start-column="40" selection-end-line="97" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/VerifikatorTransaction/UploadDataKotorVerif.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2145">
+          <caret line="207" column="96" selection-start-line="207" selection-start-column="96" selection-end-line="207" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.4.1/70fca5cd856d0cc740e43affeb6f661204fdb2cc/okhttp-3.4.1-sources.jar!/okhttp3/MultipartBody.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3135">
+          <caret line="244" column="23" selection-start-line="244" selection-start-column="23" selection-end-line="244" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/CreditCardSubmission/FormUploadDocumentSelfie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6285">
+          <caret line="419" column="17" selection-start-line="419" selection-start-column="17" selection-end-line="419" selection-end-column="17" />
           <folding>
-            <marker date="1586833504302" expanded="true" signature="1188:1528" ph="..." />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/CreditCardSubmission/DialogSuccess.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_jurtul_submission_form.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/VerifikatorTransaction/FormSubmitSelectionBank.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="99" column="5" selection-start-line="99" selection-start-column="5" selection-end-line="99" selection-end-column="5" />
+        <state relative-caret-position="1530">
+          <caret line="122" column="56" selection-start-line="122" selection-start-column="56" selection-end-line="122" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/JurtulTransaction/JurtulSubmissionForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4020">
+          <caret line="310" column="45" selection-start-line="310" selection-start-column="45" selection-end-line="310" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_list_check_data_duplicate.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1860">
+          <caret line="124" column="61" selection-start-line="124" selection-start-column="45" selection-end-line="124" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_form_submit_selection_bank.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/CreditCardSubmission/CustomerDataForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4950">
+          <caret line="379" column="1" selection-start-line="379" selection-start-column="1" selection-end-line="379" selection-end-column="1" />
+          <folding>
+            <element signature="e#16860#16861#0" expanded="true" />
+            <element signature="e#16893#16894#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/VerifikatorTransaction/ListTransactionDetailWaitingVerif.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11310">
+          <caret line="796" column="25" selection-start-line="796" selection-start-column="25" selection-end-line="796" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/CreditCardSubmission/BankSubmissionForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4380">
+          <caret line="312" column="5" selection-start-line="312" selection-start-column="5" selection-end-line="312" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+        <state relative-caret-position="225">
+          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/HistoryFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_list_transaction_detail_waiting_verif.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7680">
-          <caret line="626" column="5" selection-start-line="626" selection-start-column="5" selection-end-line="626" selection-end-column="5" />
+        <state relative-caret-position="4890">
+          <caret line="326" column="51" selection-start-line="326" selection-start-column="51" selection-end-line="326" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/helper/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1095">
+          <caret line="95" column="16" selection-start-line="95" selection-start-column="16" selection-end-line="95" selection-end-column="16" />
           <folding>
-            <element signature="class#SectionsPagerAdapter#0;class#HistoryFragment#0" />
-            <element signature="class#BlankFragment#0;class#HistoryFragment#0" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -854,72 +860,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/CreditCardSubmission/FormUploadDocumentSelfie.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/UpdatePassword.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13095">
-          <caret line="937" column="16" selection-start-line="937" selection-start-column="16" selection-end-line="937" selection-end-column="16" />
+        <state relative-caret-position="3150">
+          <caret line="249" column="4" selection-start-line="249" selection-start-column="4" selection-end-line="259" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_form_upload_document.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="1485">
-          <caret line="99" column="55" selection-start-line="99" selection-start-column="55" selection-end-line="99" selection-end-column="55" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/AccountFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/AppMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="69" column="5" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/VerifikatorTransaction/FormSubmitSelectionBank.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="126" column="47" selection-start-line="126" selection-start-column="47" selection-end-line="126" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/JurtulTransaction/ListTransacationPendingJurtul.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/DetailHistoryTransactionInputJurtul.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7297">
-          <caret line="470" column="25" selection-start-line="470" selection-start-column="25" selection-end-line="470" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/JurtulTransaction/ListTransactionDetailPendingJurtul.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="1171" column="5" selection-start-line="1145" selection-start-column="4" selection-end-line="1171" selection-end-column="5" />
+        <state relative-caret-position="345">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
           <folding>
-            <element signature="e#16251#16252#0" expanded="true" />
-            <element signature="e#16294#16295#0" expanded="true" />
-            <element signature="e#16342#16343#0" expanded="true" />
-            <element signature="e#16379#16380#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/VerifikatorTransaction/ListTransactionDetailWaitingVerif.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/APIhelper/BaseApiService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6671">
-          <caret line="305" column="33" selection-start-line="305" selection-start-column="33" selection-end-line="305" selection-end-column="33" />
-          <folding>
-            <element signature="e#10999#11000#0" expanded="true" />
-            <element signature="e#11036#11037#0" expanded="true" />
-            <element signature="e#40027#40028#0" expanded="true" />
-            <element signature="e#40084#40085#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="355">
+          <caret line="158" column="57" selection-start-line="158" selection-start-column="57" selection-end-line="158" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/DuplicateCheckCustomer/ListCheckDataDuplicate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="768">
+          <caret line="398" column="48" selection-start-line="398" selection-start-column="48" selection-end-line="398" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_search_customer_dup.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="65" column="45" selection-start-line="65" selection-start-column="45" selection-end-line="65" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/winery/winerymobile/ui/DuplicateCheckCustomer/ChildMenuOtherFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="183" column="20" selection-start-line="183" selection-start-column="20" selection-end-line="184" selection-end-column="101" />
         </state>
       </provider>
     </entry>

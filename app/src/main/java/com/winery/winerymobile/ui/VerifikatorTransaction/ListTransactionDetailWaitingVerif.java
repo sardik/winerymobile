@@ -59,6 +59,8 @@ public class ListTransactionDetailWaitingVerif extends AppCompatActivity {
     TextView tvNik;
     @BindView(R.id.tv_dob)
     TextView tvDob;
+    @BindView(R.id.tv_telepon)
+    TextView tvTelepon;
     @BindView(R.id.tv_handphone)
     TextView tvHandphone;
     @BindView(R.id.tv_mother_name)
@@ -71,10 +73,14 @@ public class ListTransactionDetailWaitingVerif extends AppCompatActivity {
     TextView tvCompanyPhone;
     @BindView(R.id.tv_emergency_contact)
     TextView tvEmergencyContact;
+    @BindView(R.id.tv_telp_econtact)
+    TextView tvTelpEcontact;
     @BindView(R.id.tv_relationship)
     TextView tvRelationship;
     @BindView(R.id.iv_ktp)
     ImageView ivKtp;
+    @BindView(R.id.iv_cc)
+    ImageView ivCC;
     @BindView(R.id.tv_sales)
     TextView tvSales;
     @BindView(R.id.card_bank_bri)
@@ -301,10 +307,14 @@ public class ListTransactionDetailWaitingVerif extends AppCompatActivity {
     com.google.android.material.button.MaterialButton btnSubmit;
     /** ButterKnife Code **/
 
-    String imageKtp;
+    String imageKtp, imageCC;
 
     @OnClick(R.id.iv_ktp) void pinchZoomKtp(){
         pinchToZoom(imageKtp);
+    }
+
+    @OnClick(R.id.iv_cc) void pinchZoomCC(){
+        pinchToZoom(imageCC);
     }
 
     @OnClick(R.id.btn_submit) void gotoSelectionBank(){
@@ -347,6 +357,7 @@ public class ListTransactionDetailWaitingVerif extends AppCompatActivity {
         switch (item.getItemId()) {
             case android.R.id.home:
                 onBackPressed();
+                finish();
                 return true;
 
             default:
@@ -375,26 +386,31 @@ public class ListTransactionDetailWaitingVerif extends AppCompatActivity {
                                     String nama = jsonRESULTS.getJSONObject("data").getString("nama");
                                     String dob = jsonRESULTS.getJSONObject("data").getString("dob");
                                     String telepon = jsonRESULTS.getJSONObject("data").getString("telepon");
+                                    String handphone = jsonRESULTS.getJSONObject("data").getString("handphone");
                                     String ibu = jsonRESULTS.getJSONObject("data").getString("ibu");
                                     String perusahaan = jsonRESULTS.getJSONObject("data").getString("perusahaan");
                                     String alamatkantor = jsonRESULTS.getJSONObject("data").getString("alamatkantor");
                                     String teleponkantor = jsonRESULTS.getJSONObject("data").getString("teleponkantor");
                                     String econtact = jsonRESULTS.getJSONObject("data").getString("econtact");
+                                    String telpecontact = jsonRESULTS.getJSONObject("data").getString("teleponecontact");
                                     String hubunganecontact = jsonRESULTS.getJSONObject("data").getString("hubunganecontact");
                                     String salesname = jsonRESULTS.getJSONObject("data").getString("salesname");
                                     String salescode = jsonRESULTS.getJSONObject("data").getString("salescode");
                                     imageKtp = jsonRESULTS.getJSONObject("data").getString("url_ktp");
+                                    imageCC = jsonRESULTS.getJSONObject("data").getString("url_kartu_kredit");
 
 
                                     tvName.setText(nama);
                                     tvNik.setText(nik);
                                     tvDob.setText(dob);
-                                    tvHandphone.setText(telepon);
+                                    tvTelepon.setText(telepon);
+                                    tvHandphone.setText(handphone);
                                     tvMotherName.setText(ibu);
                                     tvCompanyName.setText(perusahaan);
                                     tvCompanyAddress.setText(alamatkantor);
                                     tvCompanyPhone.setText(teleponkantor);
                                     tvEmergencyContact.setText(econtact);
+                                    tvTelpEcontact.setText(telpecontact);
                                     tvRelationship.setText(hubunganecontact);
                                     tvSales.setText(salesname + " - " + salescode);
 
@@ -406,6 +422,15 @@ public class ListTransactionDetailWaitingVerif extends AppCompatActivity {
                                             .skipMemoryCache(true)
                                             .transition(DrawableTransitionOptions.withCrossFade(100))
                                             .into(ivKtp);
+
+                                    // fetch image cc
+                                    Glide.with(ListTransactionDetailWaitingVerif.this).
+                                            load(imageCC)
+                                            .placeholder(R.color.grey_20)
+                                            .diskCacheStrategy(DiskCacheStrategy.NONE)
+                                            .skipMemoryCache(true)
+                                            .transition(DrawableTransitionOptions.withCrossFade(100))
+                                            .into(ivCC);
 
                                     // bank BRI
                                     String StatusBri, VerifikasiBri, tanggalSubmitBri, statusappBri;
@@ -755,6 +780,8 @@ public class ListTransactionDetailWaitingVerif extends AppCompatActivity {
                     @Override
                     public void onFailure(Call<ResponseBody> call, Throwable t) {
                         Log.e("debug", "onFailure: ERROR > " + t.toString());
+                        String error_message = "server error silahkan coba lagi";
+                        Toast.makeText(ListTransactionDetailWaitingVerif.this, error_message, Toast.LENGTH_SHORT).show();
                         loading.dismiss();
                     }
                 });
@@ -787,4 +814,16 @@ public class ListTransactionDetailWaitingVerif extends AppCompatActivity {
             });
             mDialog.show();
         }
+
+    @Override
+    protected void onStop(){
+        Log.d("onstop", "onStop: jalanbanksubmissionform");
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        Log.d("odestroy", "onDestroy: jalanbanksubmissionform");
+        super.onDestroy();
+    }
     }

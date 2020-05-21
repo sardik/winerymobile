@@ -20,6 +20,7 @@ import android.widget.Toast;
 import com.winery.winerymobile.R;
 import com.winery.winerymobile.ui.APIhelper.BaseApiService;
 import com.winery.winerymobile.ui.APIhelper.UtilsApi;
+import com.winery.winerymobile.ui.AppMain;
 import com.winery.winerymobile.ui.VerifikatorTransaction.ListTransactionWaitingVerif;
 import com.winery.winerymobile.ui.adapter.LIstHistoriCCAdapter;
 import com.winery.winerymobile.ui.dbhelper.SessionManagement;
@@ -139,6 +140,7 @@ public class CustomerDataForm extends AppCompatActivity {
 
     @OnClick(R.id.btn_back) void back(){
         onBackPressed();
+        finish();
     }
 
     @OnClick(R.id.btn_next) void next(){
@@ -226,12 +228,12 @@ public class CustomerDataForm extends AppCompatActivity {
             hadiah = etHadiah.getText().toString();
 
             if(etHadiahReferensi.getText().toString().equals("")){
-                hadiah_referensi = "-NON HADIAH";
+                hadiah_referensi = "NON HADIAH";
             }else{
                 hadiah_referensi = etHadiahReferensi.getText().toString();
             }
 
-            hadiah_explode = hadiah+hadiah_referensi;
+            hadiah_explode = hadiah+"-"+hadiah_referensi;
 
 
             stateTransactionSales.createStateInpuForm(nama, nik, tanggal_lahir, handphone_1, handphone_2,nama_ibu_kandung,
@@ -358,9 +360,21 @@ public class CustomerDataForm extends AppCompatActivity {
                     @Override
                     public void onFailure(Call<ResponseBody> call, Throwable t) {
                         Log.e("debug", "onFailure: ERROR > " + t.toString());
+                        String error_message = "server error silahkan coba lagi";
+                        Toast.makeText(CustomerDataForm.this, error_message, Toast.LENGTH_SHORT).show();
                         loading.dismiss();
                     }
                 });
+    }
+
+    @Override
+    protected void onStop(){
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 
 }

@@ -119,17 +119,17 @@ public class ChildMenuOtherFragment extends BottomSheetDialogFragment {
         MaterialButton btnSearch;
         ContentLoadingProgressBar loading;
         ImageView ivClose;
-        TextInputLayout tiNik, tiDateBirth, tiMonthBirth, tiYearBirth;
-        TextInputEditText etNik, etDateBrith, etMonthBirth, etYearBirth;
+        TextInputLayout tiName, tiDateBirth, tiMonthBirth, tiYearBirth;
+        TextInputEditText etName, etDateBrith, etMonthBirth, etYearBirth;
 
         ivClose = (ImageView) dialogView.findViewById(R.id.iv_close);
 
-        tiNik = (TextInputLayout) dialogView.findViewById(R.id.ti_nik);
+        tiName = (TextInputLayout) dialogView.findViewById(R.id.ti_name);
         tiDateBirth = (TextInputLayout) dialogView.findViewById(R.id.ti_date_birth);
         tiMonthBirth = (TextInputLayout) dialogView.findViewById(R.id.ti_month_birth);
         tiYearBirth = (TextInputLayout) dialogView.findViewById(R.id.ti_year_birth);
 
-        etNik = (TextInputEditText) dialogView.findViewById(R.id.et_nik);
+        etName = (TextInputEditText) dialogView.findViewById(R.id.et_name);
         etDateBrith = (TextInputEditText) dialogView.findViewById(R.id.et_date_brith);
         etMonthBirth = (TextInputEditText) dialogView.findViewById(R.id.et_month_birth);
         etYearBirth = (TextInputEditText) dialogView.findViewById(R.id.et_year_birth);
@@ -162,9 +162,9 @@ public class ChildMenuOtherFragment extends BottomSheetDialogFragment {
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(etNik.getText().toString().equals("")){
-                    tiNik.setError("Nik harus di isi");
-                    etNik.requestFocus();
+                if(etName.getText().toString().equals("")){
+                    tiName.setError("Nama harus di isi");
+                    etName.requestFocus();
                 }
                 else if(etDateBrith.getText().toString().equals("")){
                     tiDateBirth.setError("Tanggal harus di isi");
@@ -180,9 +180,11 @@ public class ChildMenuOtherFragment extends BottomSheetDialogFragment {
                     etYearBirth.requestFocus();
                 }else{
                     Intent intent = new Intent(getContext(), ListCheckDataDuplicate.class);
-                    intent.putExtra("nik", etNik.getText().toString());
+                    intent.putExtra("name", etName.getText().toString());
                     intent.putExtra("dob", etDateBrith.getText().toString()+"/"
                             +etMonthBirth.getText().toString()+"/"+etYearBirth.getText().toString());
+//                    intent.putExtra("dob", etYearBirth.getText().toString()+"-"
+//                            +etMonthBirth.getText().toString()+"-"+etDateBrith.getText().toString());
                     startActivity(intent);
                     dialog.dismiss();
                 }

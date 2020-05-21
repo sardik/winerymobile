@@ -71,6 +71,7 @@ public class FormUploadDocument extends AppCompatActivity {
 
     @OnClick(R.id.btn_back) void back(){
         onBackPressed();
+        finish();
     }
 
     @OnClick(R.id.btn_next) void fotoselfie(){

@@ -41,18 +41,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@android:color/black"
-            android:text="NIK"/>
+            android:text="Nama"/>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/ti_nik"
+            android:id="@+id/ti_name"
             style="@style/text_input_basic">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_nik"
+                android:id="@+id/et_name"
                 style="@style/edit_text_input"
-                android:inputType="number"
-                android:maxLength="16"
-                android:hint="NIK" />
+                android:hint="Nama" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView

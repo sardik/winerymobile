@@ -23,6 +23,7 @@ import com.google.android.material.snackbar.Snackbar;
 import com.winery.winerymobile.R;
 import com.winery.winerymobile.ui.APIhelper.BaseApiService;
 import com.winery.winerymobile.ui.APIhelper.UtilsApi;
+import com.winery.winerymobile.ui.DetailHistoryTransaksiInputVerif;
 import com.winery.winerymobile.ui.VerifikatorTransaction.ListTransactionWaitingVerif;
 import com.winery.winerymobile.ui.adapter.LIstHistoriCCAdapter;
 import com.winery.winerymobile.ui.dbhelper.SessionManagement;
@@ -247,6 +248,7 @@ public class ListTransacationPendingJurtul extends AppCompatActivity {
         switch (item.getItemId()) {
             case android.R.id.home:
                 onBackPressed();
+                finish();
                 return true;
 
             default:
@@ -314,6 +316,8 @@ public class ListTransacationPendingJurtul extends AppCompatActivity {
                     @Override
                     public void onFailure(Call<ResponseBody> call, Throwable t) {
                         Log.e("debug", "onFailure: ERROR > " + t.toString());
+                        String error_message = "server error silahkan coba lagi";
+                        Toast.makeText(ListTransacationPendingJurtul.this, error_message, Toast.LENGTH_SHORT).show();
                         loading.dismiss();
                     }
                 });
@@ -325,5 +329,17 @@ public class ListTransacationPendingJurtul extends AppCompatActivity {
         View sbView = snackbar.getView();
         sbView.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimary));
         snackbar.show();
+    }
+
+    @Override
+    protected void onStop(){
+        Log.d("onstop", "onStop: jalanbanksubmissionform");
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        Log.d("odestroy", "onDestroy: jalanbanksubmissionform");
+        super.onDestroy();
     }
 }

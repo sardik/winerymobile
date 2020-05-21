@@ -47,6 +47,8 @@ public class ListCheckDataDuplicate extends AppCompatActivity {
     androidx.core.widget.NestedScrollView nested;
     @BindView(R.id.ll_section1)
     LinearLayout llSection1;
+    @BindView(R.id.tv_tgl_pengajuan)
+    TextView tvTglPengajuan;
     @BindView(R.id.tv_name)
     TextView tvName;
     @BindView(R.id.tv_nik)
@@ -330,6 +332,7 @@ public class ListCheckDataDuplicate extends AppCompatActivity {
         switch (item.getItemId()) {
             case android.R.id.home:
                 onBackPressed();
+                finish();
                 return true;
 
             default:
@@ -342,9 +345,9 @@ public class ListCheckDataDuplicate extends AppCompatActivity {
         loading.setCanceledOnTouchOutside(false);
 
         Intent intent = getIntent();
-        String nik = intent.getStringExtra("nik");
+        String name = intent.getStringExtra("name");
         String dob = intent.getStringExtra("dob");
-        mApiService.getCheckDuplicateData(nik, dob)
+        mApiService.getCheckDuplicateData(name, dob)
                 .enqueue(new Callback<ResponseBody>() {
                     @Override
                     public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
@@ -371,6 +374,7 @@ public class ListCheckDataDuplicate extends AppCompatActivity {
                                     String hadiah = jsonRESULTS.getJSONObject("data").getString("hadiah");
 
 
+                                    tvTglPengajuan.setText(tanggal);
                                     tvName.setText(nama);
                                     tvNik.setText(nik);
                                     tvDob.setText(dob);
@@ -696,6 +700,8 @@ public class ListCheckDataDuplicate extends AppCompatActivity {
                     @Override
                     public void onFailure(Call<ResponseBody> call, Throwable t) {
                         Log.e("debug", "onFailure: ERROR > " + t.toString());
+                        String error_message = "server error silahkan coba lagi";
+                        Toast.makeText(ListCheckDataDuplicate.this, error_message, Toast.LENGTH_SHORT).show();
                         loading.dismiss();
                     }
                 });

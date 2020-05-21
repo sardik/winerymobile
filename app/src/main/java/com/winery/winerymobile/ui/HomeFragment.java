@@ -8,6 +8,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -131,6 +132,18 @@ public class HomeFragment extends Fragment {
         tvName.setText(name);
         tvCode.setText(code);
         tvPosition.setText(position);
+    }
+
+    @Override
+    public void onStop(){
+        Log.d("onstop", "onStop: jalanHomeFragment");
+        super.onStop();
+    }
+
+    @Override
+    public void onDestroy() {
+        Log.d("odestroy", "onDestroy: jalanHomeFragment");
+        super.onDestroy();
     }
 
 

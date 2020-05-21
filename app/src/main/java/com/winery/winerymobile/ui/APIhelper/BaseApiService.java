@@ -156,6 +156,6 @@ public interface BaseApiService {
     // get check dup
     @FormUrlEncoded
     @POST("check_duplicate")
-    Call<ResponseBody> getCheckDuplicateData(@Field("nik") String nik,
+    Call<ResponseBody> getCheckDuplicateData(@Field("name") String nik,
                                                 @Field("dob") String dob);
 }

@@ -83,7 +83,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@android:color/black"
-                    android:text="Ahmad Taufik"/>
+                    android:text="-"/>
             </LinearLayout>
 
             <LinearLayout
@@ -103,7 +103,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@android:color/black"
-                    android:text="00010212121"/>
+                    android:text="-"/>
             </LinearLayout>
 
             <LinearLayout
@@ -122,7 +122,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@android:color/black"
-                    android:text="21 Mar 1998"/>
+                    android:text="-"/>
             </LinearLayout>
 
             <LinearLayout
@@ -142,7 +142,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@android:color/black"
-                    android:text="09853843843"/>
+                    android:text="-"/>
             </LinearLayout>
 
             <LinearLayout
@@ -162,7 +162,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@android:color/black"
-                    android:text="Ibu Taufik"/>
+                    android:text="-"/>
             </LinearLayout>
 
             <LinearLayout
@@ -181,7 +181,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@android:color/black"
-                    android:text="PT. TAUFIK SEJAHTERA"/>
+                    android:text="-"/>
             </LinearLayout>
 
             <LinearLayout
@@ -201,7 +201,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@android:color/black"
-                    android:text="Jl. Arya Santika no 35, jurang mangu barat bintaro tangerang selatan"/>
+                    android:text="-"/>
             </LinearLayout>
 
             <LinearLayout
@@ -221,7 +221,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@android:color/black"
-                    android:text="0213475485"/>
+                    android:text="-"/>
             </LinearLayout>
 
             <LinearLayout
@@ -241,7 +241,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@android:color/black"
-                    android:text="Ayah Taufik"/>
+                    android:text="-"/>
             </LinearLayout>
 
             <LinearLayout
@@ -261,7 +261,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@android:color/black"
-                    android:text="Ayah Taufik"/>
+                    android:text="-"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -318,7 +318,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="YES"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -342,7 +342,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="12 mar 2019"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -366,7 +366,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="HTC"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -390,7 +390,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="12 mar 2019"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -415,7 +415,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="Reject"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                 </LinearLayout>
@@ -451,7 +451,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="YES"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -475,7 +475,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="12 mar 2019"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -499,7 +499,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="HTC"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -523,7 +523,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="12 mar 2019"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -548,7 +548,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="Reject"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                 </LinearLayout>
@@ -584,7 +584,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="YES"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -608,7 +608,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="12 mar 2019"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -632,7 +632,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="HTC"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -656,7 +656,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="12 mar 2019"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -681,7 +681,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="Reject"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                 </LinearLayout>
@@ -717,7 +717,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="YES"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -741,7 +741,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="12 mar 2019"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -765,7 +765,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="HTC"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -789,7 +789,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="12 mar 2019"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -814,7 +814,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="Reject"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                 </LinearLayout>
@@ -850,7 +850,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="YES"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -874,7 +874,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="12 mar 2019"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -898,7 +898,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="HTC"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -922,7 +922,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="12 mar 2019"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -947,7 +947,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="Reject"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                 </LinearLayout>
@@ -983,7 +983,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="YES"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -1007,7 +1007,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="12 mar 2019"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -1031,7 +1031,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="HTC"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -1055,7 +1055,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="12 mar 2019"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -1080,7 +1080,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="Reject"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                 </LinearLayout>
@@ -1116,7 +1116,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="YES"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -1140,7 +1140,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="12 mar 2019"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -1164,7 +1164,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="HTC"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -1188,7 +1188,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="12 mar 2019"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -1213,7 +1213,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="Reject"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                 </LinearLayout>
@@ -1249,7 +1249,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="YES"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -1273,7 +1273,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="12 mar 2019"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -1297,7 +1297,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="HTC"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -1321,7 +1321,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="12 mar 2019"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -1346,7 +1346,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="Reject"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                 </LinearLayout>
@@ -1382,7 +1382,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="YES"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -1406,7 +1406,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="12 mar 2019"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -1430,7 +1430,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="HTC"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -1454,7 +1454,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="12 mar 2019"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -1479,7 +1479,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="Reject"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                 </LinearLayout>
@@ -1515,7 +1515,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="YES"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -1539,7 +1539,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="12 mar 2019"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -1563,7 +1563,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="HTC"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -1587,7 +1587,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="12 mar 2019"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -1612,7 +1612,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:textColor="@android:color/black"
-                            android:text="Reject"/>
+                            android:text="-"/>
                     </RelativeLayout>
 
                 </LinearLayout>

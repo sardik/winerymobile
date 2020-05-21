@@ -69,4 +69,14 @@ public class AccountFragment extends Fragment {
         return view;
     }
 
+    @Override
+    public void onStop(){
+        super.onStop();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+    }
+
 }

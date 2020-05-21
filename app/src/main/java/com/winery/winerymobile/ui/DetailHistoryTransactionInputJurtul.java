@@ -577,6 +577,7 @@ public class DetailHistoryTransactionInputJurtul extends AppCompatActivity {
         switch (item.getItemId()) {
             case android.R.id.home:
                 onBackPressed();
+                finish();
                 return true;
 
             default:
@@ -1037,8 +1038,22 @@ public class DetailHistoryTransactionInputJurtul extends AppCompatActivity {
                     @Override
                     public void onFailure(Call<ResponseBody> call, Throwable t) {
                         Log.e("debug", "onFailure: ERROR > " + t.toString());
+                        String error_message = "server error silahkan coba lagi";
+                        Toast.makeText(DetailHistoryTransactionInputJurtul.this, error_message, Toast.LENGTH_SHORT).show();
                         loading.dismiss();
                     }
                 });
+    }
+
+    @Override
+    protected void onStop(){
+        Log.d("onstop", "onStop: jalanbanksubmissionform");
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        Log.d("odestroy", "onDestroy: jalanbanksubmissionform");
+        super.onDestroy();
     }
 }

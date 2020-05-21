@@ -28,6 +28,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.google.android.material.snackbar.Snackbar;
 import com.winery.winerymobile.R;
 import com.winery.winerymobile.ui.APIhelper.BaseApiService;
@@ -112,8 +115,8 @@ public class UploadDataKotorVerif extends AppCompatActivity {
     public final int SELECT_FILE_DATA_KOTOR = 1;
 
 
-    int bitmap_size = 70; // image quality 1 - 100;
-    int max_resolution_image = 800;
+    int bitmap_size = 50; // image quality 1 - 100;
+    int max_resolution_image = 400;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -159,17 +162,50 @@ public class UploadDataKotorVerif extends AppCompatActivity {
                     matrix.setRotate(rotationAngle, (float) bm.getWidth() / 2, (float) bm.getHeight() / 2);
                     selectedImageDataKotor = Bitmap.createBitmap(bm, 0, 0, bounds.outWidth, bounds.outHeight, matrix, true);
 //                    selectedImageDataKotor = BitmapFactory.decodeFile(fileUri.getPath());
-                    setToImageView(getResizedBitmap(selectedImageDataKotor, max_resolution_image),ivKtp);
+//                    setToImageView(getResizedBitmap(selectedImageDataKotor, max_resolution_image),ivKtp);
+//                    selectedImageDataKotor = getBitmap(fileUri.getPath());
+                    if(selectedImageDataKotor != null) {
+                        Glide.with(UploadDataKotorVerif.this).
+                                load(selectedImageDataKotor)
+                                .placeholder(R.drawable.ic_camera)
+                                .diskCacheStrategy(DiskCacheStrategy.NONE)
+                                .skipMemoryCache(true)
+                                .transition(DrawableTransitionOptions.withCrossFade(100))
+                                .into(ivKtp);
+                    }else{
+                    Toast.makeText(this,"Error while capturing Image",Toast.LENGTH_LONG).show();
+                    }
                 } catch (Exception e) {
                     e.printStackTrace();
+                    Toast.makeText(this,"Error while capturing Image",Toast.LENGTH_LONG).show();
                 }
             } else if (reqCode == SELECT_FILE_DATA_KOTOR && data != null && data.getData() != null) {
                 try {
 
-                    selectedImageDataKotor = MediaStore.Images.Media.getBitmap(UploadDataKotorVerif.this.getContentResolver(), data.getData());
-                    setToImageView(getResizedBitmap(selectedImageDataKotor, max_resolution_image), ivKtp);
-                } catch (IOException e) {
+//                    selectedImageDataKotor = MediaStore.Images.Media.getBitmap(UploadDataKotorVerif.this.getContentResolver(), data.getData());
+//                    setToImageView(getResizedBitmap(selectedImageDataKotor, max_resolution_image), ivKtp);
+                    Uri imageUri = data.getData();
+                    if(imageUri != null){
+                        Uri selectedImage = imageUri;
+                        getContentResolver().notifyChange(selectedImage, null);
+                        selectedImageDataKotor = getBitmap(imageUri);
+                        if(selectedImageDataKotor != null){
+                            Glide.with(UploadDataKotorVerif.this).
+                                    load(selectedImageDataKotor)
+                                    .placeholder(R.drawable.ic_camera)
+                                    .diskCacheStrategy(DiskCacheStrategy.NONE)
+                                    .skipMemoryCache(true)
+                                    .transition(DrawableTransitionOptions.withCrossFade(100))
+                                    .into(ivKtp);
+                        }else{
+                            Toast.makeText(this,"Error while capturing Image",Toast.LENGTH_LONG).show();
+                        }
+                    }else{
+                        Toast.makeText(this,"Error while capturing Image",Toast.LENGTH_LONG).show();
+                    }
+                } catch (Exception e) {
                     e.printStackTrace();
+                    Toast.makeText(this,"Error while capturing Image",Toast.LENGTH_LONG).show();
                 }
             }
         }
@@ -188,6 +224,7 @@ public class UploadDataKotorVerif extends AppCompatActivity {
         switch (item.getItemId()) {
             case android.R.id.home:
                 onBackPressed();
+                finish();
                 return true;
 
             default:
@@ -287,26 +324,34 @@ public class UploadDataKotorVerif extends AppCompatActivity {
                                     Toast.makeText(UploadDataKotorVerif.this, "success", Toast.LENGTH_SHORT).show();
                                     DialogSuccess bottomSheetFragment = new DialogSuccess();
                                     bottomSheetFragment.show(getSupportFragmentManager(), bottomSheetFragment.getTag());
+                                    selectedImageDataKotor.recycle();
 
                                 } else {
                                     // Jika login gagal
                                     String error_message = jsonRESULTS.getString("message");
                                     Toast.makeText(UploadDataKotorVerif.this, error_message, Toast.LENGTH_SHORT).show();
+                                    selectedImageDataKotor.recycle();
                                 }
                             } catch (JSONException e) {
                                 e.printStackTrace();
+                                selectedImageDataKotor.recycle();
                             } catch (IOException e) {
                                 e.printStackTrace();
+                                selectedImageDataKotor.recycle();
                             }
                         } else {
                             loading.dismiss();
+                            selectedImageDataKotor.recycle();
                         }
                     }
 
                     @Override
                     public void onFailure(Call<ResponseBody> call, Throwable t) {
                         Log.e("debug", "onFailure: ERROR > " + t.toString());
+                        String error_message = "server error silahkan coba lagi";
+                        Toast.makeText(UploadDataKotorVerif.this, error_message, Toast.LENGTH_SHORT).show();
                         loading.dismiss();
+                        selectedImageDataKotor.recycle();
                     }
                 }
         );
@@ -352,7 +397,7 @@ public class UploadDataKotorVerif extends AppCompatActivity {
     private static File getOutputMediaFile() {
 
         // External sdcard location
-        File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), "DeKa");
+        File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), "winery");
 
         // Create the storage directory if it does not exist
         if (!mediaStorageDir.exists()) {
@@ -368,5 +413,78 @@ public class UploadDataKotorVerif extends AppCompatActivity {
         mediaFile = new File(mediaStorageDir.getPath() + File.separator + "Win" + timeStamp + ".jpg");
 
         return mediaFile;
+    }
+
+    private Bitmap getBitmap(Uri path) {
+
+        Uri uri = path;
+        InputStream in = null;
+        try {
+            final int IMAGE_MAX_SIZE = 1200000; // 1.2MP
+            in = getContentResolver().openInputStream(uri);
+
+            // Decode image size
+            BitmapFactory.Options o = new BitmapFactory.Options();
+            o.inJustDecodeBounds = true;
+            BitmapFactory.decodeStream(in, null, o);
+            in.close();
+
+
+            int scale = 1;
+            while ((o.outWidth * o.outHeight) * (1 / Math.pow(scale, 2)) >
+                    IMAGE_MAX_SIZE) {
+                scale++;
+            }
+            Log.d("", "scale = " + scale + ", orig-width: " + o.outWidth + ", orig-height: " + o.outHeight);
+
+            Bitmap b = null;
+            in = getContentResolver().openInputStream(uri);
+            if (scale > 1) {
+                scale--;
+                // scale to max possible inSampleSize that still yields an image
+                // larger than target
+                o = new BitmapFactory.Options();
+                o.inSampleSize = scale;
+                b = BitmapFactory.decodeStream(in, null, o);
+
+                // resize to desired dimensions
+                int height = b.getHeight();
+                int width = b.getWidth();
+                Log.d("", "1th scale operation dimenions - width: " + width + ", height: " + height);
+
+                double y = Math.sqrt(IMAGE_MAX_SIZE
+                        / (((double) width) / height));
+                double x = (y / height) * width;
+
+                Bitmap scaledBitmap = Bitmap.createScaledBitmap(b, (int) x,
+                        (int) y, true);
+                b.recycle();
+                b = scaledBitmap;
+
+                System.gc();
+            } else {
+                b = BitmapFactory.decodeStream(in);
+            }
+            in.close();
+
+            Log.d("", "bitmap size - width: " + b.getWidth() + ", height: " +
+                    b.getHeight());
+            return b;
+        } catch (IOException e) {
+            Log.e("", e.getMessage(), e);
+            return null;
+        }
+    }
+
+    @Override
+    protected void onStop(){
+        Log.d("onstop", "onStop: jalanbanksubmissionform");
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        Log.d("odestroy", "onDestroy: jalanbanksubmissionform");
+        super.onDestroy();
     }
 }

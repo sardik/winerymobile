@@ -23,6 +23,7 @@ import com.google.android.material.snackbar.Snackbar;
 import com.winery.winerymobile.R;
 import com.winery.winerymobile.ui.APIhelper.BaseApiService;
 import com.winery.winerymobile.ui.APIhelper.UtilsApi;
+import com.winery.winerymobile.ui.CreditCardSubmission.FormUploadDocumentSelfie;
 import com.winery.winerymobile.ui.adapter.LIstHistoriCCAdapter;
 import com.winery.winerymobile.ui.dbhelper.SessionManagement;
 import com.winery.winerymobile.ui.model.HistoryCc;
@@ -237,6 +238,7 @@ public class ListTransactionWaitingVerif extends AppCompatActivity {
         switch (item.getItemId()) {
             case android.R.id.home:
                 onBackPressed();
+                finish();
                 return true;
 
             default:
@@ -305,6 +307,8 @@ public class ListTransactionWaitingVerif extends AppCompatActivity {
                     @Override
                     public void onFailure(Call<ResponseBody> call, Throwable t) {
                         Log.e("debug", "onFailure: ERROR > " + t.toString());
+                        String error_message = "server error silahkan coba lagi";
+                        Toast.makeText(ListTransactionWaitingVerif.this, error_message, Toast.LENGTH_SHORT).show();
                         loading.dismiss();
                     }
                 });
@@ -316,5 +320,17 @@ public class ListTransactionWaitingVerif extends AppCompatActivity {
         View sbView = snackbar.getView();
         sbView.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimary));
         snackbar.show();
+    }
+
+    @Override
+    protected void onStop(){
+        Log.d("onstop", "onStop: jalanbanksubmissionform");
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        Log.d("odestroy", "onDestroy: jalanbanksubmissionform");
+        super.onDestroy();
     }
 }

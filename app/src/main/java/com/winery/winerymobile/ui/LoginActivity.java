@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.winery.winerymobile.R;
 import com.winery.winerymobile.ui.APIhelper.BaseApiService;
 import com.winery.winerymobile.ui.APIhelper.UtilsApi;
+import com.winery.winerymobile.ui.CreditCardSubmission.FormUploadDocumentSelfie;
 import com.winery.winerymobile.ui.dbhelper.SessionManagement;
 
 import org.json.JSONException;
@@ -86,6 +87,7 @@ public class LoginActivity extends AppCompatActivity {
 
     @OnClick(R.id.btn_back) void back(){
         onBackPressed();
+        finish();
     }
     
     @Override
@@ -146,6 +148,8 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onFailure(Call<ResponseBody> call, Throwable t) {
                         Log.e("debug", "onFailure: ERROR > " + t.toString());
+                        String error_message = "server error silahkan coba lagi";
+                        Toast.makeText(LoginActivity.this, error_message, Toast.LENGTH_SHORT).show();
                         loading.dismiss();
                     }
                 });
@@ -198,6 +202,8 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onFailure(Call<ResponseBody> call, Throwable t) {
                         Log.e("debug", "onFailure: ERROR > " + t.toString());
+                        String error_message = "server error silahkan coba lagi";
+                        Toast.makeText(LoginActivity.this, error_message, Toast.LENGTH_SHORT).show();
                         loading.dismiss();
                     }
                 });
@@ -250,9 +256,21 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onFailure(Call<ResponseBody> call, Throwable t) {
                         Log.e("debug", "onFailure: ERROR > " + t.toString());
+                        String error_message = "server error silahkan coba lagi";
+                        Toast.makeText(LoginActivity.this, error_message, Toast.LENGTH_SHORT).show();
                         loading.dismiss();
                     }
                 });
+    }
+
+    @Override
+    protected void onStop(){
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 
 

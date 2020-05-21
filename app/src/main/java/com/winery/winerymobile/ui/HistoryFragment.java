@@ -34,6 +34,7 @@ import com.winery.winerymobile.R;
 import com.winery.winerymobile.ui.APIhelper.BaseApiService;
 import com.winery.winerymobile.ui.APIhelper.UtilsApi;
 import com.winery.winerymobile.ui.CreditCardSubmission.BankSubmissionForm;
+import com.winery.winerymobile.ui.CreditCardSubmission.FormUploadDocumentSelfie;
 import com.winery.winerymobile.ui.JurtulTransaction.ListTransacationPendingJurtul;
 import com.winery.winerymobile.ui.VerifikatorTransaction.ListTransactionDetailWaitingVerif;
 import com.winery.winerymobile.ui.VerifikatorTransaction.ListTransactionWaitingVerif;
@@ -476,6 +477,8 @@ public class HistoryFragment extends Fragment {
                         @Override
                         public void onFailure(Call<ResponseBody> call, Throwable t) {
                             Log.e("debug", "onFailure: ERROR > " + t.toString());
+                            String error_message = "server error silahkan coba lagi";
+                            Toast.makeText(getContext(), error_message, Toast.LENGTH_SHORT).show();
                             loading.dismiss();
                         }
                     });
@@ -543,6 +546,8 @@ public class HistoryFragment extends Fragment {
                         @Override
                         public void onFailure(Call<ResponseBody> call, Throwable t) {
                             Log.e("debug", "onFailure: ERROR > " + t.toString());
+                            String error_message = "server error silahkan coba lagi";
+                            Toast.makeText(getContext(), error_message, Toast.LENGTH_SHORT).show();
                             loading.dismiss();
                         }
                     });
@@ -610,6 +615,8 @@ public class HistoryFragment extends Fragment {
                         @Override
                         public void onFailure(Call<ResponseBody> call, Throwable t) {
                             Log.e("debug", "onFailure: ERROR > " + t.toString());
+                            String error_message = "server error silahkan coba lagi";
+                            Toast.makeText(getContext(), error_message, Toast.LENGTH_SHORT).show();
                             loading.dismiss();
                         }
                     });
@@ -624,6 +631,16 @@ public class HistoryFragment extends Fragment {
             snackbar.show();
         }
 
+    }
+
+    @Override
+    public void onStop(){
+        super.onStop();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
     }
 
 

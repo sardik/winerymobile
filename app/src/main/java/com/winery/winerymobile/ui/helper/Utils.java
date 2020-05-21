@@ -3,8 +3,11 @@ package com.winery.winerymobile.ui.helper;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Environment;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
@@ -16,6 +19,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -27,7 +31,7 @@ public class Utils {
                 , System.currentTimeMillis() +"_image.webp");
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
 
-        bitmap.compress(Bitmap.CompressFormat.WEBP,50, bos);
+        bitmap.compress(Bitmap.CompressFormat.WEBP,60, bos);
         byte[] bitmapdata = bos.toByteArray();
         //write the bytes in file
 
@@ -121,4 +125,5 @@ public class Utils {
         ((Activity) context).getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         return (int) (displayMetrics.heightPixels *percentPoint);
     }
+
 }
