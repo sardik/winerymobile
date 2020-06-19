@@ -321,10 +321,61 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:text="File Npwp"/>
+
+                        <ImageView
+                            android:id="@+id/iv_npwp"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/default_padding_medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="File ID Card"/>
+
+                        <ImageView
+                            android:id="@+id/iv_idcard"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/default_padding_medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:text="File Credit Card"/>
 
                         <ImageView
                             android:id="@+id/iv_cc"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/default_padding_medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="File Dokumen Pendukung"/>
+
+                        <ImageView
+                            android:id="@+id/iv_doc1"
                             android:layout_width="match_parent"
                             android:layout_height="200dp"/>
                     </LinearLayout>

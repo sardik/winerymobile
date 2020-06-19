@@ -220,7 +220,11 @@ public class CustomerDataForm extends AppCompatActivity {
             nama_ibu_kandung = etMotherName.getText().toString();
             nama_perusahaan = etCompanyName.getText().toString();
             alamat_perusahaan = etCompanyAddress.getText().toString();
-            telephone_kantor = etCompanyPhone.getText().toString()+etCompanyPhoneExt.getText().toString();
+            if(etCompanyPhoneExt.getText().toString().length() > 0){
+                telephone_kantor = etCompanyPhone.getText().toString()+"-"+etCompanyPhoneExt.getText().toString();
+            }else{
+                telephone_kantor = etCompanyPhone.getText().toString();
+            }
             nama_emergency_contact = etEmergencyName.getText().toString();
             telp_emergency_contact = etEmergencyTelp.getText().toString();
 

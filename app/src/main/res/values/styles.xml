@@ -69,6 +69,7 @@
     <style name="edit_text_input">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:inputType">text</item>
     </style>
 
     <style name="default_button">
@@ -78,7 +79,7 @@
         <item name="android:textSize">@dimen/font_size_16</item>
         <item name="android:textColor">@android:color/white</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:padding">@dimen/default_margin_small</item>
+        <item name="android:padding">@dimen/default_padding_medium</item>
         <item name="rippleColor">@color/colorPrimary</item>
     </style>
 
@@ -216,5 +217,17 @@
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">@android:color/black</item>
         <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="radio_button_filter_recontest_list">
+        <item name="android:layout_marginTop">@dimen/default_padding_small</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:layout_marginStart">@dimen/default_margin_small</item>
+        <item name="android:layout_marginEnd">@dimen/default_margin_small</item>
+        <item name="android:padding">3dp</item>
+        <item name="android:buttonTint">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/font_size_12</item>
+        <item name="android:textColor">@color/cardview_dark_background</item>
     </style>
 </resources>

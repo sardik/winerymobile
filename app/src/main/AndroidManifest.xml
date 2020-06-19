@@ -17,13 +17,18 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_winery3"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_winery3_round"
-        android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.DuplicateCheckCustomer.ListCheckDataDuplicate"></activity>
+        <activity android:name=".ui.Recontest.ReviewDataCustomerRecontestActivity"></activity>
+        <activity android:name=".ui.Recontest.ChangeDocumentRecontestActivity" />
+        <activity android:name=".ui.Recontest.DetailDataCustomerRecontestActivity">
+
+        </activity>
+        <activity android:name=".ui.DuplicateCheckCustomer.ListCheckDataDuplicate" />
         <activity android:name=".ui.DetailHistoryTransactionInputJurtul" />
         <activity android:name=".ui.JurtulTransaction.JurtulSubmissionForm" />
         <activity android:name=".ui.VerifikatorTransaction.FormSubmitSelectionBank" />
@@ -44,7 +49,9 @@
         <activity
             android:name=".ui.LoginActivity"
             android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".ui.ParentHomeActivity" />
+        <activity android:name=".ui.ParentHomeActivity">
+
+        </activity>
         <activity
             android:name=".ui.SplashScreen"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">

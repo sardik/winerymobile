@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Recontest.ReviewDataCustomerRecontestActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:minHeight="?attr/actionBarSize">
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:minHeight="?attr/actionBarSize"
+                app:theme="@style/AppTheme">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Review"
+                    android:gravity="center"
+                    android:layout_marginEnd="@dimen/default_margin_xxlarge"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/font_size_16"/>
+
+                <ImageView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="@dimen/default_ic_size_medium"
+                    android:layout_height="@dimen/default_ic_size_medium"
+                    style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+                    android:src="@drawable/winputih"
+                    android:layout_marginEnd="@dimen/default_margin_small"
+                    android:layout_gravity="end"/>
+            </com.google.android.material.appbar.MaterialToolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@android:color/white">
+            <ScrollView
+                android:id="@+id/sc_filter_recontest"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/rl_footer"
+                android:fillViewport="true"
+                android:scrollbars=""
+                android:isScrollContainer="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_marginTop="@dimen/default_margin_large"
+                        android:layout_marginBottom="@dimen/default_margin_small"
+                        android:layout_marginStart="@dimen/default_margin_small"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/font_size_16"
+                        android:gravity="left"
+                        android:text="Dokumen Pribadi"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/default_margin_medium"
+                        android:layout_marginEnd="@dimen/default_margin_medium"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="KTP"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:textAllCaps="true"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/font_size_14"/>
+
+                            <RelativeLayout
+                                android:id="@+id/container_iv_ktp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/dash_line">
+
+                                <ImageView
+                                    android:id="@+id/iv_ktp"
+                                    android:scaleType="fitXY"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="170dp"
+                                    android:src="@drawable/ic_camera"/>
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="@dimen/default_margin_small"
+                            android:layout_height="match_parent"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="NPWP"
+                                android:textStyle="bold"
+                                android:textAllCaps="true"
+                                android:gravity="center"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/font_size_14"/>
+
+                            <RelativeLayout
+                                android:id="@+id/container_iv_npwp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/dash_line">
+
+                                <ImageView
+                                    android:id="@+id/iv_npwp"
+                                    android:scaleType="fitXY"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="170dp"
+                                    android:src="@drawable/ic_camera"/>
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/default_margin_large"
+                        android:layout_marginEnd="@dimen/default_margin_large"
+                        android:layout_marginTop="@dimen/default_margin_small"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="ID Card"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/font_size_14"/>
+
+                            <RelativeLayout
+                                android:id="@+id/container_iv_idcard"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/dash_line">
+
+                                <ImageView
+                                    android:id="@+id/iv_idcard"
+                                    android:scaleType="fitXY"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="170dp"
+                                    android:src="@drawable/ic_camera"/>
+
+                                
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="@dimen/default_margin_small"
+                            android:layout_height="match_parent"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Kartu Kredit"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/font_size_14"/>
+
+                            <RelativeLayout
+                                android:id="@+id/container_iv_cc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/dash_line">
+
+                                <ImageView
+                                    android:id="@+id/iv_cc"
+                                    android:scaleType="fitXY"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="170dp"
+                                    android:src="@drawable/ic_camera"/>
+
+                                
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_marginTop="@dimen/default_margin_large"
+                        android:layout_marginBottom="@dimen/default_margin_small"
+                        android:layout_marginStart="@dimen/default_margin_small"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/font_size_16"
+                        android:gravity="left"
+                        android:text="Dokumen Pendukung"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/default_margin_large"
+                        android:layout_marginEnd="@dimen/default_margin_large"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Dokumen Pendukung"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/font_size_14"/>
+
+                            <RelativeLayout
+                                android:id="@+id/container_iv_supportdoc1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/dash_line">
+
+                                <ImageView
+                                    android:id="@+id/iv_supportdoc1"
+                                    android:scaleType="fitXY"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="170dp"
+                                    android:src="@drawable/ic_camera"/>
+
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="@dimen/default_margin_small"
+                            android:layout_height="match_parent"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Dokumen Pendukung"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/font_size_14"/>
+
+                            <RelativeLayout
+                                android:id="@+id/container_iv_supportdoc2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/dash_line">
+
+                                <ImageView
+                                    android:id="@+id/iv_supportdoc2"
+                                    android:scaleType="fitXY"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="170dp"
+                                    android:src="@drawable/ic_camera"/>
+
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_marginTop="@dimen/default_margin_large"
+                        android:layout_marginBottom="@dimen/default_margin_small"
+                        android:textColor="@android:color/black"
+                        android:layout_marginStart="@dimen/default_margin_small"
+                        android:textSize="@dimen/font_size_16"
+                        android:gravity="left"
+                        android:text="Dokumen Selfie"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/default_margin_medium"
+                        android:layout_marginEnd="@dimen/default_margin_medium"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Bri"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:textAllCaps="true"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/font_size_14"/>
+
+                            <RelativeLayout
+                                android:id="@+id/container_iv_bri"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/dash_line">
+
+                                <ImageView
+                                    android:id="@+id/iv_bri"
+                                    android:scaleType="fitXY"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="170dp"
+                                    android:src="@drawable/ic_camera"/>
+
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="@dimen/default_margin_small"
+                            android:layout_height="match_parent"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="BNI"
+                                android:textStyle="bold"
+                                android:textAllCaps="true"
+                                android:gravity="center"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/font_size_14"/>
+
+                            <RelativeLayout
+                                android:id="@+id/container_iv_bni"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/dash_line">
+
+                                <ImageView
+                                    android:id="@+id/iv_bni"
+                                    android:scaleType="fitXY"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="170dp"
+                                    android:src="@drawable/ic_camera"/>
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/default_margin_large"
+                            android:layout_marginEnd="@dimen/default_margin_large"
+                            android:layout_marginTop="@dimen/default_margin_large"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Cimb Niaga"
+                                    android:textAllCaps="true"
+                                    android:gravity="center"
+                                    android:textStyle="bold"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/font_size_14"/>
+
+                                <RelativeLayout
+                                    android:id="@+id/container_iv_cimb"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/dash_line">
+
+                                    <ImageView
+                                        android:id="@+id/iv_cimb"
+                                        android:scaleType="fitXY"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="170dp"
+                                        android:src="@drawable/ic_camera"/>
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="@dimen/default_margin_small"
+                                android:layout_height="match_parent"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_container_mayapada"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Mayapada"
+                                    android:textAllCaps="true"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/font_size_14"/>
+
+                                <RelativeLayout
+                                    android:id="@+id/container_iv_mayapada"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/dash_line">
+
+                                    <ImageView
+                                        android:id="@+id/iv_selfie_mayapada"
+                                        android:scaleType="fitXY"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="170dp"
+                                        android:src="@drawable/ic_camera"/>
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/font_size_14"
+                            android:textColor="@android:color/black"
+                            android:layout_marginTop="@dimen/default_margin_medium"
+                            android:layout_marginStart="@dimen/default_margin_small"
+                            android:text="Catatan"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_marginStart="@dimen/default_margin_small"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/default_padding_medium"
+                            android:textSize="@dimen/font_size_12"
+                            android:textColor="@android:color/darker_gray"
+                            android:text="Pastikan nasabah sudah dikonfirmasi dan\nbersedia untuk diajukan ulang."/>
+
+                        <CheckBox
+                            android:id="@+id/checkbox_validation_data"
+                            android:layout_width="match_parent"
+                            android:layout_marginStart="@dimen/default_margin_small"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="Ya, sudah dikonfirmasi"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <RelativeLayout
+                android:id="@+id/rl_footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_recontest"
+                    style="@style/default_button"
+                    android:enabled="false"
+                    android:textSize="@dimen/font_size_14"
+                    android:layout_marginStart="@dimen/default_margin_small"
+                    android:layout_marginEnd="@dimen/default_margin_small"
+                    android:layout_marginBottom="@dimen/default_margin_small"
+                    android:text="Ajukan Lagi"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

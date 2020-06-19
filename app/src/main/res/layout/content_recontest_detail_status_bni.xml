@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:id="@+id/ll_parent_recontest_detail_status_bni"
+    android:visibility="gone"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/card_recontest_detail_status_bni"
+        android:background="@android:color/white"
+        app:strokeColor="@android:color/black"
+        app:cardCornerRadius="@dimen/default_padding_medium"
+        app:strokeWidth="1dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="@dimen/default_margin_small"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_size_14"
+                android:layout_alignParentStart="true"
+                android:text="BNI"/>
+
+            <ImageView
+                android:id="@+id/ivChevronDetailStatusBni"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_expand_more_black_24dp"/>
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <RelativeLayout
+        android:id="@+id/parent_container_item_status_bni"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_container_item_data_card"
+        android:visibility="gone"
+        android:layout_marginTop="-16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin_small"
+            android:layout_marginEnd="@dimen/default_margin_small"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin_small"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_size_14"
+                        android:layout_alignParentStart="true"
+                        android:textColor="@android:color/darker_gray"
+                        android:text="Status Verifikasi"/>
+
+                    <TextView
+                        android:id="@+id/tv_status_verif_bni"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_size_14"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@android:color/darker_gray"
+                        android:text="Status Verif"
+                        android:textAllCaps="true"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_marginTop="@dimen/default_margin_small"
+                    android:layout_marginBottom="@dimen/default_margin_small"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_size_14"
+                        android:layout_alignParentStart="true"
+                        android:textColor="@android:color/darker_gray"
+                        android:text="Tanggal Verifikasi"/>
+
+                    <TextView
+                        android:id="@+id/tv_date_verif_bni"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_size_14"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@android:color/darker_gray"
+                        android:text="-"
+                        android:textAllCaps="true"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_marginTop="@dimen/default_margin_small"
+                    android:layout_marginBottom="@dimen/default_margin_small"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_size_14"
+                        android:layout_alignParentStart="true"
+                        android:textColor="@android:color/darker_gray"
+                        android:text="Tanggal Input"/>
+
+                    <TextView
+                        android:id="@+id/tv_tanggal_input_bni"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_size_14"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@android:color/darker_gray"
+                        android:text="-"
+                        android:textAllCaps="true"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_marginTop="@dimen/default_margin_small"
+                    android:layout_marginBottom="@dimen/default_margin_small"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_size_14"
+                        android:layout_alignParentStart="true"
+                        android:textColor="@android:color/darker_gray"
+                        android:text="Tanggal Inc. Doc"/>
+
+                    <TextView
+                        android:id="@+id/tv_date_inc_verif_bni"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_size_14"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@android:color/darker_gray"
+                        android:text="-"
+                        android:textAllCaps="true"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_marginTop="@dimen/default_margin_small"
+                    android:layout_marginBottom="@dimen/default_margin_small"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_size_14"
+                        android:layout_alignParentStart="true"
+                        android:textColor="@android:color/darker_gray"
+                        android:text="Tanggal Salin"/>
+
+                    <TextView
+                        android:id="@+id/tv_salin_date_verif_bni"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_size_14"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@android:color/darker_gray"
+                        android:text="-"
+                        android:textAllCaps="true"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_marginTop="@dimen/default_margin_small"
+                    android:layout_marginBottom="@dimen/default_margin_small"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_size_14"
+                        android:layout_alignParentStart="true"
+                        android:textColor="@android:color/darker_gray"
+                        android:text="Tanggal Analyst"/>
+
+                    <TextView
+                        android:id="@+id/tv_analyst_date_verif_bni"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_size_14"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@android:color/darker_gray"
+                        android:text="-"
+                        android:textAllCaps="true"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_marginTop="@dimen/default_margin_small"
+                    android:layout_marginBottom="@dimen/default_margin_small"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_size_14"
+                        android:layout_alignParentStart="true"
+                        android:textColor="@android:color/darker_gray"
+                        android:text="Tanggal Submit"/>
+
+                    <TextView
+                        android:id="@+id/tv_submit_date_verif_bni"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_size_14"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@android:color/darker_gray"
+                        android:text="-"
+                        android:textAllCaps="true"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_marginTop="@dimen/default_margin_small"
+                    android:layout_marginBottom="@dimen/default_margin_small"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_size_14"
+                        android:layout_alignParentStart="true"
+                        android:textColor="@android:color/darker_gray"
+                        android:text="Status Aplikasi"/>
+
+                    <TextView
+                        android:id="@+id/tv_status_aplikasi_verif_bni"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_size_14"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@android:color/darker_gray"
+                        android:text="-"
+                        android:textAllCaps="true"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_marginTop="@dimen/default_margin_small"
+                    android:layout_marginBottom="@dimen/default_margin_small"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_size_14"
+                        android:layout_alignParentStart="true"
+                        android:textColor="@android:color/darker_gray"
+                        android:text="Tanggal Status"/>
+
+                    <TextView
+                        android:id="@+id/tv_status_date_verif_bni"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_size_14"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@android:color/darker_gray"
+                        android:text="-"
+                        android:textAllCaps="true"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_marginTop="@dimen/default_margin_small"
+                    android:layout_marginBottom="@dimen/default_margin_small"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

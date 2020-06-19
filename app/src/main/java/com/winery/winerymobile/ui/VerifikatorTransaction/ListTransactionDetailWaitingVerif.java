@@ -43,6 +43,7 @@ import retrofit2.Response;
 public class ListTransactionDetailWaitingVerif extends AppCompatActivity {
 
     /** ButterKnife Code **/
+    /** ButterKnife Code **/
     @BindView(R.id.appBar)
     com.google.android.material.appbar.AppBarLayout appBar;
     @BindView(R.id.toolbar_main)
@@ -79,8 +80,14 @@ public class ListTransactionDetailWaitingVerif extends AppCompatActivity {
     TextView tvRelationship;
     @BindView(R.id.iv_ktp)
     ImageView ivKtp;
+    @BindView(R.id.iv_npwp)
+    ImageView ivNpwp;
+    @BindView(R.id.iv_idcard)
+    ImageView ivIdcard;
     @BindView(R.id.iv_cc)
-    ImageView ivCC;
+    ImageView ivCc;
+    @BindView(R.id.iv_doc1)
+    ImageView ivDoc1;
     @BindView(R.id.tv_sales)
     TextView tvSales;
     @BindView(R.id.card_bank_bri)
@@ -306,11 +313,24 @@ public class ListTransactionDetailWaitingVerif extends AppCompatActivity {
     @BindView(R.id.btn_submit)
     com.google.android.material.button.MaterialButton btnSubmit;
     /** ButterKnife Code **/
+    /** ButterKnife Code **/
 
-    String imageKtp, imageCC;
+    String imageKtp, imageCC, imageNpwp, imageIdCard, imageDoc1;
 
     @OnClick(R.id.iv_ktp) void pinchZoomKtp(){
         pinchToZoom(imageKtp);
+    }
+
+    @OnClick(R.id.iv_npwp) void pinchZoomNpwp(){
+        pinchToZoom(imageNpwp);
+    }
+
+    @OnClick(R.id.iv_idcard) void pinchZoomIdcard(){
+        pinchToZoom(imageIdCard);
+    }
+
+    @OnClick(R.id.iv_doc1) void pinchZoomIddoc(){
+        pinchToZoom(imageDoc1);
     }
 
     @OnClick(R.id.iv_cc) void pinchZoomCC(){
@@ -397,6 +417,11 @@ public class ListTransactionDetailWaitingVerif extends AppCompatActivity {
                                     String salesname = jsonRESULTS.getJSONObject("data").getString("salesname");
                                     String salescode = jsonRESULTS.getJSONObject("data").getString("salescode");
                                     imageKtp = jsonRESULTS.getJSONObject("data").getString("url_ktp");
+                                    imageNpwp = jsonRESULTS.getJSONObject("data").getString("url_npwp");
+                                    imageIdCard = jsonRESULTS.getJSONObject("data").getString("url_fotoid");
+                                    imageDoc1 = jsonRESULTS.getJSONObject("data").getString("url_date_pendukung");
+
+
                                     imageCC = jsonRESULTS.getJSONObject("data").getString("url_kartu_kredit");
 
 
@@ -423,6 +448,30 @@ public class ListTransactionDetailWaitingVerif extends AppCompatActivity {
                                             .transition(DrawableTransitionOptions.withCrossFade(100))
                                             .into(ivKtp);
 
+                                    Glide.with(ListTransactionDetailWaitingVerif.this).
+                                            load(imageNpwp)
+                                            .placeholder(R.color.grey_20)
+                                            .diskCacheStrategy(DiskCacheStrategy.NONE)
+                                            .skipMemoryCache(true)
+                                            .transition(DrawableTransitionOptions.withCrossFade(100))
+                                            .into(ivNpwp);
+
+                                    Glide.with(ListTransactionDetailWaitingVerif.this).
+                                            load(imageIdCard)
+                                            .placeholder(R.color.grey_20)
+                                            .diskCacheStrategy(DiskCacheStrategy.NONE)
+                                            .skipMemoryCache(true)
+                                            .transition(DrawableTransitionOptions.withCrossFade(100))
+                                            .into(ivIdcard);
+
+                                    Glide.with(ListTransactionDetailWaitingVerif.this).
+                                            load(imageDoc1)
+                                            .placeholder(R.color.grey_20)
+                                            .diskCacheStrategy(DiskCacheStrategy.NONE)
+                                            .skipMemoryCache(true)
+                                            .transition(DrawableTransitionOptions.withCrossFade(100))
+                                            .into(ivDoc1);
+
                                     // fetch image cc
                                     Glide.with(ListTransactionDetailWaitingVerif.this).
                                             load(imageCC)
@@ -430,7 +479,7 @@ public class ListTransactionDetailWaitingVerif extends AppCompatActivity {
                                             .diskCacheStrategy(DiskCacheStrategy.NONE)
                                             .skipMemoryCache(true)
                                             .transition(DrawableTransitionOptions.withCrossFade(100))
-                                            .into(ivCC);
+                                            .into(ivCc);
 
                                     // bank BRI
                                     String StatusBri, VerifikasiBri, tanggalSubmitBri, statusappBri;

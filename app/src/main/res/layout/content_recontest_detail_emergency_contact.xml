@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_recontest_detail_emergency_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        app:strokeColor="@android:color/black"
+        app:cardCornerRadius="@dimen/default_padding_medium"
+        app:strokeWidth="1dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="@dimen/default_margin_small"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_size_14"
+                android:layout_alignParentStart="true"
+                android:text="Data Kontak Darurat"/>
+
+            <ImageView
+                android:id="@+id/ivChevronDetailEmergencyContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_expand_more_black_24dp"/>
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <RelativeLayout
+        android:id="@+id/parent_container_item_data_emergency_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_container_item_data_card"
+        android:visibility="gone"
+        android:layout_marginTop="-16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin_small"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/default_margin_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="Nama Emergency Kontak"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_emergency_name"
+                style="@style/text_input_basic">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_emergency_name"
+                    style="@style/edit_text_input"
+                    android:hint="Nama Emergency Kontak" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_marginTop="@dimen/default_margin_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="No. Telepon Emergency Kontak"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_emergency_telp"
+                style="@style/text_input_basic">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_emergency_telp"
+                    style="@style/edit_text_input"
+                    android:inputType="number"
+                    android:maxLength="13"
+                    android:hint="Telepon Emergency Kontak"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_marginTop="@dimen/default_margin_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="Hubungan"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/text_input_basic_dropdown"
+                    android:id="@+id/ti_emergency_relationship">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/et_emergency_relationship"
+                        android:hint="Hubungan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.ListMessageRecontest">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:minHeight="?attr/actionBarSize">
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:minHeight="?attr/actionBarSize"
+                app:theme="@style/AppTheme">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pesan"
+                    android:gravity="center"
+                    android:layout_marginEnd="@dimen/default_margin_small"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/font_size_16"/>
+
+                <ImageView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="@dimen/default_ic_size_medium"
+                    android:layout_height="@dimen/default_ic_size_medium"
+                    style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+                    android:src="@drawable/winputih"
+                    android:layout_marginEnd="@dimen/default_margin_small"
+                    android:layout_gravity="end"/>
+            </com.google.android.material.appbar.MaterialToolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin_small"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_filter"
+                style="@style/default_button"
+                android:padding="0dp"
+                app:iconTint="@android:color/darker_gray"
+                app:iconTintMode="multiply"
+                app:icon="@drawable/ic_filter"
+                app:iconGravity="start"
+                app:iconPadding="5dp"
+                android:paddingStart="@dimen/default_margin_small"
+                android:paddingEnd="@dimen/default_margin_small"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="0dp"
+                android:paddingLeft="@dimen/default_margin_small"
+                android:paddingRight="@dimen/default_margin_small"
+                android:textSize="@dimen/font_size_12"
+                app:backgroundTint="@android:color/white"
+                app:strokeColor="@android:color/darker_gray"
+                android:textColor="@android:color/darker_gray"
+                app:strokeWidth="1dp"
+                app:cornerRadius="14dp"
+                android:textAllCaps="false"
+                android:text="Filter"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_sort"
+                style="@style/default_button"
+                android:padding="0dp"
+                app:iconTint="@android:color/darker_gray"
+                app:iconTintMode="multiply"
+                app:icon="@drawable/ic_sort"
+                app:iconGravity="start"
+                app:iconPadding="5dp"
+                android:paddingStart="@dimen/default_margin_small"
+                android:paddingEnd="@dimen/default_margin_small"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="0dp"
+                android:paddingLeft="@dimen/default_margin_small"
+                android:paddingRight="@dimen/default_margin_small"
+                android:layout_marginLeft="@dimen/default_margin_small"
+                android:textSize="@dimen/font_size_12"
+                app:backgroundTint="@android:color/white"
+                app:strokeColor="@android:color/darker_gray"
+                android:textColor="@android:color/darker_gray"
+                app:strokeWidth="1dp"
+                app:cornerRadius="14dp"
+                android:textAllCaps="false"
+                android:text="Urutkan : Terbaru"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_no_data"
+            android:visibility="visible"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/default_margin_large"
+            android:layout_marginEnd="@dimen/default_margin_large"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Tidak Ada data"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/font_size_16"/>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_message_recontest"
+            android:layout_width="match_parent"
+            android:paddingTop="@dimen/default_margin_small"
+            android:layout_marginLeft="@dimen/default_padding_medium"
+            android:layout_marginRight="@dimen/default_padding_medium"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+</FrameLayout>

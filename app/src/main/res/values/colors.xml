@@ -10,4 +10,6 @@
     <color name="deep_purple_200">#B39DDB</color>
     <color name="light_blue_500">#05BCDC</color>
     <color name="green_600">#43A047</color>
+    <color name="colorSelectedDot">#2D9CDB</color>
+    <color name="colorIdleDot">#662D9CDB</color>
 </resources>

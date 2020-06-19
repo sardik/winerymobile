@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.ronaldsmartin:Material-ViewPagerIndicator:1.0.2@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9d5a8fb2261b5499492d45a86aa1dc27/jetified-Material-ViewPagerIndicator-1.0.2/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9d5a8fb2261b5499492d45a86aa1dc27/jetified-Material-ViewPagerIndicator-1.0.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9d5a8fb2261b5499492d45a86aa1dc27/jetified-Material-ViewPagerIndicator-1.0.2/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

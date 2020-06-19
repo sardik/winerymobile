@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Recontest.DetailDataCustomerRecontestActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:minHeight="?attr/actionBarSize">
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:minHeight="?attr/actionBarSize"
+                app:theme="@style/AppTheme">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/titlebar_username"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Name User"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:layout_marginEnd="@dimen/default_margin_small"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/font_size_16"/>
+
+                        <TextView
+                            android:id="@+id/titlebar_status_aplikasi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="status aplikasi"
+                            android:layout_marginEnd="@dimen/default_margin_small"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/font_size_12"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/titlebar_tgl_pengajuan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="dd MMM yyyy hh:mm"
+                            android:gravity="end"
+                            android:textColor="@android:color/white"
+                            android:layout_marginEnd="@dimen/default_padding_medium"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/font_size_10"/>
+
+                        <TextView
+                            android:id="@+id/titlebar_tgl_verif"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="dd MMM yyyy hh:mm"
+                            android:gravity="end"
+                            android:layout_marginEnd="@dimen/default_padding_medium"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/font_size_10"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.appbar.MaterialToolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@android:color/white">
+            <ScrollView
+                android:id="@+id/sc_filter_recontest"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/rl_footer"
+                android:layout_marginTop="@dimen/default_margin_small"
+                android:fillViewport="true"
+                android:scrollbars=""
+                android:isScrollContainer="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:text="Dokumen"
+                        android:layout_marginStart="@dimen/default_margin_small"
+                        android:textSize="@dimen/font_size_14"/>
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:foregroundGravity="center"
+                        android:layout_marginTop="@dimen/default_padding_medium"
+                        android:id="@+id/viewPager"
+                        android:clipToPadding="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp">
+
+                        <com.itsronald.widget.ViewPagerIndicator
+                            android:id="@+id/id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/default_margin_small"
+                            android:layout_gravity="bottom|center|center_vertical"
+                            android:gravity="start|top|bottom"
+                            app:dotRadius="3dp"
+                            app:selectedDotColor="@color/colorSelectedDot"
+                            app:unselectedDotColor="@color/colorIdleDot" />
+                    </androidx.viewpager.widget.ViewPager>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/default_margin_small"
+                        android:layout_marginEnd="@dimen/default_margin_small"
+                        android:layout_marginTop="@dimen/default_margin_small"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/font_size_14"
+                            android:textColor="@android:color/black"
+                            android:text="Dokumen"/>
+
+                        <include
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/default_padding_medium"
+                            layout="@layout/content_recontest_detail_personal_data" />
+
+                        <include
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/default_padding_medium"
+                            layout="@layout/content_recontest_detail_profession" />
+
+                        <include
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/default_padding_medium"
+                            layout="@layout/content_recontest_detail_emergency_contact" />
+
+                        <include
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/default_padding_medium"
+                            layout="@layout/content_recontest_detail_hadiah" />
+
+                        <TextView
+                            android:layout_marginTop="@dimen/default_margin_medium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/font_size_14"
+                            android:textColor="@android:color/black"
+                            android:text="Status Aplikasi"/>
+
+                        <include
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/default_padding_medium"
+                            layout="@layout/content_recontest_detail_status_bri" />
+
+                        <include
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/default_padding_medium"
+                            layout="@layout/content_recontest_detail_status_bni" />
+
+                        <include
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/default_padding_medium"
+                            layout="@layout/content_recontest_detail_status_bca" />
+
+                        <include
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/default_padding_medium"
+                            layout="@layout/content_recontest_detail_status_cimb" />
+
+                        <include
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/default_padding_medium"
+                            layout="@layout/content_recontest_detail_status_mayapada" />
+
+                        <include
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/default_padding_medium"
+                            layout="@layout/content_recontest_detail_status_dbs" />
+
+                        <include
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/default_padding_medium"
+                            layout="@layout/content_recontest_detail_status_mnc" />
+
+                        <include
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/default_padding_medium"
+                            layout="@layout/content_recontest_detail_status_uob" />
+
+                        <include
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/default_padding_medium"
+                            layout="@layout/content_recontest_detail_status_mega" />
+
+                        <include
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/default_padding_medium"
+                            layout="@layout/content_recontest_detail_status_panin" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/font_size_14"
+                            android:textColor="@android:color/black"
+                            android:layout_marginTop="@dimen/default_margin_medium"
+                            android:text="Catatan"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/default_padding_medium"
+                            android:textSize="@dimen/font_size_12"
+                            android:textColor="@android:color/darker_gray"
+                            android:text="Pastikan nasabah sudah dikonfirmasi dan\nbersedia untuk diajukan ulang."/>
+
+                        <CheckBox
+                            android:id="@+id/checkbox_validation_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="Ya, sudah dikonfirmasi"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <RelativeLayout
+                android:id="@+id/rl_footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        android:background="@android:color/white">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_change_document"
+                            style="@style/default_button"
+                            android:backgroundTint="@color/grey_20"
+                            android:textColor="@android:color/black"
+                            android:layout_marginStart="@dimen/default_margin_small"
+                            android:layout_marginEnd="@dimen/default_margin_small"
+                            android:textSize="@dimen/font_size_14"
+                            android:text="Ganti Dokumen"/>
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="@dimen/default_padding_small"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:layout_marginBottom="@dimen/default_margin_small">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_recontest"
+                            style="@style/default_button"
+                            android:enabled="false"
+                            android:textSize="@dimen/font_size_14"
+                            android:layout_marginStart="@dimen/default_margin_small"
+                            android:layout_marginEnd="@dimen/default_margin_small"
+                            android:text="Ajukan Lagi"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

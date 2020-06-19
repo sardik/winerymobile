@@ -158,4 +158,29 @@ public interface BaseApiService {
     @POST("check_duplicate")
     Call<ResponseBody> getCheckDuplicateData(@Field("name") String nik,
                                                 @Field("dob") String dob);
+
+
+    // get message recontest
+    @FormUrlEncoded
+    @POST("list_transaction")
+    Call<ResponseBody> getListMessageRecontest(@Field("sales_code") String salesCode,
+                                        @Field("bank") String bank,
+                                        @Field("verif") String verif,
+                                        @Field("sort") String sort);
+
+
+    // update data for recontest
+    @Multipart
+    @POST("transaction_edit")
+    Call<ResponseBody> UpdateDataForRecontest(@Part MultipartBody.Part photoKtp,
+                                  @Part MultipartBody.Part photoNpwp,
+                                  @Part MultipartBody.Part photoIDCard,
+                                  @Part MultipartBody.Part photoCC,
+                                  @Part MultipartBody.Part photoDoc1,
+                                  @Part MultipartBody.Part photoDoc2,
+                                  @Part MultipartBody.Part photoBri,
+                                  @Part MultipartBody.Part photoBni,
+                                  @Part MultipartBody.Part photoCimb,
+                                  @Part MultipartBody.Part photoMayapada,
+                                  @PartMap Map<String, RequestBody> text);
 }

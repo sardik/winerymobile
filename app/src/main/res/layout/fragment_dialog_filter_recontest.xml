@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="bottom"
+    app:cardCornerRadius="@dimen/default_margin_small"
+    tools:context=".ui.Recontest.FragmentDialogFilterRecontest">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_view_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="150dp"
+                android:layout_height="1dp"
+                android:layout_margin="@dimen/default_padding_small"
+                android:layout_centerInParent="true"
+                android:background="@android:color/black"
+                android:padding="@dimen/default_padding_medium" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:color/white">
+
+            <ScrollView
+                android:id="@+id/sc_filter_recontest"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/rl_footer"
+                android:layout_marginTop="@dimen/default_margin_small"
+                android:fillViewport="true"
+                android:scrollbars=""
+                android:isScrollContainer="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginStart="@dimen/default_margin_small"
+                        android:layout_marginEnd="@dimen/default_margin_small">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/font_size_14"
+                                android:textColor="@android:color/black"
+                                android:text="Filter"
+                                android:layout_alignParentStart="true"
+                                android:gravity="start"/>
+
+                            <TextView
+                                android:id="@+id/hapus_filter"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/font_size_14"
+                                android:textColor="@android:color/darker_gray"
+                                android:text="Hapus Filter"
+                                android:layout_alignParentEnd="true"
+                                android:layout_gravity="end"/>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/default_padding_medium"
+                        android:background="@android:color/darker_gray"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_gravity="start"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:id="@+id/parent_filter_bank"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/default_padding_medium"
+                                        android:layout_marginStart="@dimen/default_margin_small"
+                                        android:layout_marginEnd="@dimen/default_margin_small"
+                                        android:layout_marginBottom="@dimen/default_padding_medium"
+                                        android:textSize="@dimen/font_size_14"
+                                        android:textColor="@android:color/black"
+                                        android:layout_alignParentStart="true"
+                                        android:text="Filter"/>
+
+                                    <ImageView
+                                        android:id="@+id/image_arrow_filter_bank"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:visibility="visible"
+                                        android:layout_marginEnd="@dimen/default_margin_small"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/ic_arrow_category_filter"/>
+
+                                </RelativeLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@android:color/darker_gray"/>
+
+                                <RelativeLayout
+                                    android:id="@+id/parent_filter_rjverif"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="@dimen/font_size_14"
+                                        android:layout_marginTop="@dimen/default_padding_medium"
+                                        android:layout_marginStart="@dimen/default_margin_small"
+                                        android:layout_marginEnd="@dimen/default_margin_small"
+                                        android:layout_marginBottom="@dimen/default_padding_medium"
+                                        android:textColor="@android:color/black"
+                                        android:layout_alignParentStart="true"
+                                        android:text="Rj Verif"/>
+
+                                    <ImageView
+                                        android:id="@+id/image_arrow_filter_rj_feriv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_marginEnd="@dimen/default_margin_small"
+                                        android:layout_centerInParent="true"
+                                        android:visibility="invisible"
+                                        android:src="@drawable/ic_arrow_category_filter"/>
+                                </RelativeLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@android:color/darker_gray"/>
+
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@android:color/darker_gray"/>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_gravity="start"
+                                android:orientation="vertical">
+
+                                <RadioGroup
+                                    android:id="@+id/radio_group_filter_bank"
+                                    android:visibility="visible"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <RadioButton
+                                        style="@style/radio_button_filter_recontest_list"
+                                        android:text="SEMUA"
+                                        android:id="@+id/rb_bank_all"
+                                        android:layout_marginTop="@dimen/default_margin_small"/>
+
+                                    <RadioButton
+                                        style="@style/radio_button_filter_recontest_list"
+                                        android:text="BRI"
+                                        android:id="@+id/rb_bank_bri"/>
+
+                                    <RadioButton
+                                        android:id="@+id/rb_bank_bni"
+                                        style="@style/radio_button_filter_recontest_list"
+                                        android:text="BNI" />
+
+                                    <RadioButton
+                                        android:id="@+id/rb_bank_bca"
+                                        android:text="BCA"
+                                        style="@style/radio_button_filter_recontest_list" />
+
+                                    <RadioButton
+                                        android:id="@+id/rb_bank_cimb"
+                                        android:text="CIMB"
+                                        style="@style/radio_button_filter_recontest_list" />
+
+                                    <RadioButton
+                                        android:id="@+id/rb_bank_mayapada"
+                                        android:text="MAYAPADA"
+                                        style="@style/radio_button_filter_recontest_list" />
+
+                                    <RadioButton
+                                        android:id="@+id/rb_bank_dbs"
+                                        android:text="DBS"
+                                        style="@style/radio_button_filter_recontest_list" />
+
+                                    <RadioButton
+                                        android:id="@+id/rb_bank_MNC"
+                                        android:text="MNC"
+                                        style="@style/radio_button_filter_recontest_list" />
+
+                                    <RadioButton
+                                        android:id="@+id/rb_bank_uob"
+                                        android:text="UOB"
+                                        style="@style/radio_button_filter_recontest_list" />
+
+                                    <RadioButton
+                                        android:id="@+id/rb_bank_mega"
+                                        android:text="MEGA"
+                                        style="@style/radio_button_filter_recontest_list" />
+
+                                    <RadioButton
+                                        android:id="@+id/rb_bank_panin"
+                                        android:text="PANIN"
+                                        style="@style/radio_button_filter_recontest_list" />
+                                    //other radio buttons goes here
+                                </RadioGroup>
+
+                                <RadioGroup
+                                    android:id="@+id/radio_group_filter_rj_verif"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="gone"
+                                    android:orientation="vertical">
+
+                                    <RadioButton
+                                        style="@style/radio_button_filter_recontest_list"
+                                        android:text="SEMUA"
+                                        android:id="@+id/rb_rj_verif_all"
+                                        android:layout_marginTop="@dimen/default_margin_small"/>
+
+                                    <RadioButton
+                                        style="@style/radio_button_filter_recontest_list"
+                                        android:text="CBC"
+                                        android:id="@+id/rb_rj_verif_cbc"/>
+
+                                    <RadioButton
+                                        android:id="@+id/rb_rj_verif_htc"
+                                        style="@style/radio_button_filter_recontest_list"
+                                        android:text="HTC" />
+
+                                    <RadioButton
+                                        android:id="@+id/rb_rj_verif_ivn"
+                                        android:text="IVN"
+                                        style="@style/radio_button_filter_recontest_list" />
+
+                                    <RadioButton
+                                        android:id="@+id/rb_rj_verif_nte"
+                                        android:text="NTE"
+                                        style="@style/radio_button_filter_recontest_list" />
+
+                                    <RadioButton
+                                        android:id="@+id/rb_rj_verif_nva"
+                                        android:text="NVA"
+                                        style="@style/radio_button_filter_recontest_list" />
+
+
+                                </RadioGroup>
+
+
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+            <RelativeLayout
+                android:id="@+id/rl_footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@android:color/darker_gray"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:layout_marginBottom="@dimen/default_margin_small">
+
+                        <com.google.android.material.button.MaterialButton
+                            style="@style/default_button"
+                            android:id="@+id/btn_filter"
+                            android:layout_marginStart="@dimen/default_margin_small"
+                            android:layout_marginEnd="@dimen/default_margin_small"
+                            android:text="Terapkan"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

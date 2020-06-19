@@ -80,16 +80,18 @@ public class ParentHomeActivity extends AppCompatActivity {
                             fragment = historyFragment;
                         break;
                     case R.id.navigation_3:
-                        if (messageFragment == null)
+                        if (chatFragment == null)
                             snackBar();
                         else
                             snackBar();
                         break;
                     case R.id.navigation_4:
-                        if (chatFragment == null)
-                            snackBar();
+                        if (messageFragment == null)
+                            fragment = new ListMessageRecontest();
+//                            snackBar();
                         else
-                            snackBar();
+                            fragment = messageFragment;
+//                            snackBar();
                         break;
                     case R.id.navigation_5:
                         if (profileFragment == null)

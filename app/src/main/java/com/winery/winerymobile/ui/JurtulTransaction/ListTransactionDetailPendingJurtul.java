@@ -80,6 +80,8 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
     ImageView ivSpt;
     @BindView(R.id.iv_cc)
     ImageView ivCc;
+    @BindView(R.id.iv_doc2)
+    ImageView ivDoc2;
     @BindView(R.id.ll_child1_ll_section2)
     LinearLayout llChild1LlSection2;
     @BindView(R.id.rl_child1_ll_section2)
@@ -444,7 +446,7 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
     com.google.android.material.button.MaterialButton btnSubmit;
     /** ButterKnife Code **/
 
-    String imageKtp,imageDataKotor,imageNpwp,imageSlipGaji,imageSpt,imageKartuKredit;
+    String imageKtp,imageDataKotor,imageNpwp,imageSlipGaji,imageSpt,imageKartuKredit, imageDoc2;
 
     @OnClick(R.id.iv_data_kotor) void pinchZoomDataKotor(){
         pinchToZoom(imageDataKotor);
@@ -456,6 +458,10 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
 
     @OnClick(R.id.iv_npwp) void pinchZoomNpwp(){
         pinchToZoom(imageNpwp);
+    }
+
+    @OnClick(R.id.iv_doc2) void pinchZoomDoc2(){
+        pinchToZoom(imageDoc2);
     }
 
     @OnClick(R.id.iv_spt) void pinchZoomDataSpt(){
@@ -647,6 +653,8 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
                                     imageSlipGaji = jsonRESULTS.getJSONObject("data").getString("url_slip_gaji");
                                     imageSpt = jsonRESULTS.getJSONObject("data").getString("url_spt");
                                     imageKartuKredit = jsonRESULTS.getJSONObject("data").getString("url_kartu_kredit");
+                                    imageDoc2 = jsonRESULTS.getJSONObject("data").getString("url_date_pendukung");
+
 
                                     // fetch image
                                     Glide.with(ListTransactionDetailPendingJurtul.this).
@@ -694,6 +702,15 @@ public class ListTransactionDetailPendingJurtul extends AppCompatActivity {
                                             .skipMemoryCache(true)
                                             .transition(DrawableTransitionOptions.withCrossFade(100))
                                             .into(ivCc);
+
+                                    // fetch image kartu kredit
+                                    Glide.with(ListTransactionDetailPendingJurtul.this).
+                                            load(imageDoc2)
+                                            .placeholder(R.drawable.ic_camera)
+                                            .diskCacheStrategy(DiskCacheStrategy.NONE)
+                                            .skipMemoryCache(true)
+                                            .transition(DrawableTransitionOptions.withCrossFade(100))
+                                            .into(ivDoc2);
 
                                     // fetch image
                                     Glide.with(ListTransactionDetailPendingJurtul.this).

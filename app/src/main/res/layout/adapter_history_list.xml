@@ -37,7 +37,7 @@
                 android:layout_marginTop="@dimen/default_padding_small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="29/05/1992"
+                android:text="DOB"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_size_14"
                 android:textStyle="bold"/>
@@ -47,7 +47,7 @@
                 android:layout_marginTop="@dimen/default_padding_small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="3201203251991001"
+                android:text="NIK"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_size_14"
                 android:textStyle="bold"/>
@@ -73,7 +73,7 @@
                 android:layout_gravity="center"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_size_14"
-                android:text="20 Mar"/>
+                android:text="Date Input"/>
 
         </LinearLayout>
     </LinearLayout>

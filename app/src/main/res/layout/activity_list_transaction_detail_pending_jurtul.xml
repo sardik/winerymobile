@@ -215,10 +215,29 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="File Kartu Kredit"/>
+                                    android:text="File Doc 1"/>
 
                                 <ImageView
                                     android:id="@+id/iv_cc"
+                                    android:scaleType="fitXY"
+                                    android:layout_width="match_parent"
+                                    android:src="@drawable/ic_camera"
+                                    android:layout_height="200dp"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_marginTop="@dimen/default_padding_medium"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="File Doc 2"/>
+
+                                <ImageView
+                                    android:id="@+id/iv_doc2"
                                     android:scaleType="fitXY"
                                     android:layout_width="match_parent"
                                     android:src="@drawable/ic_camera"

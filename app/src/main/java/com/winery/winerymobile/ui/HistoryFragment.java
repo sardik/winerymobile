@@ -421,6 +421,8 @@ public class HistoryFragment extends Fragment {
             HashMap<String, String> user = sessionManagement.getUserDetails();
             String code = user.get(SessionManagement.KEY_SALES_CODE);
 
+            Log.d("id", "requestGetHistoryCc: "+code);
+
             mApiService.getListHistoryCc(startDate, endDate,code)
                     .enqueue(new Callback<ResponseBody>() {
                         @Override
